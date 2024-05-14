@@ -1,0 +1,82 @@
+[
+    {
+        "value": "US Hawaiian Time (Honolulu)",
+        "abbr": "HST",
+        "offset": -10,
+        "isdst": false,
+        "text": "(UTC-10:00) Hawaii",
+        "utc": [
+            "Pacific/Honolulu"
+        ]
+    },
+    {
+        "value": "US Alaskan Time (Anchorage)",
+        "abbr": "AKDT",
+        "offset": -8,
+        "isdst": true,
+        "text": "(UTC-09:00) Alaska",
+        "utc": [
+            "America/Anchorage"
+        ]
+    },
+    {
+        "value": "US Pacific Time (Los Angeles)",
+        "abbr": "PDT",
+        "offset": -7,
+        "isdst": true,
+        "text": "(UTC-07:00) Pacific Time (US & Canada)",
+        "utc": [
+            "America/Los_Angeles"
+        ]
+    },
+    {
+        "value": "US Mountain Time (Denver)",
+        "abbr": "MDT",
+        "offset": -6,
+        "isdst": true,
+        "text": "(UTC-07:00) Mountain Time (US & Canada)",
+        "utc": [
+            "America/Denver"
+        ]
+    },
+    {
+        "value": "US Mountain Standard Time (Phoenix)",
+        "abbr": "MDT",
+        "offset": -6,
+        "isdst": true,
+        "text": "(UTC-07:00) Mountain Standard Time (US & Canada)",
+        "utc": [
+            "America/Phoenix"
+        ]
+    },
+    {
+        "value": "US Central Time (Chicago)",
+        "abbr": "CDT",
+        "offset": -5,
+        "isdst": true,
+        "text": "(UTC-06:00) Central Time (US & Canada)",
+        "utc": [
+            "America/Chicago"
+        ]
+    },
+    {
+        "value": "US Eastern Time (New York)",
+        "abbr": "EDT",
+        "offset": -4,
+        "isdst": true,
+        "text": "(UTC-05:00) Eastern Time (US & Canada)",
+        "utc": [
+            "America/New_York"
+        ]
+    },
+    {
+        "value": "Chamorro Standard Time (Guam)",
+        "abbr": "WPST",
+        "offset": 10,
+        "isdst": false,
+        "text": "(UTC+10:00) Guam, Port Moresby",
+        "utc": [
+            "Pacific/Guam"
+        ]
+    }
+]

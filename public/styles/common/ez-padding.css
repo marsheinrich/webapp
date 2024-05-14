@@ -1,0 +1,272 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Padding/Margin UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ENGINEERING NOTES
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    CSS padding syntax (https://www.w3schools.com/csS/css_padding.asp)
+        Standards:
+            Represent 0px as 0 (example: margin: 0;)
+        Multiple-value padding statements:
+            (1 value) padding: {top & right & left & bottom};
+            (2 values) padding: {top} {bottom};
+            (3 values) padding: {top} {right & left} {bottom};
+            (4 values) padding: {top} {right} {bottom} {left};
+        Other padding statements:
+            padding-top: {top};
+            padding-right: {right};
+            padding-bottom: {bottom};
+            padding-left: {left}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+/* Padding */
+.ezPad2 {
+    padding: 2px;
+}
+
+.ezPad4 {
+    padding: 4px;
+}
+
+.ezPad6 {
+    padding: 6px;
+}
+
+.ezPad8 {
+    padding: 8px;
+}
+
+.ezPad10 {
+    padding: 10px;
+}
+
+.ezPad-top-4 {
+    padding-top: 4px;
+}
+
+.ezPad-bottom-4 {
+    padding-bottom: 4px;
+}
+
+.ezPadding-bottom-0 {
+    padding-bottom: 0;
+}
+
+.ezPadding-top-10 {
+    padding-top: 10px;
+}
+
+.ezPadding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.ezPadding-left-10 {
+    padding-left: 10px;
+}
+
+.ezPadding-right-10 {
+    padding-right: 10px;
+}
+
+.ezPadding-top-8 {
+    padding-top: 8px;
+}
+
+.ezPadding-bottom-8 {
+    padding-bottom: 8px;
+}
+
+.ezPadding-left-8 {
+    padding-left: 8px;
+}
+
+.ezPadding-right-8 {
+    padding-right: 8px;
+}
+
+.ezPadding-left-right-8 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ENGINEERING NOTES
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    CSS margin syntax (https://www.w3schools.com/csS/css_margin.asp)
+        Standards:
+            Represent 0px as 0 (example: margin: 0;)
+        Multiple-value margin statements:
+            (1 value) margin: {top & right & left & bottom};
+            (2 values) margin: {top} {bottom};
+            (3 values) margin: {top} {right & left} {bottom};
+            (4 values) margin: {top} {right} {bottom} {left};
+        Other margin statements:
+            margin-top: {top};
+            margin-right: {right};
+            margin-bottom: {bottom};
+            margin-left: {left}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+/* All Marigns */
+.ezMargin_2x2x2x2 {
+    margin: 4px;
+}
+
+.ezMargin_4x4x4x4 {
+    margin: 4px;
+}
+
+.ezMargin_8x8x8x8 {
+    margin: 8px;
+}
+
+.ezMargin_10x10x10x10 {
+    margin: 10px;
+}
+
+.ezMargin_15x15x15x15 {
+    margin: 15px;
+}
+
+.ezMargin_20x20x20x20 {
+    margin: 20px;
+}
+
+/* Top Margins */
+.ezTopMargin_2 {
+    margin-top: 4px;
+}
+
+.ezTopMargin_4 {
+    margin-top: 4px;
+}
+
+.ezTopMargin_8 {
+    margin-top: 8px;
+}
+
+.ezTopMargin_10 {
+    margin-top: 10px;
+}
+
+.ezTopMargin_15 {
+    margin-top: 15px;
+}
+
+.ezTopMargin_20 {
+    margin-top: 20px;
+}
+
+/* Bottom Margins */
+.ezBottomMargin_2 {
+    margin-bottom: 4px;
+}
+
+.ezBottomMargin_4 {
+    margin-bottom: 4px;
+}
+
+.ezBottomMargin_8 {
+    margin-bottom: 8px;
+}
+
+.ezBottomMargin_10 {
+    margin-bottom: 10px;
+}
+
+.ezBottomMargin_15 {
+    margin-bottom: 15px;
+}
+
+.ezBottomMargin_20 {
+    margin-bottom: 20px;
+}
+
+/* Left Margins */
+.ezLeftMargin_2 {
+    margin-left: 4px;
+}
+
+.ezLeftMargin_4 {
+    margin-left: 4px;
+}
+
+.ezLeftMargin_8 {
+    margin-left: 8px;
+}
+
+.ezLeftMargin_10 {
+    margin-left: 10px;
+}
+
+.ezLeftMargin_15 {
+    margin-left: 15px;
+}
+
+.ezLeftMargin_20 {
+    margin-left: 20px;
+}
+
+/* Right Margins */
+.ezRightMargin_2 {
+    margin-right: 4px;
+}
+
+.ezRightMargin_4 {
+    margin-right: 4px;
+}
+
+.ezRightMargin_8 {
+    margin-right: 8px;
+}
+
+.ezRightMargin_10 {
+    margin-right: 10px;
+}
+
+.ezRightMargin_15 {
+    margin-right: 15px;
+}
+
+.ezRightMargin_20 {
+    margin-right: 20px;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/

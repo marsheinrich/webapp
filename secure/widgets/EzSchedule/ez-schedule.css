@@ -1,0 +1,175 @@
+/* ===================================================================
+| ezClocker Schedule Page Styles
+|
+| <link href="/secure/widgets/EzSchedule/ez-schedule.css" rel="stylesheet" type="text/css">
+|
+| Note:
+|   The ez-body.css import must appear before (nearly) all
+|   other ezClocker css imports to take advantage of the variables.
+=================================================================== */
+
+.ezSchedule-content {
+    display: grid;
+    padding: 8px;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.ezSchedule-tab-bar {
+    display: grid;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    grid-template-rows: auto;
+    grid-template-columns: max-content max-content max-content;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: end;
+    align-content: end;
+    background-color: var(--ezClockerBackground);
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+    border-style: solid;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.ezSchedule-tabbutton-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: transparent;
+    border-style: none;
+    border-width: 0px;
+}
+
+.ezSchedule-active-tab,
+.ezSchedule-active-tab:enabled,
+.ezSchedule-active-tab:hover,
+.ezSchedule-active-tab:hover:enabled,
+.ezSchedule-active-tab:active,
+.ezSchedule-active-tab:hover:active,
+.ezSchedule-active-tab:focus,
+.ezSchedule-active-tab:hover:focus,
+.ezSchedule-active-tab:visited,
+.ezSchedule-active-tab:hover:visited {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 32;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite) ;
+    font-size: 14pt;
+    font-weight: bold;
+    border-color: var(--ezBorderNavy) ;
+    border-style: solid;
+    border-bottom-style:  none;
+    border-width: 1px;
+    border-bottom-width: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline-style: none;
+    box-shadow:
+        0 -2px 2px 0 rgb(109 110 112 / 50%),
+        2px 0 2px 0 rgb(109 110 112 / 50%),
+        -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ezSchedule-tab,
+.ezSchedule-tab:enabled,
+.ezSchedule-tab:visited {
+    height: 32;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 0;
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    font-weight: normal;
+    background-color: var(--ezClockerOffWhite) ;
+    border-color: var(--ezLightNavy) ;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-bottom-style: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline-style: none;
+    outline-width: 0;
+}
+
+.ezSchedule-tab:hover,
+.ezSchedule-tab:hover:enabled,
+.ezSchedule-tab:focus,
+.ezSchedule-tab:active  {
+    min-height: 32;
+    margin-bottom: 0;
+    background-color: var(--ezHoverNavy);
+    color: var(--ezNavyContainerTextColor);
+    font-size: 14pt;
+    font-weight: normal;
+    border-color: var(--ezClockerBlack);
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-bottom-style: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline-style: none;
+    outline-width: 0;
+}
+
+.ezSchedule-tab-content-container {
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.ezSchedule-tab-content {
+    color: var(--ezFontColor);
+    background-color: var(--ezClockerWhite);
+    border-style: none;
+    padding: 4px;
+}
+
+.ezSchedule-day-header {
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerWhite);
+    font-size: 14pt;
+    font-style: normal;
+    font-weight: bold;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezSchedule-day-table {
+    display: grid;
+    grid-template-rows: repeat(23, min-content [col-start] auto [col-end]);
+    grid-template-columns: repeat(3);
+}
+
+.ezSchedule-day-hour {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: normal;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezSchedule-day-employee-card {
+    padding: 2px;
+    text-align: left;
+    vertical-align: top;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}

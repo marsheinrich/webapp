@@ -1,0 +1,59 @@
+div.comingSoonContainer {
+    padding: 10px;
+}
+
+div.comingSoonImgContainer {
+    width: 120px;
+    height: 120px;
+    padding: 4px;
+    background-color: #000000;
+}
+
+div.comingSoonLabelContainer {
+    width: 290px;
+}
+
+img.comingSoonLogo {
+    width: 112px;
+    height: 112px;
+    padding: 4px;
+    background-color: #000000;
+}
+
+label.comingSoonLabel {
+    font-size: 32pt;
+    font-weight: bold;
+    padding: 4px;
+    color: #000000;
+}
+
+div.logoContainer {
+    padding: 10px;
+    background-color: rgb(124 208 253 / 50%);
+    box-shadow: 0 0 4px 4px #C0C0C0;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #7CD0FD;
+    border-left-color: #7CD0FD;
+    border-bottom-color: #4284D3;
+    border-right-color: #4284D3;
+
+    /*
+    border-top-color: #FFCC66;
+    border-left-color: #FFCC66;
+    border-bottom-color: #FF9900;
+    border-right-color: #FF9900;
+    */
+}
+
+table.comingSoonTable {
+    margin-top: 20%;
+    width: 100%;
+}
+
+td.comingSoonColumn {
+    vertical-align: middle;
+    text-align: center;
+    width: 33%;
+}

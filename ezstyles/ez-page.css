@@ -1,0 +1,46 @@
+/* -------------------------------------------------------------------
+| Page Layout Styles
+| Import: <link href="/ezstyles/ez-page.css" rel="stylesheet" type="text/css">
+------------------------------------------------------------------- */
+.ezPage-html {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.ezPage-body-full {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: stretch;
+    justify-content: stretch;
+    margin: var(--ezBodyMarginSize);
+    padding: var(--ezBodyPaddingSize);
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezPage-header {
+    display: grid;
+    align-content: start;
+    grid-template-columns: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.ezPage-view-full {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: stretch;
+    justify-content: stretch;
+    background-color: transparent;
+}

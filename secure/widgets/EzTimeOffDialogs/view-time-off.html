@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<div id="EzTimeOffViewModal" class="ezHiddentByDefault" title="All Time Off Request">
+    <div id="all-time-off-request-main-fragment" class="ezHiddentByDefault">
+        <div id="EzAllRequestTimeOffRequestDialog" title="All Time Off Request Dialog">
+            <div id="EzAllRequestTimeOffRequestDialogMainDiv"
+                class="ezSilverBox marginTop10 ezRequestTimeOffDialogMainDiv">
+                <table id="EzAllRequestTimeOffRequestDialogMainTable"
+                    class="ezFullWidth ezRequestTimeOffDialogMainTable">
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell" style="float: left"><label>Request Type</label> <br /> <input
+                            id="EzAllRequestTimeOffRequestDialog_RequestType" class="ezRequestTimeOffDialog_RequestType"
+                            disabled /></td>
+                        <td class="leftAlignCell" style="float: right; margin-left: 15px;"><label>Status</label> <br />
+                            <input id="EzAllRequestTimeOffRequestDialog_RequestedStatus" disabled /></td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+
+                        <td class="leftAlignCell" style="margin-top: 15px;"><label
+                            for="EzAllRequestTimeOffRequestDialog_RequestedBy"> Requested By </label> <br /> <input
+                            id="EzAllRequestTimeOffRequestDialog_RequestedBy" disabled /></td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell"><label>Start</label> <br />
+                            <div>
+                                <input readonly="true" id="EzAllRequestTimeOffDialog_StartDateTime"
+                                    class="ezRequestTimeOffDialog_StartDate viewTimeOffDateTime" disabled />
+                            </div></td>
+                        <td class="leftAlignCell" style="margin-left: 15px"><label>End</label> <br />
+                            <div>
+                                <input type="text" readonly="true" id="EzAllRequestTimeOffDialog_EndDateTime"
+                                    class="ezRequestTimeOffDialog_EndDate viewTimeOffDateTime" disabled />
+                            </div></td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell"><label for="EzAllRequestTimeOffRequestDialog_Notes">Notes:</label>
+                            <br /> <textarea readonly="true" type="text" id="EzAllRequestTimeOffRequestDialog_Notes"
+                                maxlength="500" class="ezRequestTimeOffDialog_Notes" disabled></textarea></td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 5px; width: 100%; margin-top: 30px;">
+                        <td class="leftAlignCell" style="display: inline-block;"><label
+                            id="EzAllRequestTimeOffRequestDialog_TotalTimeOffLabel"
+                            class="ezRequestTimeOffDialog_TotalTimeOffLabel">Total Time Off Hours</label> <label
+                            id="EzAllRequestTimeOffRequestDialog_TotalTimeOff"
+                            class="ezRequestTimeOffDialog_TotalTimeOff" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

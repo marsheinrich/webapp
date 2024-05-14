@@ -1,0 +1,18 @@
+/* DEPRECATED: Migrate to ez-spinner.js functionality */
+
+/* DEPRECATED */.spinnerOverlay {
+    text-align: center;
+}
+
+/* DEPRECATED */.overlayLabel {
+    padding: 4px;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: var(--ezAlphaBackgroundWhite);
+    color: var(--ezClockerBlack);
+    font-size: 52pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezClockerWhite);
+}

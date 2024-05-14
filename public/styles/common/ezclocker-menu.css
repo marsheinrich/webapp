@@ -1,0 +1,23 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Remove or migrate to alternate solutions for all CSS classes in this file
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */div.ezClockerMenu {
+    background-color: rgb(245 245 245 / 70%);
+    color: var(--ezClockerBlack);
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 8px;
+    border-left-color: #ffffff;
+    border-bottom-color: #c0c0c0;
+    border-right-color: #c0c0c0;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    box-shadow: 0 0 4px 1px #C0C0C0;
+}

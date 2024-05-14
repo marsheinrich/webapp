@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-spinner.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-editors.css?v=r72-3" rel="stylesheet" type="text/css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <title>ezClocker</title>
+</head>
+
+<body>
+    <div class="ezClockerHeader2015NonFixed bottomShadow">
+        <a id="EzClockerLogoGoToSignInLink" href="/public/signin">
+            <img id="EzClockerLogoImage" src="/public/images/logos/ezclocker_logo_2015.svg" class="ezClockerHeader2015"
+                alt="ezClocker" />
+        </a>
+    </div>
+
+    <div class="ezWhiteBox8">
+        <h1>Authentication Required</h1>
+        <h3>You must sign in before you can access some areas of ezClocker.</h3>
+        <p>
+            Looks like you haven't signed in or your sign in has expired. Don't worry through, in just a few seconds we
+            will take you to the ezClocker Sign In
+            page so you can sign in and then continue with what you wanted to do.
+        </p>
+        <small>
+            Tip: If you are in a big hurry - or for some reason we failed to get you to the ezClocker sign in page - you
+            can click the ezClocker logo
+            at the top of the page (or click <a id="EzClockerGoToSignInLinkg" href="/public/signin">HERE</a>) to get
+            there now.
+        </small>
+    </div>
+    <div id="EzErrorDetailsContainer" class="ezContainer-alpha-white-silver-border-8 ezText-small-gray">
+        <p class="ezBold">Error 401: Unauthorized</p>
+        <p>
+            Normally caused by:
+        <ul>
+            <li>Authentication is required and the user was not signed in.</li>
+            <li>The user signed in but entered incorrect credentials.</li>
+            <li>The user was signed in but enough time has passed where ezClocker expired the current sign in and
+                requires the user to re-sign in.</li>
+        </ul>
+        For more information visit <a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-401-unauthorized">Offical
+            Standard: RFC-9110 HTTP Semantics</a>
+        </p>
+    </div>
+    <script type="text/javascript">
+        setTimeout(
+            () => ezApi.ezclocker.ezNavigation.ezNavigateToMain(),
+            5000);
+    </script>
+</body>
+
+</html>

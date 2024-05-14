@@ -1,0 +1,79 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Migrate to CSS classes defined in /src/main/webapp/public/styles/common/ez-dialogs.css
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */.ezDialogs-content-container {
+    display: grid;
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    grid-template-rows: auto;
+    grid-template-columns: min auto;
+    align-content: start;
+    justify-content: stretch;
+}
+
+/* DEPRECATED */.ezDialogs-left-info-image-container {
+    padding: 4px;
+    width: 24px;
+    min-height: 24px;
+    background-color: transparent;
+    text-align: center;
+    background-image: url("/public/images/icons/info.svg");
+    background-position: center;
+    background-repeat: none;
+    background-size: 24px;
+}
+
+/* DEPRECATED */.ezDialogs-right-message-container {
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    text-align: left;
+}
+
+/* DEPRECATED */div.ezClockerDialog {
+    display: none;
+}
+
+/* DEPRECATED */img.ezClockerDialogImage {
+    width: 48px;
+    min-height: 48px;
+}
+
+/* DEPRECATED */table.ezClockerDialogContent {
+    width: 100%;
+    border-style: none;
+}
+
+/* DEPRECATED */tr.ezDialog-table-row-no-border {
+    border-style: none;
+}
+
+/* DEPRECATED */td.ezClockerDialogImageCell {
+    padding: 8px;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: top;
+    border-style: none;
+}
+
+/* DEPRECATED */td.ezClockerDialogMessageCell {
+    vertical-align: top;
+    text-align: left;
+    font: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-style: var(--ezFontStyle);
+    font-weight: var(--ezFontWeight);
+    border-style: none;
+}
+
+/* DEPRECATED */div.genericDialog {
+    padding: 8px;
+}
+
+/* DEPRECATED */.ezDialogTextInputContainerHighlight {
+    box-shadow: 0 0 15px 1px var(--ezClockerYellow);
+}

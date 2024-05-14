@@ -1,0 +1,141 @@
+.ez-support-processing-spinner {
+    width: 100px;
+}
+
+.ez-support-header-section-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 28px;
+
+    img {
+        width: 304px;
+    }
+
+    .ez-support-header-name {
+        padding-left: 10px;
+    }
+}
+
+#EzAdminActionsContainer > a {
+    text-align: center;
+    padding: 7px 50px;
+    font-size: 18px;
+}
+
+
+.ez-support-content-section {
+    font-size: 18px;
+
+    .lookup-basic-label {
+        background-color: var(--ezClockerNavy);
+        color: white;
+        font-size: 28px;
+        padding: 10px 0 10px 5px;
+    }
+
+    .search-select-box {
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .search-input-box-user-name,
+    .search-input-box {
+        width: 300px;
+        padding: 14px 0;
+        font-size: 18px;
+    }
+
+    .search-input-box-user-name {
+        width: 400px;
+    }
+
+    button.majorButton div {
+        text-align: center;
+        padding: 7px 50px;
+        font-size: 18px;
+    }
+
+    #userInformationClearResultsButtonId,
+    #lookupEmployeeByMobilePhoneClearResultsButtonId,
+    #lookupUserSubscriptionClearResultsButtonId,
+    #lookUpArchiveEmployeeClearResultsButtonId,
+    #deleteUserAccountnClearResultsButtonId,
+    #timeEntriesClearResultsButtonId,
+    #changeBillingProviderResultsButtonId,
+    #clearReactivateEmployerIdResultsButtonId,
+    #EzRestoreSwapPasswordButton,
+    #createEmployeeLinkClearResultsButtonId {
+        background-color: var(--ezClockerSilver);
+    }
+
+    .results-main-div {
+        width: 96%;
+    }
+
+    .results-label {
+        background-color: #00e7eb;
+        font-size: 20px;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+
+    table > thead {
+        position: sticky;
+        top: 0;
+    }
+
+    thead > tr {
+        background-color: lightgray;
+    }
+
+    tr {
+        font-size: 20px;
+    }
+
+    th,
+    td {
+        width: 10%;
+        padding: 10px 0;
+        word-wrap:break-word
+    }
+
+    .input_ValidationError_Main_Div {
+        background-color: pink;
+        margin: 0 8px;
+        padding: 10px;
+        width: 34%;
+        margin-top: 20px;
+    }
+
+    .input_ValidationWarning_Main_Div {
+        background-color: bisque;
+        padding: 10px;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .input_ValidationError_Submit_Button_Main_Div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex-display-column {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .flex-display-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .results-table-scroll {
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+
+

@@ -1,0 +1,219 @@
+button.headerButton {
+    width: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #edf6ff;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.headerButton:disabled {
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.headerButton:active {
+    background-color: #c0c0c0;
+}
+
+button.headerButton:hover {
+    background-color: #ffffff;
+}
+
+button.actionButton {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px 10px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.actionButton:hover {
+    background-color: #FFCC66;
+}
+
+button.actionButton:disabled {
+    background-color: #c0c0c0;
+    color: #808080;
+}
+
+button.actionButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+button.rightActionButton {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.rightActionButton:hover {
+    background-color: #FFCC66;
+}
+
+button.rightActionButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+button.disabledActionButton {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #808080;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.rightEditButton {
+    width: 50px;
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 2px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.rightEditButton:disabled {
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.rightEditButton:hover {
+    background-color: #FFCC66;
+}
+
+button.rightEditButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+input.fixedActionButton {
+    margin-left: 10px;
+    float: right;
+    width: 125px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+input.fixedActionButton:hover {
+    background-color: #FFCC66;
+}
+
+input.fixedActionButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+button.fixedActionButton {
+    margin-left: 10px;
+    float: right;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.fixedActionButton:hover {
+    background-color: #FFCC66;
+}
+
+button.fixedActionButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+button.subscribeButton {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #8EF13C;
+    color: #000000;
+    border-style: solid;
+    border-color: #439400;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+    width: 100%;
+}
+
+button.subscribeButton:active {
+    background-color: #439400;
+}
+
+button.subscribeButton:hover {
+    background-color: #A9F16C;
+}
+
+button.subscribeButton:disabled {
+    background-color: #f0f0f0;
+    color: #c0c0c0;
+    cursor: default;
+}
+
+input.hiddenSubmit {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}

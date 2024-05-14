@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+
+
+    <!-- ezClocker Library CSS -->
+    <link href="/jquery-ui/jquery-ui.min.css?v=r69" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css?v=r69" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css?v=r69" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css?v=r69" rel="stylesheet" type="text/css">
+    <link href="/node_modules/icheck/skins/minimal/minimal.css?v=r69" rel="stylesheet" type="text/css"
+        data-dev-for="icheck.min.js">
+    <link href="/node_modules/icheck/skins/flat/orange.css?v=r69" rel="stylesheet" type="text/css"
+        data-dev-for="icheck.min.js">
+
+    <!-- ezClocker Core CSS -->
+    <link href="/public/styles/common/ez-body.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-shadows.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/javascript/google/ez-google-maps-dialog.css?v=r52" rel="stylesheet" type="text/css">
+
+    <!-- EzJobCodeDialog CSS -->
+    <link href="widgets/EzJobCodeDialog/ez-jobcode-dialog.css?v=r52" rel="stylesheet" type="text/css">
+
+    <!-- EzTimeAddEditDialog CSS -->
+    <link href="/public/widgets/EzTimeAddEditDialog/EzTimeAddEditDialog.css?v=r52" rel="stylesheet" type="text/css">
+
+    <!-- EzWizard Core CSS -->
+    <link href="/public/webcomponents/ez-wizard/ez-wizard-common.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/public/webcomponents/ez-wizard/ez-wizard.css?v=r52" rel="stylesheet" type="text/css">
+
+    <script src="/node_modules/es5-shim/es5-shim.min.js" async></script>
+    <script src="/node_modules/es6-shim/es6-shim.min.js" async></script>
+    <script src="/node_modules/es6-promise-polyfill/promise.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/node_modules/store/dist/store.legacy.min.js" data-dep-for="jquery-idletimeout.min.js"></script>
+    <script src="/jquery/jquery.timers-1.2.min.js" data-dep-for="jquery-idletimeout.min.js"></script>
+
+    <script src="/jquery-ui/jquery-ui.min.js?v=r52"></script>
+    <script src="/jquery-ui/jquery-idletimeout.min.js?v=r52"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js?v=r52"></script>
+    <script src="/node_modules/icheck/icheck.min.js?v=r52"></script>
+
+    <!-- ezClocker Core js -->
+    <script src="/ezwp/js/ez-core.js?v=r52"></script>
+    <script src="/public/javascript/common/ez-injector.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-dateUtils.js?v=r52"></script>
+    <script src="/public/javascript/common/ez-date-helper.js?v=r52"></script>
+    <script src="/public/javascript/common/ez-ticker-timer.js?v=r52"></script>
+    <script src="/dynamic/ez-feature-toggles.js?v=r52" async></script>
+    <script src="javascript/common/ezclocker-autologout.js?v=r52"></script>
+
+    <script src="/public/javascript/common/ezclocker-google-analytics.js?v=r52" async></script>
+    <script src="/public/javascript/common/ez-performance-metric.js?v=r52"></script>
+
+    <!-- ezClocker Legacy js -->
+    <script src="/public/javascript/common/ezclocker-html5-gps.js?v=r52" async></script>
+    <script src="/public/javascript/common/ezclocker-constants.js?v=r52"></script>
+
+    <!-- ezClocker Services JS -->
+    <script src="/public/javascript/common/ez-services.js?v=r52"></script>
+    <script src="/public/javascript/services/ezclocker-account-services.js?v=r52"></script>
+    <script src="/public/javascript/services/ezclocker-options.js?v=r52"></script>
+    <script src="/secure/javascript/common/ezclocker-license-helper.js?v=r52"></script>
+    <script src="/secure/javascript/common/ezclocker-employer-services.js?v=r52"></script>
+    <script src="/secure/javascript/services/ezclocker-employee-service.js?v=r52"></script>
+    <script src="/secure/javascript/common/ez-employee-api.js?v=r52"></script>
+    <script src="/secure/javascript/services/ezclocker-time-entry-service.js?v=r52"></script>
+    <script src="/secure/javascript/services/ezclocker-timeentry-audit-service.js?v=r52"></script>
+    <script src="/secure/javascript/services/ezclocker-datatag-service.js?v=r52"></script>
+    <script src="/secure/javascript/services/ezclocker-datatagmap-service.js?v=r52"></script>
+
+    <!-- ezClocker Core UX js -->
+    <script src="/public/javascript/common/ezui.js?v=r52"></script>
+    <script src="/public/javascript/common/ez-html.js?v=r52"></script>
+    <script src="/public/webcomponents/ezclocker-component-loader.js?v=r52"></script>
+    <script src="/public/webcomponents/spinner/EzSpinner.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-html-helper.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-dialog-helper.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-dialog.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-layout-helper.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-page.js?v=r52"></script>
+    <script src="/public/javascript/common/ezclocker-size-divs.js?v=r52"></script>
+    <!-- <script src="/public/javascript/common/ezclocker-time-entry-grid.js?v=r52"></script> -->
+    <script src="/public/javascript/services/ezclocker-google-service.js?v=r52"></script>
+    <script src="/public/javascript/google/google-maps-api.js?v=r52"></script>
+
+    <!-- ezClocker Context JS -->
+    <script src="/public/javascript/common/ez-context.js?v=r52"></script>
+
+    <!-- ezClocker ezWizard Core JS -->
+    <script src="/public/webcomponents/ez-wizard/ez-wizard-context.js?v=r52"></script>
+    <script src="/public/webcomponents/ez-wizard/ez-wizard-flow.js?v=r52"></script>
+    <script src="/public/webcomponents/ez-wizard/ez-wizard-info.js?v=r52"></script>
+    <script src="/public/webcomponents/ez-wizard/ez-wizard.js?v=r52"></script>
+
+    <!-- ezIntegration Wizard Core JS -->
+    <script src="integrations/ez-integration-wizard-context.js"></script>
+    <script src="integrations/ez-integration-wizard-state-loader.js"></script>
+
+    <!-- ezQBOIntegration Wizard Core JS -->
+    <script src="integrations/qbo/ez-qbo-integration-wizard-flow.js"></script>
+    <script src="integrations/qbo/ez-qbo-integration-wizard-launcher.js"></script>
+
+    <!-- ezClocker ez-jobcode-dialog JS -->
+    <script src="widgets/EzJobCodeDialog/ez-jobcode-dialog.js?v=r52"></script>
+    <script src="widgets/EzJobCodeDialog/ez-jobcode-assign-employee-dialog.js?v=r52"></script>
+
+    <!-- ezClocker ez-timeentry-dialog JS -->
+    <script src="/public/widgets/EzTimeAddEditDialog/EzTimeAddEditDialogController.js?v=r52"></script>
+
+    <!-- ezClocker Page CSS -->
+    <link href="/secure/styles/common/ezclocker-timeentry-audit-dialog.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/common/ezclocker-dialog-employer-export-timesheet.css?v=r52" rel="stylesheet"
+        type="text/css">
+    <link href="/secure/styles/tcs-secure-style.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/addTimeEntry.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/timeEntryTable.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/quick-filter.css?v=r52" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/employerDashboard.css?v=r52" rel="stylesheet" type="text/css">
+
+    <!-- ezClocker Page JS -->
+    <script src="/secure/javascript/employerDashboard/employerDashboard.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employer-dashboard-controller.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/clockinout-handler.js?v=r52"></script>
+    <script src="/secure/components/EzUpdateEmailDialog/EzUpdateEmailDialog.js?v=r52"></script>
+    <script src="/secure/javascript/common/ezclocker-dialog-employer-export-timesheet.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-EditTimeEntry.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-AddTimeEntry.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-DownloadTimeSheet.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-DisplayEmployeeInfo.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-InviteEmployee.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-DeleteEmployee.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerdashboard-whoisclockedin.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-EditEmployeeInfo.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-QuickBooks.js?v=r52"></script>
+    <script src="/secure/javascript/employerDashboard/employerDashboard-ManageJobCodes.js?v=r52"></script>
+
+    <style>
+        .effectTarget {
+            margin: 10px;
+            padding: 10px;
+            color: #000000;
+            font-weight: bold;
+            border-style: solid;
+        }
+
+        .effectTarget1 {
+            background-color: #ff9900;
+        }
+
+        .effectTarget2 {
+            background-color: #ff0000;
+        }
+
+        .effectTarget3 {
+            background-color: #00ff00;
+        }
+
+        .effectTarget4 {
+            background-color: #0000ff;
+            color: #ffffff;
+        }
+    </style>
+
+
+    <title>Effects Test</title>
+</head>
+
+
+<body>
+    <div id="EFFECT_TARGET1" class="effectTarget effectTarget1">Effect Target 1</div>
+    <div id="EFFECT_TARGET2" class="effectTarget effectTarget2">Effect Target 2</div>
+    <div id="EFFECT_TARGET3" class="effectTarget effectTarget3">
+        Effect Target 3
+        <div id="EFFECT_TARGET4" class="effectTarget effectTarget4">Effect Target 4</div>
+    </div>
+</body>
+
+</html>

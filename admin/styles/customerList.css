@@ -1,0 +1,32 @@
+table.employerData {
+    width: 100%;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    background-color: #FF9900;
+}
+
+table.userData {
+    width: 100%;
+    border-style: solid;
+    border-color: #000000; 
+    border-width: 1px;
+    background-color: #FF9900;
+}
+
+td.header {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 4px;
+}
+
+td.content {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    background-color: #ffffff;
+    padding: 4px;
+}

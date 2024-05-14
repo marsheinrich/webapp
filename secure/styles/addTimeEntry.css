@@ -1,0 +1,89 @@
+table.addTimeEntry_DateTimeContainerTable {
+    width: 100%;
+    padding: 8px;
+    color: #000000;
+    background-color: #e0e0e0;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+table.addTimeEntry_InputContainerTable {
+    padding: 4px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #6d6e70;
+    border-width: 1px;
+}
+
+.addTimeEntry_ClockInOutTitle {
+    color: #000000;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+input.addTimeEntry_Input {
+    width: 100%;
+}
+
+div.addTimeEntry_ReasonInputDiv {
+    margin-top: 10px;
+}
+
+.clockOutDisabledContainer {
+    display: none;
+    padding: 6px;
+    color: #000000;
+    font-size: 10pt;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-width: 1px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #c0c0c0;
+}
+
+/* Employer dashboard */
+.employeeList {
+    width: 200px;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.employeeList .employee {
+    padding: 30px;
+    border: 1px solid #E2E6E6;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 15%), inset 0 1px 0 rgb(255 255 255 / 100%);
+    margin-bottom: 10px;
+    float: left;
+}
+
+.employeeList .employee.selected {
+    background-color: #FF9900;
+}
+
+.employeeList .employee:hover {
+    background-color: #FF9900;
+}
+
+#contentDiv .employeeInfo {
+    float: left;
+    width: 80%;
+    margin-left: 5px;
+}
+
+#contentDiv .leftContentColumn {
+    float: left;
+    width: 11%;
+    border-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#contentDiv #search_input {
+    margin-bottom: 10px;
+    width: 88%;
+}

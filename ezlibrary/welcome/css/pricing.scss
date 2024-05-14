@@ -1,0 +1,322 @@
+@import 'ez-core';
+@import 'ez-responsive.scss';
+
+$color_orange: #ff8b22;
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+#startPlanText {
+    font-size: 1rem;
+}
+
+#intro-text-col {
+    text-align: center;
+    padding-bottom: 20px
+}
+
+#intro-sub-text-col {
+    text-align: center;
+    .row {
+        padding: 40px;
+    }
+}
+
+#try-button-col {
+    padding-top: 5px;
+}
+
+#switch {
+    text-align: center;
+}
+
+#plan-month-price {
+    padding-right: 10px;
+    color: #bbc0c5;
+    text-decoration: line-through;
+}
+
+#plan-yearly-price {
+    color: #3cd453;
+}
+
+#per-month-text {
+    font-size: 1rem;
+    padding-right: 5px
+}
+
+.list-group-item {
+    border: 0;
+    font-size: 1.2rem;
+    background-color: #f8f9fa;
+}
+
+.stand-out {
+    border-color: #33c4b6; // !important;
+    border-width: 4px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); // !important;
+    .plan-name {
+        padding-left: 40px;
+        word-wrap: break-word;
+    }
+}
+
+.stand-out::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 64px 64px 0 0;
+    border-color: #3bc6b8 transparent transparent transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.stand-out::after {
+    font-size: .7rem;
+    content: "Most Popular";
+    word-wrap: break-word;
+    width: 50px;
+    color: white;
+    position: absolute;
+    left: 2px;
+    top: -4px;
+    text-shadow: 0 0 2px #37c5b6;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.sect-header {
+    text-align: center;
+}
+
+section#plans {
+    margin-top: 85px;
+    .container {
+        max-width: 80%;
+        #planRow {
+            padding-top: 30px;
+            h3 {
+                font-size: 1.2rem;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+            .card {
+                color: white;
+                background-color: $color_orange;
+                border-color: white;
+                .card-header {
+                    background-color: #004b76;
+                    padding: 12px; //height:65px;
+                    .p-6 {
+                        padding: 0px; // !important;
+                    }
+                }
+                .card-block {
+                    padding: 15px;
+                    background-color: $color_orange;
+                    .card-title {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+        #sliderRow {
+            padding-top: 30px;
+            .switch label {
+                cursor: pointer;
+                display: inline-block;
+                margin-bottom: .5rem;
+            }
+            .switch label input[type=checkbox] {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            [type=checkbox]:checked,
+            [type=checkbox]:not(:checked) {
+                position: absolute;
+                pointer-events: none;
+            }
+            input[type=checkbox],
+            input[type=radio] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+            button,
+            input {
+                overflow: visible;
+            }
+            .switch.blue-white-switch label .lever {
+                background-color: #004e76;
+                width: 54px;
+                height: 34px;
+                border-radius: 10em;
+            }
+            .switch.blue-white-switch label input[type=checkbox]:checked+.lever {
+                background-color: #3cd453;
+            }
+            .switch.round.blue-white-switch label .lever:after {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                left: 4px;
+                top: 4px;
+            }
+            .switch label .lever {
+                content: "";
+                display: inline-block;
+                position: relative;
+                background-color: #818181;
+                border-radius: .9375rem;
+                margin-right: .625rem;
+                vertical-align: middle;
+                margin: 0 1rem;
+                width: 2.5rem;
+                height: .9375rem;
+                -webkit-transition: background .3s ease;
+                -moz-transition: background .3s ease;
+                -o-transition: background .3s ease;
+                transition: background .3s ease;
+            }
+            .switch label .lever:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: #f1f1f1;
+                border-radius: 1.3125rem;
+                left: -.3125rem;
+                top: -.1875rem;
+                box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, .4);
+                width: 1.3125rem;
+                height: 1.3125rem;
+                -webkit-transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+                -moz-transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+                -o-transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+                transition: left .3s ease, background .3s ease, box-shadow 1s ease;
+            }
+            .switch label input[type=checkbox]:checked+.lever:after {
+                left: 1.5rem;
+            }
+        }
+    }
+}
+
+#features {
+
+    padding-top: 50px;
+    #feature-row {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        .col-lg-2 .col-lg-4 {
+            line-height: 2;
+            text-align: center;
+        }
+        li.list-group-item {
+            text-align: left;
+            .feature-text {
+                padding-left: 10px;
+                font-weight: 700
+            }
+        }
+    }
+}
+
+#faq {
+    padding-top: 50px;
+    #faq-row {
+        padding-top: 40px;
+        .col-lg-12 {
+            line-height: 3;
+        }
+        .card-header {
+            background-color: white;
+            .qheader {
+                text-decoration: none;
+                .rotate-icon {
+                    float: right;
+                }
+            }
+        }
+        .card-body {
+            background-color: white;
+            color: black;
+        }
+    }
+    #gotmoreq {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        .col-lg-12 {
+            text-align: center
+        }
+    }
+}
+
+.fa-check {
+    color: green;
+}
+
+/*------------------------------------------------------
+| @Media Small Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (max-width: $ezSmallMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Regular Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezMobileMinWidth) and
+    (max-width: $ezMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Tablets
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezTabletMinWidth) and
+    (max-width: $ezTabletMaxWidth) {
+    #plans {
+        margin-top: 8px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Laptops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezLaptopMinWidth) and
+    (max-width: $ezLaptopMaxWidth) {
+    h3 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    #startPlanText {
+        font-size: 1.5rem;
+    }
+    #planRow {
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Desktops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezDesktopMinWidth) {
+}

@@ -1,0 +1,52 @@
+.mobileheadercontainer {
+    padding-top: 4px;
+    width: 100%;
+}
+
+.headercell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.logoimage {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.logotext {
+    font-size: 14pt;
+    font-weight: bold;
+    font-family: monospace;
+    color: #000000;
+}
+
+.catchphrase {
+    font-family: sans-serif;
+    font-size: 12pt;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+}
+
+div.headerSpacer {
+    height: 75px;
+}
+
+div.fullHeader {
+    background-color: #7CD0FD;
+    height: 55px;
+}
+
+label.mobileEzClockerLogoText {
+    margin-left: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #000000;
+}
+
+td.centerHeaderCell {
+    text-align: center;
+    vertical-align: middle;
+}

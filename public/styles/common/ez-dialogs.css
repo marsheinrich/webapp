@@ -1,0 +1,260 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Dialogs UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezDialog-container {
+    display: none;
+}
+
+.ezDialog-layout-container {
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto;
+    justify-content: stretch;
+    align-content: start;
+    grid-column-gap: 10px;
+}
+
+.ezDialog-icon {
+    margin: 10px;
+    height: 32px;
+    width: 32px;
+}
+
+.ezDialog-message-container {
+    overflow: auto;
+}
+
+/* -------------------------------------------------------------------
+| JQuery UI Dialog Overrides (default)                               |
+------------------------------------------------------------------- */
+
+.ezDialog-content-border-silver {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezDialog-no-close-button .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ezDialog-without-icon {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-content: start;
+    align-content: start;
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezDialog-with-icon {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: min-content auto;
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezDialog-icon-container {
+    display: grid;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    align-content: start;
+    justify-content: justify-content;
+    background-color: transparent;
+}
+
+img.ezDialog-icon {
+    padding: 0;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    border-style: none;
+}
+
+.ezDialog-content-container {
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-radius: 3px;
+}
+
+.ezDialog-content-silver-container_4px {
+    padding: 4px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezDialog-content-silver-container_8px {
+    padding: 8px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ez-dialog-shadow {
+    /* box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4); */
+    box-shadow: 0 0 4px 2px rgb(0 0 0 / 40%);
+}
+
+/*
+    @deprecated
+    Migrate to: ezDialog-content-container
+*/
+.ezDialog-content {
+    margin-top: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    border-style: none;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with 'ezDialog-' or
+    use ez-padding.css classes.
+*/
+.ui-corner-all {
+    border-radius: 3px;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with 'ezDialog-' or
+    use ez-layout-grid.css classes.
+*/
+.ez-dialog-no-scroll {
+    overflow: hidden;
+}
+
+/* Older Dialog Styles */
+/*
+    @deprecated
+    Migrate to classes starting with: ezDialog-
+*/
+div.ezClockerDialog {
+    display: none;
+}
+
+/*
+    @deprecated
+    Migrate to: ezDialog-icon
+*/
+img.ezClockerDialogImage {
+    height: 32px;
+    width: 32px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with: ezDialog-
+*/
+table.ezClockerDialogContent {
+    width: 100%;
+    border-style: none;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with: ezDialog-
+*/
+td.ezClockerDialogImageCell {
+    text-align: left;
+    vertical-align: top;
+    width: 34px;
+    border-style: none;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with: ezDialog-
+*/
+td.ezClockerDialogMessageCell {
+    vertical-align: top;
+    text-align: left;
+    border-style: none;
+}
+
+/*
+    @deprecated
+    Migrate to: ezDialog-without-icon or ezDialog-with-icon
+*/
+div.genericDialog {
+    padding: 8px;
+}
+
+/*
+    @deprecated
+    Migrate to classes starting with 'ezDialog-' or
+    use ez-text.css classes.
+*/
+.ezDialogTextInputContainerHighlight {
+    box-shadow: 0 0 15px 1px #ffcc66;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+
+}
+*/
+
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+
+}
+*/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+
+}
+*/

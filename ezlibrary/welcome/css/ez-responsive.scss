@@ -1,0 +1,108 @@
+/*
+Default Font Size is 14px on the HTML page, use the below scale to adjust font sizes.
+
+8pt = 0.571rem
+10pt = 0.714rem
+12pt = 0.857rem
+14pt = 1rem (base font size)
+18pt = 1.285rem
+20pt = 1.428rem
+22pt = 1.571rem
+24pt = 1.714rem
+28pt = 2rem
+30pt = 2.142rem
+32pt = 2.285rem
+*/
+
+// Responseive Font Sizes
+$ezResponsivePicoFontSize: 0.517rem;
+$ezResponsiveMicroFontSize: 0.714rem;
+$ezResponsiveSmallFontSize: 0.857rem;
+$ezResponsiveNormalFontSize: 1rem;
+$ezResponsiveMediumFontSize: 1.285rem;
+$ezResponsiveLargeFontSize: 1.428rem;
+$ezResponsiveExtraLargeFontSize: 1.571rem;
+$ezResponsiveHugeFontSize: 1.714rem;
+$ezResponsiveExtraHugeFontSize: 2rem;
+$ezResponsiveMassiveFontSize: 2.142rem;
+$ezResponsiveExtraMassiveFontSize: 2.285rem;
+
+// Responseive Font Sizes
+$ezResponsiveMarketingPicoFontSize: $ezResponsiveMicroFontSize;
+$ezResponsiveMarketingMicroFontSize: $ezResponsiveSmallFontSize;
+$ezResponsiveMarketingSmallFontSize: $ezResponsiveNormalFontSize;
+$ezResponsiveMarketingNormalFontSize: $ezResponsiveMediumFontSize;
+$ezResponsiveMarketingMediumFontSize: $ezResponsiveLargeFontSize;
+$ezResponsiveMarketingLargeFontSize: $ezResponsiveExtraLargeFontSize;
+$ezResponsiveMarketingExtraLargeFontSize: $ezResponsiveHugeFontSize;
+$ezResponsiveMarketingHugeFontSize: $ezResponsiveExtraHugeFontSize;
+$ezResponsiveMarketingExtraHugeFontSize: $ezResponsiveMassiveFontSize;
+$ezResponsiveMarketingMassiveFontSize: $ezResponsiveExtraMassiveFontSize;
+$ezResponsiveMarketingSuperFontSize: 2.428rem;
+
+// Responsive Normal Header and Title Font Sizes
+$ezResponsiveHeaderFontSize: $ezResponsiveExtraLargeFontSize;
+$ezResponsiveSubHeaderFontSize: $ezResponsiveMediumFontSize;
+$ezResponsiveTitleFontSize: $ezResponsiveLargeFontSize;
+$ezResponsiveLabelFontSize: $ezResponsiveMediumFontSize;
+
+// Responsive Marketing Header and Title Font Sizes
+$ezResponsiveMarketingHeaderFontSize: $ezResponsiveHugeFontSize;
+$ezResponsiveMarketingSubHeaderFontSize: $ezResponsiveHugeFontSize;
+$ezResponsiveMarketingTitleFontSize: $ezResponsiveHugeFontSize;
+
+$ezRespnsiveLogoWidth: 100%;
+$ezResponseLogoHeight: auto;
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezClocker Supported Media Screen Sizes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$ezSmallMobileMinWidth: 240;
+$ezSmallMobileMaxWidth: 319;
+$ezMobileMinWidth: 320px;
+$ezMobileMaxWidth: 480px;
+$ezTabletMinWidth: 481px;
+$ezTabletMaxWidth: 1023px;
+$ezLaptopMinWidth: 1024px;
+$ezLaptopMaxWidth: 1919px;
+$ezDesktopMinWidth: 1920px;
+
+/*------------------------------------------------------
+| @Media Small Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (max-width: $ezSmallMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Regular Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezMobileMinWidth) and
+    (max-width: $ezMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Tablets
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezTabletMinWidth) and
+    (max-width: $ezTabletMaxWidth) {
+}
+
+/*------------------------------------------------------
+| @Media for Laptops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezLaptopMinWidth) and
+    (max-width: $ezLaptopMaxWidth) {
+}
+
+/*------------------------------------------------------
+| @Media for Desktops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezDesktopMinWidth) {
+}
+

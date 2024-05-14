@@ -1,0 +1,17 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Migrate to CSS classes defined in /src/main/webapp/public/styles/common/ez-body.css
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */body {
+    min-width: 300px;
+    background-image: url("../../images/background/gray-background.png");
+    color: var(--ezClockerBlack);
+    font-family: var(--font-family);
+}
+
+/* DEPRECATED */.normalContentFont {
+    font-family: var(--font-family);
+    font-size: 12pt;
+}

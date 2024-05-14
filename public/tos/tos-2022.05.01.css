@@ -1,0 +1,73 @@
+.bannerBackground {
+    background-color: #75adde;
+    box-shadow: 0 0 2px 2px rgb(0 0 0 / 40%);
+}
+
+.ezBannerImage {
+    max-width: 1513px;
+    max-height: 288px;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: var(--ezTitleFontSize);
+    }
+    h3 {
+        font-size: var(--ezTopicFontSize);
+    }
+    h4 {
+        font-size: var(--ezFontSize);
+    }
+}
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: var(--ezTitleFontSize);
+    }
+    h3 {
+        font-size: var(--ezTopicFontSize);
+    }
+    h4 {
+        font-size: var(--ezFontSize);
+    }
+}
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: var(--ezTitleFontSize);
+    }
+    h3 {
+        font-size: var(--ezTopicFontSize);
+    }
+    h4 {
+        font-size: var(--ezFontSize);
+    }
+}
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+    h1 {
+        font-size: var(--ezTitleFontSize);
+    }
+    h3 {
+        font-size: var(--ezTopicFontSize);
+    }
+    h4 {
+        font-size: var(--ezFontSize);
+    }
+}

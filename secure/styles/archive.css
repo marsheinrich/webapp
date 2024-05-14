@@ -1,0 +1,128 @@
+/* === DEPRECATED: No longer maintained. Switch to /secure/archive/ez-employee-archive.css === */
+table.headerTable {
+    width: 100%;
+}
+
+.headerContent {
+    margin-top: 10px;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    background-color: rgb(255 255 255 / 40%);
+}
+
+.archiveLists {
+    margin-top: 8px;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    background-color: rgb(255 255 255 / 40%);
+}
+
+div.headerButtonContainer {
+    float: right;
+}
+
+div.pageContent {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px #C0C0C0;
+}
+
+table.archiveContentTable {
+    width: 100%;
+}
+
+td.listColumn {
+    width: 48%;
+    text-align: left;
+    vertical-align: top;
+}
+
+td.listContainer {
+    vertical-align: top;
+}
+
+div.availableSlots {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+div.activeEmployeeList {
+    min-height: 120px;
+    overflow: auto;
+    border-style: solid;
+    border-width: 2px;
+    background-size: 16px 16px;
+    border-radius: 4px;
+
+    /* border-color: var(--ezBorderBabyBlue);
+    background-color: var(--ezLightBabyBlue); */
+    border-color: #2CACF1;
+    background-color: #E8F7FF;
+}
+
+div.archivedEmployeeList {
+    min-height: 120px;
+    overflow: auto;
+    border-style: solid;
+    border-width: 2px;
+    background-size: 16px 16px;
+    border-radius: 4px;
+
+    /* border-color: var(--ezBorderSilver);
+    background-color: var(--ezSilver); */
+    border-color: #878686;
+    background-color: #e0e0e0;
+}
+
+div.activeItem {
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+
+    /* border-color: var(--ezBorderYellow);
+    background-color: var(--ezClockerYellow);
+    color: var(--ezYelloContainerText); */
+    border-color: #9B7800;
+    background-color: #ffc500;
+    color: #000000;
+}
+
+div.archiveItem {
+    border-style: solid;
+    border-width: 1px;
+    margin: 10px;
+    padding-left: 8px;
+    font-weight: normal;
+
+    /* color: var(--ezGrayContainerText);
+    border-color: var(--ezBorderGray);
+    background-color: var(--ezClockerGray); */
+    color: #ffffff;
+    border-color: #323437;
+    background-color: #6d6e70;
+}
+
+table.itemTable {
+    width: 100%;
+}
+
+td.labelColumn {
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.buttonColumn {
+    padding: 0;
+    vertical-align: middle;
+    text-align: right;
+}

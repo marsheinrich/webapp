@@ -1,0 +1,252 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Table UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    /* Default Table Background */
+    --ezTableBackgroundColor: var(--ezClockerWhite);
+
+    /* Default Table Font */
+    --ezTableFontColor: var(--ezFontColor);
+    --ezTableFontSize: 12pt;
+    --ezTableFontWeight: var(--ezFontWeight);
+    --ezTableFontFamily: var(--ezTextFontFamily);
+
+    /* Default Table Border */
+    --ezTableBorderColor: var(--ezClockerGray);
+    --ezTableBorderSize: 1px;
+    --ezTableBorderStyle: solid;
+
+    /* Header Cells */
+    --ezTableHeaderCellBackgroundColor: var(--ezClockerNavy);
+    --ezTableHeaderCellFontColor: var(--ezClockerWhite);
+    --ezTableHeaderCellFontWeight: bold;
+}
+
+/* Table Styles */
+table.ez-table {
+    background-color: var(--ezTableBackgroundColor);
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-spacing: 0;
+}
+
+table.ez-table-transparent-full-width {
+    width: 100%;
+    padding: 2px;
+    background-color: transparent;
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-spacing: 0;
+}
+
+table.ez-table-full-width {
+    width: 100%;
+    padding: 2px;
+    background-color: var(--ezTableBackgroundColor);
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-spacing: 0;
+}
+
+table.ez-table-full-width-transparent {
+    width: 100%;
+    padding: 2px;
+    background-color: transparent;
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-spacing: 0;
+}
+
+/* Table Body Styles */
+tbody.ez-table-body {
+    background-color: var(--ezTableBackgroundColor);
+    padding: 2px;
+    border-color: var(--ezTableBorderColor);
+    border-style: solid;
+    border-width: 1px;
+}
+
+tr.ez-table-row {
+    padding: 0;
+    border-style: none;
+}
+
+td.ez-table-cell {
+    padding: 4px;
+    background-color: var(--ezTableBackgroundColor);
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-color: var(--ezTableBorderColor);
+    border-width: var(--ezTableBorderSize);
+    border-style: var(--ezTableBorderStyle);
+}
+
+td.ez-table-cell-max-width-50 {
+    padding: 4px;
+    max-width: 50%;
+    background-color: var(--ezTableBackgroundColor);
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-color: var(--ezTableBorderColor);
+    border-width: var(--ezTableBorderSize);
+    border-style: var(--ezTableBorderStyle);
+}
+
+td.ez-table-cell-min-width-50 {
+    padding: 4px;
+    min-width: 50%;
+    background-color: var(--ezTableBackgroundColor);
+    color: var(--ezTableFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-color: var(--ezTableBorderColor);
+    border-width: var(--ezTableBorderSize);
+    border-style: var(--ezTableBorderStyle);
+}
+
+.ez-cell-align-top-left {
+    vertical-align: top;
+    text-align: left;
+}
+
+.ez-cell-align-middle-center {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ez-cell-align-middle-left {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.ez-cell-vertical-align-top {
+    vertical-align: top;
+}
+
+.ez-cell-vertical-align-bottom {
+    vertical-align: bottom;
+}
+
+.ez-cell-vertical-align-middle {
+    vertical-align: middle;
+}
+
+.ez-cell-horizontal-align-left {
+    text-align: left;
+}
+
+.ez-cell-horizontal-align-center {
+    text-align: center;
+}
+
+.ez-cell-horizontal-align-right {
+    text-align: right;
+}
+
+td.ez-cell-width-33 {
+    width: 33%;
+}
+
+/* Table Header Styles */
+thead.ez-sticky-table-header {
+    position: sticky;
+}
+
+thead.ez-table-header {
+    padding: 4px;
+    background-color: var(--ezTableHeaderCellBackgroundColor);
+    color: var(--ezTableHeaderCellFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableHeaderCellFontWeight);
+}
+
+th.ez-table-cell-header {
+    padding: 4px;
+    background-color: var(--ezTableHeaderCellBackgroundColor);
+    color: var(--ezTableHeaderCellFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableHeaderCellFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+th.ez-table-cell-header-left-align {
+    padding: 4px;
+    background-color: var(--ezTableHeaderCellBackgroundColor);
+    color: var(--ezTableHeaderCellFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableHeaderCellFontWeight);
+    font-family: var(--ezTableFontFamily);
+    text-align: left;
+    vertical-align: top;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+th.ez-table-cell-header-fixed {
+    padding: 4px;
+    position: sticky;
+    top: 0;
+    background-color: var(--ezTableHeaderCellBackgroundColor);
+    color: var(--ezTableHeaderCellFontColor);
+    font-size: var(--ezTableFontSize);
+    font-weight: var(--ezTableHeaderCellFontWeight);
+    font-family: var(--ezTableFontFamily);
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+    border-style: solid;
+}
+
+td.ez-table-cell-width-50 {
+    width: 50%;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/

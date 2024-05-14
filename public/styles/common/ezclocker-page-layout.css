@@ -1,0 +1,140 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Legacy 2015 Styles
+| If possible, migrate to classes defined in non-legacy css files.
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+div.ezClockerHeader2015 {
+    z-index: 9999;
+    transition: 200ms ease-in-out;
+    transform-origin: center top;
+    transform: none;
+    width: 100%;
+    top: -2px;
+    left: -2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: fixed;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 32pt;
+}
+
+div.ezClockerHeader2015NonFixed {
+    transition: 200ms ease-in-out;
+    transform-origin: center top;
+    transform: none;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 32pt;
+    color: var(--ezClockerBlack);
+    background-color: rgb(255 255 255 / 40%);
+    border-bottom-color: var(--ezClockerBlack);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+div.ezClockerHeaderTransparent2015 {
+    /* Full CSS3 Compliant Browsers */
+    transition: 200ms ease-in-out;
+    transform: scale(0.75, 0.75);
+    transform-origin: center top;
+    width: 100%;
+    top: -2px;
+    left: -2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: fixed;
+    background-color: rgb(15 71 119 / 80%);
+    color: var(--ezClockerWhite);
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 32pt;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+table.ezClockerHeader2015 {
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 0;
+    width: 100%;
+}
+
+td.ezClockerHeader2015 {
+    border-style: none;
+    text-align: left;
+    vertical-align: middle;
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 32pt;
+}
+
+td.ezclockerHeader2015Right {
+    vertical-align: middle;
+    text-align: right;
+}
+
+img.ezClockerHeader2015 {
+    max-width: 250px;
+    border-style: none;
+    padding: 8px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+img.ezClockerEmployerHeader2015 {
+    padding: 2px;
+    margin: 0;
+    border-style: none;
+    max-width: 110px;
+    max-height: 40px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+a.ezClockerHeader2015 {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--ezClockerWhite);
+}
+
+div.ezClockerMainMenu2015 {
+    font-weight: bold;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+    border-top-width: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+div.ezClockerMainContent2015 {
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    overflow: auto;
+}
+
+div.fullPageContent2015 {
+    margin: 0;
+    background-color: var(--ezClockerWhite);
+    padding: 0;
+    overflow: auto;
+}
+
+.notVisible {
+    display: none;
+}

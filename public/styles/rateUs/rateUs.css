@@ -1,0 +1,95 @@
+/*
+    Used in the following:
+    (updated: 2021.12.11)
+
+    rateUs.html
+*/
+
+.rateUsBody {
+    background-color: #0f4776;
+    background-image: none;
+}
+
+div.rateUsMainDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.rateUsMainBoxDivStyle {
+    text-align: center;
+    margin: 110px 100px;
+    background-color: white;
+    padding: 22px
+}
+
+.rateUsThanksForInputStyle {
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+.rateUsInputStarRatingTextStyle {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: #f68b29;
+}
+
+.rateUsDoneButtonStyle {
+    font-size: 24px;
+    margin-top: 30px;
+    float: right;
+}
+
+.ezClockerLogoText {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 48pt;
+    color: #000000;
+    padding-bottom: 3px;
+}
+
+.ezClockerLogoImage {
+    width: 60px;
+    height: 60px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 4px;
+    padding: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+[name^='rating'] {
+    display: none;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.empty {
+    color: lightgray;
+}
+
+.orange {
+    color: #f68b29;
+}
+
+.fa-star {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    .rateUsBody {
+        background-color: white;
+        background-image: none;
+    }
+
+    .rateUsMainBoxDivStyle {
+        margin: 0;
+    }
+
+}

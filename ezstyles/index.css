@@ -1,0 +1,12 @@
+.ezBox {
+    margin: 9px;
+    width: 200px;
+    height: 200px;
+    background-color: var(- -ezClockerOrange);
+    border-style: solid;
+    border-color: var(- -ezClockerGray);
+}
+
+.ezButtonBox {
+    margin: 8px;
+}

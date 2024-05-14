@@ -1,0 +1,110 @@
+body.index {
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+table.mobileContentTable {
+    width: 100%;
+}
+
+td.mobileContentCell {
+    width: 25%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div.bannerInfo {
+    background-image: url("../../images/background/index_banner_optimized.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    min-width: 1200px;
+    max-height: 800px;
+    min-height: 800px;
+}
+
+div.bannerText {
+    clear: left;
+    width: 100%;
+    font-family: monospace;
+    color: #FF9933;
+    font-size: 38pt;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    padding: 10px;
+}
+
+div.bannerText2 {
+    color: #000000;
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 10px;
+}
+
+table.signUpTable {
+    border-collapse: collapse;
+}
+
+table.accountTypeTable {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+div.bannerScreenShot {
+    margin-top: 35px;
+    float: right;
+}
+
+a.siteMapLink {
+    font-size: 10pt;
+    color: #000000;
+    text-decoration: none;
+}
+
+a.siteMapLink:hover {
+    font-size: 10pt;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.siteMapLinks {
+    text-align: center;
+    width: 100%;
+}
+
+div.siteMap {
+    width: 100%;
+}
+
+a.forgotPassLink {
+    font-weight: normal;
+    color: #0000c0;
+    font-size: 8pt;
+}
+
+a.forgotPassLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+td.forgotPasswordCell {
+    text-align: left;
+    vertical-align: top;
+    padding-left: 4px;
+}
+
+div.siteMapLinks {
+    margin-top: 10px;
+    text-align: center;
+    font-size: x-small;
+}
+
+div.version {
+    color: #c0c0c0;
+    padding: 10px;
+    text-align: right;
+    font-size: x-small;
+}

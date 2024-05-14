@@ -1,0 +1,405 @@
+/*
+    Used in the following:
+    (updated: 2021.02.22)
+
+    signin.html
+*/
+.ezPasswordShowHideImg {
+    height: 24px;
+    padding-top: 2px
+}
+
+div.ezFixedDialogBox {
+    margin: 25%;
+    margin-top: 3%;
+    padding: 30px;
+    background-color: rgba(250, 250, 255, 0.85);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--ezClockerNavy);
+    border-radius: 3px;
+}
+
+.ezFixedDialogLogoContainer {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+.ezFixedDialogLogoImage {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.ezFixedDialogSubBanner {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: normal;
+    color: #808080;
+}
+
+.ezFixedDialogBanner {
+    margin-bottom: 10px;
+    color: #0f4777;
+    font-size: 48pt;
+    font-weight: bold;
+
+}
+
+.ezFixedDialogInputLabel {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.ezFixedDialogInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 18pt;
+}
+
+.ezDialogInputTitle {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+input.ezDialogTextInput {
+    width: 100%;
+    font-size: 18pt;
+}
+
+/** Password Viewer Styles **/
+
+img.viewPasswordImage {
+    display: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+td.passwordPeekContainer {
+    width: 24px;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.passwordPeek {
+    text-align: left;
+    padding: 4px;
+
+    /* 	background-color: #0f4777; */
+    background-color: rgb(15 71 119 / 40%);
+    color: #ffffff;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 12pt;
+    word-wrap: break-word;
+    position: absolute;
+
+    /* 	-webkit-box-shadow: 0px 0px 2px 2px rgba(109,110,112,1); */
+
+    /* 	-moz-box-shadow: 0px 0px 2px 2px rgba(109,110,112,1); */
+
+    /* 	box-shadow: 0px 0px 2px 2px rgba(109,110,112,1); */
+
+    /* 	border-radius: 4px; */
+}
+
+div.passwordPeekBlank {
+    text-align: left;
+    font-style: italic;
+}
+
+.ui-effects-transfer {
+    background-color: rgb(15 71 119 / 25%);
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+pre.visualPasswordSpace {
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-width: 1px;
+    border-color: #7cd0fd;
+    padding: 0;
+    margin: 0;
+}
+
+div.peekCountDown {
+    text-align: center;
+    display: hidden;
+    color: #0f4777;
+    font-size: 12pt;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+div.signInBox {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: rgb(250 250 250 / 100%);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 35px;
+}
+
+td.signUpCell {
+    padding-top: 20px;
+    text-align: center;
+}
+
+td.inputCell {
+    padding-bottom: 8px;
+}
+
+td.signInLabel {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+td.buttonCell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.signInBanner {
+    text-align: center;
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+div.errorBox {
+    text-align: center;
+    color: red;
+    font-size: 14pt;
+    display: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    Animated Sign-In Backgrounds
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezSignup-animated-gradient-background
+        @-webkit-keyframes ezSignup-animated-gradient-background-keyframes
+        @keyframes ezSignup-animated-gradient-background-keyframes
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        all
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezSignup-animated-gradient-background {
+    width: 100%;
+    height: 100vh;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg,
+            rgba(255, 153, 0, 0.9) 0%,
+            rgba(255, 153, 0, 0.9) 25%,
+            rgba(255, 153, 0, 0.9) 50%,
+            var(--ezClockerWhite) 100%);
+    -webkit-animation: ezSignup-animated-gradient-background-keyframes 20s ease infinite;
+    animation: ezSignup-animated-gradient-background-keyframes 20s ease infinite;
+}
+
+@-webkit-keyframes ezSignup-animated-gradient-background-keyframes {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes ezSignup-animated-gradient-background-keyframes {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezSignin-animated-blob-background-part1::before
+        @keyframes ezSignin-animated-blob-background-part1-shape
+        .ezSignin-animated-blob-background-part2::before
+        @keyframes ezSignin-animated-blob-background-part2-shape
+        .ezSignin-animated-blob-background-part3::before
+        @keyframes ezSignin-animated-blob-background-part3-shape
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezSignin-animated-blob-background-part1::before {
+    scale: 75%;
+    position: absolute;
+    content: "";
+    left: 10%;
+    top: 5%;
+    width: 450px;
+    height: 450px;
+    background: rgba(15, 71, 119, 0.3);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: ezSignin-animated-blob-background-part1-shape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: ezSignin-animated-blob-background-part1-shape 5s linear infinite;
+}
+
+@keyframes ezSignin-animated-blob-background-part1-shape {
+
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezSignin-animated-blob-background-slider-thumb::before
+        @keyframes ezSignin-animated-blob-background-slider-shape
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        all
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezSignin-animated-blob-background-part2::before {
+    scale: 75%;
+    position: absolute;
+    content: "";
+    left: 35%;
+    top: 40%;
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 153, 0, 0.5);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: ezSignin-animated-blob-background-part2-shape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: ezSignin-animated-blob-background-part2-shape 5s linear infinite;
+}
+
+@keyframes ezSignin-animated-blob-background-part2-shape {
+
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezSignin-animated-blob-background
+        .ezSignin-animated-blob-background-slider-thumb::before
+        @keyframes ezSignin-animated-blob-background-slider-shape
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        all
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezSignin-animated-blob-background-part3::before {
+    scale: 75%;
+    position: absolute;
+    content: "";
+    left: 60%;
+    top: 15%;
+    width: 450px;
+    height: 450px;
+    background: rgba(109, 110, 112, 0.5);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: ezSignin-animated-blob-background-part3-shape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: ezSignin-animated-blob-background-part3-shape 5s linear infinite;
+}
+
+@keyframes ezSignin-animated-blob-background-part3-shape {
+
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}

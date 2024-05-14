@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/apple-touch-icon.png" sizes="180x180" rel="apple-touch-icon">
+    <link href="/favicon-32x32.png" sizes="32x32" rel="icon" type="image/png">
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" color="#5bbad5" rel="mask-icon"  >
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/public/javascript/jquery/jquery-ui-1.10.3/css/jquery-ui-1.10.3.min.css" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/tcs-common-black.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/public/javascript/jquery/jquery-ui-1.10.3/js/jquery-ui-1.10.3.min.js"></script>
+    <script src="/public/javascript/google-analytics.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ezclocker-block-user-actions.js?v=r72-3"></script>
+    <script src="/public/javascript/ezclocker-constants.js?v=r72-3"></script>
+    <script src="/public/javascript/tcs-common.js?v=r72-3"></script>
+    <script src="/public/javascript/jquery/jquery-tcs-common.js?v=r72-3"></script>
+    <script src="/public/webcomponents/marketing/google-remarketing.js?v=r72-3"></script>
+    <script>
+        $('document').ready(function () {
+            $('.bodyDiv').fadeIn("slow");
+            sizeDivs();
+            loadAnalytics("../");
+        });
+
+        $(window).resize(function () {
+            sizeDivs();
+        });
+
+        function sizeDivs() {
+            $('div#filler').height($(document).height());
+            sizeContentToWindow($('div#headerDiv'), $('div#menuDiv'),
+                $('div#contentDiv'), $('div#footerDiv'), $('body'));
+        }
+    </script>
+    <title>ezClocker</title>
+</head>
+
+<body class="body">
+    <div class="bodyDiv">
+        <div class="header" id="headerDiv">
+            <img class="logoImage" src="./images/logos/ezclocker_32x32.png" alt="ezClocker" />
+            <label class="logo">ezClocker</label>
+        </div>
+        <div id="menuDiv"></div>
+
+        <div id="contentDiv">
+            <h1>ezClocker Careers</h1>
+        </div>
+
+    </div>
+</body>
+
+</html>

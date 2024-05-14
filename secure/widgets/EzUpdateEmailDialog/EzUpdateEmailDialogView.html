@@ -1,0 +1,49 @@
+<style>
+    .no-close .ui-dialog-titlebar-close {
+        display: none
+    }
+
+    div.updateEmailDialog {
+        font-size: 14pt;
+    }
+
+    div.updateEmailInfo {
+        padding: 8px;
+    }
+
+    div.updateEmailContainer {
+        padding: 8px;
+        background-color: #e0e0e0;
+    }
+
+    div.updateEmailCurrentLabel {
+        font-size: 12pt;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    div.updateEmailCurrent {
+        font-weight: bold;
+    }
+
+    input.updateEmailNew {
+        width: 100%;
+    }
+</style>
+
+<div id="_EZC_UpdateEmailDialog" class="updateEmailDialog" title="Update Email">
+    <div id="_EZC_UpdateEmailInfo" class="updateEmailInfo">After updating the email address, the employee will
+        need to use the updated email address when logging into ezClocker. ezClocker will send a notification to the
+        original and new email address informing them of the change.</div>
+    <div id="_EZC_UpdateEmailOriginal" class="updateEmailCurrentLabel">
+        Current Email Address:
+        <div id="_EZC_UpdateEmailCurrent" class="updateEmailCurrent"></div>
+    </div>
+    <div id="_EZC_UpdateEmailContainer" class="updateEmailContainer">
+        <div id="_EZC_UpdateEmailLabel" class="updateEmailLabel">Enter the new email address below:</div>
+        <div id="_EZC_UpdateEmailInputs" class="updateEmailInputs">
+            <input type="hidden" id="_EZC_UpdateEmailCurrent" /> <input type="hidden" id="_EZC_UpdateEmailUserId" />
+            _EZC_UpdateEmailUserId <input type="text" id="_EZC_UpdateEmailNew" class="updateEmailNew" />
+        </div>
+    </div>
+</div>

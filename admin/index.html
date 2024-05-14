@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-admin-page.bundle.js?v=r72-3"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $("form#removeEmployeeForm").submit(removeEmployeeSubmit);
+                $("form#removeEmployerForm").submit(removeEmployerSubmit);
+                $("form#listDeveloperEmployersForm").submit(listDeveloperEmployersSubmit);
+                $("form#addEmailTemplateForm").submit(addEmailTemplateSubmit);
+                $("form#updateEmailTemplateForm").submit(updateEmailTemplateSubmit);
+                $("form#removeEmailTemplateForm").submit(removeEmailTemplateSubmit);
+                $("form#getEmailTemplateForm").submit(getEmailTemplateSubmit);
+                $("form#_ForceEmailQueue").submit(forceEmailQueueSubmit);
+            });
+
+        let testEmailPayLoad = "";
+        let lastUrl = "";
+
+        function sendTestEmail() {
+            lastUrl = "../v1/_email/template/test";
+            let data = $("#_EmailTestDataFields").val();
+            testEmailPayLoad = '{' + '"templateName":"' + $("#_EmailTestName").val() + '",' + '"recipient":"' +
+                $("#_EmailTestRecipient").val() + '",' + '"dataFields":' + data.trim() + '}';
+            $("#_TestEmailResults").html('URL: ' + lastUrl + '<br/>' + 'Request Payload:<br/>' + testEmailPayLoad);
+            ezPostJSON(lastUrl, testEmailPayLoad, sendTestEmailSuccess, handelError);
+        }
+
+        function sendTestEmailSuccess(result, statusCode, jqXHR) {
+            $("#_TestEmailResults").html('URL: ' + lastUrl + '<br/>' + 'Request Payload:<br/>' +
+                testEmailPayLoad + '<br/><br/>' + 'Response:<br/>' + ezApi.ezToJson(result, 3, true));
+        }
+        // Force Email Queue
+        function forceEmailQueueSubmit(event) {
+            postForm(event, this, forceEmailQueueSuccess, handelError);
+        }
+
+        function forceEmailQueueSuccess(result, statusCode, jqXHR) {
+            alert("Queue is now processing.");
+        }
+        // Get email template
+        function getEmailTemplateSubmit(event) {
+            $("div#getEmailTemplateResults")
+                .html("Processing results...");
+            postForm(event, this, getEmailTemplateSuccess, handelError);
+        }
+
+        function getEmailTemplateSuccess(result, statusCode, jqXHR) {
+            $("div#getEmailTemplateResults")
+                .html(result.toString());
+        }
+        // Remove email template
+        function removeEmailTemplateSubmit(event) {
+            $("div#removeEmailTemplateResults")
+                .html("Processing results...");
+            postForm(event, this, removeEmailTemplateSuccess, handelError);
+        }
+
+        function removeEmailTemplateSuccess(result, statusCode, jqXHR) {
+            $("div#removeEmailTemplateResults")
+                .html(result.toString());
+        }
+        // Update email template
+        function updateEmailTemplateSubmit(event) {
+            $("div#updateEmailTemplateResults")
+                .html("Processing results...");
+            postForm(event, this, updateEmailTemplateSuccess, handelError);
+        }
+
+        function updateEmailTemplateSuccess(result, statusCode, jqXHR) {
+            $("div#updateEmailTemplateResults")
+                .html(result.toString());
+        }
+
+        function addEmailTemplateSubmit(event) {
+            $("div#addEmailTemplateResults")
+                .html("Processing results...");
+            postForm(event, this, addEmailTemplateSuccess, handelError);
+        }
+
+        function addEmailTemplateSuccess(result, statusCode, jqXHR) {
+            $("div#addEmailTemplateResults")
+                .html(result.toString());
+        }
+        // listDeveloperEmployers
+        function listDeveloperEmployersSubmit(event) {
+            $("div#listDeveloperEmployersResults")
+                .html("Processing results...");
+            postForm(event, this, listDeveloperEmployersSuccess, handelError);
+        }
+
+        function listDeveloperEmployersSuccess(result, statusCode, jqXHR) {
+            $("div#listDeveloperEmployersResults")
+                .html(result.toString());
+        }
+        // remove Employer
+        function removeEmployerSubmit(event) {
+            event.preventDefault();
+            $("div#removeEmployerResults")
+                .html("Processing results...");
+            // Get Form Values
+            let employerId = $(this)
+                .find("#employerId")
+                .val();
+            // Build URL
+            let url = this.action + '/' + employerId
+            postUrlForm(event, this, url, removeEmployerSuccess, handelError);
+        }
+
+        function removeEmployerSuccess(result, statusCode, jqXHR) {
+            $("div#removeEmployerResults")
+                .html(result.toString());
+        }
+        // remove employee
+        function removeEmployeeSubmit(event) {
+            event.preventDefault();
+            $("div#removeEmployeeResults")
+                .html("Processing results...");
+            // Get Form Values
+            let employerId = $(this)
+                .find("#employerIdOfEmployee")
+                .val();
+            let employeeId = $(this)
+                .find("#employeeId")
+                .val();
+            // Build URL
+            let url = this.action + '/' + employerId + '/' + employeeId;
+            postUrlForm(event, this, url, removeEmployeeSuccess, handelError);
+        }
+        function removeEmployeeSuccess(result, statusCode, jqXHR) {
+            $("div#removeEmployeeResults").html(result.toString());
+        }
+
+        function getPromoCodeUrl() {
+            ezGetJSON("../special/server/domain", "", generatePromoUrl, handelError, true);
+        }
+        function generatePromoUrl(result, statusCode, jqXHR) {
+            let code = $("#_PromoCode").val();
+            let data = $("#_PromoData").val();
+            let target = $("#_PromoTarget").val();
+
+            let domain = result.message;
+            let promoUrl = domain + '/promo?code=' + encodeURIComponent(code);
+
+            if (data.length != 0) {
+                promoUrl += '&data=' + encodeURIComponent(data);
+            }
+
+            if (target.length != 0) {
+                promoUrl += '&url=' + encodeURIComponent(target);
+            }
+
+            $("#_PromoUrlResults").html('<a href="' + promoUrl + '" target="_new">' + promoUrl + '</a>');
+        }
+
+        function deleteAccount() {
+            let userName = ezUi.ezGetInputValue('ezAdminDeleteAccountUserName');
+            if (ezApi.ezStringHasLength(userName)) {
+                let url = ezApi.ezclocker.nav.ezGetInternalApiUrl('account?username=' + userName);
+                ezApi.ezclocker.http.ezDelete(url).then(
+                    function (response) {
+                        if (0 !== response.errorCode) {
+                            ezUi.ezContent('ezAdminDeleteUserAccountResults', ezApi.ezToJson(response, 3));
+                            return;
+                        }
+                        ezUi.ezContent('ezAdminDeleteUserAccountResults', 'Account Deleted');
+                    },
+                    function (eResponse) {
+                        ezUi.ezContent('ezAdminDeleteUserAccountResults', ezApi.ezToJson(eResponse, 3));
+                    });
+            }
+        }
+
+        function createEmployeeInvite() {
+            let userFullName = ezApi.ezclocker.ezUi.ezGetInputValue('ezAdminCreateInviteFullUserName');
+
+            let userEmail = ezApi.ezclocker.ezUi.ezGetInputValue('ezAdminCreateInviteEmailId');
+
+            if (ezApi.ezStringHasLength(userFullName) && ezApi.ezStringHasLength(userEmail)) {
+                let url = `/_api/v1/admin/create-employee-invite?full-name=${userFullName}&user-name=${userEmail}`;
+
+                ezApi.ezclocker.ezHttpHelper.ezGet(url)
+                    .then(
+                        function (response) {
+                            ezApi.ezclocker.ezUi.ezSetInputValue('ezAdminCreateInviteFullUserName', '');
+
+                            ezApi.ezclocker.ezUi.ezSetInputValue('ezAdminCreateInviteEmailId', '');
+
+                            if (200 !== response.errorCode) {
+                                ezApi.ezclocker.ezUi.ezContent(
+                                    'ezAdminCreateEnInviteResults',
+                                    ezApi.ezToJson(response.message, 3));
+
+                                return;
+                            }
+
+                            ezApi.ezclocker.ezUi.ezContent(
+                                'ezAdminCreateEnInviteResults',
+                                EzHtml.build`
+                                    Invite created for ${userFullName}: ${response.message}`);
+                        },
+                        function (eResponse) {
+                            ezApi.ezclocker.ezUi.ezSetInputValue('ezAdminCreateInviteFullUserName', '');
+
+                            ezApi.ezclocker.ezUi.ezSetInputValue('ezAdminCreateInviteEmailId', '');
+
+                            ezApi.ezclocker.ezUi.ezContent(
+                                'ezAdminCreateEnInviteResults',
+                                ezApi.ezToJson(eResponse, 3));
+                        });
+            } else {
+                ezApi.ezclocker.ezUi.ezContent(
+                    'ezAdminCreateEnInviteResults',
+                    'Username and email id are both required. Please enter both');
+            }
+        }
+
+        function moveEmployeeToEmployer() {
+            document.getElementById('moveEmployeeToEmployerSubmitButton').disabled = true;
+            document.getElementById('moveEmployeeToEmployerSubmitButton').hidden = true;
+            let employeeEmail = ezUi.ezGetInputValue('ezAdminBulkMoveEmployeesFromEmployer');
+            let toEmployerEmailId = ezUi.ezGetInputValue('ezAdminBulkMoveEmployeesToEmployer');
+            if (ezApi.ezStringHasLength(employeeEmail) && ezApi.ezStringHasLength(toEmployerEmailId)) {
+                ezUi.ezContent('ezAdminBulkMoveEmployeesResults', 'Please wait..... Transaction in process. Employee ' + employeeEmail + ' being moved to ' + toEmployerEmailId);
+                let url = ezApi.ezclocker.nav.ezGetInternalApiUrl('_admin/data/migration/move/employee' + '?employeeEmail=' + employeeEmail + '&destination-employerEmail=' + toEmployerEmailId);
+                ezApi.p.http.get(url).then(
+                    function (response) {
+                        ezUi.ezSetInputValue('ezAdminBulkMoveEmployeesFromEmployer', '');
+                        ezUi.ezSetInputValue('ezAdminBulkMoveEmployeesToEmployer', '');
+                        document.getElementById('moveEmployeeToEmployerSubmitButton').disabled = false;
+                        document.getElementById('moveEmployeeToEmployerSubmitButton').hidden = false;
+                        if (0 !== response.errorCode) {
+                            ezUi.ezContent('ezAdminBulkMoveEmployeesResults', ezApi.ezToJson(response, 3));
+                            return;
+                        }
+                        ezUi.ezContent('ezAdminBulkMoveEmployeesResults', 'Employee ' + employeeEmail + ' moved to ' + toEmployerEmailId);
+                    },
+                    function (eResponse) {
+                        ezUi.ezSetInputValue('ezAdminBulkMoveEmployeesFromEmployer', '');
+                        ezUi.ezSetInputValue('ezAdminBulkMoveEmployeesToEmployer', '');
+                        document.getElementById('moveEmployeeToEmployerSubmitButton').disabled = false;
+                        document.getElementById('moveEmployeeToEmployerSubmitButton').hidden = false;
+                        ezUi.ezContent('ezAdminBulkMoveEmployeesResults', ezApi.ezToJson(eResponse, 3));
+                    });
+            } else {
+                ezUi.ezContent('ezAdminBulkMoveEmployeesResults', ezApi.ezToJson('Employee email id and employer email id are both required. Please enter both', 3));
+            }
+        }
+
+        function handelError(jqXHR, status, error) {
+            alert(error);
+        }
+    </script>
+    <title>ezClocker Admin Services</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="ezClockerHeader2015NonFixed bottomShadow ezAutoCol_50x50">
+        <a href="#" onclick="ezApi.ezclocker.ezNavigation.ezSignOut();">
+            <img src="/public/images/logos/ezclocker_logo_2015.svg" class="ezClockerHeader2015" alt="ezClocker" />
+        </a>
+        <div id="EzAdminActionsContainer" class="ezAutoCol_A ezPad4 ezGrid-vertical-align-middle ezGrid-align-right">
+            <a id="EzAdminSignoutLink" class="ezButton-link-ezClockerOrange" href="#"
+                onclick="ezApi.ezclocker.ezNavigation.ezSignOut()">
+                Sign Out
+            </a>
+        </div>
+    </div>
+
+    <div id="EzAdminPageContent" class="ezPageContent">
+        <div id="EzAdminPageContentBlock" class="ezPageContentBlock">
+            <h1 class="ezH1">
+                EzClocker Admin Services
+            </h1>
+            <div id="EzAdminActionsContainer" class="ezContiner-ezClockerNavy-pad8">
+                <h3 class="ezH3-ezClockerWhite ezBottomMargin_8">
+                    Admin Actions
+                </h3>
+                <div id="EzAdminActionButtonsContainer"
+                    class="ezContainer-alpha-white-silver-border-8 ezAutoCol_AxAxA ezGridGap_4 ezGrid-align-left ezGrid-vertical-align-middle">
+                    <a id="EzAdminViewRecycledEmployeesLink" href="#EzAdminAction_ViewEmployerRecycledEmployees" class="ezButton-link-ezClockerHotGreen">
+                        View Employer Recycled Employees
+                    </a>
+                    <a id="EzAdminReloadSubscriptionPlanCacheLink" class="ezButton-link-ezClockerHotGreen" href="#"
+                        onclick="ezApi.ezclocker.ezAdminViewController.ezReloadSubscriptionPlanCache()">
+                        Reload Subscription Plan Cache
+                    </a>
+                    <div style="background-color:#000000;height:80%;width:2px;"></div>
+                    <a id="EzAdminRestoreRecycledEmployeeLink" href="#EzAdminAction_RestoreRecycledEmployee" class="ezButton-link-ezClockerHotGreen">
+                        Jump to Restore Recycled Employee
+                    </a>
+                </div>
+            </div>
+
+            <div id="EzActionsGroupContainer_RecycledEmployees" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                    Hijack Account Actions
+                </h1>
+                <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- WHO IS HIJACKED  -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div style="background-color:#E8F7FF" class="TestBox">
+                        <h1 class="warningText">
+                            Who is Hijacked?
+                        </h1>
+                        <button onclick="ezApi.ezclocker.ezAdminViewController.ezViewHijacks()">
+                            View Hijacked Accounts...
+                        </button>
+                        <div style="background-color: #ffc500" class="ResultsBox" id="_WhoIsHijacked">
+                            results appear here
+                        </div>
+                        <div id="viewJumpEmployer"
+                            style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employerDashboard.html" target="_EmployerDashboardHijack">
+                                Jump to Employer Dashboard
+                            </a>
+                        </div>
+                        <div id="viewJumpEmployee"
+                            style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employeeDashboard.html" target="_EmployeeDashboardHijack">
+                                Jump to Employee Dashboard
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- RESTORE HIJACK  -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div id="EzRetoreHijackContainer" class="TestBox">
+                        <div style="background-color: #C0F991" class="TestBox">
+                            <p>Releasing a hijacked account release ALL hijacked accounts (employee and
+                                employer).</p>
+                            <p>Log out of the hijacked account and close the browser window. Then click the
+                                release button
+                                below
+                                to
+                                release the account.</p>
+                            <button id="EzRestoreHijackButton" style="font-size: 18pt;">
+                                Release Hijack
+                            </button>
+                            <div class="ResultsBox" id="_HijackResults2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- HIJACK EMPLOYER  -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Hijack Employer Account</h1>
+                        <div style="padding: 4px;">
+                            <label for="EzHijackEmployerId">Employer Id:</label>
+                            <input type="text" id="EzHijackEmployerId" />
+                        </div>
+                        <button id="EzHijackEmployerButton"
+                            onclick="ezApi.ezclocker.ezAdminViewController.ezHijackEmployer()">
+                            Hijack Employer...
+                        </button>
+                        <div class="ResultsBox" id="EzHijackEmployerResults">
+                        </div>
+                        <div id="jumpEmployer" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employerDashboard.html" target="_EmployerDashboardHijack">
+                                Jump to Employer Dashboard
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- HIJACK EMPLOYEE  -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Hijack Employee Account</h1>
+                        <div style="padding: 4px;">
+                            <label for="" style="padding: 4px;">Employee Id:</label>
+                            <input type="text" id="_HijackEmployeeId" />
+                        </div>
+                        <div style="padding: 4px;">
+                            <button id="EzHijackEmployeeButton"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezHijackEmployee">
+                                Hijack Employee...
+                            </button>
+                        </div>
+                        <div class="ResultsBox" id="EzHijackEmployeeResults">
+                        </div>
+                        <div id="jumpEmployee" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employeeDashboard.html" target="_EmployeeDashboardHijack">
+                                Jump to Employer Dashboard
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- HIJACK PAYROLL MANAGER -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Hijack Payroll Manager Account</h1>
+                        <div style="padding: 4px;">
+                            <label for="EzHijackPayrollManagerId" style="padding: 4px;">
+                                Payroll Manager (employee) id:
+                            </label>
+                            <input id="EzHijackPayrollManagerId" type="text" />
+                        </div>
+                        <div style="padding: 4px;">
+                            Payroll Manager EmployerId
+                        </div>
+                        <div style="padding: 4px;">
+                            <button id="EzHijackPayrollManagerButton"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezHijackPayrollManager">
+                                Hijack Payroll Manager...
+                            </button>
+                        </div>
+                        <div id="EzHijackPayrollManagerResults" class="ResultsBox"></div>
+                        <div id="jumpPayrollManagerEmployee"
+                            style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employer?v=r72-3" target="_EzPayrollManagerEmployeeDashboardHijack">
+                                Jump to Payroll Manager Dashboard
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- HIJACK MANAGER -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Hijack Manager Account</h1>
+                        <div style="padding: 4px;">
+                            <label for="EzHijackManagerId" style="padding: 4px;">Manager (Employee) Id:</label>
+                            <input type="text" id="EzHijackManagerId" />
+                        </div>
+                        <div style="padding: 4px;">
+                            <button id="EzHijackManagerButton"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezHijackManager()">
+                                Hijack Manager...
+                            </button>
+                        </div>
+                        <div id="EzHijackManagerResults" class="ResultsBox">
+                        </div>
+                        <div id="jumpEmployee" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                            <a href="/secure/employer?v=r72-3" target="_EzManagerDashboardHijack">
+                                Jump to Manager Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="EzActionsGroupContainer_SwapAccountPasswordActions"
+                class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                    Swap Account Password Actions
+                </h1>
+                <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- SWAP PASSWORD FOR A USER -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Swap Password</h1>
+                        <div class="testBoxLine">
+                            <div>Account Username:</div>
+                            <input id="EzSwapPasswordAccountUserName" type="text" class="ezFullWidth" />
+                        </div>
+                        <div class="testBoxLine">
+                            <button id="EzSwapPasswordButton"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezSwapPasswordForUser()">
+                                Swap Password ...
+                            </button>
+                            <button id="EzRestoreSwapPasswordButton" style="font-size: 18pt;display:none;"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezRestoreSwapPassword()">
+                                Restore swapped password ...
+                            </button>
+                        </div>
+                        <div id="EzSwapPasswordResults" class="ResultsBox"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Removed failed authentication attempts lock from user -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div id="EzActionsGroupContainer_UserAccountActions" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                    User Account Actions
+                </h1>
+                <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Unlock User Account -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Remove Failed Authentication Attempts Lock from User</h1>
+                        <h4>Service: http://{domain}/api/v1/admin/unlock-user-account?username=support@ezclocker.com</h4>
+                        <div class="ezInputBox">
+                            <label for="EzAdminUnlockUserAccountUsername">Account User Name:</label>
+                            <input id="EzAdminUnlockUserAccountUsername" class="ezFullWidth" type="text" />
+                        </div>
+                        <div class="ezButtonBox">
+                            <button id="EzUnlockUserAccountButton" onclick="deleteAccount()">Unlock Account</button>
+                        </div>
+                        <div class="ResultsBox" id="EzAdminUnlockUserAccountResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Delete Account -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox" style="background-color:var(--ezClockerInputErrorBackground);border-color:var(--ezClockerWarnning);">
+                        <h1>Delete User Account</h1>
+                        <h3 class="warningText">This operation cannot be reversed!</h3>
+                        <h4>Service: http://{domain}/_api/v1/account</h4>
+                        <div class="ezInputBox">
+                            <label for="ezAdminDeleteAccountUserName">Account User Name:</label>
+                            <input class="ezFullWidth" type="text" id="ezAdminDeleteAccountUserName" />
+                        </div>
+                        <div class="ezButtonBox">
+                            <button onclick="deleteAccount()">Delete Account</button>
+                        </div>
+                        <div class="ResultsBox" id="ezAdminDeleteUserAccountResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="EzActionsGroupContainer_EmployeeActions" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                    Employee Admin Actions
+                </h1>
+                <div id="EzActionsContainer_ViewFullEmployeeInfo" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- VIEW EMPLOYEE INFO -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div id="EzViewFullEmployeeInfoSection" class="TestBox">
+                        <h1>View Full Employee Info</h1>
+                        <div class="testBoxLine">
+                            <label for="EzViewFullEmployeeInfoEmployeeId">
+                                Employee Id:
+                            </label>
+                            <input id="EzViewFullEmployeeInfoEmployeeId" type="text" />
+                        </div>
+                        <div class="testBoxLine">
+                            <button id="EzViewFullEmployeeInfoButton">
+                                View full employee info ...
+                            </button>
+                        </div>
+                        <div id="EzViewFullEmployeeInfoResults" class="ResultsBox" style="max-width:100%">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- VIEW EMPLOYER RESCYCLED EMPLOYEES -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <a id="EzAdminAction_ViewEmployerRecycledEmployees" />
+                    <div id="EzViewEmployerRecycledEmployeesSection" class="TestBox">
+                        <h1>View Employer Recycled Employees</h1>
+                        Enter either the Employer Id OR the Employer Username (not both!).
+                        <div class="testBoxLine">
+                            <label for="EzRecycledEmployeeEmployerId">
+                                Employer Id:
+                            </label>
+                            <input id="EzRecycledEmployeeEmployerId" type="text" />
+                        </div>
+                        <div class="testBoxLine">
+                            <label for="EzRecycledEmployeeEmployerUserName">
+                                Employer Username:
+                            </label>
+                            <input id="EzRecycledEmployeeEmployerUserName" type="text" />
+                        </div>
+                        <div class="testBoxLine">
+                            <button id="EzViewRecycledEmployeesButton">
+                                View employer recycled employees ...
+                            </button>
+                        </div>
+                        <div id="EzViewRestoreRecycledEmployeeResultsWarning">
+                            Some recycled employees might already have been restored because previous restores did
+                            not
+                            delete the
+                            recycled data. Restoring an already restored employee could result in errors or
+                            duplicate
+                            employees.
+                        </div>
+                        <div id="EzViewRestoreRecycledEmployeeResults" class="ResultsBox" style="max-width:100%">
+                        </div>
+                    </div>
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- RESTORE RESCYCLED EMPLOYEE -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <a id="EzAdminAction_RestoreRecycledEmployee" />
+                    <div id="EzRestoreRecycledEmployeeSection" class="TestBox">
+                        <h1>
+                            Restore Recycled Employee
+                        </h1>
+                        If you need to see the available recycled employees then see the View Employer Recycled
+                        Employees
+                        section above. To restore a recycled employee enter the original employee id from the
+                        recycled
+                        employee entity and/or the recycled employee entitie's id in the input boxes below.
+                        <div class="testBoxLine">
+                            <label for="EzRecycledEmployeeId">
+                                Recycled Employee Id (id column in recycled_emplyee table):
+                            </label>
+                            <input id="EzRecycledEmployeeId" type="text">
+                        </div>
+                        <div class="testBoxLine">
+                            <label for="EzRecycledEmployeeOriginalEmployeeId">
+                                Recycled Employee's Original Employee Id (original_employee_id column in
+                                recycled_employee table):
+                            </label>
+                            <input id="EzRecycledEmployeeOriginalEmployeeId" type="text" />
+                        </div>
+                        <div class="testBoxLine">
+                            <label for="EzRestoreRecycledEmployeeTimeEntries">
+                                <input id="EzRestoreRecycledEmployeeTimeEntries" type="checkbox" checked />
+                                Also restore recycled time entries for the employee?
+                            </label>
+                        </div>
+                        <div class="testBoxLine">
+                            <label for="EzRestoreRecycledEmployeeIfOriginalIdNull">
+                                <input id="EzRestoreRecycledEmployeeIfOriginalIdNull" type="checkbox" />
+                                Restore employee even if original employee id is null?
+                            </label>
+                        </div>
+                        <div class="testBoxLine">
+                            <button id="EzRestoreRecycledEmployeeButton">
+                                Restore Recycled Employee...
+                            </button>
+                        </div>
+                        <div id="EzRestoreRecycledEmployeeResults" class="ResultsBox"
+                            style="max-width:100%;overflow:scroll">
+                        </div>
+                    </div>
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Create Employee Invite Admin Action -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox">
+                        <h1>Create an invite</h1>
+                        <div class="ezInputBox">
+                            <label for="ezAdminCreateInviteFullUserName">Employee Name:</label>
+                            <input class="ezFullWidth" type="text" id="ezAdminCreateInviteFullUserName" />
+                        </div>
+                        <div class="ezInputBox">
+                            <label for="ezAdminCreateInviteEmailId">Employee User Name:</label>
+                            <input class="ezFullWidth" type="text" id="ezAdminCreateInviteEmailId" />
+                        </div>
+                        <div class="ezButtonBox">
+                            <button onclick="createEmployeeInvite()">Create an Invite</button>
+                        </div>
+                        <div class="ResultsBox" id="ezAdminCreateEnInviteResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Remove Employee -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox" style="background-color:var(--ezClockerInputErrorBackground);border-color:var(--ezClockerWarnning);">
+                        <h1>Remove Employee</h1>
+                        <h4>Service: http://{domain}/_employee/remove/{employerId}/{employeeId}
+                        </h4>
+                        <h4>Removes the employee and their associated tables</h4>
+                        <form id="removeEmployeeForm" action="../_employee/remove" enctype="application/json" method="post">
+                            <div class="ezInputBox">
+                                <label for="employerIdOfEmployee" class="EzInputLabel">Employer Id</label>
+                                <input type="text" id="employerIdOfEmployee" />
+                            </div>
+                            <div class="ezInputBox">
+                                <label for="employeeId" class="EzInputLabel">Employee Id</label>
+                                <input type="text" id="employeeId" />
+                            </div>
+                            <input type="submit" value="Remove employee...">
+                        </form>
+                        <div class="ResultsBox" id="removeEmployeeResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Move Employee to New Employer -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox" style="background-color:var(--ezClockerWarningYellow)">
+                        <h1>Move employees to new employer</h1>
+                        <div class="ezInputBox">
+                            <label for="ezAdminBulkMoveEmployeesFromEmployer">Employee login user name (name or
+                                email id, as
+                                applicable)):</label>
+                            <input class="ezFullWidth" type="text" id="ezAdminBulkMoveEmployeesFromEmployer" />
+                        </div>
+                        <div class="ezInputBox">
+                            <label for="ezAdminBulkMoveEmployeesToEmployer" class="ezInputLabel">Target Employer login user name (name or
+                                email id,
+                                as applicable):</label>
+                            <input class="ezFullWidth" type="text" id="ezAdminBulkMoveEmployeesToEmployer" />
+                        </div>
+                        <div id="moveEmployeeToEmployerSubmitButton" class="ezButtonBox">
+                            <button onclick="moveEmployeeToEmployer()">Move Employee</button>
+                        </div>
+                        <div class="ResultsBox" id="ezAdminBulkMoveEmployeesResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="EzActionsGroupContainer_EmployerActions" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                    Employer Admin Actions
+                </h1>
+                <div id="EzActionsContainer_RemoveEmployer" class="ezWhiteBox">
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Remove Employer -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="TestBox" style="background-color:var(--ezClockerInputErrorBackground);border-color:var(--ezClockerWarnning);">
+                        <h1>Remove Employer</h1>
+                        <h4>Service: http://{domain}/_employer/remove/{employerId}</h4>
+                        <h4>Removes the employer, all employees, all time entries, and other associated tables for
+                            the employer
+                        </h4>
+                        <form id="removeEmployerForm" action="../_employer/remove" enctype="application/json" method="post">
+                            <div class="ezInputBox">
+                                <label for="employerId" class="ezInputLabel">Employer Id</label>
+                                <input id="employerId" type="text" />
+                            </div>
+                            <button type="submit">Remove employer...</button>
+                        </form>
+                        <div class="ResultsBox" id="removeEmployerResults">
+                            <em>Results Appear Here</em>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Bullk Ad Employer Locations -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <script>
+                        function postBulkAddEmployerLocation() {
+                            let url = '../_api/v1/support/import/bulk-locations/' + $("#_BulkLocation_EmployerId")
+                                .val();
+                            $("#bulkAddEmployerLocation")
+                                .attr("action", url);
+                            $("#bulkAddEmployerLocation")
+                                .submit();
+                        }
+                    </script>
+                    <div class="TestBox">
+                        <h1>Bulk Add Employer Locations</h1>
+                        <form id="bulkAddEmployerLocation" method="post" enctype="multipart/form-data"
+                            target="_new_tab_bulk">
+                            <input type="file" name="csvFile" id="_csvFile" />
+                            <br /> Employer Id:
+                            <input type="text" name="employerId" id="_BulkLocation_EmployerId" />
+                            <br />
+                            <input type="checkbox" name="splitStreet" id="_SplitStreet" checked />Split Street
+                            Column?
+                        </form>
+                        <button onclick="postBulkAddEmployerLocation()">Go!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="EzActionsGroupContainer_MobileVersionInfo"
+                class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+                <div id="EzActionsGroupContainer_MobileVersionInfo_TitleContainer"
+                    class="ezAutoCol_AxA ezGrid-vertical-align-middle ezGrid-align-space-between">
+                    <div id="EzActionsGroupContainer_MobileVersionInfo_Title" class="ezGrid-vertical-align-middle">
+                        <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                            Mobile Version Info
+                        </h1>
+                    </div>
+                    <button id="EzActionsGroupContainer_MobileVersionInfo_Button_Collapse" class="ezSquareEditButton" style="display:none"
+                        onclick="ezApi.ezclocker.ezAdminViewController.ezHandleCollapseGroupContentButtonClick('EzActionsGroupContainer_MobileVersionInfo_Button', 'EzActionsGroupContainer_MobileVersionInfo_Content')">
+                        <img src="/images/icons/collapse-ezClockerBlack.svg" class="ezSquarEditButtonImg" alt="Hide" />
+                    </button>
+                    <button id="EzActionsGroupContainer_MobileVersionInfo_Button_Expand" class="ezSquareEditButton"
+                        onclick="ezApi.ezclocker.ezAdminViewController.ezHandleExpandGroupContentButtonClick('EzActionsGroupContainer_MobileVersionInfo_Button', 'EzActionsGroupContainer_MobileVersionInfo_Content')">
+                        <img src="/images/icons/expand-ezClockerBlack.svg" class="ezSquarEditButtonImg" alt="Hide" />
+                    </button>
+                </div>
+                <div id="EzActionsGroupContainer_MobileVersionInfo_Content" class="ezWhiteBox" style="display:none">
+                    <div id="EzActionsContainer_GetMobileVersionInfoForDeviceType" class="TestBox">
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <!-- Get Mobile Version Info for Device Type -->
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <div class="TestBox">
+                            <h1>Get Mobile Version Info for Device Type</h1>
+                            <div class="testBoxLine">
+                                <label for="GetMobileVersionInfoForDeviceType_DeviceTypeSelect">Device Type</label>
+                                <select id="GetMobileVersionInfoForDeviceType_DeviceTypeSelect" class="ezFullWidth">
+                                    <option id="EzDeviceType_APPLE_IPHONE" value="APPLE_IPHONE">Apple iPhone</option>
+                                    <option id="EzDeviceType_APPLE_IPAD" value="APPLE_IPAD">Apple iPad</option>
+                                    <option id="EzDeviceType_APPLE_WATCH" value="APPLE_WATCH">Apple Watch</option>
+                                    <option id="EzDeviceType_ANDRIOD_PHONEL" value="ANDRIOD_PHONE">Andriod Phone</option>
+                                    <option id="EzDeviceType_ANDRIOD_TABLET" value="ANDRIOD_TABLET">Andriod Tablet</option>
+                                    <option id="EzDeviceType_CHROMEBOOK" value="CHROMEBOOK">Chromebook</option>
+                                    <option id="EzDeviceType_WINDOWS_PC" value="WINDOWS_PC">Windows PC</option>
+                                    <option id="EzDeviceType_WINDOWS_TABLET" value="WINDOWS_TABLET">Windows Tablet</option>
+                                    <option id="EzDeviceType_APPLE_MACBOOK_AIR_PC" value="APPLE_MACBOOK_AIR_PC">Apple MacBook Air</option>
+                                    <option id="EzDeviceType_APPLE_MACBOOK_PRO_PC" value="APPLE_MACBOOK_PRO_PC">Apple MacBook Pro</option>
+                                    <option id="EzDeviceType_APPLE_IMAC_PC" value="APPLE_IMAC_PC">Apple iMac</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_MINI_PC">Apple Mac Mini</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_STUDIO_PC">Apple Mac Studio</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_PRO_PC">Apple Mac Pro</option>
+                                </select>
+                            </div>
+                            <div class="testBoxLine">
+                                <button id="GetMobileVersionInfoForDeviceType_Button"
+                                    onclick="ezApi.ezclocker.ezAdminViewController.ezGetMobileVersionInfoForEzDeviceType()">
+                                    Get Mobile Version Info for Device Type ...
+                                </button>
+                            </div>
+                            <div id="GetMobileVersionInfoForDeviceType_ResultsContainer" class="ResultsBox">
+                                <textarea id="GetMobileVersionInfoForDeviceType_Results" rows="5" cols="80"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="EzActionsContainer_GetMobileVersionInfoForOsType" class="TestBox">
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <!-- Get Mobile Version Info for Device Type -->
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <div class="TestBox">
+                            <h1>Get Mobile Version Info for OS Type</h1>
+                            <div class="testBoxLine">
+                                <label for="GetMobileVersionInfoForOsType_OsTypeSelect">Device Type</label>
+                                <select id="GetMobileVersionInfoForOsType_OsTypeSelect" class="ezFullWidth">
+                                    <option id="EzDeviceType_IOS" value="IOS">Apple iOS</option>
+                                    <option id="EzDeviceType_IPAD_OS" value="IPAD_OS">Apple iPad OS</option>
+                                    <option id="EzDeviceType_ANDRIOD" value="ANDRIOD">Google Chromebook</option>
+                                    <option id="EzDeviceType_OSX" value="OSX">Apple OSX</option>
+                                    <option id="EzDeviceType_WINDOWS" value="WINDOWS">Microsoft Windows</option>
+                                    <option id="EzDeviceType_LINUX" value="LINUX">Generic Linux</option>
+                                    <option id="EzDeviceType_CHROME_OS" value="CHROME_OS">Google Chrome OS</option>
+                                </select>
+                            </div>
+                            <div class="testBoxLine">
+                                <button id="GetMobileVersionInfoForOsType_Button"
+                                    onclick="ezApi.ezclocker.ezAdminViewController.ezGetMobileVersionInfoForEzOsType()">
+                                    Get Mobile Version Info for Device Type ...
+                                </button>
+                            </div>
+                            <div id="GetMobileVersionInfoForOsType_ResultsContainer" class="ResultsBox">
+                                <textarea id="GetMobileVersionInfoForOsType_Results" rows="5" cols="80"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="EzActionsContainer_GetMobileVersionInfo" class="TestBox">
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <!-- Get Mobile Version Info for Id -->
+                        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <div class="TestBox">
+                            <h1>
+                                Get Mobile Version Info by Id
+                            </h1>
+                            <div class="testBoxLine">
+                                <label for="GetMobileVersionInfoForId_MobileVersionInfoId">
+                                    Enter the Mobile Version Info Id
+                                </label>
+                                <input id="GetMobileVersionInfoForId_MobileVersionInfoId" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <button id="GetMobileVersionInfoForId_Button"
+                                    onclick="ezApi.ezclocker.ezAdminViewController.ezGetMobileVersionInfoForId()">
+                                    Get Mobile Version Info for Id ...
+                                </button>
+                            </div>
+                            <div id="GetMobileVersionInfoForId_ResultsContainer" class="ResultsBox">
+                                <textarea id="GetMobileVersionInfoForId_Results" rows="5" cols="80"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- Add or Update Mobile Version Info for Device Type -->
+                    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- TODO: DISABLED UNTIL FIXED: PUT and POST api returns 400 for no known reason
+                    <div id="EzActionsContainer_UpdateMobileVersionInfo" class="TestBox">
+                        <div class="TestBox">
+                            <h1>Add or Update Mobile Version Info</h1>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_LatestVersion">
+                                    Mobile Version Info Id (leave blank to add)
+                                </label>
+                                <input id="UpdateMobileVersionInfo_Id" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_DeviceTypeInput">
+                                    Select Device Type
+                                </label>
+                                <select id="UpdateMobileVersionInfo_DeviceTypeSelect" class="ezFullWidth">
+                                    <option id="EzDeviceType_APPLE_IPHONE" value="APPLE_IPHONE">Apple iPhone</option>
+                                    <option id="EzDeviceType_APPLE_IPAD" value="APPLE_IPAD">Apple iPad</option>
+                                    <option id="EzDeviceType_APPLE_WATCH" value="APPLE_WATCH">Apple Watch</option>
+                                    <option id="EzDeviceType_ANDRIOD_PHONEL" value="ANDRIOD_PHONE">Andriod Phone</option>
+                                    <option id="EzDeviceType_ANDRIOD_TABLET" value="ANDRIOD_TABLET">Andriod Tablet</option>
+                                    <option id="EzDeviceType_CHROMEBOOK" value="CHROMEBOOK">Chromebook</option>
+                                    <option id="EzDeviceType_WINDOWS_PC" value="WINDOWS_PC">Windows PC</option>
+                                    <option id="EzDeviceType_WINDOWS_TABLET" value="WINDOWS_TABLET">Windows Tablet</option>
+                                    <option id="EzDeviceType_APPLE_MACBOOK_AIR_PC" value="APPLE_MACBOOK_AIR_PC">Apple MacBook Air</option>
+                                    <option id="EzDeviceType_APPLE_MACBOOK_PRO_PC" value="APPLE_MACBOOK_PRO_PC">Apple MacBook Pro</option>
+                                    <option id="EzDeviceType_APPLE_IMAC_PC" value="APPLE_IMAC_PC">Apple iMac</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_MINI_PC">Apple Mac Mini</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_STUDIO_PC">Apple Mac Studio</option>
+                                    <option id="EzDeviceType_APPLE_MAC_MINI_PC" value="APPLE_MAC_PRO_PC">Apple Mac Pro</option>
+                                </select>
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_OsTypeSelect">Select OS Type</label>
+                                <select id="UpdateMobileVersionInfo_OsTypeSelect" class="ezFullWidth">
+                                    <option id="EzDeviceType_IOS" value="IOS">Apple iOS</option>
+                                    <option id="EzDeviceType_IPAD_OS" value="IPAD_OS">Apple iPad OS</option>
+                                    <option id="EzDeviceType_ANDRIOD" value="ANDRIOD">Google Chromebook</option>
+                                    <option id="EzDeviceType_CHROME_OS" value="CHROME_OS">Google Chrome OS</option>
+                                    <option id="EzDeviceType_WINDOWS" value="WINDOWS">Microsoft Windows</option>
+                                    <option id="EzDeviceType_OSX" value="OSX">Apple OSX</option>
+                                    <option id="EzDeviceType_LINUX" value="LINUX">Generic Linux</option>
+                                </select>
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_LatestAppVersion">
+                                    Latest App Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_LatestAppVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_MinimumAppVersion">
+                                    Minimum App Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_MinimumAppVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_SupportedAppVersions">
+                                    Supported Versions (separate each version with a comma)
+                                </label>
+                                <div>
+                                    <textarea id="UpdateMobileVersionInfo_SupportedAppVersions" rows="5" cols="80"></textarea>
+                                </div>
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_MinimumOsVersion">
+                                    Minimum OS Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_MinimumOsVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_MaximumOsVersion">
+                                    Maximum OS Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_MaximumOsVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_SupportedOsVersions">
+                                    Supported OS Versions (separate each version with a comma)
+                                </label>
+                                <div>
+                                    <textarea id="UpdateMobileVersionInfo_SupportedOsVersions" rows="4" cols="80"></textarea>
+                                </div>
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_MinimumSdkVersion">
+                                    Minimum SDK Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_MinimumSdkVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_MaximumSdkVersion">
+                                    Maximum SDK Version
+                                </label>
+                                <input id="UpdateMobileVersionInfo_MaximumSdkVersion" type="text" class="ezFullWidth" />
+                            </div>
+                            <div class="testBoxLine">
+                                <label for="UpdateMobileVersionInfo_SupportedSdkVersions">
+                                    Supported SDK Versions (separate each version with a comma)
+                                </label>
+                                <div>
+                                    <textarea id="UpdateMobileVersionInfo_SupportedSdkVersions" rows="5" cols="80"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testBoxLine">
+                            <label for="UpdateMobileVersionInfo_Force">
+                                <input id="UpdateMobileVersionInfo_Force" type="checkbox" />
+                                Force Update
+                            </label>
+                        </div>
+                        <div class="testBoxLine">
+                            <button id="UpdateMobileVersionInfo_Button"
+                                onclick="ezApi.ezclocker.ezAdminViewController.ezUpdateMobileVersionInfo()">
+                                Update Mobile Version Info ...
+                            </button>
+                        </div>
+                        <div id="UpdateMobileVersionInfo_ResultsContainer" class="ResultsBox">
+                            <textarea id="UpdateMobileVersionInfo_Results" rows="5" cols="80"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <div id="EzActionsGroupContainer_DeveloperAccountActions" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+            <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                Developer Account Actions
+            </h1>
+            <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- List Developer Employers -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>List Developer Employers</h1>
+                    <h4>Service: http://{domain}/_employer/developer</h4>
+                    <h4>List all employers associated with your developer token</h4>
+                    <form id="listDeveloperEmployersForm" action="../_employer/developer" enctype="application/json" method="post">
+                        developerToken:
+                        <br />
+                        <input type="text" id="developerToken" name="developerToken" />
+                        <br />
+                        <input type="submit" value="List all employers...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="listDeveloperEmployersResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="EzActionsGroupContainer_EmailActions" class="ezContiner-ezClockerNavy-pad8-top-margin-10">
+            <h1 class="ezH1-ezClockerWhite ezBottomMargin_8">
+                Email Admin Actions
+            </h1>
+            <div id="EzActionsContainer_RecycledEmployees" class="ezWhiteBox">
+                <div class="TestBox">
+                    <form id="_ForceEmailQueue" action="../_email/forceEmailQueue" enctype="application/json"
+                        method="post">
+                        <input type="submit" value="Force Email Queue" />
+                    </form>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Test Email Template -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>Test Email Template</h1>
+                    <h4>Service: http://{domain}/email/template/test</h4>
+                    <h4>Sends an email using a template and data passed to the recipient (for testing)</h4>
+                    name: (template ID/name)
+                    <br />
+                    <input type="text" name="name" id="_EmailTestName" value="NEW_EMPLOYER_HTML" />
+                    <br /> dataFields: This is a json array, key value: [{"key":"value",{"key":"value"}]
+                    <br />
+                    <textarea name="dataFields" id="_EmailTestDataFields" rows="25" cols="100">
+                            {"EMPLOYER_NAME":"Employer Name"}
+                        </textarea>
+                    <br /> recpient:
+                    <br />
+                    <input type="text" name="recipient" id="_EmailTestRecipient" value="jason.ridge@gmail.com" />
+                    <br />
+                    <button onclick="sendTestEmail()">Send email test..."</button>
+                    <br />
+                    <div class="ResultsBox" id="_TestEmailResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Add Email Template -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>Add Email Template</h1>
+                    <h4>Service: http://{domain}/email/template/add</h4>
+                    <h4>Adds a new email template to the DB</h4>
+                    <form id="addEmailTemplateForm" action="../_email/template/add" enctype="application/json"
+                        method="post">
+                        name (template name, must be unique):
+                        <br />
+                        <input type="text" name="name" />
+                        <br /> subject (email subject):
+                        <br />
+                        <input type="text" name="subject" style="width: 500px;" />
+                        <br /> body (email body):
+                        <br /> NOTE: For replacement tags, use the following format: {-table_name.field_name-}
+                        <br />
+                        <textarea name="body" rows="25" cols="100"></textarea>
+                        <br />
+                        <input type="submit" value="Add email template...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="addEmailTemplateResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Update Email Template -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>Update Email Template (by name)</h1>
+                    <h4>Service: http://{domain}/email/template/update</h4>
+                    <h4>Updates an existing email template</h4>
+                    <form id="updateEmailTemplateForm" action="../_email/template/update" enctype="application/json"
+                        method="post">
+                        name (required):
+                        <br />
+                        <input type="text" name="name" />
+                        <br /> subject (email subject, optional in the update):
+                        <br />
+                        <input type="text" name="subject" style="width: 500px;" />
+                        <br /> body (email body, optional in the update):
+                        <br /> NOTE: For replacement tags, use the following format: {-table_name.field_name-}
+                        <br />
+                        <textarea name="body" rows="25" cols="100"></textarea>
+                        <br />
+                        <input type="submit" value="Update email template...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="updateEmailTemplateResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Remove Email Template -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>Remove Email Template (by name)</h1>
+                    <h4>Service: http://{domain}/email/template/remove</h4>
+                    <h4>Removes an existing email template</h4>
+                    <form id="removeEmailTemplateForm" action="../_email/template/remove" enctype="application/json"
+                        method="post">
+                        name (required):
+                        <br />
+                        <input type="text" name="name" />
+                        <br />
+                        <input type="submit" value="Remove email template...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="removeEmailTemplateResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Get Email Template by Name -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>Get Email Template (by name)</h1>
+                    <h4>Service: http://{domain}/email/template/get</h4>
+                    <h4>Gets an existing email template</h4>
+                    <form id="getEmailTemplateForm" action="../_email/template/get" enctype="application/json"
+                        method="post">
+                        name (required):
+                        <br />
+                        <input type="text" name="name" />
+                        <br />
+                        <input type="submit" value="Get email template...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="getEmailTemplateResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- Get All Email Templates -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="TestBox">
+                    <h1>List All Available Email Templates</h1>
+                    <h4>Service: http://{domain}/email/template/names</h4>
+                    <form id="getEmailTemplateNamesForm" action="../_email/template/names"
+                        enctype="application/json" method="get">
+                        <input type="submit" value="Get email template names...">
+                        <br />
+                    </form>
+                    <div class="ResultsBox" id="getEmailTemplateNamesResults">
+                        <em>Results Appear Here</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+#getDateDivs {
+    font-weight: bold;
+    font-size: 12pt;
+    float: right;
+}
+
+#_payPeriodTitle {
+    padding-left: 5px;
+}
+
+td.employeeTitle {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+table.fullWidthTable {
+    width: 100%;
+}
+
+table.inputTable {
+    width: 100%;
+}
+
+#totalTimeData {
+    float: left;
+    padding-left: 10px;
+}
+
+#inputDates {
+    width: 200px;
+}
+
+table.dashBoardHeaderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td.leftTopAlignCell {
+    /* Used: employeeDashboard.js, employee-dashboard-controller.js */
+    text-align: left;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/** Total Hours Display **/
+input.totalHours {
+    font-size: 18pt;
+    font-family: monospace;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    width: 100px;
+    text-align: right;
+    margin-left: 4px;
+    padding: 4px;
+}
+
+div.filterMenu {
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(245 245 245 / 70%);
+    border-style: solid;
+    border-color: #c0c0c0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.error_edit_input {
+    background-color: #fff0f0;
+    border-color: #a60400;
+}

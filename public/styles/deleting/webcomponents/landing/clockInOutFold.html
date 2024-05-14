@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<style>
+.clockInOutAnywhereContainer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #6d6e70;
+    background-image: url("pi/landing/ezc_web_image_1_ClockInOut_1.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto;
+    background-color: #ffffff;
+    min-height: 350px;
+}
+
+.clockInOutAnywhereItem {
+    padding: 10px;
+    min-height: 350px;
+}
+
+.clockInOutAnywhereText {
+    font-size: 14pt;
+}
+
+.clockInOutAnywhereImg {
+    margin-top: 75px;
+}
+
+.clockInOutEditImg {
+    margin-top: 60px;
+}
+
+@media only screen and (max-width: 1140) {
+    .clockInOutAnywhereContainer {
+        background-size: 100% 100%;
+        min-height: auto;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .clockInOutAnywhereContainer {
+        background-image: none;
+        background-color: #e0e0e0;
+        min-height: auto;
+    }
+    .clockInOutAnywhereItem {
+        min-height: auto;
+    }
+    .clockInOutAnywhereImg {
+        margin-top: 20px;
+    }
+    .clockInOutEditImg {
+        margin-top: 30px;
+    }
+}
+</style>
+<script>
+    $("#_ClockInOutAnywhereImage").prop("src",ezNavigation.getPublicImagesUrl("landing/clockInOutAnywhere.svg"));
+    $("#_ClockInOutEditImage").prop("src",ezNavigation.getPublicImagesUrl("landing/ezc_web_image_1_ClockInOut_2.jpg"));
+    $(".clockInOutItem").css("width", (Math.floor($(window).width() / 3) - 6) + "px");
+    $(window).resize(function() {
+        $(".clockInOutItem").css("width", (Math.floor($(window).width() / 3) - 6) + "px");
+    })
+</script>
+<div class="clockInOutAnywhereContainer row center-block">
+    <div class="clockInOutAnywhereItem col-md-4 center-block" id="_Column1">
+        <!-- empty -->
+    </div>
+    <div class="clockInOutAnywhereItem col-md-4 center-block" id="_Column2">
+        <img alt="ezClocker.com: Clock in and out anywhere" class="img-responsive center-block clockInOutAnywhereImg"
+            id="_ClockInOutAnywhereImage" name="ezClocker.com: Clock in and out anywhere">
+    </div>
+    <div alt="ezClocker.com: Clock in and out anywhere"
+        class="clockInOutAnywhereItem col-md-4 center-block clockInOutAnywhereText" id="_Column3"
+        name="ezClocker.com: Clock in and out anywhere">
+        <img alt="ezClocker.com: View and edit time sheests anywhere"
+            class="img-responsive center-block clockInOutEditImg" id="_ClockInOutEditImage"
+            name="ezClocker.com: View and edit time sheests anywhere">
+        <div class="text-center">View/Edit employee time sheets anywhere</div>
+    </div>
+</div>

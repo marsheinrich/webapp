@@ -1,0 +1,43 @@
+.emailBody {
+    width: 80%;
+}
+
+.ezClockerEmailHeader {
+    width: 100%;
+    background-color: #7CD0FD;
+    padding: 5px;
+    box-shadow: inset 1px 1px 10px #EEEEEE;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: -6px;
+}
+
+.ezClockerLogoText {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 48pt;
+    color: #000000;
+}
+
+.ezClockerLogoImage {
+    width: 60px;
+    height: 60px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 4px;
+    padding: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.ezClockerCatchPhrase {
+    text-align: right;
+    vertical-align: top;
+    font-size: 16pt;
+    font-family: sans-serif;
+    color: #000000;
+    position: absolute;
+    margin-top: -19px;
+    margin-left: 50px;
+}

@@ -1,0 +1,22 @@
+{
+    "sourceMaps": true,
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 5 years"
+                    ]
+                }
+            }
+        ]
+    ],
+    "exclude": [
+        "*.min.*",
+        "*.map"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-throw-expressions"
+    ]
+}

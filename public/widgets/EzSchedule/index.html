@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-common.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css">
+    <style>
+        .testContainer {
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-style: solid;
+            border-color: var(--ezClockerBlack);
+            border-width: 1px;
+        }
+
+        .testBoxes {
+            padding: 4px;
+            background-color: var(--ezClockerOffWhite);
+        }
+
+        .testBoxLabel {
+            padding: 4px;
+            background-color: var(--ezClockerNavy);
+            color: var(--ezClockerWhite);
+            font-weight: bold;
+        }
+    </style>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-context.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-schedule-widget.bundle.js?v=r72-3"></script>
+    <title>ezClocker: Schedules</title>
+</head>
+
+<body>
+    <!-- Schedule Header -->
+    <div class="testContainer">
+        <div class="testBoxLabel">Schedule Header</div>
+        <div id="EzScheduleWeekTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Schedule Box -->
+    <div class="testContainer">
+        <div class="testBoxLabel">Schedule Box</div>
+        <div id="EzScheduleBoxTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Pending Time Off -->
+    <div class="testContainer">
+        <div class="testBoxLabel">Pending PTO Time Off Box</div>
+        <div id="EzPendingPTOTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">Pending PTO Time Off All Day Box</div>
+        <div id="EzPendingPTOTimeOffAllDayBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">Pending UNPAID Time Off Box</div>
+        <div id="EzPendingUNPAIDTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">Pending SICK Time Off Box</div>
+        <div id="EzPendingSICKTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">Pending HOLIDAY Time Off Box</div>
+        <div id="EzPendingHOLIDAYTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Approvied Time Off -->
+    <div class="testContainer">
+        <div class="testBoxLabel">APPROVED PTO Time Off Box</div>
+        <div id="EzApprovedPTOTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">APPROVED UNPAID Time Off Box</div>
+        <div id="EzApprovedUNPAIDTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">APPROVED SICK Time Off Box</div>
+        <div id="EzApprovedSICKTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">APPROVED HOLIDAY Time Off Box</div>
+        <div id="EzApprovedHOLIDAYTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Expired Time Off -->
+    <div class="testContainer">
+        <div class="testBoxLabel">EXPIRED PTO Time Off Box</div>
+        <div id="EzEXPIREDPTOTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">EXPIRED UNPAID Time Off Box</div>
+        <div id="EzEXPIREDUNPAIDTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">EXPIRED SICK Time Off Box</div>
+        <div id="EzEXPIREDSICKTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">EXPIRED HOLIDAY Time Off Box</div>
+        <div id="EzEXPIREDHOLIDAYTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Denied Time Off -->
+    <div class="testContainer">
+        <div class="testBoxLabel">DENIED PTO Time Off Box</div>
+        <div id="EzDENIEDPTOTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">DENIED UNPAID Time Off Box</div>
+        <div id="EzDENIEDUNPAIDTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">DENIED SICK Time Off Box</div>
+        <div id="EzDENIEDSICKTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">DENIED HOLIDAY Time Off Box</div>
+        <div id="EzDENIEDHOLIDAYTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+
+    <!-- Canceled Time Off -->
+    <div class="testContainer">
+        <div class="testBoxLabel">CANCELED PTO Time Off Box</div>
+        <div id="EzCANCELEDPTOTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">CANCELED UNPAID Time Off Box</div>
+        <div id="EzCANCELEDUNPAIDTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div class="testBoxLabel">CANCELED SICK Time Off Box</div>
+        <div id="EzCANCELEDSICKTimeOffBoxTest" class="testBoxes"></div>
+    </div>
+    <div class="testContainer">
+        <div id="EzCANCELEDHOLIDAYTimeOffBoxTest" class="testBoxes"></div>
+        <div class="testBoxLabel">CANCELED HOLIDAY Time Off Box</div>
+    </div>
+</body> 
+
+</html>

@@ -1,0 +1,5983 @@
+/*
+    ##########################################################################################################################################################
+    EzClocker Button UX CSS Classes
+    Requires:
+        /src/main/webapp/public/styles/common/ez-body.css (for css variables used in this file)
+    ##########################################################################################################################################################
+*/
+
+:root {
+    /* General Button Variables */
+    --ezButtons-font-family: 'Roboto', verdana, sans-serif;
+    --ezButtons-cursor: pointer;
+
+    /* Link Button Common Variables */
+    --ezSmallLinkButton-text-decoration: none;
+    --ezSmallLinkButton-font-weight: normal;
+    --ezSmallLinkButton-font-style: normal;
+    --ezSmallLinkButton-cursor: pointer;
+
+    /* Small Link Button Variables */
+    --ezLinkButton-small-font-size: 10pt;
+
+    /* Large Button Variables */
+    --ezLargeButtonMaxHeight: 32px;
+    --ezLargeButtonMaxWidth: 175px;
+    --ezLargeButtonMinWidth: 32px;
+    --ezLargeButtonTextTransform: capitalize;
+    --ezLargeButtonFontWeight: bold;
+    --ezLargeButton-border-radius: 4px;
+
+    /* Navigation Button Variables */
+    --ezNavButtonColor: var(--ezOrange);
+    --ezNavButtonColorHover: var(--ezClockerOrange);
+    --ezNavButtonTextColor: var(--ezBlack);
+    --ezNavButtonFontSize: var(--ezFontSize);
+    --ezNavButtonFontWeight: var(--ezLargeButtonFontWeight);
+    --ezNavButtonMaxHeight: var(--ezLargeButtonMaxHeight);
+    --ezNavButtonTextTransform: var(--ezLargeButtonTextTransform);
+    --ezNavButtonMaxWidth: var(--ezLargeButtonMaxWidth);
+    --ezNavButtonMinWidth: var(--ezLargeButtonMinWidth);
+    --ezNavButtonRippleEffect: var(--ezWhite);
+    --ezNavButton-border-radius: 4px;
+
+    /* Sign-out Button Variables */
+    --ezSignOutButtonColor: var(--ezClockerAqua);
+    --ezSignOutButtonTextColor: var(--ezWhite);
+    --ezSignOutButtonFontSize: var(--ezFontSize);
+    --ezSignOutButtonHoverColor: var(--ezDarkAqua);
+    --ezSignOutButtonFontWeight: var(--ezLargeButtonFontWeight);
+    --ezSignOutButtonTextTransform: var(--ezLargeButtonTextTransform);
+    --ezSignOutButtonMaxHeight: var(--ezLargeButtonMaxHeight);
+    --ezSignOutButtonMaxWidth: var(--ezLargeButtonMaxWidth);
+    --ezSignOutButtonMinWidth: var(--ezLargeButtonMinWidth);
+    --ezSignOutButtonMinWidth-border-radius: 4px;
+
+    /* Subscription Plan Select Button Variables */
+    --ezSelectPlanBtnColor: var(--ezActionGreen);
+    --ezSelectPlanBtnTextColor: var(--ezBlack);
+    --ezSelectPlanBtnFontSize: var(--ezFontSize);
+    --ezSelectPlanBtnHoverColor: var(--ezHoverGreen);
+    --ezSelectPlanBtnFontWeight: var(--ezLargeButtonFontWeight);
+    --ezSelectPlanTextTransform: var(--ezLargeButtonTextTransform);
+    --ezSelectPlanBtnMaxHeight: var(--ezLargeButtonMaxHeight);
+    --ezSelectPlanButtonMaxWidth: var(--ezLargeButtonMaxWidth);
+    --ezSelectPlanButtonMinWidth: var(--ezLargeButtonMinWidth);
+    --ezSelectPlanButton-border-radius: 4px;
+}
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    HTML Link Buttons
+    ##########################################################################################################################################################
+    Applies to HTML Tags:
+        <a/>
+    Name Templates:
+        ezButtons-{name}-{color}
+        ezButtons-{name}-{other-properties}-color}
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Large Link Buttons
+    Classes:
+        (DEPRECATED) a.ezButtonLink_default-large-navy
+        (DEPRECATED) a.ez-button-link-large-navy
+        (DEPRECATED) a.ezLargeNavyLink
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) a.ezButtonLink_default-large-navy
+        (DEPRECATED) a.ez-button-link-large-navy
+        (DEPRECATED) a.ezLargeNavyLink
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: ezButtonLink_default-large-navy */
+a.ezButtonLink_default-large-navy,
+a.ezButtonLink_default-large-navy:enabled,
+a.ezButtonLink_default-large-navy:enabled:visited,
+/* DEPRECATED: a.ez-button-link-large-navy */
+a.ez-button-link-large-navy,
+a.ez-button-link-large-navy:enabled,
+a.ez-button-link-large-navy:enabled:visited,
+/* DEPRECATED: a.ezLargeNavyLink */
+a.ezLargeNavyLink,
+a.ezLargeNavyLink:enabled,
+a.ezLargeNavyLink:enabled:visited {
+    color: var(--ezClockerNavy);
+    font-family: var(--ezButtons-font-family);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14pt;
+    cursor: var(--ezButtons-cursor);
+    text-decoration: none;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) a.ezButtonLink_default-large-navy
+        (DEPRECATED) a.ez-button-link-large-navy
+        (DEPRECATED) a.ezLargeNavyLink
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+        :enabled:visited:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: ezButtonLink_default-large-navy */
+a.ezButtonLink_default-large-navy:enabled:hover,
+a.ezButtonLink_default-large-navy:enabled:focus:hover,
+a.ezButtonLink_default-large-navy:enabled:visited:hover,
+/* DEPRECATED a.ez-button-link-large-navy */
+a.ez-button-link-large-navy:enabled:hover,
+a.ez-button-link-large-navy:enabled:focus:hover,
+a.ez-button-link-large-navy:enabled:visited:hover,
+/* DEPRECATED a.ezLargeNavyLink */
+a.ezLargeNavyLink:enabled:hover,
+a.ezLargeNavyLink:enabled:focus:hover,
+a.ezLargeNavyLink:enabled:visited:hover {
+    color: var(--ezHoverNavy);
+    text-decoration: underline;
+}
+
+/* DEPRECATED: ezButtonLink_default-large-navy */
+a.ezButtonLink_default-large-navy:enabled:active,
+a.ezButtonLink_default-large-navy:enabled:active:hover,
+a.ezButtonLink_default-large-navy:enabled:visited:active,
+a.ezButtonLink_default-large-navy:enabled:visited:active:hover,
+/* DEPRECATED a.ez-button-link-large-navy */
+a.ez-button-link-large-navy:enabled:active,
+a.ez-button-link-large-navy:enabled:active:hover,
+a.ez-button-link-large-navy:enabled:visited:active,
+a.ez-button-link-large-navy:enabled:visited:active:hover,
+/* DEPRECATED a.ezLargeNavyLink */
+a.ezLargeNavyLink:enabled:active,
+a.ezLargeNavyLink:enabled:active:hover,
+a.ezLargeNavyLink:enabled:visited:active,
+a.ezLargeNavyLink:enabled:visited:active:hover {
+    color: var(--ezDarkNavy);
+    text-decoration: underline;
+}
+
+/* DEPRECATED: ezButtonLink_default-large-navy */
+a.ezButtonLink_default-large-navy:disabled,
+a.ezButtonLink_default-large-navy:disabled:hover,
+/* DEPRECATED a.ez-button-link-large-navy */
+a.ez-button-link-large-navy:disabled,
+a.ez-button-link-large-navy:disabled:hover,
+/* DEPRECATED a.ezLargeNavyLink */
+a.ezLargeNavyLink:disabled,
+a.ezLargeNavyLink:disabled:hover {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+/* DEPRECATED a.ezLargeNavyLinkDisabled */
+a.ezLargeNavyLinkDisabled,
+a.ezLargeNavyLinkDisabled:disabled a.ezLargeNavyLinkDisabled:disabled:hover {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Link Buttons
+    Classes:
+        a.ezLink-ezClockerNavy
+        (DEPRECATED) a.ezNavyLink
+    ===================================================================================================================
+*/
+
+a.ezLink-ezClockerNavy,
+/* DEPRECATED:  */
+a.ezNavyLink {
+    color: var(--ezClockerNavy);
+    text-decoration: none;
+    font-family: var(--ezButtons-font-family);
+    font-size: 12pt;
+    font-weight: normal;
+    font-style: normal;
+    cursor: pointer;
+}
+
+a.ezLink-ezClockerNavy:hover,
+/* DEPRECATED:  */
+a.ezNavyLink:hover {
+    color: var(--ezHoverNavy);
+    text-decoration: underline;
+}
+
+a.ezLink-ezClockerNavy:hover:enabled,
+/* DEPRECATED:  */
+a.ezNavyLink:hover:enabled {
+    color: var(--ezHoverNavy);
+    text-decoration: underline;
+}
+
+a.ezLink-ezClockerNavy:hover:active,
+/* DEPRECATED:  */
+a.ezNavyLink:hover:active {
+    color: var(--ezDarkNavy);
+    text-decoration: underline;
+}
+
+a.ezLink-ezClockerNavy:visited,
+/* DEPRECATED:  */
+a.ezNavyLink:visited {
+    color: var(--ezClockerNavy);
+    text-decoration: none;
+}
+
+a.ezLink-ezClockerNavy:disabled,
+/* DEPRECATED:  */
+a.ezNavyLink:disabled {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+/* DEPRECATED:  */
+a.ezNavyLinkDisabled {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    HTML Link 'Button' Classes
+    ##########################################################################################################################################################
+    Applies to HTML Tags:
+        <a/>
+    Name Templates:
+        ezButtons-link-{name}-{color}
+        ezButtons-link-{name}-{other-properties}-color}
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Link Buttons
+    Classes:
+        a.ezButton-link-ezClockerOrange
+        a.ezButton-link-ezClockerWhite
+        a.ezButton-link-ezClockerHotGreen
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :link
+        :visited
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerOrange,
+a.ezButton-link-ezClockerOrange:link,
+a.ezButton-link-ezClockerOrange:visited {
+    margin: 0;
+    padding: 4px;
+    /* Variable --ezClockerOrange defined in ez-body.css */
+    background-color: var(--ezClockerOrange);
+    text-decoration: none;
+    /* Variable --ezContentFontColor defined in ez-body.css */
+    color: var(--ezContentFontColor);
+    /* Variable ezFontFamily defined in ez-body.css */
+    font-family: var(--ezFontFamily);
+    /* Variable --ezContentFontSize defined in ez-body.css */
+    font-size: var(--ezContentFontSize);
+    /* Variable --ezContentFontWeigth defined in ez-body.css */
+    font-weight: var(--ezContentFontWeigth);
+    /* Variable --ezContentFontStyle defined in ez-body.css */
+    font-style: var(--ezContentFontStyle);
+    /* Variable --ezBorderOrange defined in ez-body.css */
+    border-color: var(--ezBorderOrange);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :active
+        :active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezclockerOrange:active,
+a.ezButton-link-ezclockerOrange:active:hover {
+    box-shadow: var(--ezBoxShadow-inset-ezClockerOrange-50);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+        :visited:hove
+        :active:hover
+        :link:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerOrange:hover,
+a.ezButton-link-ezClockerOrange:visited:hover,
+a.ezButton-link-ezClockerOrange:link:hover {
+    background-color: var(--ezHoverOrange);
+    box-shadow: unset;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+        :disabled:visited
+        :disabled:link
+        :disabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerOrange:disabled,
+a.ezButton-link-ezClockerOrange:disabled:active,
+a.ezButton-link-ezClockerOrange:disabled:hover,
+a.ezButton-link-ezClockerOrange:disabled:visited,
+a.ezButton-link-ezClockerOrange:disabled:link {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezBorderOrange);
+    border-color: var(--ezOrange);
+    box-shadow: unset;
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerWhite
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :link
+        :visited
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerWhite,
+a.ezButton-link-ezClockerWhite:link,
+a.ezButton-link-ezClockerWhite:visited {
+    margin: 0;
+    padding: 4px;
+    /* Variable --ezClockerOrange defined in ez-body.css */
+    background-color: var(--ezClockerWhite);
+    text-decoration: none;
+    /* Variable --ezContentFontColor defined in ez-body.css */
+    color: var(--ezContentFontColor);
+    /* Variable ezFontFamily defined in ez-body.css */
+    font-family: var(--ezFontFamily);
+    /* Variable --ezContentFontSize defined in ez-body.css */
+    font-size: var(--ezContentFontSize);
+    /* Variable --ezContentFontWeigth defined in ez-body.css */
+    font-weight: var(--ezContentFontWeigth);
+    /* Variable --ezContentFontStyle defined in ez-body.css */
+    font-style: var(--ezContentFontStyle);
+    /* Variable --ezBorderOrange defined in ez-body.css */
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerWhite
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :active
+        :active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerWhite:active,
+a.ezButton-link-ezClockerWhite:active:hover {
+    box-shadow: var(--ezBoxShadow-inset-ezClockerGray-50);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerWhite
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+        :visited:hove
+        :active:hover
+        :link:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerWhite:hover,
+a.ezButton-link-ezClockerWhite:visited:hover,
+a.ezButton-link-ezClockerWhite:link:hover {
+    background-color: var(--ezClockerSilver);
+    box-shadow: unset;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerWhite
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+        :disabled:visited
+        :disabled:link
+        :disabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerWhite:disabled,
+a.ezButton-link-ezClockerWhite:disabled:hover,
+a.ezButton-link-ezClockerWhite:disabled:visited,
+a.ezButton-link-ezClockerWhite:disabled:link,
+a.ezButton-link-ezClockerWhite:disabled:active {
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerGray);
+    border-color: var(--ezClockerSilver);
+    box-shadow: unset;
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerHotGreen
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :link
+        :visited
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerHotGreen,
+a.ezButton-link-ezClockerHotGreen:link,
+a.ezButton-link-ezClockerHotGreen:visited {
+    margin: 0;
+    padding: 4px;
+    /* Variable --ezClockerOrange defined in ez-body.css */
+    background-color: var(--ezClockerHotGreen);
+    text-decoration: none;
+    /* Variable --ezContentFontColor defined in ez-body.css */
+    color: var(--ezContentFontColor);
+    /* Variable ezFontFamily defined in ez-body.css */
+    font-family: var(--ezFontFamily);
+    /* Variable --ezContentFontSize defined in ez-body.css */
+    font-size: var(--ezContentFontSize);
+    /* Variable --ezContentFontWeigth defined in ez-body.css */
+    font-weight: var(--ezContentFontWeigth);
+    /* Variable --ezContentFontStyle defined in ez-body.css */
+    font-style: var(--ezContentFontStyle);
+    /* Variable --ezBorderOrange defined in ez-body.css */
+    border-color: var(--ezBorderHotGreen);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerHotGreen
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :active
+        :active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerHotGreen:active,
+a.ezButton-link-ezClockerHotGreen:active:hover {
+    box-shadow: var(--ezBoxShadow-inset-ezBorderHotGreen-50);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerHotGreen
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+        :visited:hove
+        :link:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerHotGreen:hover,
+a.ezButton-link-ezClockerHotGreen:visited:hover,
+a.ezButton-link-ezClockerHotGreen:link:hover {
+    background-color: var(--ezHoverHotGreen);
+    box-shadow: unset;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-link-ezClockerHotGreen
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+        :disabled:visited
+        :disabled:link
+        :disabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-link-ezClockerHotGreen:disabled,
+a.ezButton-link-ezClockerHotGreen:disabled:hover,
+a.ezButton-link-ezClockerHotGreen:disabled:visited,
+a.ezButton-link-ezClockerHotGreen:disabled:link,
+a.ezButton-link-ezClockerHotGreen:disabled:active {
+    background-color: var(--ezHoverHotGreen);
+    color: var(--ezBorderHotGreen);
+    border-color: var(--ezClockerHotGreen);
+    box-shadow: unset;
+    cursor: default;
+}
+
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Small Link Buttons
+        a.ezButtonLink_default-small-navy
+        (DEPRECATED) a.ezSmallNavyLink
+        (DEPRECATED) a.ez-button-link-small-navy
+        (DEPRECATED) a.ezSmallNavyLinkDisabled
+    ===================================================================================================================
+*/
+
+/* -------------------------------------------------
+| [Link Button]
+|   ezButtonLink_default-small-navy
+|   (DEPRECATED) ez-button-link-small-navy
+|   (DEPRECATED) ezSmallNavyLink
+------------------------------------------------- */
+a.ezButtonLink_default-small-navy,
+/* DEPRECATED:  */
+a.ezSmallNavyLink,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy {
+    color: var(--ezClockerNavy);
+    font-family: var(--ezFontFamily);
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: normal;
+    font-style: normal;
+    cursor: pointer;
+}
+
+a.ezButtonLink_default-small-navy:hover,
+/* DEPRECATED:  */
+a.ezSmallNavyLink:hover,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy:hover {
+    color: var(--ezHoverNavy);
+    text-decoration: underline;
+}
+
+a.ezButtonLink_default-small-navy:hover:enabled,
+/* DEPRECATED:  */
+a.ezSmallNavyLink:hover:enabled,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy:hover:enabled {
+    color: var(--ezHoverNavy);
+    text-decoration: underline;
+}
+
+a.ezButtonLink_default-small-navy:hover:active,
+/* DEPRECATED:  */
+a.ezSmallNavyLink:hover:active,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy:hover:active {
+    color: var(--ezDarkNavy);
+    text-decoration: underline;
+}
+
+a.ezButtonLink_default-small-navy:visited,
+/* DEPRECATED:  */
+a.ezSmallNavyLink:visited,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy:visited {
+    color: var(--ezClockerNavy);
+    text-decoration: none;
+}
+
+a.ezButtonLink_default-small-navy:disabled,
+/* DEPRECATED:  */
+a.ezSmallNavyLink:disabled,
+/* DEPRECATED:  */
+a.ez-button-link-small-navy:disabled {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+/* DEPRECATED:  */
+a.ezSmallNavyLinkDisabled {
+    color: var(--ezClockerGray);
+    text-decoration: none;
+    cursor: default;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Action Link Buttons
+    Classes:
+        a.ezButtonLink_action-normal-green
+        (DEPRECATED) a.ezActionLink
+    ===================================================================================================================
+*/
+
+/* -------------------------------------------------
+| [Link Button]
+|   ezButtonLink_action-normal-green
+|   (DEPRECATED) ezActionLink
+------------------------------------------------- */
+a.ezButtonLink_action-normal-green:link,
+/* DEPRECATED:  */
+a.ezActionLink:link {
+    margin: 0;
+    padding: 8px;
+    background-color: var(--ezActionGreen);
+    text-decoration: none;
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+a.ezButtonLink_action-normal-green:hover:enabled,
+/* DEPRECATED:  */
+a.ezActionLink:hover:enabled {
+    background-color: var(--ezHoverHotGreen);
+}
+
+a.ezButtonLink_action-normal-green:hover:active,
+/* DEPRECATED:  */
+a.ezActionLink:hover:active {
+    background-color: var(--ezDarkHotGreen);
+}
+
+a.ezButtonLink_action-normal-green:visited,
+/* DEPRECATED:  */
+a.ezActionLink:visited {
+    margin: 0;
+    padding: 8px;
+    text-decoration: none;
+    background-color: var(--ezActionGreen);
+    font-style: normal;
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Download Link Buttons
+    Classes:
+        a.ezButtonLink_download-normal-navy
+        (DEPRECATED) a.ezDownloadLink
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButtonLink_download-normal-navy
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :link
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButtonLink_download-normal-navy:link,
+/* DEPRECATED: ezDownloadLink */
+a.ezDownloadLink:link {
+    margin: 0;
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    text-decoration: none;
+    color: var(--ezClockerWhite);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButtonLink_download-normal-navy
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover:enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButtonLink_download-normal-navy:hover:enabled,
+/* DEPRECATED: ezDownloadLink */
+a.ezDownloadLink:hover:enabled {
+    background-color: var(--ezHoverNavy);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButtonLink_download-normal-navy
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButtonLink_download-normal-navy:hover:active,
+/* DEPRECATED: ezDownloadLink */
+a.ezDownloadLink:hover:active {
+    background-color: var(--ezDarkNavy);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButtonLink_download-normal-navy
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :visited
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButtonLink_download-normal-navy:visited,
+/* DEPRECATED: ezDownloadLink */
+a.ezDownloadLink:visited {
+    margin: 0;
+    padding: 8px;
+    text-decoration: none;
+    background-color: var(--ezClockerNavy);
+    font-style: normal;
+    color: var(--ezClockerWhite);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+a.ezButtonLink_download-normal-navy:disabled,
+/* DEPRECATED: ezDownloadLink */
+a.ezDownloadLink:disabled {
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerSilver);
+    border-color: var(--ezLightNavy);
+    cursor: default;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Help/More Info Link Buttons
+    Classes:
+        a.ezButton-what-is-this-link
+        a.ezButton-what-is-this-link-margin-top4px
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-what-is-this-link {
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: small;
+    text-decoration: none;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-what-is-this-link:hover {
+    text-decoration: underline;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link-margin-top4px
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-what-is-this-link-margin-top4px {
+    margin-top: 4px;
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: small;
+    text-decoration: none;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link-margin-top4px
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-what-is-this-link-margin-top4px:hover {
+    text-decoration: underline;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-show-more-details-link {
+    /* top right bottom left */
+    padding: 4px 4px 4px 18px;
+    background-color: transparent;
+    background-size: 10px 10px;
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    background-image: url('/public/images/icons/expand-ezClockerNavy.svg');
+    /* --ezClockerNavy from ez-body.css */
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    /* --ezSmallFontSize from ez-text.css */
+    font-size: var(--ezSmallFontSize);
+    text-decoration: none;
+    border-style: none;
+    cursor: pointer;
+
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        a.ezButton-what-is-this-link
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+a.ezButton-show-more-details-link:hover {
+    text-decoration: underline;
+}
+
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    HTML Input Buttons
+    ##########################################################################################################################################################
+    Applies to HTML Tags:
+        <input type="button"/>
+    Name Templates:
+        ezButtons-{name}-{color}
+        ezButtons-{name}-{other-properties}-color}
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Major Input Buttons
+    ===================================================================================================================
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Input Buttons
+| HTML Tags: <input type="button"/>
+|-------------------------------------------------
+| Template: ezInputButton_{name}-{size}-{color}
+|
+| Official Classes:
+|   ezInputButton_major-normal-orange
+|   ezInputButton_action-normal-ezActionGreen
+|
+| Deprecated Classes:
+|   ez-major-button
+|   ez-action-button
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*-------------------------------------------------
+| [Input Button]
+|   ezInputButton_major-normal-orange
+|   (DEPRECATED) ez-major-button
+------------------------------------------------- */
+/* DEPRECATED:  */
+input[type="button"].ez-major-button,
+input[type="button"].ezInputButton_major-normal-orange {
+    /* ez-major-button style */
+    display: inline-block;
+    background-color: var(--ezClockerOrange);
+    padding: 6px 24px;
+    font-family: var(--ezButtons-font-family);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--ezClockerBlack);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* DEPRECATED:  */
+input[type="button"].ez-major-button:hover:enabled,
+input[type="button"].ezInputButton_major-normal-orange:hover:enabled {
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED:  */
+input[type="button"].ez-major-button:hover:active,
+input[type="button"].ezInputButton_major-normal-orange:hover:active {
+    background-color: #ff9933;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Action Input Buttons
+    ===================================================================================================================
+*/
+
+
+/* -------------------------------------------------
+| [Input Button]
+|   ezInputButton_action-normal-ezActionGreen
+|   (DEPRECATED) ez-action-button
+------------------------------------------------- */
+input[type="button"].ez-action-button,
+input[type="button"].ezInputButton_action-normal-ezActionGreen {
+    background-color: var(--ezActionGreen);
+    border: 1px solid var(--ezActionGreenBorderColor);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtons-font-family);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+input[type="button"].ez-action-button:hover:enabled,
+input[type="button"].ezInputButton_action-normal-ezActionGreen:hover:enabled {
+    background-color: var(--ezActionGreenHoverColor);
+}
+
+input[type="button"].ez-action-button:hover:active,
+input[type="button"].ezInputButton_action-normal-ezActionGreen:hover:active {
+    color: var(--ezActionGreenHoverColor);
+    background-color: var(--ezActionGreenBorderColor);
+}
+
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Edit Input Buttons
+    ===================================================================================================================
+*/
+
+/* -------------------------------------------------
+| [Input Button]
+|   ezInputButton_edit-normal-ezClockerOffWhite
+|   (DEPRECATED) ez-edit-button
+------------------------------------------------- */
+input[type="button"].ezInputButton_edit-normal-ezClockerOffWhite,
+/* DEPRECATED: input[type="button"].ez-edit-button */
+input[type="button"].ez-edit-button {
+    display: inline-block;
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtons-font-family);
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    border: 1px solid var(--ezBorderOffWhite);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type="button"].ezInputButton_edit-normal-ezClockerOffWhite:hover:enabled,
+/* DEPRECATED: input[type="button"].ez-edit-button */
+input[type="button"].ez-edit-button:hover:enabled {
+    background-color: var(--ezHoverOffWhite);
+}
+
+
+input[type="button"].ezInputButton_edit-normal-ezClockerOffWhite:hover:active,
+/* DEPRECATED: input[type="button"].ez-edit-button */
+input[type="button"].ez-edit-button:hover:active {
+    background-color: var(--ezDarkOffWhite);
+}
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    HTML Button Classes
+    ##########################################################################################################################################################
+    Applies to HTML Tags:
+        <button/>
+    Name Templates:
+        ezButtons-{name}-{color}
+        ezButtons-{name}-{other-properties}-color}
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Buttons
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezButton
+        (DEPRECATED) button.ezButton_default-normal-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button,
+button:enabled,
+button.ezButton-default-ezClockerOrange,
+button.ezButton-default-ezClockerOrange:enabled,
+/* DEPRECATED: ezButton */
+button.ezButton,
+button.ezButton:enabled,
+/* DEPRECATED: ezButton_default-normal-ezClockerOrange */
+button.ezButton_default-normal-ezClockerOrange,
+button.ezButton_default-normal-ezClockerOrange:enabled {
+    padding: 6px 24px;
+    margin: 2px;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtons-font-family);
+    font-size: 10pt;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px transparent;
+    outline-style: none;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezButton
+        (DEPRECATED) button.ezButton_default-normal-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button:enabled:focus,
+button.ezButton-default-ezClockerOrange:enabled:focus,
+/* DEPRECATED: button.ezButton */
+button.ezButton:enabled:focus,
+/* DEPRECATED: button.ezButton_default-normal-ezClockerOrange */
+button.ezButton_default-normal-ezClockerOrange:enabled:focus {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezClockerBlack);
+    /* box-shadow: 0 0 1px 1px transparent; */
+    outline-width: 0;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezButton
+        (DEPRECATED) button.ezButton_default-normal-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button:enabled:hover,
+button:enabled:focus:hover,
+button.ezButton-default-ezClockerOrange:enabled:hover,
+button.ezButton-default-ezClockerOrange:enabled:focus:hover,
+/* DEPRECATED: button.ezButton */
+button.ezButton:enabled:hover,
+button.ezButton:enabled:focus:hover,
+/* DEPRECATED: button.ezButton_default-normal-ezClockerOrange */
+button.ezButton_default-normal-ezClockerOrange:enabled:hover,
+button.ezButton_default-normal-ezClockerOrange:enabled:focus:hover {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezClockerBlack);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    outline-color: var(--ezClockerGray);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezButton
+        (DEPRECATED) button.ezButton_default-normal-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    States:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button:enabled:active,
+button:enabled:active:hover,
+button:enabled:focus:active,
+button:enabled:focus:active:hover,
+button.ezButton-default-normal-ezClockerOrange:enabled:active,
+button.ezButton-default-normal-ezClockerOrange:enabled:active:hover,
+button.ezButton-default-normal-ezClockerOrange:enabled:focus:active,
+button.ezButton-default-normal-ezClockerOrange:enabled:focus:active:hover,
+/* DEPRECATED: button.ezButton */
+button.ezButton:enabled:active,
+button.ezButton:enabled:active:hover,
+button.ezButton:enabled:focus:active,
+button.ezButton:enabled:focus:active:hover,
+/* DEPRECATED: button.ezButton_default-normal-ezClockerOrange */
+button.ezButton_default-normal-ezClockerOrange:enabled:active,
+button.ezButton_default-normal-ezClockerOrange:enabled:active:hover,
+button.ezButton_default-normal-ezClockerOrange:enabled:focus:active,
+button.ezButton_default-normal-ezClockerOrange:enabled:focus:active:hover {
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    box-shadow:
+        0 0 1px 1px transparent,
+        inset 0 0 4px 2px rgba(198, 118, 0, 0.5);
+    outline-color: var(--ezClockerGray);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezButton
+        (DEPRECATED) button.ezButton_default-normal-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button:disabled,
+button:disabled:hover,
+button.ezButton-default-normal-ezClockerOrange:disabled,
+button.ezButton-default-normal-ezClockerOrange:disabled:hover,
+/* DEPRECATED: button.ezButton */
+button.ezButton:disabled,
+button.ezButton:disabled:hover,
+/* DEPRECATED: button.ezButton_default-normal-ezClockerOrange */
+button.ezButton_default-normal-ezClockerOrange:disabled,
+button.ezButton_default-normal-ezClockerOrange:disabled:hover {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezBorderOrange);
+    border-color: var(--ezClockerOrange);
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) button.disabledButton
+        (DEPRECATED) button.ezDisabledButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        all
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: button.disabledButton  */
+button.disabledButton,
+button.disabledButton:disabled,
+button.disabledButton:disabled:hover,
+/* DEPRECATED: button.ezDisabledButton  */
+button.ezDisabledButton,
+button.ezDisabledButton:disabled,
+button.ezDisabledButton:disabled:hover {
+    padding: 6px 24px;
+    margin: 2px;
+    background-color: var(--ezHoverOrange);
+    color: var(--ezBorderOrange);
+    font-family: var(--ezButtons-font-family);
+    font-size: 10pt;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerOrange);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px transparent;
+    outline-style: none;
+    cursor: default;
+}
+
+/*
+====================================================================================================================
+| [Class Group]
+| EzClocker Header Buttons
+====================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButton
+        (DEPRECATED) button.headerButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-ezClockerOrange,
+button.ezButtons-header-ezClockerOrange:enabled,
+/* DEPRECATED: button.ezHeaderButton */
+button.ezHeaderButton,
+button.ezHeaderButton:enabled,
+/* DEPRECATED: button.headerButton */
+button.headerButton,
+button.headerButton:enabled {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButton
+        (DEPRECATED) button.headerButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-ezClockerOrange:enabled:focus,
+/* DEPRECATED: button.ezHeaderButton */
+button.ezHeaderButton:enabled:focus,
+/* DEPRECATED: button.headerButton */
+button.headerButton:enabled:focus {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButton
+        (DEPRECATED) button.headerButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-ezClockerOrange:enabled:hover,
+button.ezButtons-header-ezClockerOrange:enabled:focus:hover,
+/* DEPRECATED: button.headerButton */
+button.headerButton:enabled:hover,
+button.headerButton:enabled:focus:hover,
+/* DEPRECATED: button.ezHeaderButton */
+button.ezHeaderButton:enabled:hover,
+button.ezHeaderButton:enabled:focus:hover {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButton
+        (DEPRECATED) button.headerButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-ezClockerOrange:enabled:active,
+button.ezButtons-header-ezClockerOrange:enabled:active:hover,
+button.ezButtons-header-ezClockerOrange:enabled:focus:active,
+button.ezButtons-header-ezClockerOrange:enabled:focus:active:hover,
+button.ezHeaderButton:enabled:active,
+button.ezHeaderButton:enabled:active:hover,
+button.ezHeaderButton:enabled:focus:active,
+button.ezHeaderButton:enabled:focus:active:hover,
+button.headerButton:enabled:active,
+button.headerButton:enabled:active:hover,
+button.headerButton:enabled:focus:active,
+button.headerButton:enabled:focus:active:hover {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButton
+        (DEPRECATED) button.headerButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-ezClockerOrange:disabled,
+button.ezButtons-header-ezClockerOrange:disabled:hover,
+/* DEPRECATED: button.headerButton */
+button.ezHeaderButton:disabled,
+button.ezHeaderButton:disabled:hover,
+/* DEPRECATED: button.headerButton */
+button.headerButton:disabled,
+button.headerButton:disabled:hover {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) button.ezDisabledHeaderButton
+        (DEPRECATED) button.disabledHeaderButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: button.ezDisabledHeaderButton */
+button.ezDisabledHeaderButton,
+button.ezDisabledHeaderButton:disabled,
+button.ezDisabledHeaderButton:disabled:hover,
+/* DEPRECATED: button.disabledHeaderButton */
+button.disabledHeaderButton,
+button.disabledHeaderButton:disabled,
+button.disabledHeaderButton:disabled:hover {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-header-down-ezClockerOrange
+        (DEPRECATED) button.ezHeaderButtonDown
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled
+        :enabled:hover,
+        :enabled:active,
+        :enabled:focus,
+        :disabled,
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-header-down-ezClockerOrange,
+button.ezButtons-header-down-ezClockerOrange:enabled,
+button.ezButtons-header-down-ezClockerOrange:enabled:hover,
+button.ezButtons-header-down-ezClockerOrange:enabled:active,
+button.ezButtons-header-down-ezClockerOrange:enabled:focus,
+/* DEPRECATED: button.ezHeaderButtonDown */
+button.ezHeaderButtonDown,
+button.ezHeaderButtonDown:enabled,
+button.ezHeaderButtonDown:enabled:hover,
+button.ezHeaderButtonDown:enabled:active,
+button.ezHeaderButtonDown:enabled:focus,
+button.ezHeaderButtonDown:disabled,
+button.ezHeaderButtonDown:disabled:hover {
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezDimOrange);
+    border-left-color: var(--ezBorderOrange);
+    border-top-color: var(--ezBorderOrange);
+    border-right-color: var(--ezOrange);
+    border-bottom-color: var(--ezOrange);
+}
+
+/*
+
+/*
+====================================================================================================================
+| [Class Group]
+| EzClocker Toggle Buttons
+====================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezLargeToggleButton-2col-container
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        all
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-toggle-button-large-2col-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+    justify-content: center;
+    align-content: center;
+    margin: 10px 10px 0;
+    padding: 10px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-unselected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-toggle-button-large-unselected,
+button.ezButtons-toggle-button-large-unselected:enabled {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-unselected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-toggle-button-large-unselected:enabled:hover,
+.ezButtons-toggle-button-large-unselected:enabled:focus:hover {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-unselected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-toggle-button-large-unselected:enabled:active,
+button.ezButtons-toggle-button-large-unselected:enabled:active:hover,
+button.ezButtons-toggle-button-large-unselected:enabled:focus:active,
+button.ezButtons-toggle-button-large-unselected:enabled:focus:active:hover {
+    background-color: var(--ezHoverNavy);
+    color: var(--ezClockerWhite);
+    font-size: 14pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    box-shadow: var(--ezBoxShadow-inset-ezNavy-50);
+    outline-color: var(--ezNavy-alpha-50);
+    outline-width: 1px;
+    outline-style: auto;
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-unselected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-toggle-button-large-unselected:disabled,
+button.ezButtons-toggle-button-large-unselected:disabled:hover {
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerGray);
+    font-size: 14pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezClockerSilver);
+    border-radius: 3px;
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-selected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+        :enabled:hover
+        :enabled:active,
+        :enabled:active:hover
+        :enabled:focus
+        :enabled:focus:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-toggle-button-large-selected,
+button.ezButtons-toggle-button-large-selected:enabled,
+button.ezButtons-toggle-button-large-selected:enabled:hover,
+button.ezButtons-toggle-button-large-selected:enabled:active,
+button.ezButtons-toggle-button-large-selected:enabled:active:hover,
+button.ezButtons-toggle-button-large-selected:enabled:focus,
+button.ezButtons-toggle-button-large-selected:enabled:focus:hover,
+button.ezButtons-toggle-button-large-selected:enabled:focus:active,
+button.ezButtons-toggle-button-large-selected:enabled:focus:active:hover {
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 14pt;
+    font-weight: bold;
+    border-color: var(--ezBorderNavy);
+    border-width: 2px;
+    box-shadow: none;
+    outline-style: none;
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-toggle-button-large-selected
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-toggle-button-large-selected:disabled,
+button.ezButtons-toggle-button-large-selected:disabled:hover {
+    background-color: var(--ezHoverNavy);
+    color: var(--ezBorderNavy);
+    font-size: 14pt;
+    font-weight: bold;
+    border-color: var(--ezClockerNavy);
+    box-shadow: none;
+    outline-style: none;
+    cursor: default;
+}
+
+
+/*
+====================================================================================================================
+| [Class Group]
+| EzClocker Major Buttons
+====================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-major-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniMajorButton
+        (DEPRECATED) button.miniMajorButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-major-mini-ezClockerYellow,
+.ezButtons-major-mini-ezClockerYellow:enabled,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.ezMiniMajorButton,
+button.ezMiniMajorButton:enabled,
+/* DEPRECATED:  */
+button.miniMajorButton,
+button.miniMajorButton:enabled {
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: var(--ezClockerYellow);
+    border-color: var(--ezClockerGray);
+    color: var(--ezClockerBlack);
+    border-radius: 3px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-major-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniMajorButton
+        (DEPRECATED) button.miniMajorButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-major-mini-ezClockerYellow:enabled:hover,
+button.ezButtons-major-mini-ezClockerYellow:enabled:active:hover,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.ezMiniMajorButton:enabled:hover,
+button.ezMiniMajorButton:enabled:active:hover,
+/* DEPRECATED: button.miniMajorButton */
+button.miniMajorButton:enabled:hover,
+button.miniMajorButton:enabled:active:hover {
+    background-color: var(--ezLightYellow);
+    box-shadow: 0 0 1px 1px var(--ezBoxShadow-ezclocker-gray-30);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezMiniMajorButton
+        (DEPRECATED) button.miniMajorButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:focus:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-major-mini-ezClockerYellow:enabled:active,
+button.ezButtons-major-mini-ezClockerYellow:enabled:focus:active,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.ezMiniMajorButton:enabled:active,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.miniMajorButton:enabled:focus:active {
+    background-color: var(--ezLightYellow);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButton-default-normal-ezClockerOrange
+        (DEPRECATED) button.ezMiniMajorButton
+        (DEPRECATED) button.miniMajorButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-major-mini-ezClockerYellow:disabled,
+button.ezButtons-major-mini-ezClockerYellow:disabled:hover,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.ezMiniMajorButton:disabled,
+button.ezMiniMajorButton:disabled:hover,
+/* DEPRECATED: button.ezMiniMajorButton */
+button.miniMajorButton:disabled,
+button.miniMajorButton:disabled:hover {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    border-color: var(--ezDarkYellow);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) button.ezDisabledMiniMajorButton
+        (DEPRECATED) button.disabledMiniMajorButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: button.ezDisabledMiniMajorButton */
+button.ezDisabledMiniMajorButton,
+button.ezDisabledMiniMajorButton:disabled,
+button.ezDisabledMiniMajorButton:disabled:hover,
+/* DEPRECATED: button.ezDisabledMiniMajorButton */
+button.disabledMiniMajorButton:disabled,
+button.disabledMiniMajorButton:disabled:hover,
+button.disabledMiniMajorButton {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    border-color: var(--ezDarkYellow);
+}
+
+
+/*
+====================================================================================================================
+| [Class Group]
+| EzClocker Mini Buttons
+====================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-default-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniNormalButton
+        (DEPRECATED) button.miniNormalButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-default-mini-ezClockerYellow,
+button.ezButtons-default-mini-ezClockerYellow:enabled,
+/* DEPRECATED: button.ezMiniNormalButton */
+button.ezMiniNormalButton,
+button.ezMiniNormalButton:enabled,
+/* DEPRECATED: button.miniNormalButton */
+button.miniNormalButton,
+button.miniNormalButton:enabled {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 8pt;
+    font-weight: normal;
+    border-color: var(--ezClockerGray);
+    border-radius: 3px;
+}
+
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-default-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniNormalButton
+        (DEPRECATED) button.miniNormalButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-default-mini-ezClockerYellow:enabled:hover,
+button.ezButtons-default-mini-ezClockerYellow:enabled:focus:hover,
+/* DEPRECATED: button.ezMiniNormalButton */
+button.ezMiniNormalButton:enabled:hover,
+button.ezMiniNormalButton:enabled:focus:hover,
+/* DEPRECATED: button.miniNormalButton */
+button.miniNormalButton:enabled:hover,
+button.miniNormalButton:enabled:focus:hover {
+    background-color: var(--ezLightYellow);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-default-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniNormalButton
+        (DEPRECATED) button.miniNormalButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-default-mini-ezClockerYellow:enabled:active,
+/* DEPRECATED: button.ezMiniNormalButton */
+button.ezMiniNormalButton:enabled:active,
+/* DEPRECATED: button.miniNormalButton */
+button.miniNormalButton:enabled:active {
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50)
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-default-mini-ezClockerYellow
+        (DEPRECATED) button.ezMiniNormalButton
+        (DEPRECATED) button.miniNormalButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-default-mini-ezClockerYellow:disabled,
+button.ezButtons-default-mini-ezClockerYellow:disabled:hover,
+/* DEPRECATED: button.ezMiniNormalButton */
+button.ezMiniNormalButton:disabled,
+button.ezMiniNormalButton:disabled:hover,
+/* DEPRECATED: button.miniNormalButton */
+button.miniNormalButton:disabled,
+button.miniNormalButton:disabled:hover {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    border-color: var(--ezDarkYellow);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) button.ezDisabledMiniNormalButton
+        (DEPRECATED) button.disabledMiniNormalButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: button.disabledMiniNormalButton */
+button.ezDisabledMiniNormalButton,
+button.ezDisabledMiniNormalButton:disabled,
+button.ezDisabledMiniNormalButton:disabled:hover,
+/* DEPRECATED: button.disabledMiniNormalButton */
+button.disabledMiniNormalButton,
+button.disabledMiniNormalButton:disabled,
+button.disabledMiniNormalButton:disabled:hover {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    border-color: var(--ezDarkYellow);
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezDialogButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezDialogButton {
+    padding: 18px;
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+button.ezDialogButton:hover {
+    padding: 18px;
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+button.ezDialogButton:active {
+    padding: 18px;
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+button.ezDialogButton:disabled {
+    padding: 18px;
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+button.ezDisabledDialogButton {
+    padding: 18px;
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: normal;
+    border-radius: 3px;
+}
+
+button.ezWhiteDialogButton {
+    padding: 18px 24px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+button.ezWhiteDialogButton:hover {
+    padding: 18px 24px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+button.ezWhiteDialogButton:hover:active,
+button.ezWhiteDialogButton:active {
+    padding: 18px 24px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+    box-shadow: var(--ezBoxShadow-inset-ezclocker-black-50);
+}
+
+button.ezWhiteDialogButton:disabled {
+    padding: 18px 24px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerStone);
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+button.ezDisabledWhiteDialogButton {
+    padding: 18px 24px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerStone);
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: normal;
+    border-radius: 3px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezMajorButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezMajorButton,
+button.ezMajorButton:enabled,
+/* DEPRECATED: button.majorButton */
+button.majorButton,
+button.majorButton:enabled {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    border-radius: 3px;
+}
+
+button.ezMajorButton:enabled:focus,
+/* DEPRECATED: button.majorButton */
+button.majorButton:enabled:focus {
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    background-color: var(--ezLightYellow);
+}
+
+button.ezMajorButton:enabled:hover,
+button.ezMajorButton:enabled:focus:hover,
+/* DEPRECATED: button.majorButton */
+button.majorButton:enabled:hover,
+button.majorButton:enabled:focus:hover {
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    background-color: var(--ezLightYellow);
+    box-shadow: 0 0 1px 1px var(--ezBoxShadow-ezclocker-gray-30);
+}
+
+button.ezMajorButton:enabled:active,
+button.ezMajorButton:enabled:active:hover,
+button.ezMajorButton:enabled:focus:active,
+button.ezMajorButton:enabled:focus:active:hover,
+/* DEPRECATED: button.majorButton */
+button.majorButton:enabled:active,
+button.majorButton:enabled:active:hover,
+button.majorButton:enabled:focus:active,
+button.majorButton:enabled:focus:active:hover {
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    background-color: var(--ezLightYellow);
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50)
+}
+
+button.ezMajorButton:disabled,
+button.ezMajorButton:disabled:hover,
+button.ezMajorButton:disabled:active,
+/* DEPRECATED: button.majorButton */
+button.majorButton:disabled,
+button.majorButton:disabled:hover,
+button.majorButton:disabled:active {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 10pt;
+    font-family: var(--ezButtons-font-family);
+    border-color: var(--ezDarkYellow);
+    cursor: default;
+    box-shadow: none;
+}
+
+/* DEPRECATED: button.ezDisabledMajorButton */
+button.ezDisabledMajorButton,
+/* DEPRECATED: button.disabledMajorButton */
+button.disabledMajorButton {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 10pt;
+    font-family: var(--ezButtons-font-family);
+    border-color: var(--ezDarkYellow);
+    cursor: default;
+    box-shadow: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezNormalButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezNormalButton {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezClockerGray);
+    border-radius: 3px;
+}
+
+button.ezNormalButton:hover:enabled {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 12pt;
+    border-color: var(--ezClockerGray);
+    box-shadow: 0 0 1px 1px var(--ezBoxShadow-ezclocker-gray-30);
+}
+
+button.ezNormalButton:focus {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 12pt;
+    border-color: var(--ezClockerGray);
+}
+
+button.ezNormalButton:hover,
+button.ezNormalButton:hover:active {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 12pt;
+    border-color: var(--ezClockerGray);
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50)
+}
+
+button.ezNormalButton:disabled,
+button.ezNormalButton:disabled:hover,
+button.ezNormalButton:disabled:hover:active {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezDarkYellow);
+    box-shadow: none;
+    cursor: default;
+}
+
+button.ezDisabledNormalButton {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 12pt;
+    border-color: var(--ezDarkYellow);
+    border-radius: 3px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezNormalButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezDefaultNormalButton {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    border-radius: 3px;
+}
+
+button.ezDefaultNormalButton:hover:enabled {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    box-shadow: 0 0 1px 1px var(--ezBoxShadow-ezclocker-gray-30);
+}
+
+button.ezDefaultNormalButton:focus {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+}
+
+button.ezDefaultNormalButton:hover,
+button.ezDefaultNormalButton:hover:active {
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    font-size: 12pt;
+    border-color: var(--ezClockerGray);
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50);
+}
+
+button.ezDefaultNormalButton:disabled,
+button.ezDefaultNormalButton:disabled:hover,
+button.ezDefaultNormalButton:disabled:active {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezDarkYellow);
+    box-shadow: none;
+    cursor: default;
+}
+
+button.ezDisabledDefaultNormalButton {
+    background-color: var(--ezLightYellow);
+    color: var(--ezDarkYellow);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezDarkYellow);
+    border-radius: 3px;
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezTealMajorButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezTealMajorButton {
+    background-color: var(--ezClockerTeal);
+    color: var(--ezTealContainerTextColor);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezTealBorder);
+    border-radius: 3px;
+}
+
+button.ezTealMajorButton:hover:enabled {
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezTealBorder);
+    background-color: var(--ezTealHover);
+    box-shadow: var(--ezTealBoxShadow);
+}
+
+button.ezTealMajorButton:focus {
+    color: var(--ezTealContainerTextColor);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezTealBorder);
+    background-color: var(--ezTealHover);
+}
+
+button.ezTealMajorButton:hover,
+button.ezTealMajorButton:hover:active {
+    color: var(--ezTealContainerTextColor);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezTealBorder);
+    background-color: var(--ezTealHover);
+    box-shadow: var(--ezTealInsetBoxShadow);
+}
+
+button.ezTealMajorButton:disabled,
+button.ezTealMajorButton:disabled:hover,
+button.ezTealMajorButton:disabled:active {
+    background-color: var(--ezDarkteal);
+    color: var(--ezTealContainerDisabledTextColor);
+    font-size: 10pt;
+    font-weight: normal;
+    border-color: var(--ezTealBorder);
+    box-shadow: none;
+    cursor: default;
+}
+
+button.ezTealMajorButtonDisabled {
+    background-color: var(--ezDarkteal);
+    color: var(--ezTealContainerDisabledTextColor);
+    font-size: 10pt;
+    font-weight: normal;
+    border-color: var(--ezTealBorder);
+    box-shadow: none;
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezWarningMajorButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezWarningMajorButton,
+/* DEPRECATED: button.warningMajorButton */
+button.warningMajorButton {
+    font-weight: bold;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+    color: var(--ezClockerWhite);
+    border-radius: 3px;
+}
+
+button.ezWarningMajorButton:hover:enabled,
+/* DEPRECATED: button.warningMajorButton */
+button.warningMajorButton:hover:enabled {
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+}
+
+button.ezWarningMajorButton:hover:active,
+/* DEPRECATED: button.warningMajorButton */
+button.warningMajorButton:hover:active {
+    color: var(--ezClockerWhite);
+    background-color: #BF3330;
+}
+
+button.ezWarningMajorButton:disabled,
+button.ezWarningMajorButton:disabled:hover,
+button.ezWarningMajorButton:disabled:active
+
+/* DEPRECATED: button.warningMajorButton */
+button.warningMajorButton:disabled button.warningMajorButton:disabled:hover,
+button.warningMajorButton:disabled:active {
+    color: var(--ezClockerStone);
+    background-color: #FFf0f0;
+    border-color: var(--ezClockerStone);
+    font-weight: normal;
+    box-shadow: none;
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezDeleteMajorButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezDeleteMajorButton,
+button.ezDeleteMajorButton:enabled,
+/* DEPRECATED: button.deleteMajorButton */
+button.deleteMajorButton,
+button.deleteMajorButton:enabled {
+    margin: 0;
+    padding: 6px 24px;
+    background-color: var(--ezDarkAlertRed);
+    color: var(--ezClockerWhite);
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+button.ezDeleteMajorButton:enabled:focus,
+/* DEPRECATED: button.deleteMajorButton */
+button.deleteMajorButton:enabled:focus {
+    margin: 0;
+    padding: 6px 24px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+}
+
+button.ezDeleteMajorButton:enabled:hover,
+button.ezDeleteMajorButton:enabled:focus:hover,
+/* DEPRECATED: button.deleteMajorButton */
+button.deleteMajorButton:enabled:hover,
+button.deleteMajorButton:enabled:focus:hover {
+    margin: 0;
+    padding: 6px 24px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezDeleteMajorButton:enabled:active,
+button.ezDeleteMajorButton:enabled:active:hover,
+button.ezDeleteMajorButton:enabled:focus:active,
+button.ezDeleteMajorButton:enabled:focus:active:hover,
+/* DEPRECATED: button.deleteMajorButton */
+button.deleteMajorButton:enabled:active,
+button.deleteMajorButton:enabled:active:hover,
+button.deleteMajorButton:enabled:focus:active,
+button.deleteMajorButton:enabled:focus:active:hover {
+    margin: 0;
+    padding: 6px 24px;
+    background-color: var(--ezDarkAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+button.ezDeleteMajorButton:disabled,
+button.ezDeleteMajorButton:disabled:hover,
+/* DEPRECATED: button.deleteMajorButton */
+button.deleteMajorButton:disabled,
+button.deleteMajorButton:disabled:hover {
+    margin: 0;
+    padding: 6px 24px;
+    background-color: var(--ezHoverAlertRed);
+    color: var(--ezBorderAlertRed);
+    font-size: 10pt;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezWarningHeaderButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezWarningHeaderButton,
+button.warningHeaderButton {
+    vertical-align: middle;
+    color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #CE0F0C;
+    border-color: #BF3330;
+    border-radius: 3px;
+}
+
+button.ezWarningHeaderButton:hover:enabled,
+button.warningHeaderButton:hover:enabled {
+    background-color: var(--ezClockerAlertRed);
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezWarningHeaderButton:focus,
+button.warningHeaderButton:focus {
+    background-color: var(--ezClockerAlertRed);
+}
+
+button.ezWarningHeaderButton:hover:active,
+button.warningHeaderButton:hover:active {
+    box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+button.ezWarningHeaderButton:disabled,
+button.warningHeaderButton:disabled {
+    color: #BF3330;
+    background-color: var(--ezClockerAlertRed);
+    border-color: #BF3330;
+    font-weight: normal;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezLargeToolButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezLargeToolButton {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+button.ezLargeToolButton:hover,
+button.ezLargeToolButton:hover:enabled {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: var(--ezHoverNavy);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+}
+
+button.ezLargeToolButton:active,
+button.ezLargeToolButton:hover:active {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: inset 0 0 4px 2px rgba(6, 56, 97, 0.5);
+}
+
+button.ezLargeToolButton:disabled {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerSilver);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezLightNavy);
+    cursor: default;
+}
+
+button.disabledEzLargeToolButton {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: #063565;
+    color: #0d58a6;
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: #0d58a6;
+    cursor: default;
+    border-radius: 3px;
+}
+
+button.ezRedLargeToolButton {
+    padding: 2px;
+    margin: 1px;
+    min-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    background-color: #ff7673;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: #a60400;
+    border-radius: 3px;
+}
+
+button.ezRedLargeToolButton:hover:enabled {
+    background-color: var(--ezClockerAlertRed);
+}
+
+button.ezRedLargeToolButton:hover:active {
+    background-color: #BF3330;
+}
+
+button.ezRedLargeToolButton:disabled {
+    background-color: var(--ezClockerOffWhite);
+    color: #808080;
+    border-color: var(--ezClockerStone);
+    cursor: default;
+}
+
+
+/*
+====================================================================================================================
+| [Class Group]
+| EzClocker Tool Buttons
+====================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy,
+.ezButtons-tool-navy:enabled,
+/* DEPRECATED .ezToolButton */
+.ezToolButton,
+.ezToolButton:enabled {
+    padding: 2px;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: none;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy:enabled:focus,
+/* DEPRECATED .ezToolButton */
+.ezToolButton:enabled:focus {
+    padding: 2px;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy:enabled:hover,
+.ezButtons-tool-navy:enabled:focus:hover,
+/* DEPRECATED .ezToolButton */
+.ezToolButton:enabled:hover,
+.ezToolButton:enabled:focus:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezHoverNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy:enabled:active,
+.ezButtons-tool-navy:enabled:active:hover,
+.ezButtons-tool-navy:enabled:focus:active,
+.ezButtons-tool-navy:enabled:focus:active:hover,
+/* DEPRECATED .ezToolButton */
+.ezToolButton:enabled:active,
+.ezToolButton:enabled:active:hover,
+.ezToolButton:enabled:focus:active,
+.ezToolButton:enabled:focus:active:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: var(--ezBoxShadow-inset-ezNavy-50);
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy:disabled,
+.ezButtons-tool-navy:disabled:hover,
+/* DEPRECATED .ezToolButton */
+.ezToolButton:disabled,
+.ezToolButton:disabled:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezHoverNavy);
+    opacity: 0.5;
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: none;
+    box-shadow: unset;
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy-large
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy-large,
+.ezButtons-tool-navy-large:enabled {
+    padding: 2px;
+    margin: 1px;
+    min-width: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 12pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: none;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy-large:enabled:focus {
+    padding: 2px;
+    margin: 1px;
+    min-width: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 12pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: auto;
+    outline-width: 1px;
+    outline-color: var(--ezNavy-alpha-50);
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy-large:enabled:hover,
+.ezButtons-tool-navy-large:enabled:focus:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    background-color: var(--ezHoverNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 12pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: auto;
+    outline-width: 1px;
+    outline-color: var(--ezNavy-alpha-50);
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy-large:enabled:active,
+.ezButtons-tool-navy-large:enabled:active:hover,
+.ezButtons-tool-navy-large:enabled:focus:active,
+.ezButtons-tool-navy-large:enabled:focus:active:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    background-color: var(--ezClockerNavy);
+    opacity: 1;
+    color: var(--ezNavyContainerTextColor);
+    font-size: 12pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: auto;
+    outline-width: 1px;
+    outline-color: var(--ezNavy-alpha-50);
+    box-shadow: var(--ezBoxShadow-inset-ezNavy-50);
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ezButtons-tool-navy
+        (DEPRECATED) .ezToolButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezButtons-tool-navy-large:disabled,
+.ezButtons-tool-navy-large:disabled:hover {
+    padding: 2px;
+    margin: 1px;
+    min-width: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    background-color: var(--ezHoverNavy);
+    opacity: 0.5;
+    color: var(--ezBorderNavy);
+    font-size: 12pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-style: none;
+    box-shadow: unset;
+    cursor: default;
+}
+
+
+button.ezRedToolButton,
+button.ezRedToolButton:enabled {
+    opacity: 1;
+    padding: 0;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+}
+
+button.ezRedToolButton:enabled:focus {
+    opacity: 1;
+    padding: 0;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    outline-width: 0;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+button.ezRedToolButton:enabled:hover,
+button.ezRedToolButton:enabled:focus:hover {
+    opacity: 1;
+    padding: 0;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezLightAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    outline-width: 0;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+button.ezRedToolButton:enabled:active,
+button.ezRedToolButton:enabled:active:hover,
+button.ezRedToolButton:enabled:focus:active,
+button.ezRedToolButton:enabled:focus:active:hover {
+    opacity: 1;
+    padding: 0;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezDarkAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    box-shadow:
+        0 0 1px 1px transparent,
+        inset 0 0 4px 2px var(--ezBorderAlertRed-alpha-50);
+    outline-width: 0;
+}
+
+button.ezRedToolButton:disabled,
+button.ezRedToolButton:disabled:hover {
+    opacity: 0.50;
+    padding: 0;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: var(--ezHoverAlertRed);
+    color: var(--ezBorderAlertRed);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    cursor: default;
+}
+
+
+button.ezTransparentToolButton {
+    opacity: 1;
+    padding: 0;
+    margin: 1px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+button.ezTransparentToolButton:hover:enabled {
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    border-color: var(--ezClockerWhite);
+}
+
+button.ezTransparentToolButton:focus button.ezTransparentToolButton:active {
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    border-color: var(--ezClockerWhite);
+    box-shadow: none;
+}
+
+button.ezTransparentToolButton:hover:active {
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    border-color: var(--ezClockerWhite);
+    box-shadow: inset 0 0 4px 2px rgba(255, 255, 255, 0.5);
+}
+
+button.ezTransparentToolButton:hover:disabled,
+button.ezTransparentToolButton:active:disabled,
+button.ezTransparentToolButton:disabled {
+    opacity: 0.50;
+    padding: 0;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: transparent;
+    cursor: default;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezButton-hidden-egg
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ezButton-hidden-egg {
+    padding: 4px;
+    margin: 0;
+    background-color: transparent;
+    min-width: 18px;
+    min-height: 18px;
+    color: transparent;
+    font-size: xx-small;
+    vertical-align: middle;
+    text-align: center;
+    border-style: none;
+    cursor: url('/secure/account/hack.cur'), auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezEditButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezEditButton,
+button.ezEditButton:enabled,
+/* DEPRECATED: editButton */
+button.editButton,
+button.editButton:enabled {
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezClockerYellow);
+    min-width: 75px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezClockerBlack);
+    border-radius: 3px;
+}
+
+button.ezEditButton:enabled:focus,
+/* DEPRECATED: editButton */
+button.editButton:enabled:focus {
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezLightYellow);
+    min-width: 75px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezClockerBlack);
+    border-radius: 3px;
+    outline-width: 0;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+button.ezEditButton:enabled:hover,
+button.ezEditButton:enabled:focus:hover,
+/* DEPRECATED: editButton */
+button.editButton:enabled:hover,
+button.editButton:enabled:focus:hover {
+    padding: 4px;
+    margin: 1px;
+    min-width: 75px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    text-align: center;
+    font-size: 10pt;
+    vertical-align: middle;
+    box-shadow: 0 0 1px 1px var(--ezBoxShadow-ezclocker-gray-30);
+}
+
+button.ezEditButton:enabled:active,
+button.ezEditButton:enabled:active:hover,
+button.ezEditButton:enabled:focus:active,
+button.ezEditButton:enabled:focus:active:hover,
+/* DEPRECATED: editButton */
+button.editButton:enabled:active,
+button.editButton:enabled:active:hover,
+button.editButton:enabled:focus:active,
+button.editButton:enabled:focus:active:hover {
+    padding: 4px;
+    margin: 1px;
+    min-width: 75px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    text-align: center;
+    font-size: 10pt;
+    vertical-align: middle;
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50);
+}
+
+button.ezEditButton:disabled,
+button.ezEditButton:disabled:hover,
+button.ezEditButton:disabled:active,
+/* DEPRECATED: editButton */
+button.editButton:disabled,
+button.editButton:disabled:hover,
+button.editButton:disabled:active {
+    padding: 4px;
+    margin: 1px;
+    min-width: 75px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezBorderYellow);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderYellow);
+    cursor: default;
+}
+
+button.ezDisabledEditButton,
+button.disabledEditButton {
+    padding: 4px;
+    margin: 1px;
+    min-width: 75px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezBorderYellow);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderYellow);
+    cursor: default;
+    border-radius: 3px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezEditButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezSquareEditButton {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    padding-left: 3px;
+    margin: 1px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+}
+
+button.ezSquareEditButton:hover:enabled {
+    padding: 4px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezSquareEditButton:focus {
+    padding: 4px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+}
+
+button.ezSquareEditButton:hover:active {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    border-color: var(--ezBorderYellow);
+    box-shadow: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+}
+
+button.ezSquareEditButton:disabled {
+    padding: 4px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezBorderYellow);
+    font-size: 10pt;
+    border-color: var(--ezBorderYellow);
+    cursor: default;
+}
+
+button.ezDisabledSquareEditButton {
+    padding: 4px;
+    background-color: var(--ezLightYellow);
+    color: var(--ezBorderYellow);
+    font-size: 10pt;
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+    cursor: default;
+}
+
+img.ezSquarEditButtonImg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezButtons-edit-navy-24x24
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezButtons-edit-navy-24x24 {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+button.ezButtons-edit-navy-24x24:hover:enabled {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezButtons-edit-navy-24x24:focus {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button.ezButtons-edit-navy-24x24:hover:active {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    box-shadow: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+}
+
+button.ezButtons-edit-navy-24x24:disabled {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    cursor: default;
+}
+
+button.ezButtons-edit-navy-24x24-disabled {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    cursor: default;
+}
+
+img.ezButtons-square-img-24x24 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezButtons-edit-navy-24x48
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezButtons-edit-navy-24x48 {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+button.ezButtons-edit-navy-24x48:hover:enabled {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezButtons-edit-navy-24x48:focus {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10pt;
+}
+
+button.ezButtons-edit-navy-24x48:hover:active {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    box-shadow: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+}
+
+button.ezButtons-edit-navy-24x48:disabled {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    cursor: default;
+}
+
+button.ezButtons-edit-navy-24x48-disabled {
+    padding: 4px;
+    width: 48px;
+    height: 24px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    cursor: default;
+}
+
+img.ezButtons-square-img-24xA {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    height: 24px;
+    width: auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezButtons-edit-navy-48x48
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezButtons-edit-navy-48x48 {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+button.ezButtons-edit-navy-48x48:hover:enabled {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    box-shadow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+}
+
+button.ezButtons-edit-navy-48x48:focus {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button.ezButtons-edit-navy-48x48:hover:active {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    box-shadow: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+}
+
+button.ezButtons-edit-navy-48x48:disabled {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    cursor: default;
+}
+
+button.ezButtons-edit-navy-48x48-disabled {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--ezLightNavy);
+    color: var(--ezBorderNavy);
+    font-size: 10pt;
+    text-align: center;
+    vertical-align: center;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+    cursor: default;
+}
+
+img.ezButtons-square-img-48xA {
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    width: auto;
+    text-align: center;
+    vertical-align: center;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezDeleteEditButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ezButtons-delete-button {
+    padding: 4px;
+    margin: 1px;
+    background-color: #ff7673;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: #a60400;
+    border-radius: 3px;
+}
+
+.ezButtons-delete-button:hover:enabled {
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ezButtons-delete-button:hover:active {
+    padding: 4px;
+    margin: 1px;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #BF3330;
+}
+
+.ezButtons-delete-button:disabled {
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezClockerOffWhite);
+    color: #808080;
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezClockerStone);
+    cursor: default;
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezDeleteEditButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezDeleteEditButton,
+button.ezDeleteEditButton:enabled {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+button.ezDeleteEditButton:enabled:focus {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezLightAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+    outline-width: 0;
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+button.ezDeleteEditButton:enabled:hover,
+button.ezDeleteEditButton:enabled:focus:hover {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezLightAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+button.ezDeleteEditButton:enabled:active,
+button.ezDeleteEditButton:enabled:active:hover,
+button.ezDeleteEditButton:enabled:focus:active,
+button.ezDeleteEditButton:enabled:focus:active:hover {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezDarkAlertRed);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+button.ezDeleteEditButton:disabled,
+button.ezDeleteEditButton:disabled:hover,
+button.ezDeleteEditButton:disabled:active {
+    opacity: 50%;
+    width: 28px;
+    height: 28px;
+    padding: 4px;
+    margin: 1px;
+    background-color: var(--ezLightAlertRed);
+    color: var(--ezBorderAlertRed);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+    cursor: default;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezMiniActionButton styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezMiniActionButton,
+button.miniActionButton {
+    opacity: 1;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezSilver);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button.ezMiniActionButton:enabled:hover,
+button.miniActionButton:enabled:hover {
+    opacity: 1;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezLightSilver);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 10pt;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+button.ezMiniActionButton:enabled:focus,
+button.miniActionButton:enabled:focus {
+    opacity: 1;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezLightSilver);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 10pt;
+    outline-color: var(--ezClockerSilver-alpha-50);
+}
+
+button.miniActionButton:enabled:active,
+button.ezMiniActionButton:enabled:active:hover,
+button.miniActionButton:enabled:active:hover {
+    opacity: 1;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezSilver);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 10pt;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.5)
+}
+
+button.ezMiniActionButton:disabled,
+button.ezMiniActionButton:disabled:active,
+button.ezMiniActionButton:disabled:active:hover,
+button.ezMiniActionButton:disabled:hover,
+button.miniActionButton:disabled,
+button.miniActionButton:disabled:hover,
+button.miniActionButton:disabled:active,
+button.miniActionButton:disabled:active:hover {
+    opacity: 0.4;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezSilver);
+    color: var(--ezClockerBlack);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+
+    /*
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerStone);
+    font-size: 10pt;
+    font-weight: normal;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+    */
+}
+
+button.ezDisabledMiniActionButton,
+button.disabledMiniActionButton {
+    opacity: 0.8;
+    padding: 2px;
+    margin: 0;
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerStone);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezSilverActionButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezSilverActionButton {
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button.ezSilverActionButton:hover,
+button.ezSilverActionButton:hover:enabled {
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: 0 0 1px 1px rgba(224, 224, 224, 0.3);
+    cursor: pointer;
+}
+
+button.ezSilverActionButton:focus {
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+button.ezSilverActionButton:active,
+button.ezSilverActionButton:hover:active {
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    font-size: 10pt;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+button.ezSilverActionButton:disabled {
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezBorderSilver);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+}
+
+button.ezDisabledSilverActionButton {
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezBorderSilver);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezSilverEditButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezSilverEditButton,
+button.silverEditButton {
+    padding: 2px 4px;
+    margin: 0;
+    margin-right: 2px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderSilver);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button.ezSilverEditButton:focus,
+button.ezSilverEditButton:hover:enabled,
+button.silverEditButton:hover:enabled {
+    padding: 2px 4px;
+    margin: 0;
+    margin-right: 2px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: 0 0 1px 1px rgba(224, 224, 224, 0.3);
+}
+
+button.ezSilverEditButton:active,
+button.ezSilverEditButton:active:focus,
+button.ezSilverEditButton:hover,
+button.ezSilverEditButton:hover:active,
+button.ezSilverEditButto:hover:active {
+    padding: 2px 4px;
+    margin: 0;
+    margin-right: 2px;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.8);
+}
+
+button.ezSilverEditButton:disabled,
+button.silverEditButton:disabled {
+    padding: 2px 4px;
+    margin: 0;
+    margin-right: 2px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezBorderSilver);
+    font-size: 10pt;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderSilver);
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezMiniDeleteActionButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezMiniDeleteActionButton,
+button.miniDeleteActionButton {
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 2px;
+    margin: 0;
+    color: var(--ezClockerWhite);
+    background-color: #CE0F0C;
+    border-color: #A60400;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button.ezMiniDeleteActionButton:hover:enabled,
+button.miniDeleteActionButton:hover:enabled {
+    background-color: var(--ezClockerAlertRed);
+    color: var(--ezClockerWhite);
+}
+
+button.ezMiniDeleteActionButton:hover:active,
+button.miniDeleteActionButton:hover:active {
+    background-color: #BF3330;
+}
+
+button.ezMiniDeleteActionButton:disabled,
+button.miniDeleteActionButtonn:disabled {
+    color: var(--ezClockerStone);
+    background-color: #FFf0f0;
+    border-color: var(--ezClockerStone);
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezButtons-quick-help
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ui-widget button.ezButtons-quick-help,
+.ezButtons-quick-help {
+    margin: 4px;
+    padding-left: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    opacity: 1;
+    background-color: transparent;
+    background-image: url('/public/images/icons/info.svg');
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: 10pt;
+    border-style: none;
+    cursor: pointer;
+}
+
+.ui-widget button.ezButtons-quick-help:hover,
+.ui-widget button.ezButtons-quick-help:focus,
+.ui-widget button.ezButtons-quick-help:focus:hover,
+.ui-widget button.ezButtons-quick-help:enabled:hover,
+.ezButtons-quick-help:hover,
+.ezButtons-quick-help:focus,
+.ezButtons-quick-help:focus:hover,
+.ezButtons-quick-help:enabled:hover {
+    margin: 4px;
+    padding-left: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    opacity: 1;
+    background-color: transparent;
+    background-image: url('/public/images/icons/info.svg');
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezClockerSilver);
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+.ui-widget button.ezButtons-quick-help:active,
+.ui-widget button.ezButtons-quick-help:active:hover,
+.ezButtons-quick-help:active,
+.ezButtons-quick-help:active:hover {
+    margin: 4px;
+    padding-left: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    opacity: 1;
+    background-color: transparent;
+    background-image: url('/public/images/icons/info.svg');
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: 10pt;
+    border-color: var(--ezClockerGray);
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: unset;
+    cursor: pointer;
+}
+
+.ui-widget.button.ezButtons-quick-help:disabled,
+.ezButtons-quick-help:disabled {
+    margin: 4px;
+    padding-left: 25px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    opacity: 1;
+    background-color: transparent;
+    background-image: url('/public/images/icons/info.svg');
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    color: var(--ezClockerNavy);
+    font-weight: normal;
+    font-size: 10pt;
+    border-style: none;
+    cursor: pointer;
+}
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Default Action Buttons
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezActionGreen
+        (DEPRECATED) button.ezActionButton
+        (DEPRECATED) button.actionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezActionGreen,
+button.ezButtons-action-ezActionGreen:enabled,
+/* DEPRECATED: button.ezActionButton */
+button.ezActionButton,
+button.ezActionButton:enabled,
+/* DEPRECATED: button.actionButton */
+button.actionButton,
+button.actionButton:enabled {
+    padding: 6px 24px;
+    margin: 0;
+    background-color: var(--ezClockerActionGreen);
+    font-size: 14pt;
+    font-weight: bold;
+    border-color: var(--ezActionGreenBorderColor);
+    border-radius: 3px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Focus]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezActionGreen
+        (DEPRECATED) button.ezActionButton
+        (DEPRECATED) button.actionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezActionGreen:enabled:focus,
+/* DEPRECATED: button.ezActionButton */
+button.ezActionButton:enabled:focus,
+/* DEPRECATED: button.actionButton */
+button.actionButton:enabled:focus {
+    outline-color: var(--ezActionGreen-alpha-50);
+    outline-style: auto;
+    outline-width: 1px;
+    outline-offset: 2px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Hover and Active Hover]:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezActionGreen
+        (DEPRECATED) button.ezActionButton
+        (DEPRECATED) button.actionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezActionGreen:enabled:hover,
+button.ezButtons-action-ezActionGreen:enabled:focus:hover,
+/* DEPRECATED: button.ezActionButton */
+button.ezActionButton:enabled:hover,
+button.ezActionButton:enabled:focus:hover,
+/* DEPRECATED: button.actionButton */
+button.actionButton:enabled:hover,
+button.actionButton:enabled:focus:hover {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: var(--ezActionGreenHoverColor);
+    box-shadow: var(--ezBoxShadow-ezGray-30);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezActionGreen
+        (DEPRECATED) button.ezActionButton
+        (DEPRECATED) button.actionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezActionGreen:enabled:active,
+button.ezButtons-action-ezActionGreen:enabled:active:hover,
+button.ezButtons-action-ezActionGreen:enabled:focus:active,
+button.ezButtons-action-ezActionGreen:enabled:focus:active:hover,
+/* DEPRECATED: button.ezActionButton */
+button.ezActionButton:enabled:active,
+button.ezActionButton:enabled:active:hover,
+button.ezActionButton:enabled:focus:active,
+button.ezActionButton:enabled:focus:active:hover,
+/* DEPRECATED: button.actionButton */
+button.actionButton:enabled:active,
+button.actionButton:enabled:active:hover,
+button.actionButton:enabled:focus:active,
+button.actionButton:enabled:focus:active:hover {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: var(--ezActionGreenHoverColor);
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-80);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezActionGreen
+        (DEPRECATED) button.ezActionButton
+        (DEPRECATED) button.actionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezActionGreen:disabled,
+button.ezButtons-action-ezActionGreen:disabled:hover,
+/* DEPRECATED: button.ezActionButton */
+button.ezActionButton:disabled,
+button.ezActionButton:disabled:hover,
+/* DEPRECATED: button.actionButton */
+button.actionButton:disabled,
+button.actionButton:disabled:hover {
+    background-color: var(--ezActionGreenHoverColor);
+    color: var(--ezActionGreenBorderColor);
+    font-size: 14pt;
+    font-weight: normal;
+    border-color: var(--ezActionGreenBorderColor);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        (DEPRECATED) button.ezDisabledActionButton
+        (DEPRECATED) button.disabledActionButton
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+/* DEPRECATED: button.ezDisabledActionButton */
+button.ezDisabledActionButton,
+button.ezDisabledActionButton:disabled,
+button.ezDisabledActionButton:disabled:hover,
+/* DEPRECATED: button.disabledActionButton */
+button.disabledActionButton,
+button.disabledActionButton:disabled,
+button.disabledActionButton:disabled:hover {
+    background-color: var(--ezActionGreenHoverColor);
+    color: var(--ezActionGreenBorderColor);
+    font-weight: normal;
+    border-color: var(--ezActionGreenBorderColor);
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezClockerYellow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezClockerYellow,
+button.ezButtons-action-ezClockerYellow:enabled {
+    padding: 6px 24px;
+    margin: 0;
+    background-color: var(--ezClockerYellow);
+    font-size: 14pt;
+    font-weight: bold;
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Focus]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezClockerYellow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezClockerYellow:enabled:focus {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: var(--ezHoverYellow);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Hover and Active Hover]:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezClockerYellow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezClockerYellow:enabled:hover,
+button.ezButtons-action-ezClockerYellow:enabled:focus:hover {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: var(--ezHoverYellow);
+    box-shadow: var(--ezBoxShadow-ezGray-30);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezClockerYellow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezClockerYellow:enabled:active,
+button.ezButtons-action-ezClockerYellow:enabled:active:hover,
+button.ezButtons-action-ezClockerYellow:enabled:focus:active,
+button.ezButtons-action-ezClockerYellow:enabled:focus:active:hover {
+    font-size: 14pt;
+    font-weight: bold;
+    box-shadow: var(--ezBoxShadow-inset-ezDarkYellow-50);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        button.ezButtons-action-ezClockerYellow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+button.ezButtons-action-ezClockerYellow:disabled,
+button.ezButtons-action-ezClockerYellow:disabled:hover {
+    background-color: var(--ezHoverYellow);
+    color: var(--ezBorderYellow);
+    font-size: 14pt;
+    font-weight: normal;
+    border-color: var(--ezBorderYellow);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezActionButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezNavyActionButton {
+    padding: 6px 24px;
+    margin: 0;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezNavyContainerTextColor);
+    font-weight: bold;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+button.ezNavyActionButton:hover:enabled {
+    font-weight: bold;
+    background-color: var(--ezHoverNavy);
+}
+
+button.ezNavyActionButton:focus {
+    font-weight: bold;
+    background-color: var(--ezHoverNavy);
+}
+
+button.ezNavyActionButton:hover:active {
+    font-weight: bold;
+    box-shadow: var(--ezNavyInsetShadow);
+}
+
+button.ezNavyActionButton:disabled {
+    background-color: var(--ezLightNavy);
+    border-color: var(--ezClockerNavy);
+    font-weight: normal;
+    color: var(--ezNavyContainerDisabledTextColor);
+    cursor: default;
+}
+
+button.ezDisabledNavyActionButton {
+    background-color: var(--ezLightNavy);
+    border-color: var(--ezBorderNavy);
+    font-weight: normal;
+    color: var(--ezNavyContainerDisabledTextColor);
+    cursor: default;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezSuperActionButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezSuperActionButton,
+button.superActionButton {
+    margin: 0;
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezClockerGray);
+    color: var(--ezClockerWhite);
+    font-weight: bold;
+    font-size: 18pt;
+    padding: 6px 24px;
+    border-radius: 3px;
+}
+
+button.ezSuperActionButton:hover:enabled,
+button.superActionButton:hover:enabled {
+    background-color: #0d58a6;
+}
+
+button.ezSuperActionButton:hover:active,
+button.superActionButton:hover:active {
+    background-color: #0d58a6;
+}
+
+button.ezSuperActionButton:disabled,
+button.superActionButton:disabled {
+    cursor: default;
+    background-color: #5387bd;
+    border-color: var(--ezClockerNavy);
+    font-weight: normal;
+    color: var(--ezClockerNavy);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezWizardNavButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezWizardNavButton {
+    /* font-family: var(--ezFontFamily); */
+    font-family: var(--ezButtons-font-family);
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+button.ezWizardHiddenNavButton {
+    /* font-family: var(--ezFontFamily); */
+    font-family: var(--ezButtons-font-family);
+    display: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| ezWizardActionButton Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+button.ezWizardActionButton {
+    /* background-color: var(--ezClockerHotGreen); */
+    background-color: var(--ezDarkHotGreen);
+
+    /* font-family: var(--ezFontFamily); */
+    font-family: var(--ezButtons-font-family);
+    font-weight: bold;
+
+    /* color: var(--ezHotGreenContainerFontColor) */
+    color: var(--ezClockerBlack);
+
+    /* border-color: var(--ezBorderHotGreen); */
+    border-color: var(--ezBorderHotGreen);
+    border-radius: 3px;
+}
+
+button.ezWizardHiddenActionButton {
+    /* font-family: var(--ezFontFamily); */
+    font-family: var(--ezButtons-font-family);
+    display: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DIV Button
+| HTML Tags: <div/>
+|-------------------------------------------------
+| Template: ezDivButton_{name}-{size}-{color}
+|
+| Official Classes:
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="")
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="UNSELECTED")
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="SELECTED")
+|
+| Deprecated Classes:
+|   ez-navy-left-nav-button (data-state="")
+|   ez-navy-left-nav-button (data-state="UNSELECTED")
+|   ez-navy-left-nav-button (data-state="SELECTED")
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* -------------------------------------------------
+| [DIV Button]
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="")
+|   (DEPRECATED) ez-navy-left-nav-button (data-state="")
+------------------------------------------------- */
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state=""],
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""] {
+    padding-left: 8px;
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    margin: 0;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 12pt;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: none;
+    border-color: var(--ezClockerNavy);
+    outline-color: var(--ezClockerBlack);
+    outline-width: 0;
+    outline-style: groove;
+    text-align: left;
+    cursor: pointer;
+    border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state=""]:enabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:enabled:hover {
+    background-color: var(--ezClockerLightNavy);
+    color: var(--ezClockerWhite);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state=""]:enabled:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:enabled:focus {
+    background-color: var(--ezClockerLightNavy);
+    color: var(--ezClockerWhite);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state=""]:enabled:active,
+.ez-navy-left-nav-button[data-state=""]:enabled:active:focus,
+.ez-navy-left-nav-button[data-state=""]:enabled:active:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:enabled:active,
+.ezDivButton_LeftNavv-normal-ezClockerNavy[data-state=""]:enabled:active:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:enabled:active:hover {
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    box-shadow: inset 0 0 4px 2px var(--ezDarkNavyAlpha);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state=""]:disabled,
+.ez-navy-left-nav-button[data-state=""]:disabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:disabled,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state=""]:disabled:hover {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerGray);
+    cursor: default;
+}
+
+/* -------------------------------------------------
+| [DIV Button]
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="UNSELECTED")
+|   (DEPRECATED) ez-navy-left-nav-button (data-state="UNSELECTED")
+------------------------------------------------- */
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="UNSELECTED"],
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"] {
+    padding-left: 8px;
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    margin: 0;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 12pt;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: none;
+    border-color: var(--ezClockerNavy);
+    outline-color: var(--ezClockerBlack);
+    outline-width: 0;
+    outline-style: groove;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:enabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:enabled:hover {
+    background-color: var(--ezClockerLightNavy);
+    color: var(--ezClockerWhite);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:enabled:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:enabled:focus {
+    background-color: var(--ezClockerLightNavy);
+    color: var(--ezClockerWhite);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:enabled:active,
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:enabled:active:focus,
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:enabled:active:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:enabled:active,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:enabled:active:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:enabled:active:hover {
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    box-shadow: inset 0 0 4px 2px var(--ezDarkNavyAlpha);
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:disabled,
+.ez-navy-left-nav-button[data-state="UNSELECTED"]:disabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:disabled,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="UNSELECTED"]:disabled:hover {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerGray);
+    font-weight: bold;
+    cursor: default;
+}
+
+/* -------------------------------------------------
+| [DIV Button]
+|   ezDivButton_LeftNav-normal-ezClockerNavy (data-state="SELECTED")
+|   (DEPRECATED) ez-navy-left-nav-button (data-state="SELECTED")
+------------------------------------------------- */
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="SELECTED"],
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"] {
+    padding-left: 8px;
+    padding-top: 14px;
+    padding-right: 24px;
+    padding-bottom: 15px;
+    margin: 0;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 12pt;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: none;
+    border-color: var(--ezClockerNavy);
+    outline-color: var(--ezClockerBlack);
+    outline-width: 0;
+    outline-style: groove;
+    text-align: left;
+    cursor: pointer;
+    border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="SELECTED"]:enabled:hover,
+.ez-navy-left-nav-button[data-state="SELECTED"]:enabled:focus,
+.ez-navy-left-nav-button[data-state="SELECTED"]:enabled:active,
+.ez-navy-left-nav-button[data-state="SELECTED"]:enabled:active:focus,
+.ez-navy-left-nav-button[data-state="SELECTED"]:enabled:active:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:enabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:enabled:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:enabled:active,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:enabled:active:focus,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:enabled:active:hover {
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 12pt;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-right-style: none;
+    border-color: var(--ezClockerNavy);
+    border-top-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 0;
+    outline-color: var(--ezClockerBlack);
+    outline-width: 0;
+    outline-style: groove;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* DEPRECATED: .ez-navy-left-nav-button */
+.ez-navy-left-nav-button[data-state="SELECTED"]:disabled,
+.ez-navy-left-nav-button[data-state="SELECTED"]:disabled:hover,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:disabled,
+.ezDivButton_LeftNav-normal-ezClockerNavy[data-state="SELECTED"]:disabled:hover {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerGray);
+    font-weight: bold;
+    cursor: default;
+}
+
+/* -------------------------------------------------
+| [DIV Button]
+|   ezDivButton_Menu-normal-ezClockerOrange
+|   (DEPRECATED) div.ezMenuButton
+------------------------------------------------- */
+/* DEPRECATED: div.ezMenuButton */
+div.ezMenuButton,
+.ezDivButton_Menu-normal-ezClockerOrange {
+    background-color: var(--ezClockerOrange);
+    font-family: var(--ezButtons-font-family);
+    color: var(--ezClockerWhite);
+    border-style: solid;
+    border-color: var(--ezBorderOrange);
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+/* DEPRECATED: div.ezMenuButton */
+div.ezMenuButton:hover:enabled,
+.ezDivButton_Menu-normal-ezClockerOrange:hover:enabled {
+    background-color: var(--ezHoverOrange);
+}
+
+/* DEPRECATED: div.ezMenuButton */
+div.ezMenuButton:hover:active,
+.ezDivButton_Menu-normal-ezClockerOrange:hover:active {
+    border-width: 1px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Button Content
+| HTML Tags: <div/>,<label/>,<span/>
+|-------------------------------------------------
+| Template: ezButtonContent_{name}-{size}-{color}
+|
+| Official Classes:
+|   ezButtonContent_SubLabel-normal-black
+|
+| Deprecated Classes:
+|   ezButtonSubLabel
+|   buttonSubLabel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* DEPRECATED: label.ezButtonSubLabel */
+label.ezButtonSubLabel,
+/* DEPRECATED: label.buttonSubLabel */
+label.buttonSubLabel {
+    font-weight: normal;
+}
+
+.ezButtonContent_SubLabel-normal-black {
+    color: var(--ezClockerBlack);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+label.ezEditButtonLabel,
+.ezButtonContent_EditLabel-small-black {
+    padding-left: 4px;
+    padding-right: 2px;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Button Images
+| HTML Tags: <img/>
+|-------------------------------------------------
+| Template: ezButtonImage_{size}
+|
+| Official Classes:
+|   ezButtonImage_16x16
+|   ezButtonImage_24x24
+|   ezBtnImage_24xA
+|
+| Deprecated Classes:
+|   ezEditButtonImage
+|   ezLargeEditButtonImage
+|   ezMiniButtonImg
+|   miniButtonIcon
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* DEPRECATED: img.ezEditButtonImage */
+img.ezEditButtonImage,
+img.ezButtonImage_16x16 {
+    margin: 0;
+    padding: 0;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezButtonImage-disable_16x16 {
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezEditButtonImage_18x18 {
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezEditButtonImage-disable_18x18 {
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezEditButtonImage_20x20 {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezEditButtonImage-disable_20x20 {
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* DEPRECATED: img.ezLargeEditButtonImage */
+img.ezLargeEditButtonImage,
+img.ezButtonImage_24x24 {
+    margin: 0;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezButtonImage-disable_24x24 {
+    opacity: .5;
+    margin: 0;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+img.ezMiniButtonImg,
+img.miniButtonIcon,
+img.ezBtnImage_24xA {
+    box-sizing: border-box;
+    padding-right: 4px;
+    width: 24px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Select Button
+| HTML Tags: <select/>
+|-------------------------------------------------
+| Template: ezSelectButton_{name}-{size}-{color}
+|
+| Official Classes:
+|   ezSelectButton_Default-normal-ezClockerOrange
+|
+| Deprecated Classes:
+|   ezMajorSelectButton
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* DEPRECATED: select.ezMajorSelectButton */
+select.ezMajorSelectButton,
+select.ezSelectButton_Default-normal-ezClockerYellow {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    border-radius: 3px;
+
+    /*
+    margin: 2px;
+    padding: 6px 24px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 10pt;
+    font-weight: bold;
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    outline-width: 0;
+    cursor: pointer;
+    */
+}
+
+/* DEPRECATED: select.ezMajorSelectButton */
+select.ezMajorSelectButton:hover:enabled,
+select.ezSelectButton_Default-normal-ezClockerOrange:hover:enabled {
+    background-color: var(--ezLightYellow);
+    box-shadow: var(--ezBoxShadowStone);
+}
+
+/* DEPRECATED: select.ezMajorSelectButton */
+select.ezMajorSelectButton:hover:active,
+select.ezSelectButton_Default-normal-ezClockerOrange:hover:active {
+    box-shadow: var(--ezBoxShadowDarkYellow);
+}
+
+/* DEPRECATED: select.ezMajorSelectButton */
+select.ezMajorSelectButton:disabled,
+select.ezSelectButton_Default-normal-ezClockerOrange:disabled {
+    background-color: var(--ezExtraLightYellow);
+    color: var(--ezDarkYellow);
+    border-color: var(--ezDarkYellow);
+}
+
+/* DEPRECATED: select.ezMajorSelectButton */
+select.ezMajorSelectButton:focus,
+select.ezSelectButton_Default-normal-ezClockerOrange:focus {
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    Select/Drop Down/Menu Buttons
+    ##########################################################################################################################################################
+    Name Templates:
+        ezSelectButton-{name}-{color}
+        ezSelectButton-{name}-{other-properties}-color}
+        ezDropDownButton-{name}-{color}
+        ezDropDownButton-{name}-{other-properties}-color}
+        ezMenuButton-{name}-{color}
+        ezMenuButton-{name}-{other-properties}-color}
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    EzClocker Select Buttons
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-default-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-default-ezClockerOrange,
+select.ezSelectButton-default-ezClockerOrange:enabled {
+    padding: 5px 24px;
+    margin: 2px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtons-font-family);
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezBorderYellow);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px transparent;
+    outline-style: none;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Focus]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-default-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-default-ezClockerOrange:enabled:focus {
+    background-color: var(--ezHoverYellow);
+    color: var(--ezClockerBlack);
+    box-shadow: 0 0 1px 1px transparent;
+    outline-color: var(--ezBorderYellow);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class State Definition: Enabled Hover and Active Hover]:
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-default-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-default-ezClockerOrange:enabled:hover,
+select.ezSelectButton-default-ezClockerOrange:enabled:focus:hover {
+    background-color: var(--ezHoverYellow);
+    color: var(--ezClockerBlack);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    outline-color: var(--ezBorderYellow);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-default-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-default-ezClockerOrange:enabled:active,
+select.ezSelectButton-default-ezClockerOrangeenabled:active:hover,
+select.ezSelectButton-default-ezClockerOrangeenabled:enabled:focus:active,
+select.ezSelectButton-default-ezClockerOrangeenabled:enabled:focus:active:hover {
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    box-shadow:
+        0 0 1px 1px transparent,
+        inset 0 0 4px 2px rgba(198, 118, 0, 0.5);
+    outline-color: var(--ezBorderYellow);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-default-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-default-ezClockerOrange:disabled,
+select.ezSelectButton-default-ezClockerOrange:disabled:hover {
+    background-color: var(--ezHoverYellow);
+    color: var(--ezBorderYellow);
+    border-color: var(--ezClockerYellow);
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        select.ezSelectButton-header-ezClockerOrange
+        (DEPRECATED) select.ezSelectButton-major-ezClockerOrange
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+select.ezSelectButton-header-ezClockerOrange,
+select.ezSelectButton-header-ezClockerOrange:enabled,
+/* DEPRECATED: select.ezSelectButton-major-ezClockerOrange */
+select.ezSelectButton-major-ezClockerOrange,
+select.ezSelectButton-major-ezClockerOrange:enabled {
+    padding: 4px;
+    margin: 2px;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtonFontFamily);
+    font-size: 12pt;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+    border-color: var(--ezBorderOrange);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    outline-width: 0;
+    cursor: pointer;
+}
+
+select.ezSelectButton-header-ezClockerOrange:hover:enabled,
+select.ezSelectButton-major-ezClockerOrange:hover:enabled {
+    background-color: var(--ezLightOrange);
+    box-shadow: var(--ezBoxShadowStone);
+}
+
+select.ezSelectButton-header-ezClockerOrange:hover:active,
+select.ezSelectButton-major-ezClockerOrange:hover:active {
+    box-shadow: var(--ezBoxShadowDarkOrnage);
+}
+
+select.ezSelectButton-header-ezClockerOrange:focus,
+select.ezSelectButton-major-ezClockerOrange:focus {
+    box-shadow: var(--ezFocusBoxShadowBlack);
+}
+
+select.ezSelectButton-header-ezClockerOrange:disabled,
+select.ezSelectButton-major-ezClockerOrange:disabled {
+    background-color: var(--ezLightOrange);
+    color: var(--ezDarkOrange);
+    border-color: var(--ezDarkOrange);
+    font-weight: normal;
+}
+
+option.ezSelectButton-option-title,
+option.ezSelectButton-option-title:hover,
+option.ezSelectButton-option-title:active,
+option.ezSelectButton-option-title:disabled option.ezSelectButton-option-title:focus {
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: default;
+}
+
+option.ezSelectButton-option {
+    font-size: 12pt;
+    text-align: left;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
+option.ezSelectButton-option:hover option.ezSelectButton-option:focus option.ezSelectButton-option:active {
+    background-color: var(--ezClockerStone);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+option.ezSelectButton-option:disabled {
+    color: var(--ezClockerStone);
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: left;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: default;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+
+}
+*/
+
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)
+------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezDialogButton Styles
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    button.ezDialogButton {
+        padding: 10px 18px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    button.ezDialogButton:hover {
+        padding: 10px 18px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezDialogButton:active {
+        padding: 10px 18px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezDialogButton:disabled {
+        padding: 10px 18px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+    button.ezDisabledDialogButton {
+        padding: 10px 18px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+    button.ezWhiteDialogButton {
+        padding: 10px 18px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    button.ezWhiteDialogButton:hover {
+        padding: 10px 18px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezWhiteDialogButton:hover:active,
+    button.ezWhiteDialogButton:active {
+        padding: 10px 18px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    button.ezWhiteDialogButton:disabled {
+        padding: 10px 18px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerStone);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+    button.ezDisabledWhiteDialogButton {
+        padding: 10px 18px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerStone);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+        border-radius: 3px;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Wearable Screen Style  (https://yesviz.com/watches.php)
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezDialogButton Styles
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    button.ezDialogButton {
+        padding: 4px 10px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    button.ezDialogButton:hover {
+        padding: 4px 10px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezDialogButton:active {
+        padding: 4px 10px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezDialogButton:disabled {
+        padding: 4px 10px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+    button.ezDisabledDialogButton {
+        padding: 4px 10px;
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+        border-radius: 3px;
+    }
+
+    button.ezWhiteDialogButton {
+        padding: 4px 10px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        border-radius: 3px;
+    }
+
+    button.ezWhiteDialogButton:hover {
+        padding: 4px 10px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+
+    button.ezWhiteDialogButton:hover:active,
+    button.ezWhiteDialogButton:active {
+        padding: 4px 10px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerBlack);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    button.ezWhiteDialogButton:disabled {
+        padding: 4px 10px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerStone);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+    }
+
+    button.ezDisabledWhiteDialogButton {
+        padding: 4px 10px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezClockerStone);
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: normal;
+        border-radius: 3px;
+    }
+}
+
+.ezFullWidthButton {
+    width: 100%;
+}
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    JQuery Button Style Overrides
+    ##########################################################################################################################################################
+*/
+
+/*
+    ===================================================================================================================
+    [Class Group]
+    JQuery Style Overrides
+    ===================================================================================================================
+*/
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-icon
+        .ui-button .ui-icon
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-icon,
+.ui-icon:enabled,
+.ui-button .ui-icon,
+.ui-button .ui-icon:enabled {
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-icon
+        .ui-button .ui-icon
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-icon:enabled:focus,
+.ui-button .ui-icon:enabled:focus {
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-icon
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-icon:enabled:hover,
+.ui-icon:enabled:focus:hover,
+.ui-button .ui-icon:enabled:hover,
+.ui-button .ui-icon:enabled:focus:hover {
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-icon
+        .ui-button .ui-icon
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    States:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-icon:enabled:active,
+.ui-icon:enabled:active:hover,
+.ui-icon:enabled:focus:active,
+.ui-icon:enabled:focus:active:hover,
+.ui-button .ui-icon:enabled:active,
+.ui-button .ui-icon:enabled:active:hover,
+.ui-button .ui-icon:enabled:focus:active,
+.ui-button .ui-icon:enabled:focus:active:hover {
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-icon
+        .ui-button .ui-icon
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-icon:disabled,
+.ui-icon:disabled:hover,
+.ui-button .ui-icon:disabled,
+.ui-button .ui-icon:disabled:hover {
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-button
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        none
+        :enabled
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button,
+.ui-button:enabled {
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezButtons-font-family);
+    font-size: 12pt;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px transparent;
+    outline-style: none;
+    cursor: pointer;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-button
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:focus
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button:enabled:focus {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezClockerBlack);
+    box-shadow: 0 0 1px 1px transparent;
+    outline-color: var(--ezClockerGray);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-button
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :enabled:hover
+        :enabled:focus:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button:enabled:hover,
+.ui-button:enabled:focus:hover {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezClockerBlack);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    outline-color: var(--ezClockerGray);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-button
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    States:
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button:enabled:active,
+.ui-button:enabled:active:hover,
+.ui-button:enabled:focus:active,
+.ui-button:enabled:focus:active:hover {
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    box-shadow:
+        0 0 1px 1px transparent,
+        inset 0 0 4px 2px rgba(198, 118, 0, 0.5);
+    outline-color: var(--ezClockerGray);
+    outline-width: 0;
+    outline-style: groove;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-button
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Defined states:
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button:disabled,
+.ui-button:disabled:hover {
+    background-color: var(--ezHoverOrange);
+    color: var(--ezBorderOrange);
+    border-color: var(--ezClockerOrange);
+    cursor: default;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-state-active .ui-icon,
+        .ui-button .ui-icon,
+        .ui-button:enabled .ui-icon:enabled,
+        .ui-button:enabled:active .ui-icon:enabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    States:
+        none
+        :enabled
+        :enabled:active
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-button .ui-icon,
+.ui-button:enabled .ui-icon:enabled,
+.ui-button:enabled:active .ui-icon:enabled:active,
+.ui-state-active .ui-icon {
+    /* Using black icons only */
+    background-image: url("/jquery-ui/images/ui-icons_000000_256x240.png");
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [Class Definition]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Classes:
+        .ui-dialog-titlebar-close
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    States:
+        none
+        :enabled
+        :enabled:focus
+        :enabled:hover
+        :enabled:focus:hover
+        :enabled:active
+        :enabled:active:hover
+        :enabled:focus:active
+        :enabled:focus:active:hover
+        :disabled
+        :disabled:hover
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ui-dialog-titlebar-close,
+.ui-dialog-titlebar-close:enabled,
+.ui-dialog-titlebar-close:enabled:focus,
+.ui-dialog-titlebar-close:enabled:hover,
+.ui-dialog-titlebar-close:enabled:focus:hover,
+.ui-dialog-titlebar-close:enabled:active,
+.ui-dialog-titlebar-close:enabled:active:hover,
+.ui-dialog-titlebar-close:enabled:focus:active,
+.ui-dialog-titlebar-close:enabled:focus:active:hover,
+.ui-dialog-titlebar-close:disabled,
+.ui-dialog-titlebar-close:disabled:hover {
+    /* Hide all JQuery UI dialog's top right X butons */
+    display: none
+}
+
+/*
+    ##########################################################################################################################################################
+    [Class Section]
+    DEPRECATED STYLES
+    DO NOT USE CLASS IN THIS SECTION
+    ##########################################################################################################################################################
+*/
+
+/* @DEPRECATED: a.navButton */
+a.navButton {
+    font-size: medium;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezActionGreenBorderColor);
+    background-color: #8ef13c;
+    color: var(--ezClockerBlack);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+/* @DEPRECATED: a.navButton */
+a.navButton:hover:enabled {
+    /* DEPRECATED: DO NOT USE */
+    border-top-color: var(--ezActionGreenHoverColor);
+    border-left-color: var(--ezActionGreenHoverColor);
+    border-bottom-color: #66cc99;
+    border-right-color: #66cc99;
+    background-color: #a9f16c;
+}
+
+/* @DEPRECATED: a.navButton */
+a.navButton:hover:active {
+    border-top-color: #66cc99;
+    border-left-color: #66cc99;
+    border-bottom-color: var(--ezActionGreenHoverColor);
+    border-right-color: var(--ezActionGreenHoverColor);
+    color: #a9f16c;
+    background-color: var(--ezActionGreenBorderColor);
+}
+
+/* @DEPRECATED: a.toolButton */
+a.toolButton {
+    font-size: small;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #996600;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* @DEPRECATED: a.toolButton */
+a.toolButton:hover:enabled {
+    border-top-color: #ffee00;
+    border-left-color: #ffee00;
+    border-bottom-color: #ff9933;
+    border-right-color: #ff9933;
+    background-color: #ffcc66;
+}
+
+/* @DEPRECATED: a.toolButton */
+a.toolButton:hover:active {
+    border-top-color: #ff9933;
+    border-left-color: #ff9933;
+    border-bottom-color: #ffee00;
+    border-right-color: #ffee00;
+    background-color: #ffcc66;
+}
+
+/* @DEPRECATED: a.disabledToolButton */
+a.disabledToolButton {
+    font-size: small;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: var(--ezClockerStone);
+    color: #808080;
+    cursor: default;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* @DEPRECATED: .buttonText */
+.buttonText {
+    font-size: 12pt;
+    font-family: verdana, sans-serif;
+    font-weight: normal;
+}
+
+/* @DEPRECATED: .headerButtonText */
+.headerButtonText {
+    font-size: 12pt;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* @DEPRECATED: button.ezNoButtonMargin */
+button.ezNoButtonMargin {
+    margin: 0;
+}
+
+/* @DEPRECATED: button.fullWidth */
+button.fullWidth {
+    width: 100%;
+}
+
+/* @DEPRECATED: button.paddButton10 */
+button.paddButton10 {
+    margin-left: 10px;
+}
+
+/* @DEPRECATED: paper-button.ez-navigation-button */
+paper-button.ez-navigation-button {
+    font-family: var(--ezFontFamily);
+    max-height: var(--ezNavButtonMaxHeight);
+    max-width: var(--ezNavButtonMaxWidth);
+    min-width: var(--ezNavButtonMinWidth);
+    font-size: var(--ezNavButtonFontSize);
+    font-weight: var(--ezNavButtonFontWeight);
+    background-color: var(--ezNavButtonColor);
+    color: var(--ezNavButtonTextColor);
+    text-transform: var(--ezNavButtonTextTransform);
+}
+
+/* @DEPRECATED: paper-button.ez-navigation-button */
+paper-button.ez-navigation-button>paper-ripple {
+    color: var(--ezWhite);
+}
+
+/* @DEPRECATED: paper-button.ez-navigation-button */
+paper-button.ez-navigation-button:hover:enabled {
+    background-color: var(--ezNavButtonColorHover);
+    box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* @DEPRECATED: ez-signout-button */
+paper-button.ez-signout-button {
+    text-transform: var(--ezSignOutButtonTextTransform);
+    max-height: var(--ezSignOutButtonMaxHeight);
+    max-width: var(--ezSignOutButtonMaxWidth);
+    min-width: var(--ezSignOutButtonMinWidth);
+    font-size: var(--ezSignOutButtonFontSize);
+    font-weight: var(--ezSignOutButtonFontWeight);
+    background-color: var(--ezSignOutButtonColor);
+    color: var(--ezSignOutButtonTextColor);
+}
+
+/* @DEPRECATED: ez-signout-button */
+paper-button.ez-signout-button>paper-ripple {
+    color: var(--ezWhite);
+}
+
+/* @DEPRECATED: ez-signout-button */
+paper-button.ez-signout-button:hover:enabled {
+    background-color: var(--ezSignOutButtonHoverColor);
+    box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.20);
+}
+
+/* @DEPRECATED: paper-button.ez-select-plan-button */
+paper-button.ez-select-plan-button {
+    max-width: var(--ezSelectPlanButtonMaxWidth);
+    min-width: var(--ezSelectPlanButtonMinWidth);
+    max-height: var(--ezSelectPlanBtnMaxHeight);
+    font-size: var(--ezSelectPlanBtnFontSize);
+    font-weight: var(ezSelectPlanBtnFontWeight);
+    background-color: var(--ezSelectPlanBtnColor);
+    color: var(--ezSelectPlanBtnTextColor);
+    text-transform: var(--ezSelectPlanTextTransform);
+}
+
+/* @DEPRECATED: paper-button.ez-select-plan-button */
+paper-button.ez-select-plan-button>paper-ripple {
+    color: var(--ezBorderGreen);
+}
+
+/* @DEPRECATED: paper-button.ez-select-plan-button */
+paper-button.ez-select-plan-button:hover:enabled {
+    background-color: var(--ezSelectPlanBtnHoverColor);
+    box-shadow:
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.20);
+}
+
+/*
+    ##########################################################################################################################################################
+    END OF DEPRECATED CLASS SECTION
+    ##########################################################################################################################################################
+*/

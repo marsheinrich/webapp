@@ -1,0 +1,19 @@
+{
+  "name": "ezclocker-team-chat",
+  "version": "1.0.0",
+  "description": "Team chat feature for ezClocker Applications",
+  "main": "index.js",
+  "private": true,
+  "scripts": {    
+  },
+  "keywords": [],
+  "author": "ezNova Technologies, LLC",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "aws-amplify": "^4.3.17"
+  }
+}

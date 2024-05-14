@@ -1,0 +1,132 @@
+<style>
+.signUpNowContainer {
+    background-color: #e0e0e0;
+    padding: 10px;
+    max-width: 325px;
+    min-width: 325px;
+}
+
+.signUpNowHeader {
+    font-size: 18pt;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.signUpInputLabel {
+    font-size: 12pt;
+    color: #6d6e70;
+}
+
+.signUpInput {
+    width: 100%;
+}
+
+.orSignUpContainer {
+    padding-top: 20px;
+    font-size: 12pt;
+    color: #0f4777;
+    width: 100%;
+    text-align: center;
+}
+
+.signInLink {
+    cursor: pointer;
+    font-size: 12pt;
+    color: #0f4777;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signInLink:link {
+    cursor: pointer;
+    font-size: 12pt;
+    color: #0f4777;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signInLink:hover {
+    color: #2419b2;
+}
+
+.signInLink:active {
+    color: #2419b2;
+}
+
+.signInLink:focus {
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #000000;
+    color: #2419b2;
+}
+
+.signupButtonCell {
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+}
+
+.inputErrorMessage {
+    border-style: solid;
+    border-color: #a60400;
+    border-width: 1px;
+    background-color: #ff7673;
+    color: #000000;
+    padding: 4px;
+    margin-right: 4px;
+    text-align: center;
+}
+
+/* for small screens */
+@media ( max-width : 550px) {
+    .signUpNowContainer {
+        width: 90%;
+    }
+}
+</style>
+
+<script src="public/javascript/common/ezclocker-google-analytics.js"></script>
+
+<div id="_SignUpNowContainer" class="signUpNowContainer">
+    <input type="hidden" id="_AccountType" value="employer" />
+    <table class="ezFullWidth">
+        <tr>
+            <td class="signUpNowHeader">Sign up now for FREE!</td>
+        </tr>
+        <tr>
+            <td class="signUpInputLabel">Company Name</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="ez_employer_name" class="signUpInput" autocomplete="new-password" /></td>
+        </tr>
+        <tr>
+            <td class="signUpInputLabel">Email Address</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="ez_userName" class="signUpInput" value="" autocomplete="new-password" /></td>
+        </tr>
+        <tr>
+            <td class="signUpInputLabel">Password</td>
+        </tr>
+        <tr>
+            <td><input type="password" id="ez_password" class="signUpInput" value="" autocomplete="new-password" />
+            </td>
+        </tr>
+        <tr>
+            <td class="signupButtonCell">
+                <button id="_SignUpButton" class="superActionButton">Sign Up</button>
+            </td>
+        </tr>
+    </table>
+    <div class="orSignUpContainer">
+        or <a href="#" onclick="ezNavigation.navigateToSignIn()" class="signInLink">Sign In</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        ezSignUpNowFold.initFold();
+        ezSignUpNowFold.ready = true;
+    });
+
+</script>

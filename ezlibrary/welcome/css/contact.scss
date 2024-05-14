@@ -1,0 +1,92 @@
+@import 'ez-core';
+@import 'ez-responsive.scss';
+
+body {
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#contactusheader {
+    padding-top: 30px;
+    background-color: $ezClockerWhite;
+    margin: 0px;
+    padding: 0px;
+    /* z-index: -1; */
+    //position: relative;
+    width: 100%;
+    /* for IE 6 */
+}
+
+.ez-static-banner {
+    width: 100%;
+}
+
+.section {
+    padding-top: 30px;
+}
+
+#contactusdetails {
+    padding-top: 30px;
+    .container {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media Small Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (max-width: $ezSmallMobileMaxWidth)  {
+    #contactusheader {
+        padding-top: 65px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Regular Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezMobileMinWidth) and
+    (max-width: $ezMobileMaxWidth)  {
+    #contactusheader {
+        padding-top: 65px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Tablets
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezTabletMinWidth) and
+    (max-width: $ezTabletMaxWidth) {
+    #contactusheader {
+        padding-top: 65px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Laptops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezLaptopMinWidth) and
+    (max-width: $ezLaptopMaxWidth) {
+    #contactusheader {
+        padding-top: 65px;
+    }
+}
+
+/*------------------------------------------------------
+| @Media for Desktops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezDesktopMinWidth) {
+    #contactusheader {
+        padding-top: 65px;
+    }
+}

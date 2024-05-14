@@ -1,0 +1,59 @@
+<style>
+/* Mobile Device Download */
+.mobileDeviceDownloadContainer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #ffffff;
+    background-color: #6d6e70;
+}
+
+.mobileDeviceFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 150px;
+}
+
+.logoContainer {
+    padding: 20px;
+}
+
+.availableMobileImg {
+    padding: 20px;
+    width: 518px;
+    height: 84px;
+}
+
+.downloadAppleStoreImg {
+    height: 60px;
+}
+
+.downloadAndriodPlayImg {
+    height: 60px;
+}
+
+@media ( max-width : 550px) {
+    .mobileDeviceFlexContainer {
+        justify-content: center;
+    }
+    .availableMobileImg {
+        padding: 20px;
+        width: 90%;
+        height: auto;
+    }
+}
+</style>
+
+<div class="mobileDeviceFlexContainer">
+    <div class="logoContainer">
+        <a href="https://itunes.apple.com/us/developer/eznova-technologies-llc/id800807200"> <img
+            class="downloadAppleStoreImg" src="pi/phone/apple/Download_on_the_App_Store_Badge_US-UK_135x40.svg" />
+        </a>
+    </div>
+    <div class="logoContainer">
+        <a href="https://play.google.com/store/apps/details?id=com.ezclocker"> <img class="downloadAndriodPlayImg"
+            alt="Get it on Google Play" src="pi/google-play-badge.png" />
+        </a>
+    </div>
+</div>

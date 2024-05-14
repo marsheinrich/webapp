@@ -1,0 +1,194 @@
+<!-- Template for the integrations employee linker wizard page -->
+
+<head>
+    <style>
+        /* Employee Link Grid */
+        table.ezIntegrationEmployeeLinkGrid {
+            box-sizing: border-box;
+            background-color: transparent;
+            width: 100%;
+        }
+
+        table.ezIntegrationEmployeeLinkGridHeaderTextLayoutGrid {
+            width: 100%;
+            font-weight: bold;
+            border-style: none;
+        }
+
+        /* Header Row and Cell */
+        tr.ezIntegrationEmployeeLinkGridHeaderRow {
+            background-color: #e0e0e0;
+            color: #000000;
+            border-style: none;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        td.ezIntegrationEmployeeLinkGridHeaderCell {
+            box-sizing: border-box;
+            color: #000000;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #6d6e70;
+            width: 50%;
+            padding: 10px;
+        }
+
+        /* Employee Grid Cells and Rows */
+        tr.ezIntegrationEmployeeLinkGridEmployeeRow {
+            color: #000000;
+            background-color: #ffffff;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        td.ezIntegrationEmployeeLinkGridEmployeeCell {
+            background-color: transparent;
+            text-align: left;
+            vertical-align: middle;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #6d6e70;
+        }
+
+        /* Refresh Employees Button */
+        button.ezIntegrationEmployeeRefreshButton {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #032746;
+            background-color: #0f4777;
+            font-size: 10pt;
+            padding: 3px;
+            color: #ffffff;
+        }
+
+        button.ezIntegrationEmployeeRefreshButton:hover {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #032746;
+            background-color: #1D5D93;
+            font-size: 10pt;
+            color: #ffffff;
+        }
+
+        button.ezIntegrationEmployeeRefreshButton:active {
+            border-style: solid;
+            border-width: 1px;
+            border-color: #032746;
+            background-color: #063861;
+            font-family: 'Roboto', Verdana, sans-serif;
+            font-size: 10pt;
+            color: #ffffff;
+        }
+
+        div.ezIntegrationEmployeeRefreshButtonBox {
+            text-align: right;
+        }
+
+        /* SIMPLE COMBO STYLES */
+        select.ezEmployeeComboBox {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* BOOTSTRAP COMBO STYLES */
+        /* Header for employee selection box items */
+        h6.ezIntegrationEmployeeMenuHeader {
+            font-family: 'Roboto', Verdana, sans-serif;
+            font-style: bold;
+            font-size: 14pt;
+            color: #0f4777;
+        }
+
+        /* Other Link Actions Box */
+        div.ezIntegrationOtherLinkActionBox {
+            padding: 8px;
+            background-color: transparent;
+            border-style: none;
+            color: #000000;
+        }
+
+        div.ezIntegrationOtherLinkActionBox:hover {
+            font-weight: bold;
+            background-color: #FFC164;
+        }
+
+        div.ezIntegrationEmployeeBox:active {
+            background-color: #FFB039;
+        }
+
+        div.ezIntegrationOtherLinkActionBox:active {
+            font-weight: bold;
+        }
+
+        /* ezClocker Employee Box */
+        div.ezIntegrationEmployeeBox {
+            padding: 8px;
+            background-color: #e0e0e0;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #878686;
+            color: #000000;
+        }
+
+        div.ezIntegrationEmployeeBox:active {
+            background-color: #FFB039;
+        }
+
+        div.ezIntegrationEmployeeBox:hover {
+            background-color: #FFC164;
+        }
+
+        div.ezIntegrationEmployeeName {
+            font-family: 'Roboto', Verdana, sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* employee selection combo box */
+        button.ezComboBoxButton {
+            box-sizing: border-box;
+            width: 100%;
+            font-family: 'Roboto', Verdana, sans-serif;
+            font-size: 14pt;
+            background-color: #ffffff;
+            color: #000000;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #000000;
+            border-radius: 0px;
+        }
+
+        button.ezComboBoxButton:hover {
+            background-color: #FFC164;
+        }
+
+        button.ezComboBoxButton:active {
+            background-color: #FFB039;
+        }
+
+        button.ezComboBoxButton:focus {
+            background-color: #ff9900;
+        }
+
+        button.ezComboBoxButton:disabled {
+            background-color: #ffc165;
+            color: #9b5d00;
+        }
+    </style>
+    <script src="/secure/integrations/qbo/ez-qbo-integration-employee-linker-controller.js"></script>
+    <title>ezClocker QBO Integration Employee Mapping</title>
+</head>
+
+<body>
+    <div id="_EzWizardPageBody" class="ezWizardPageBody"></div>
+    <div class="ezWizardHeader" id="EzWizard_Title">Map ezClocker Employee's</div>
+    <div class="ezWizardContentBox">
+        <div id="EzWizard_Instructions" class="ezWizardInstructions"></div>
+        <div id="EzWizard_Content" class="ezWizardContent"></div>
+    </div>
+</body>

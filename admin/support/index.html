@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r71"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r71"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r71"></script>
+    <script src="/ezwp/js/ez-admin-support-page.bundle.js?v=r71"></script>
+    <title>ezClocker Internal Support</title>
+</head>
+
+<body style="padding: 10px 20px;">
+    <!-- Header -->
+    <div class="ezClockerHeader2015NonFixed bottomShadow ezAutoCol_50x50">
+        <div class="ez-support-header-section-1">
+            <a href="#" onclick="ezApi.ezclocker.ezNavigation.ezSignOut();">
+                <img src="/public/images/logos/ezclocker_logo_2015.svg" class="ezClockerHeader2015" alt="ezClocker" />
+            </a>
+            <div class="ezH1 ez-support-header-name">
+                Internal Support
+            </div>
+        </div>
+
+        <div id="EzAdminActionsContainer" class="ezAutoCol_A ezPad4 ezGrid-vertical-align-middle ezGrid-align-right">
+            <a id="EzAdminSignoutLink" class="ezButton-link-ezClockerOrange" href="#"
+                onclick="ezApi.ezclocker.ezNavigation.ezSignOut()">
+                Sign Out
+            </a>
+        </div>
+    </div>
+
+    <div id="EzAdminPageContent" class="ezPageContent ez-support-content-section">
+        <div id="userInformationSectionId" style="border: 1px solid black;">
+            <div class="lookup-basic-label">Lookup Basic User Information</div>
+            <div style="padding: 10px 20px">
+                <div>
+                    <div style="padding: 10px 0;">To lookup basic user information, please enter ONE of the following</div>
+                    <ul>
+                        <li>Email Address</li>
+                        <li>Mobile Phone Number</li>
+                        <li>User Name</li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            </label>Email Address</label>
+                            <input id="userInformationEmailAddress" class="search-input-box"></input>
+                        </div>
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            </label>Mobile Phone Number</label>
+                            <input id="userInformationMobilePhoneNumber" class="search-input-box" type="tel"></input>
+                        </div>
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            </label>User Name (not Email or Phone Number) </label>
+                            <input id="userInformationUserName" class="search-input-box-user-name"></input>
+                        </div>
+                    </div>
+
+                    <div id="basicUserLookBasicInformation_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="basicUserLookBasicInformation_ValidationError" class="input_ValidationError_Main_Div">
+                        </div>
+                        <div id="basicUserLookBasicInformation_ResponseWarning" class="input_ValidationWarning_Main_Div">
+                        </div>
+                        <button class="majorButton" id="basicUserLookBasicInformationButton"
+                            onclick="ezApi.ezclocker.ezSupportViewController.validateAndLookupBasicInformation()" style="float:right;margin-top:20px;">
+                            <div>Look Up Basic Information</div>
+                        </button>
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label"><span style="padding-left: 10px">Results</span></div>
+                        <div class="results-table-scroll">
+                            <table id="userInformationResultsTableId" class="ezGrid">
+                                <thead>
+                                    <tr class="header">
+                                        <th>User Name</th>
+                                        <th>Role</th>
+                                        <th>Internal Employer Id</th>
+                                        <th>Internal Employee Id</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="userInformationResultsTableBodyId" class="ezGridData">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div style="padding:20px 0;">
+                        <button class="majorButton" id="userInformationClearResultsButtonId" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lookupEmployeeByMobilePhoneSectionId" style="border:1px solid black;padding-top:20px">
+            <div class="lookup-basic-label">
+                Lookup User Employee Information for Mobile Phone Number
+            </div>
+            <div style="padding: 10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        Enter the employee's mobile phone number to look up their information
+                    </div>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            <label>
+                                Mobile Phone Number
+                            </label>
+                            <input id="lookupEmployeeByMobilePhoneNumber" class="search-input-box">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="lookupEmployeeByMobilePhoneButton_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="lookupEmployeeByMobilePhoneButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <div id="lookupEmployeeByMobilePhoneButton_ResponseWarning" class="input_ValidationWarning_Main_Div">
+                        </div>
+                        <button class="majorButton" id="lookupEmployeeByMobilePhoneButton" style="float:right;margin-top:20px;"
+                            onclick="ezApi.ezclocker.ezSupportViewController.validateAndLookupEmployeeInformationByPhoneNumber()">
+                            <div>
+                                Look Up Employee Information
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label"><span style="padding-left:10px">
+                                Results</span>
+                        </div>
+                        <div style="height:200px;overflow-y:scroll;">
+                            <table id="lookupEmployeeByMobilePhoneResultsTableId" class="ezGrid">
+                                <thead>
+                                    <tr class="header">
+                                        <th>User Name</th>
+                                        <th>Employee Name</th>
+                                        <th>Internal Employee Id</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lookupEmployeeByMobilePhoneResultsTableBodyId" class="ezGridData">
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div style="padding:20px 0;">
+                        <button class="majorButton" id="lookupEmployeeByMobilePhoneClearResultsButtonId" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lookupUserSubscriptionSectionId" style="border:1px solid black;padding-top:20px">
+            <div class="lookup-basic-label">
+                Lookup User Subscription Information
+            </div>
+            <div style="padding:10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To lookup a user's subscription information, please enter the following
+                    </div>
+                    <ul>
+                        <li>
+                            Email Address
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Email Address
+                            </label>
+                            <input id="lookupUserSubscriptionEmailAddress" class="search-input-box">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="lookupUserSubscriptionButton_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="lookupUserSubscriptionButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <div id="lookupUserSubscriptionButton_ResponseWarning" class="input_ValidationWarning_Main_Div">
+                        </div>
+                        <button class="majorButton" id="lookupUserSubscriptionButton" style="float:right;margin-top:20px;"
+                            onclick="ezApi.ezclocker.ezSupportViewController.validateAndLookupBySubscription()">
+                            <div>Look Up Basic Information</div>
+                        </button>
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left:10px">
+                                Results
+                            </span>
+                        </div>
+                        <div class="results-table-scroll">
+                            <table id="lookupUserSubscriptionResultsTableId" class="ezGrid">
+                                <thead>
+                                    <tr class="header">
+                                        <th>User Name</th>
+                                        <th>Internal Employer Id</th>
+                                        <th>Subscription Plan</th>
+                                        <th>Internal Billing Provider</th>
+                                        <th>Expire Date</th>
+                                        <th>Canceled</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="lookupUserSubscriptionResultsTableBodyId" class="ezGridData">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div style="padding: 20px 0;">
+                        <button class="majorButton" id="lookupUserSubscriptionClearResultsButtonId" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="changeBillingProviderSectionId" style="border:1px solid black;padding-top:20px">
+            <div class="lookup-basic-label">
+                Change Billing Provider
+            </div>
+            <div style="padding:10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To change user's subscription, please enter the following
+                    </div>
+                    <ul>
+                        <li>
+                            Email Address
+                        </li>
+                        <li>
+                            New Billing Provider
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Email Address
+                            </label>
+                            <input id="changeBillingProviderEmailAddress" class="search-input-box">
+                            </input>
+                        </div>
+
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            <label>
+                                New Billing Provider
+                            </label>
+                            <select id="changeBillingProviderOptions" class="search-select-box">
+                                <option value="APPLE_SUBSCRIPTION">APPLE_SUBSCRIPTION</option>
+                                <option value="BRAINTREEPAYMENTS_SUBSCRIPTION">BRAINTREEPAYMENTS_SUBSCRIPTION</option>
+                                <option value="EZCLOCKER_FREE_TRIAL">EZCLOCKER_FREE_TRIAL</option>
+                                <option value="EZCLOCKER_SUBSCRIPTION">EZCLOCKER_SUBSCRIPTION</option>
+                                <option value="GOOGLE_PLAY_SUBSCRIPTION">GOOGLE_PLAY_SUBSCRIPTION</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div id="changeBillingProviderButton_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="changeBillingProviderButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <button class="majorButton" id="changeBillingProviderButton" style="float:right;margin-top:20px;"
+                                onclick="ezApi.ezclocker.ezSupportViewController.changeBillingProviderSubscription()">
+                            <div>Change Billing Provider</div>
+                        </button>
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left:10px">
+                                Results
+                            </span>
+                        </div>
+                        <div style="padding-top: 20px;font-size: 24px;">
+                            <div id="changeBillingProviderResultsId" class="ezGrid">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="padding: 20px 0;">
+                        <button class="majorButton" id="changeBillingProviderResultsButtonId" style="float:right"
+                                onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reactivateBlockedAccountSectionId" style="border:1px solid black;padding-top:20px">
+            <div class="lookup-basic-label">
+                Re-activate a blocked account
+            </div>
+            <div style="padding:10px 20px">
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Employer Id
+                            </label>
+                            <input type="number" id="reactivateEmployerId" class="search-input-box">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="reactivateEmployerIdButton_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="reactivateEmployerIdButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <button class="majorButton" id="reactivateEmployerIdButtonId" style="float:right;margin-top:20px;"
+                                onclick="ezApi.ezclocker.ezSupportViewController.reactivateEmployer()">
+                            <div>Unblock Account</div>
+                        </button>
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left:10px">
+                                Results
+                            </span>
+                        </div>
+                        <div style="padding-top: 20px;font-size: 24px;">
+                            <div id="reactivateEmployerIdResultsId" class="ezGrid">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="padding: 20px 0;">
+                        <button class="majorButton" id="clearReactivateEmployerIdResultsButtonId" style="float:right"
+                                onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lookUpArchiveEmployeeSectionId" style="border:1px solid black;padding-top:20px">
+            <div class="lookup-basic-label">
+                Lookup Archive Employee
+            </div>
+            <div style="padding:10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To lookup basic user information, please enter ONE of the following
+                    </div>
+                    <ul>
+                        <li>
+                            Email Address
+                        </li>
+                        <li>
+                            Mobile Phone Number
+                        </li>
+                        <li>
+                            User Name
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Email Address
+                            </label>
+                            <input id="lookUpArchiveEmployeeEmailAddress" class="search-input-box">
+                            </input>
+                        </div>
+
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            <label>
+                                Mobile Phone Number
+                            </label>
+                            <input id="lookUpArchiveEmployeeMobilePhoneNumber" class="search-input-box">
+                            </input>
+                        </div>
+
+                        <div class="flex-display-column" style="padding-left: 30px;">
+                            <label>
+                                User Name (not Email or Phone Number)
+                            </label>
+                            <input id="lookUpArchiveEmployeeUserName" class="search-input-box-user-name">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="lookUpArchiveEmployeeButton_ValidationError_Submit_div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="lookUpArchiveEmployeeButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <div id="lookUpArchiveEmployeeButton_ResponseWarning" class="input_ValidationWarning_Main_Div">
+                        </div>
+                        <button id="lookUpArchiveEmployeeButton" class="majorButton" style="float:right;margin-top:20px;"
+                            onclick="ezApi.ezclocker.ezSupportViewController.validateAndLookupArchive()">
+                            <div>
+                                Look Up Archive Employee
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left:10px">
+                                Results
+                            </span>
+                        </div>
+
+                        <div class="results-table-scroll">
+                            <table id="lookUpArchiveEmployeeResultsTableId" class="ezGrid">
+                                <thead>
+                                    <tr class="header">
+                                        <th>
+                                            User Name
+                                        </th>
+                                        <th>
+                                            Employee Name
+                                        </th>
+                                        <th>
+                                            Internal Archived Employee Id
+                                        </th>
+                                        <th>
+                                            Internal Archived Employee User Id
+                                        </th>
+                                        <th>
+                                            Old Internal Archived Employee Id
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="lookUpArchiveEmployeeResultsTableBodyId" class="ezGridData">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div style="padding:20px 0">
+                        <button class="majorButton" id="lookUpArchiveEmployeeClearResultsButtonId" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteUserAccountSectionId" style="border:1px solid black;">
+            <div class="lookup-basic-label">
+                Delete User Account
+            </div>
+            <div style="padding: 10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To lookup basic user information, please user name (userid, email id or phone number)
+                    </div>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                User Name
+                            </label>
+                            <input id="ezAdminDeleteAccountUserName" class="search-input-box">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="deleteUserAccountButton_ValidationError_Submit_Div" style="display: flex;justify-content: space-between;">
+                        <div id="deleteUserAccountButton_ValidationError" class="input_ValidationError_Main_Div">
+
+                        </div>
+                        <div id="deleteUserAccountButton_SuccessMessage">
+
+                        </div>
+                        <button id="deleteUserAccountButton" class="majorButton" style="float:right;margin-top:20px;"
+                            onclick="ezApi.ezclocker.ezSupportViewController.handleUserDeleteAction()">
+                            <div>
+                                Delete User Account
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left:10px">
+                                Results
+                            </span>
+                        </div>
+                        <div>
+                        </div>
+                        <table id="deleteUserAccountResultsTableId" class="ezGrid">
+                            <thead>
+
+                            </thead>
+                            <tbody id="deleteUserAccountResultsTableBodyId" class="ezGridData">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="padding:20px 0;">
+                        <button class="majorButton" id="deleteUserAccountnClearResultsButtonId" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="createEmployeeInviteLinkSectionId" style="border: 1px solid black;padding-top: 20px">
+            <div class="lookup-basic-label">
+                Create Employee Invite Link
+            </div>
+            <div style="padding: 10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To create a employee invite link, please enter either both or email. Email Address may be needed for us to create a link:
+                    </div>
+                    <ul>
+                        <li>
+                            Email Address
+                        </li>
+                        <li>
+                            Employee Name
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Email Address
+                            </label>
+                            <input id="ezAdminCreateInviteEmailId" class="search-input-box">
+                            </input>
+                        </div>
+
+                        <div class="flex-display-column" style="padding-left:30px;">
+                            <label>
+                                Employee Name
+                            </label>
+                            <input id="ezAdminCreateInviteFullUserName" class="search-input-box">
+                            </input>
+                        </div>
+
+                    </div>
+
+                    <div id="createEmployeeLinkBasicInformationButton_ValidationError_Submit_Div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="createEmployeeLinkBasicInformationButton_ValidationError" class="input_ValidationError_Main_Div">
+                        </div>
+                        <div id="createEmployeeLinkBasicInformationButton_Success">
+                        </div>
+                        <button id="createEmployeeLinkBasicInformationButton" class="majorButton" style="float:right;margin-top:20px;"
+                            onclick="ezApi.ezclocker.ezSupportViewController.createEmployeeInvite()">
+                            <div>
+                                Create Employee Invite Link
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left: 10px">
+                                Results
+                            </span>
+                        </div>
+                        <table id="createEmployeeLinkResultsTableId" class="ezGrid">
+                            <thead>
+
+                            </thead>
+                            <tbody id="createEmployeeLinkResultsTableBodyId" class="ezGridData">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="padding: 20px 0;">
+                        <button id="createEmployeeLinkClearResultsButtonId" class="majorButton" style="float:right"
+                            onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="EzSupportActionsGroupContainer_SwapAccountPasswordActions"
+            style="border: 1px solid black;padding-top: 20px">
+            <div class="lookup-basic-label">
+                Swap Account Password Actions
+            </div>
+            <div style="padding: 10px 20px">
+                <div style="padding:10px 0;">
+                    To swap the user’s password with an admin one, so you can sign in into the account
+                </div>
+                <div id="EzSupportActionsContainer_RecycledEmployees"
+                    class="flex-display-column">
+                    <div class="flex-display-column">
+                        <div class="flex-display-column" style="font-size: 30px;padding-top: 20px">
+                            <label for="EzSupportSwapPasswordAccountUserName">
+                                Account Username
+                            </label>
+                            <input
+                                id="EzSupportSwapPasswordAccountUserName"
+                                class="search-input-box"
+                                type="text"/>
+                        </div>
+                        <div id="restorePassword_WarningMessageId" class="input_ValidationError_Main_Div" style="margin-left: 0px;padding: 20px 0;display: none">
+                            <span style="padding-left: 10px">Don’t forget to restore the password</span>
+                        </div>
+
+                        <div class="flex-display-row" style="justify-content: end;padding: 20px;">
+                            <button
+                                    id="EzSupportSwapPasswordButton"
+                                    class="majorButton"
+                                    onclick="ezApi.ezclocker.ezSupportViewController.ezSwapPasswordForUser()">
+                                <div>Swap Password ...</div>
+                            </button>
+                            <button
+                                    id="EzSupportRestoreSwapPasswordButton"
+                                    class="majorButton"
+                                    style="display:none;"
+                                    onclick="ezApi.ezclocker.ezSupportViewController.ezRestoreSwapPassword()">
+                                <div>Restore swapped password ...</div>
+                            </button>
+                        </div>
+
+                        <div class="ezGridContainer results-main-div">
+                            <div class="results-label">
+                                <span style="padding-left:10px">
+                                    Results
+                                </span>
+                            </div>
+                            <div style="padding-top: 20px;font-size: 24px;">
+                                <div id="EzSupportSwapPasswordResults" class="ezGrid">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="timeEntriesSectionId" style="border: 1px solid black;padding-top: 20px">
+            <div class="lookup-basic-label">
+                Get Time Entries
+            </div>
+            <div style="padding: 10px 20px">
+                <div>
+                    <div style="padding:10px 0;">
+                        To get time entries, please enter either or both:
+                    </div>
+                    <ul>
+                        <li>
+                            Employee Id
+                        </li>
+                        <li>
+                            Employer Id
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex-display-column">
+                    <div class="flex-display-row">
+                        <div class="flex-display-column">
+                            <label>
+                                Employer Id
+                            </label>
+                            <input id="ezAdminTimeEntryEmployerId" class="search-input-box"/>
+                        </div>
+
+                        <div class="flex-display-column" style="padding:30px;">OR</div>
+
+                        <div class="flex-display-column">
+                            <label>
+                                Employee Id
+                            </label>
+                            <input id="ezAdminTimeEntryEmployeeId" class="search-input-box"/>
+                        </div>
+
+                    </div>
+
+                    <div id="timeEntriesButton_ValidationError_Submit_Div" class="input_ValidationError_Submit_Button_Main_Div">
+                        <div id="timeEntriesInformationButton_ValidationError" class="input_ValidationError_Main_Div">
+                        </div>
+                        <div id="timeEntriesInformationButton_Success">
+                        </div>
+                        <button id="timeEntriesInformationButton" class="majorButton" style="float:right;margin-top:20px;"
+                                onclick="ezApi.ezclocker.ezSupportViewController.getTimeEntries()">
+                            <div>
+                                Get Time Entries
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <div class="ezGridContainer results-main-div">
+                        <div class="results-label">
+                            <span style="padding-left: 10px">
+                                Results
+                            </span>
+                        </div>
+                        <table id="timeEntriesResultsTableId" class="ezGrid">
+                            <thead>
+                                <tr class="header">
+                                    <th>Employer Id</th>
+                                    <th>Employee Id</th>
+                                    <th>Time Entry Type</th>
+                                    <th>Is Active Clock In</th>
+                                    <th>Is Active Break</th>
+                                    <th>Clock In Iso</th>
+                                    <th>Clock Out Iso</th>
+                                    <th>Clock In Date TimeZone</th>
+                                </tr>
+
+                            </thead>
+                            <tbody id="timeEntriesResultsTableBodyId" class="ezGridData">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="padding: 20px 0;">
+                        <button id="timeEntriesClearResultsButtonId" class="majorButton" style="float:right"
+                                onclick="ezApi.ezclocker.ezSupportViewRenderer.clearResultsTable();">
+                            <div>
+                                Clear Results
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

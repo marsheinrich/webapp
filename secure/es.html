@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="ezHtml">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="/jquery-ui/jquery-ui.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.min.css', true)">
+    <link
+        href="/jquery-ui/jquery-ui.structure.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.structure.min.css', true)">
+    <link
+        href="/jquery-ui/jquery-ui.theme.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.theme.min.css', true)">
+    <link
+        href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery.ui.timepicker-0.3.3.min.css', true)">
+    <link
+        href="/node_modules/animate.css/animate.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/node_modules/animate.css/animate.min.cs', true)">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-common.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-padding.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-tabs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-shadows.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-borders.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-tabs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-logo.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-header.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-calendar.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/schedule.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/ezclocker-create-timeoff-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/ezclocker-view-timeoff-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/ezclocker-view-request-timeoff-renderer.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/styles/ezclocker-dialog-view-timeoff-record.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/secure/schedule/ez-employee-schedule.css?v=r72-3" rel="stylesheet" type="text/css">
+    <script src="/ezlibrary/EzDependencyManager.js?v=r72-3"></script>
+    <script
+        src="/node_modules/jquery/dist/jquery.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery/dist/jquery.min.js', true)">
+    </script>
+    <script
+        src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery-migrate/dist/jquery-migrate.min.js', true)">
+    </script>
+    <script
+        src="/node_modules/moment/min/moment-with-locales.min.js"
+        onerror="failedScriptReloader('/node_modules/moment/min/moment-with-locales.min.js', true)">
+    </script>
+    <script
+        src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"
+        onerror="failedScriptReloader('/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js', true)">
+    </script>
+    <script
+        src="/jquery-ui/jquery-ui.min.js"
+        onerror="failedScriptReloader('/jquery-ui/jquery-ui.min.js', true)">
+    </script>
+    <script
+        src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"
+        onerror="failedScriptReloader('/jquery-ui/jquery.ui.timepicker-0.3.3.min.js', true)">
+    </script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-context.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-google-service.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-time-off-request-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-employee-schedule.bundle.js?v=50?v=r72-3"></script>
+    <!-- <script src="/ezlibrary/EzTeamChat/ez-team-chat-ui.bundle.js?v=r72-3"></script> -->
+    <title>ezClocker: Employee Schedule</title>
+</head>
+
+<body class="ezPageBody">
+    <!-- Header -->
+    <div id="EzPageViewHeader">
+        <!-- Header -->
+        <div id="EzEmployeeSchedulePageViewHeader" class="ezHeader">
+            <div id="EzPageViewHeader_EmployerLogoContainer" class="ezHeader-employer-logo-container">
+                <div id="EmployerLogoImgContainer" class="ezHeader-logo-image-container">
+                    <img id="_EmployerLogoImage" class="ezHeader-employer-logo" alt="employer"
+                        src="/public/images/spinners/orange-spinner.gif" />
+                </div>
+                <div id="_EmployerNameCell" class="ezHeader-employer-name">
+                </div>
+            </div>
+            <div id="EzPageViewHeader_NavigationButtons" class="ezHeader-navigation-button-container">
+                <button id="_NavDashboard" class="headerButton">
+                    Dashboard
+                </button>
+                <button id="_NavSchedules" class="headerButton" disabled>
+                    Schedules
+                </button>
+                <span id="EzTimeOffNavFeatureToggle" data-feature-id="ezfTimeOff" style="display:none">
+                    <button id="_NavTimeOff" class="headerButton" disabled>
+                        Time off
+                    </button>
+                </span>
+                <button id="_NaviSignout" class="headerButton">
+                    Sign Out
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="EzEmployeeSchedulePageMenuView" class="ezSubContentView-transparent-noborder-noscroll">
+        <div id="EzEmployeeScheduleMenu" class="ezEmployeeScheduleMenu leftRightBottomShadow">
+            <table id="EzEmployeeScheduleToolbarTable" class="ezFullWidth">
+                <tr>
+                    <td id="EzEmployeeScheduleSelectDateCell" class="ezPad8">
+                        <h3 class="ezHeader1" id="_ScheduleName">Your Schedule for the Week</h3>
+                            <button class="majorButton"
+                                onclick="ezApi.ezclocker.ezEmployeeScheduleController.navigatePreviousWeek()">
+                                &lt;
+                            </button>
+                            <input type="text" id="scheduleWeek" class="largerDatePicker" />
+                            <button class="majorButton"
+                                onclick="ezApi.ezclocker.ezEmployeeScheduleController.navigateNextWeek()">
+                                &gt;
+                            </button>
+                    </td>
+                    <td id="EzEmployeeScheduleTotalHoursCell" class="ezEmployeeScheduleTotalHoursCell">
+                        <div id="EzEmployeeScheduleTotalHoursContainer" class="ezEmployeeTotalScheduleHoursContainer">
+                            Period Scheduled Hours
+                            <div id="_TotalScheduledHours" class="totalScheduleHours">
+                                00:00
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="_SchedulePage" class="ezPageView">
+            <div id="EzSchedulePageCalendarView" class="ezSubContentView ezMargin_8x8x8x8">
+                <div id="_CalendarContainer" class="ezCalendarContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

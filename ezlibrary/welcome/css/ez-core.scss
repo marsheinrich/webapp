@@ -1,0 +1,219 @@
+@import 'ez-responsive.scss';
+
+/* Use http://paletton.com to generate pallets */
+
+// Primary ezClocker Colors
+$ezClockerOrange: #ff9900;
+$ezClockerNavy: #0f4777; // rgb(15,71,119)
+$ezClockerYellow: #ffc500;
+$ezClockerGray: #6d6e70; // rgb(109,110,112)
+$ezClockerAquaGray: #6a737d;
+$ezClockerSilver: #e0e0e0; // rgb(224,224,224)
+$ezClockerActionGreen: #8EF13C;
+$ezClockerAlertRed: #FF0700;
+$ezClockerBlack: #000000;
+$ezClockerWhite: #ffffff;
+
+// Specail Use Colors
+$ezClockerSmokeyTooth: #f7f4ec;
+$ezClockerBackground: #E1E1E1;
+
+// Rarely Used Legacy Colors
+$ezClockerAqua: #316dac;
+$ezClockerBlue: #2419b2;
+$ezClockerBabyBlue: #7CD0FD;
+
+// ezClocker Smokey Tooth Shades (#f7f4ec)
+$ezSmokeyTooth: $ezClockerSmokeyTooth;
+$ezSmokeyToothLight: $ezClockerWhite;
+$ezSmokeyToothHover: #FFFEFC;
+$ezDarkSmokeyTooth: #D0CBBC;
+$ezBorderSmokeyTooth: #AFA68E;
+
+// ezClocker Orange Shades (#ff9900)
+$ezOrange: #ff9900;
+$ezLightOrange: #FFC164;
+$ezHoverOrange: #FFB039;
+$ezDarkOrange: #C67700;
+$ezBorderOrange: #9B5D00;
+
+// ezClocker Navy Shades (#0f4777)
+$ezNavy: var($ezClockerNavy);
+$ezNavyContainerTextColor: var($ezClockerWhite);
+$ezLightNavy: #3B6F9B;
+$ezHoverNavy: #1D5D93;
+$ezDarkNavy: #063861;
+$ezBorderNavy: #032746;
+$ezAqua: var($ezClockerAqua);
+$ezLightAqua: #7AA7D5;
+$ezHoverAqua: #4F85BE;
+$ezDarkAqua: #1058A3;
+$ezBorderAqua: #0A417A;
+$ezNavyContainerDisabledTextColor: var($ezBorderNavy);
+$ezNavyAlpha: rgba(15, 71, 119, 0.8);
+
+// ezClocker yellow shades (#ffc500)
+$ezYellow: var($ezClockerYellow);
+$ezYelloContainerText: #000000;
+$ezLightYellow: #FFDB64;
+$ezHoverYellow: #FFD239;
+$ezDarkYellow: #C69800;
+$ezBorderYellow: #9B7800;
+
+// ezClocker Gray shades (#6d6e70)
+$ezGrayAlpha: rgba(109, 110, 112, 0.9);
+$ezGray: $ezClockerGray;
+$ezGrayContainerText: $ezClockerWhite;
+$ezLightGray: #B2B3B4;
+$ezHoverGray: #8A8B8D;
+$ezDarkGray: #515255;
+$ezBorderGray: #323437;
+
+// ezClocker Aqua Gray Shared
+$ezAquaGray: $ezClockerGray;
+$ezAquaGrayContainerText: $ezClockerBackground;
+$ezLightAquaGray: #B7BABE;
+$ezHoverAquaGray: #898F96;
+$ezDarkAquaGray: #505B67;
+$ezBorderAquaGray: #374350;
+
+// ezClocker Blue Shades (#2419b2)
+$ezBlue: var($ezClockerGray);
+$ezLightBlue: #665EC6;
+$ezHoverBlue: #463DB7;
+$ezDarkBlue: #1B128A;
+$ezBorderBlue: #120B6D;
+
+// ezClocker silver shares (#e0e0e0)
+$ezSilverAlpha: rgba(224, 224, 224, 0.8);
+$ezSilver: var($ezClockerSilver);
+$ezLightSilver: #f0f0f0;
+$ezDarkSilver: #B3B3B3;
+$ezBorderSilver: #878686;
+
+// ezClocker ActionGreen shaes (#8EF13C)
+$ezActionGreen: var($ezClockerActionGreen);
+$ezLightActionGreen: #C0F991;
+$ezHoverActionGreen: #A5F562;
+$ezDarkGreen: #77ED16;
+$ezBorderGreen: #65DF00;
+
+// ezClocker AlertRed shades (#FF0700)
+$ezAlertText: var($ezClockerWhite);
+$ezAlertRed: var($ezClockerAlertRed);
+$ezLightAlertRed: #FF6864;
+$ezHoverAlertRed: #FF3E39;
+$ezDarkAlertRed: #C60500;
+$ezBorderAlertRed: #9B0400;
+
+// ezClocker BabyBlue (#7CD0FD) Shades
+$ezBabyBlue: var($ezClockerBabyBlue);
+$ezLightBabyBlue: #E8F7FF;
+$ezHoverBabyBlue: #A9E0FE;
+$ezDarkBabyBlue: #54C0FA;
+$ezBorderBabyBlue: #2CACF1;
+
+// Black Shades
+$ezBlack: #000000;
+$ezLightBlack: #7F7E7E;
+$ezHoverBlack: #464646;
+
+// White Shades
+$ezWhite: var($ezClockerWhite);
+$ezDarkWhite: #CECECE;
+$ezBorderWhite: #A2A0A0;
+
+// Background Colors
+$ezBackgroundColor: $ezClockerBackground;
+$ezAlphaBackgroundColor: rgba(225, 225, 225, .3);
+$ezAlphaDarkBackgroundColor: rgba(225, 225, 225, .8);
+$ezGrayAlphaBackgroundColor: rgba(128, 128, 128, .4);
+$ezDarkBackgroundColor: #B4B4B4;
+$ezDarkAlphaBackgroundColor: rgba(180, 180, 180, .3);
+
+$ezBorderBackgrounColor: #888787;
+$ezBorderAlphaBackgroundColor: rgba(136, 135, 135, .3);
+
+$ezBackgroundImageGradientAlphaWhite1: rgba(255, 255, 255, .07);
+$ezBackgroundImageGradientAlphaWhite2: rgba(255, 255, 255, .13);
+$ezBackgroundImageGradientAlphaWhite3: rgba(255, 255, 255, .17);
+$ezBackgroundImageGradientAlphaWhite4: rgba(255, 255, 255, .19);
+
+// Text Colors
+$ezTextColor: $ezClockerBlack;
+$ezLightTextColor: $ezClockerGray;
+$ezTitleTextColor: $ezClockerNavy;
+$ezHeaderTextColor: $ezClockerBlack;
+$ezSubHeaderTextColor: $ezClockerNavy;
+
+// Font Family
+$ezFontFamilyRoboto: 'Roboto';
+$ezFontFamilyVerdana: Verdana;
+$ezFontFamilySansSerif: sans-serif;
+
+// Normal Font Sizes
+$ezFontSize: 14pt;
+
+$ezPicoFontSize: 8pt;
+$ezMicroFontSize: 10pt;
+$ezSmallFontSize: 12pt;
+$ezNormalFontSize: $ezFontSize;
+$ezMediumFontSize: 18pt;
+$ezLargeFontSize: 20pt;
+$ezExtraLargeFontSize: 22pt;
+
+// Normal Header and Title Font Sizes
+$ezHeaderFontSize: $ezExtraLargeFontSize;
+$ezSubHeaderFontSize: $ezMediumFontSize;
+$ezTitleFontSize: $ezLargeFontSize;
+
+// Marketing Font Sizes
+$ezMarketingPicoFontSize: $ezMicroFontSize;
+$ezMarketingMicroFontSize: $ezSmallFontSize;
+$ezMarketingSmallFontSize: $ezNormalFontSize;
+$ezMarketingNormalFontSize: $ezMediumFontSize;
+$ezMarketingMediumFontSize: $ezLargeFontSize;
+$esMarketingLargeFontSize: $ezExtraLargeFontSize;
+$ezMarketingExtraLargeFontSize: 24pt;
+
+// Marketing Header and Title Font Sizes
+$ezMarketingHeaderFontSize: $ezMarketingExtraLargeFontSize;
+$ezMarketingSubHeaderFontSize: $ezMarketingMediumFontSize;
+$ezMarketingTitleFontSize: $esMarketingLargeFontSize;
+
+// margins and padding/
+$ezDefaultMarginSize: 0;
+$ezDefaultPaddingSize: 0;
+
+// Background Images
+.ezBackgroundImage {
+    background-image: linear-gradient(90deg, $ezBackgroundImageGradientAlphaWhite1 50%, transparent 50%),
+    linear-gradient(90deg, $ezBackgroundImageGradientAlphaWhite2 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, $ezBackgroundImageGradientAlphaWhite3 50%),
+    linear-gradient(90deg, transparent 50%, $ezBackgroundImageGradientAlphaWhite4 50%);
+    background-size: 13px, 29px, 37px, 53px;
+}
+
+.ez-float-left {
+    float: left
+}
+
+.ez-float-right {
+    float: left
+}
+
+.ez-bring-to-front {
+    z-index: 9999;
+}
+
+.ez-hidden {
+    display: none;
+}
+
+.ez-topish {
+    margin-top: 25%;
+}
+
+.ez-full-width {
+    width: 100%;
+}

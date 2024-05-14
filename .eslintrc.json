@@ -1,0 +1,143 @@
+{
+    "$schema": "https://json.schemastore.org/eslintrc.json",
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:json/recommended",
+        "prettier"
+    ],
+    "env": {
+        "es6": true,
+        "es2021": true,
+        "es2022": true,
+        "es2023": true,
+        "es2024": true,
+        "jest": true,
+        "commonjs": true,
+        "browser": true,
+        "jquery": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "2024",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "json",
+        "jquery",
+        "node",
+        "security",
+        "xss",
+        "html",
+        "prettier",
+        "import"
+    ],
+    "rules": {
+        "@typescript-eslint/strict-boolean-expressions": [
+            2,
+            {
+                "allowString": false,
+                "allowNumber": false
+            }
+        ],
+        "prettier/prettier": "error",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "no-global-assign": [
+            "warn"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "curly": [
+            "error",
+            "all"
+        ],
+        "brace-style": [
+            "error",
+            "1tbs",
+            {
+                "allowSingleLine": false
+            }
+        ],
+        "no-unused-vars": [
+            "warn"
+        ],
+        "no-undef": [
+            "warn"
+        ],
+        "no-useless-escape": [
+            "off"
+        ]
+    },
+    "files": [
+        "src/main/webapp/*.js",
+        "src/main/webapp/**/*.js",
+        "src/main/webapp/*.jsx",
+        "src/main/webapp/**/*.jsx",
+        "src/main/webapp/*.html",
+        "src/main/webapp/**.html"
+    ],
+    "ignorePatterns": [
+        "src/**/*.min.js",
+        "src/**/*.min.jsx"
+    ],
+    "globals": {
+        "globalThis": "readonly",
+        "ezApi": "readonly",
+        "browserDetect": "readonly",
+        "moment": "readonly",
+        "google": "readonly",
+        "MapLabel": "readonly",
+        "parseint": "readonly",
+        "JSON": "readonly",
+        "fbq": "readonly",
+        "amplitude": "readonly",
+        "_elev": "readonly"
+    },
+    "settings": {
+        "fix": true,
+        "html": {
+            "html-extensions": [
+                ".html"
+            ],
+            "indent": "+4",
+            "report-bad-indent": "warn"
+        },
+        "propWrapperFunctions": [
+            "forbidExtraProps",
+            {
+                "property": "freeze",
+                "object": "Object"
+            },
+            {
+                "property": "myFavoriteWrapper"
+            }
+        ],
+        "linkComponents": [
+            "Hyperlink",
+            {
+                "name": "Link",
+                "linkAttribute": "to"
+            }
+        ]
+    }
+}

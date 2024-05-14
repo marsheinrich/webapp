@@ -1,0 +1,213 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Shadow UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    /* ezClockerStone Shadows: --ezBorderStone: #666565; */
+    --ezStoneShadowColor: var(--ezStoneBorder);
+    --ezStoneInsetBoxShadow: inset 0 0 4px 2px rgb(102 101 101 / 50%);
+    --ezStoneBoxShadow: 0 0 1px 1px rgb(102 101 101 / 50%);
+    --ezStoneInsetBottomShadow: inset 0 -2px 4px -2px rgb(102 101 101 / 50%);
+    --ezStoneBottomShadow: 0 2px 2px -2px rgb(102 101 101 / 50%);
+    --ezStoneTopShadow: 0 -2px 2px 0 rgb(102 101 101 / 50%);
+    --ezStoneLeftShadow: -2px 0 2px 0 rgb(102 101 101 / 50%);
+    --ezStoneRightShadow: 2px 0 2px 0 rgb(102 101 101 / 50%);
+    --ezStoneTopRightShadow: 4px -4px 4px 0 rgb(102 101 101 / 50%);
+    --ezStopTopLeftShadow: -4px -4px 4px 0 rgb(102 101 101 / 50%);
+    --ezStoneBottomLeftShadow: -4px 4px 4px 0 rgb(102 101 101 / 50%);
+    --ezStoneInsetTopLeft: inset 2px 2px 2px 0 rgb(102 101 101 / 50%);
+    --ezStoneInsetTopRight: inset -2px 2px 2px 0 rgb(102 101 101 / 50%);
+
+    /* ezClockerTeal Shadows: --ezTealBorder #007c82 */
+    --ezTealShadowColor: var(--ezTealBorder);
+    --ezTealInsetBoxShadow: inset 0 0 4px 2px rgb(0 124 130 / 100%);
+    --ezTealBoxShadow: 0 0 1px 1px rgb(0 124 130 / 100%);
+    --ezTealInsetBottomShadow: inset 0 -2px 4px -2px rgb(0 124 130 / 100%);
+    --ezTealBottomShadow: 0 4px 4px -2px rgb(0 124 130 / 100%);
+    --ezTealTopShadow: 0 -4px 4px 0 rgb(0 124 130 / 100%);
+    --ezTealLeftShadow: -4px 0 4px 0 rgb(0 124 130 / 100%);
+    --ezTealRightShadow: 4px 0 4px 0 rgb(0 124 130 / 100%);
+
+    /* ezClockerNavy Shadows: --ezBorderNavy: #032746; */
+    --ezNavyShadowColor: var(--ezBorderNavy);
+    --ezNavyInsetShadow: inset 0 0 4px 2px rgb(3 39 70 / 100%);
+    --ezNavyBoxShadow: 0 0 1px 1px rgb(3 39 70 / 100%);
+    --ezNavyInsetBottomShadow: inset 0 -4px 4px 0 rgb(3 39 70 / 50%);
+    --ezNavyBottomShadow: 0 2px 4px 0 rgb(3 39 70 / 100%);
+    --ezNavyTopShadow: 0 -2px 2px 0 rgb(3 39 70 / 100%);
+    --ezNavyLeftShadow: -2px 0 2px 0 rgb(3 39 70 / 100%);
+    --ezNavyRightShadow: 2px 0 2px 0 rgb(3 39 70 / 100%);
+
+    /* ezClockerBlack Shadows: --ezBorderBlack: #030101 */
+    --ezBlackShadowColor: var(--ezBorderBlack);
+    --ezBlackInsetBottomShadow: inset 0 -2px 4px -2px rgb(3 1 1 / 100%);
+    --ezBlackBottomShadow: 0 2px 2px -2px rgb(3 1 1 / 100%);
+    --ezBlackTopShadow: 0 -2px 2px 0 rgb(3 1 1 / 100%);
+    --ezBlackLeftShadow: -2px 0 2px 0 rgb(3 1 1 / 100%);
+    --ezBlackRightShadow: 2px 0 2px 0 rgb(3 1 1 / 100%);
+    --ezBlackThickBottomShadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Shadows */
+.ezShadows-0-0-10px-0-ezClockerBlack {
+    box-shadow: 0 0 10px 0 var(--ezClockerBlack);
+}
+
+
+.ezShadows-inset-shadow {
+    box-shadow:
+        rgb(0,0,0) 3px 3px 6px 0 inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.ez-bottom-shadow {
+    box-shadow: 0 2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ezShadows-wide-bottom-shadow {
+    box-shadow: 0 4px 4px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-inset-bottom-shadow {
+    box-shadow: inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+.ezShadow-overlay-inset-bottom {
+    box-shadow: inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+.ezShadow-overlay-inset-bottom:before {
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+.ez-right-shadow {
+    box-shadow: 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-inset-right-shadow {
+    box-shadow: inset -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ezShadows-inset-right-left-bottom-shadow {
+    box-shadow:
+        /* right */
+        inset -2px 0 2px 0 rgb(109 110 112 / 50%),
+        /* left */
+        inset 2px 0 2px 0 rgb(109 110 112 / 50%),
+        /* bottom */
+        inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+.ezShadows-inset-box-2px {
+    box-shadow:
+        /* left */
+        inset 2px 0 2px 0 rgb(109 110 112 / 50%),
+        /* right */
+        inset -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ezShadows-inset-box-2px:after {
+    box-shadow:
+        /* top */
+        inset 0 2px 2px 0 rgb(109 110 112 / 50%),
+        /* bottom */
+        inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+.ez-left-shadow {
+    box-shadow: -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-left-right-shadow {
+    box-shadow:
+        /* left */
+        2px 0 2px 0 rgb(109 110 112 / 50%),
+        /* right */
+        -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-inset-left-shadow {
+    box-shadow: inset 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-top-shadow {
+    box-shadow: 0 -2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-inset-top-shadow {
+    box-shadow: inset 0 2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-left-right-top-shadow {
+    box-shadow:
+        /* left */
+        2px 0 2px 0 rgb(109 110 112 / 50%),
+        /* top */
+        inset 0 2px 2px 0 rgb(109 110 112 / 50%),
+        /* right */
+        -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-left-right-bottom-shadow {
+    box-shadow: 0 2px 4px 1px rgb(109 110 112 / 50%);
+}
+
+.ez-shadow {
+    box-shadow: 0 0 4px 2px rgb(109 110 112 / 50%);
+}
+
+.ez-shadow-small {
+    box-shadow: 0 0 2px 2px var(--ezClockerGray);
+}
+
+.ez-shadow-dark {
+    box-shadow: 0 2px 8px 4px rgb(0 0 0 / 50%);
+}
+
+.ez-inset-shadow {
+    box-shadow: inset 0 0 8px 4px rgb(109 110 112 / 50%);
+}
+
+.ez-small-inset-shadow {
+    box-shadow: inset 0 0 4px 2px rgb(109 110 112 / 50%);
+}
+
+.ez-left-top-inset-shadow {
+    box-shadow: inset 2px 2px 4px 2px rgb(109 110 112 / 50%);
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/

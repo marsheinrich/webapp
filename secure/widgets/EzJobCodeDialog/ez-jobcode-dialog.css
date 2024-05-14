@@ -1,0 +1,311 @@
+.ezJobCodeColumns {
+    scroll-behavior: auto;
+    padding: 4px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.ezJobCodeRow {
+    scroll-behavior: none;
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+}
+
+.ezAvailableJobCodesLayoutTable {
+    width: 100%;
+}
+
+.ezJobCodeTitleContainer {
+    padding: 2px;
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    border-top-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+
+.ezJobCodeTitleDisabledContainer {
+    padding: 2px;
+    background-color: var(--ezClockerGray);
+    border-color: var(--ezBorderGray);
+    border-top-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+
+.ezJobCodeContainerTitle {
+    padding: 4px;
+    color: var(--ezClockerWhite);
+    font-size: var(--ezActionFontSize);
+    font-weight: var(--ezActionFontWeight);
+}
+
+.ezAssignedEmployeImage {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.ezAvailableJobCodesContainer {
+    padding: 2px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-color: var(- -ezBorderGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezAvailableJobCodesContainer:focus {
+    padding: 2px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-color: var(- -ezClockerBlack);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ezJobCodeBorderlessContainer {
+    padding: 4px;
+}
+
+.ezJobCodeBorderContainer {
+    padding: 4px;
+    min-height: 100px;
+    border-color: var(--ezBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezJobCodeActionBar {
+    z-index: -1;
+    padding: 2px;
+    text-align: right;
+    background-color: var(--ezClockerNavy);;
+    border-color: var(--ezBorderNavy);
+    border-top-style: none;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-width: 1px;
+}
+
+ezJobCodeAssignEmployeeDialog-content-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    align-content: start;
+    justify-content: start;
+}
+
+.ezAssignedEmployeeContainer {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    border-color: var(--ezClockerNavy);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ezAssignedEmployeeDisabledContainer {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+    border-color: var(--ezBorderGray);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ezAssignedEmployeeName {
+    padding: 8px;
+    font-weight: bold;
+}
+
+.ezAssignedEmployeeDisabledName {
+    padding: 8px;
+
+    color: var(--ezClockerGray);
+    font-weight: bold;
+}
+
+.ezJobCodeDialog-assigneed-employee-primary-container {
+    display: grid;
+    min-width: 72px;
+    padding: 4px;
+    margin: 2px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--ezClockerHotGreen);
+    color: var(--ezHotGreenContainerFontColor);
+    font-weight: bold;
+    font-size: var(--ezMicroFontSize);
+    border-color: var(--ezBorderHotGreen);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezJobCodeDialog-assigneed-employee-non-primary-container {
+    display: grid;
+    padding: 4px;
+    min-width: 72px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: transparent;
+    color: var(--ezClockerBlack);
+    border-style: none;
+    border-radius: 3px;
+}
+
+
+.ezJobCodeBar {
+    padding: 4px;
+    margin: 2px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezBorderYellow);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.ezJobCodeBar:hover {
+    background-color: var(--ezExtraLightYellow);
+    border-color: var(--ezBorderYellow);
+}
+
+.ezJobCodeBarJobCodeName {
+    color: var(--ezBlack);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+}
+
+.ezJobCodeBarJobCodeCode {
+    color: var(--ezClockerGray);
+    font-size: var(--ezSmallFontSize);
+    font-style: italic;
+}
+
+.ezActivateddJobCodeBar {
+    background-color: var(--ezClockerYellow);
+    color: var( --ezClockerNavy);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-weight: bold;
+    border-color: (--ezBorderYellow);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezActivatedJobCodeName {
+    color: var(--ezBlack);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+}
+
+.ezActivatedJobCodeCode {
+    color: var(--ezClockerGray);
+    font-size: var(--ezSmallFontSize);
+    font-style: italic;
+}
+
+.ezJobCodeBarDisplayCell {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.ezJobCodeBarActionCell {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.ezJobCodeEditorContainer {
+    padding: 4px;
+}
+
+.ezJobCodeEditorContainer {
+    color: #000000;
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-weight: bold;
+}
+
+.ezJobCodeAssignedEmployee {
+    padding: 4px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezJobCodeInputNameLabel {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.ezJobCodeInputCodeLabel {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.ezAvailableEmployeesSelect {
+    width: 100%;
+}
+
+.ezSelectEmployeeContainer {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.primaryJobAssignedElsewhereMessage {
+    padding: 4px;
+    color: var(--ezClockerGray);
+    font-style: italic;
+}
+
+.ezJobDialogVisualHelpContainer {
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    min-height: 100%
+}
+
+.ezJobDialogTopVisualHelpImage {
+    width: 100%;
+}
+
+.ezJobDialogVisualHelpAddJobContainer {
+    background-image: url('../../../public/images/add-a-job-help-action.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+.ezJobDialogBottomVisualHelpImage {
+    width: 100%;
+}
+
+.ezJobCodeDialogVisualHelpAssignEmployeeContainer {
+    background-image: url('../../../public/images/assign-job-employee-help-action.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+.ezJobCodeDialogVisualHelpAssignEmployeeScreenShot {
+    width: 100%;
+}

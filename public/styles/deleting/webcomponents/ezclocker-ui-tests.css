@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 4px;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+}
+
+div.ezBox {
+    margin: 0 0 4px;
+    padding: 8px;
+    background-color: #f8f8f8;
+    border-width: 1px;
+    border-color: #909090;
+    border-style: none;
+    border-top-style: solid;
+    border-left-style: solid;
+    /*
+	-moz-box-shadow: 1px 1px 2px #101010;
+	-webkit-box-shadow: 1px 1px 2px #010101;
+	*/
+    box-shadow: 1px 1px 3px #000000;
+}
+
+input {
+    margin: 0 0 4px;
+    padding: 8px;
+    background-color: #f5f9ff;
+    border-width: 1px;
+    border-color: #d0d0ff;
+    border-bottom-style: none;
+    border-right-style: none;
+    border-top-style: solid;
+    border-left-style: solid;
+    box-shadow: inset -1px -1px 2px #d0e0ff;
+    font-size: 14pt;
+    outline-width: 1px;
+    outline-color: rgba(255, 153, 0, 0.8);
+    outline-width: -2;
+}
+
+input[type=text]:ACTIVE {
+    background-color: rgba(255, 153, 0, 0.2);
+}

@@ -1,0 +1,94 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14pt;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    color: #000066;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #4284d3;
+    margin: 0;
+}
+
+h3 {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.logoFont {
+    font-family: monospace;
+    font-style: bold;
+}
+
+.dataContainer {
+    background-color: #ff9900;
+    padding: 2px;
+    box-shadow: 0 0 4px 1px #ff9900;
+    box-shadow: 0 0 4px 1px #ff9900;
+}
+
+.queryContainer {
+    background-color: #808080;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.dataResultContainer {
+    background-color: #caff9e;
+    color: #000000;
+    padding: 8px;
+}
+
+.dataInput {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px;
+    margin-right: 8px;
+    min-width: 250px;
+}
+
+.queryButton {
+    cursor: pointer;
+    background-color: #8df13c;
+    color: #000000;
+    font-weight: bold;
+    padding: 8px;
+    border-style: solid;
+    border-color: #439400;
+    border-width: 1px;
+}
+
+.queryButton:hover {
+    background-color: #caff9e;
+    color: #000000;
+    font-weight: bold;
+    padding: 8px;
+    border-style: solid;
+    border-color: #8df13c;
+    border-width: 1px;
+}
+
+.queryButton:ACTIVE {
+    background-color: #439400;
+    color: #000000;
+    font-weight: bold;
+    padding: 8px;
+    border-style: solid;
+    border-color: #caff9e;
+    border-width: 1px;
+}

@@ -1,0 +1,1486 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Containers/Boxes UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezContainer {
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ez-debug-timezone-container {
+    position: absolute;
+    padding: 2px;
+    left: 10px;
+    top: 0;
+    background-color: var(--ezClockerBabyBlue);
+    color: var(--ezClockerGray);
+    font-size: xx-small;
+    font-style: italic;
+}
+
+.ezInstructionContainer {
+    border-style: none;
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+}
+
+/* Input Containers/Boxes */
+.ezContainer-date-picker {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+    justify-content: stretch;
+    align-content: top;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: var(--ezClockerBlack);
+    border-style: none;
+}
+
+.ezContainer-labeled-input-vertical {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-row-gap: 4px;
+    grid-column-gap: 0;
+    justify-content: stretch;
+    align-content: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    color: var(--ezClockerBlack);
+    border-style: none;
+}
+
+.ezInputContainer {
+    border-style: none;
+    padding: 8px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+}
+
+.ezTransparentInputContainer {
+    padding: 8px;
+    background-color: transparent;
+    color: var(--ezFontColor);
+    border-style: none;
+}
+
+/* DEPRECATED: Switch to ezInputs-input-box */
+.ezInputBox {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-content: center;
+    padding: 4px;
+    background-color: transparent;
+    color: var(--ezFontColor);
+}
+
+.ezContainers_InputBox {
+    display: grid;
+    padding: 4px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-content: center;
+    background-color: transparent;
+    color: var(--ezFontColor);
+}
+
+.ezContaner_CenterInputBox {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: stretch;
+    align-content: center;
+    padding: 4px;
+    background-color: transparent;
+    color: var(--ezFontColor);
+}
+
+
+.ezCenterInputBox {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: center;
+    padding: 4px;
+    background-color: transparent;
+    color: var(--ezFontColor);
+}
+
+.ezLargeInputBox,
+.ezContainers-large-input-box {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.ezSmallInputBox,
+.ezContainers-small-input-box {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ezErrorContainer {
+    margin: 4px;
+    padding: 4px;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: var(--ezLightAlertRed);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-color: var(--ezBorderAlertRed);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezErrorBox {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: var(--ezClockerErrorRed);
+    background-image: url("/public/images/icons/error-red.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    background-position-y: center;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+.ezContainer-validation-error-box {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    min-height: 17px;
+    min-width: 17px;
+    background-color: var(--ezClockerErrorRed);
+    background-image: url("/public/images/icons/error-red.svg");
+    background-size: 17px 17px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    background-position-y: center;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+.ezWarningBox {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: var(--ezLightWarningYellow);
+    background-image: url("/public/images/icons/warn-triangle-yellow.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderWarningYellow);
+    border-radius: 3px;
+
+}
+
+.ezContainer-warning-no-image {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+    min-height: 24px;
+    background-color: var(--ezLightWarningYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-color: var(--ezBorderWarningYellow);
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+.ezContainer-warning-no-image-thick-dark-alert-red-border {
+    margin-bottom: 8px;
+    padding: 8px;
+    min-height: 24px;
+    background-color: var(--ezLightWarningYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-color: var(--ezBorderAlertRed);
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 3px;
+}
+
+.ez-floating-error-container {
+    position: absolute;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    background-color: var(--ezClockerErrorRed);
+
+    background-image: url("/public/images/icons/error-red.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderAlertRed);
+}
+
+.ezCenterContainer {
+    margin: 0;
+    padding: 4px;
+    text-align: center;
+}
+
+/* ezClocker Boxes */
+div.ezQuickStatusBox {
+    position: fixed;
+    display: none;
+    z-index: 999;
+    background-color: rgb(128 128 128 / 40%);
+    font-size: 8pt;
+    color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--ezBorderBabyBlue);
+    box-shadow: 0 0 2px 2px rgb(0 0 0 / 40%);
+    padding: 2px;
+    margin: 4px;
+}
+
+.ezBabyBlueBox {
+    padding: 4px;
+    background-color: var(--ezClockerBabyBlue);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    border-style: solid;
+    border-color: var(--ezBorderBabyBlue);
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContentsBox {
+    display: inline-block;
+}
+
+.ezBlackBox {
+    padding: 4px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerBlack);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezBlackBox8 {
+    padding: 8px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerBlack);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezSilverBox {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerSilver);
+    border-color: #a7a9ab;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezSilverBox8 {
+    padding: 8px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerSilver);
+    border-color: #a7a9ab;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-ezClockerYellow-pad-4 {
+    padding: 8px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderYellow);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ezClockerWhite containers
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Active
+        ezContainer-ezClockerWhite-pad-4
+        ezContainer-ezClockerWhite-pad-8
+        ezContainer-ezClockerWhite-pad-10
+        ezContainer-bottom-ezClockerWhite-pad-10
+        ezContainer-ezClockerWhite-shadow
+        ezContainer-default-ezClockerWhite
+        ezContainers-ezClockerWhite-small-help
+        (DEPRECATED) ezWhiteBox
+        (DEPRECATED) ezWhiteBox8
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+.ezContainer-ezClockerWhite-pad-4,
+/* DEPRECATED: .ezWhiteBox */
+.ezWhiteBox {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-ezClockerWhite-pad-4-no-border {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+    border-style: none;
+}
+
+
+.ezContainer-ezClockerWhite-pad-8,
+/* DEPRECATED: .ezWhiteBox8 */
+.ezWhiteBox8 {
+    padding: 8px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-ezClockerWhite-pad-10 {
+    padding: 10px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-bottom-ezClockerWhite-pad-10 {
+    padding: 10px;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0 0 3px 3px;
+}
+
+.ezContainer-default-ezClockerWhite {
+    background-color: var(--ezClockerWhite);
+    border-style: none;
+}
+
+.ezContainer-ezClockerWhite-shadow {
+    background-color: var(--ezClockerWhite);
+    border-style: none;
+    box-shadow: 4px 4px 8px -2px var(--ezClockerGray);
+}
+
+.ezContainers-ezClockerWhite-small-content {
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: var(--ezSmallFontSize);
+}
+
+.ezContainers-ezMobileBlue-pad2 {
+    padding: 2px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerMobileBlue);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 2px;
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ezClockerSilver containers
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Active
+        ezContainer-ezClockerSilver-pad-8
+        ezContainer-ezClockerSilver-pad-10
+        ezContainer-bottom-ezClockerSilver-pad-10
+        ezContainer-ezClockerSilver-shadow
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezContainer-ezClockerSilver-pad-4 {
+    padding: 4px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-ezClockerSilver-pad-8 {
+    padding: 8px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-ezClockerSilver-pad-10 {
+    padding: 10px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-bottom-ezClockerSilver-pad-10 {
+    padding: 10px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0 0 3px 3px;
+}
+
+.ezContainer-ezClockerSilver-shadow {
+    background-color: var(--ezClockerSilver);
+    border-style: none;
+    box-shadow: 4px 4px 8px -2px var(--ezClockerGray);
+}
+
+/*
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ezClockerNavy containers
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Active
+        ezContainer-navy4
+        ezContainer-navy8
+        ezContainer-top-navy4
+        ezContainer-top-navy8
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+.ezContainer-navy4 {
+    padding: 4px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-navy8 {
+    padding: 8px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-top-navy4 {
+    padding: 4px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ezContainer-top-navy8 {
+    padding: 8px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ezContainer-top-gray4 {
+    padding: 4px;
+    color: var(--ezClockerWhite);
+    background-color: var(--ezClockerGray);
+    border-color: var(--ezBorderGray);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ez-white-borderless-box8 {
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    border-style: none;
+    border-radius: 3px;
+}
+
+.ezContainer-white-border-pad8-bottom-margin10 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-alpha-white-silver-border-8 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgb(255 255 255 / 50%);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-white-right-aligned-button-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgb(255 255 255 / 50%);
+    text-align: right;
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-transparent-button-bar-no-border {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+
+.ezTransparentBox {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ezTransparentBox8 {
+    padding: 8px;
+    color: var(--ezClockerBlack);
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezLightGrayBox {
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(----ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezLightGrayBox8 {
+    padding: 8px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(----ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezLightGrayMinBox {
+    display: block;
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(----ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezLightGrayMinBox8 {
+    display: block;
+    padding: 8px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezFontColor);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-navy-8 {
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-weight: var(--ezTitleFontWeight);
+    font-size: var(--ezTitleFontSize);
+    border-radius: 3px;
+}
+
+.ezContainer-title-navy-8 {
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-weight: var(--ezTitleFontWeight);
+    font-size: var(--ezTitleFontSize);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ezPageContent {
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    overflow: auto;
+}
+
+.ezPageContentBlock {
+    display: grid;
+    padding: 4px;
+    grid-row-gap: 2px;
+    row-gap: 2px;
+    grid-column-gap: 2px;
+    column-gap: 2px;
+    background-color: var(--ezWhite);
+    color: var(--ezFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+
+}
+
+.ezRightAlignedButtonContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: right;
+    background-color: transparent;
+}
+
+.ezCenterAlignedContainer {
+    padding: 4px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.ez-error-details-container {
+    margin-top: 10px;
+    background-color: var(--ezClockerWhite);
+    padding: 2px;
+    color: var(--ezClockerGray);
+    font-size: small;
+    font-style: italic;
+}
+
+.ezContaner-image-box {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.ezContainer-dialog-buttons {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    grid-template-rows: 100%;
+    grid-template-columns: auto;
+}
+
+.ezContainer-dialog-buttons-x2 {
+    display: grid;
+    margin-top: 20px;
+    justify-content: end;
+    align-content: center;
+    grid-template-rows: 100%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 8px;
+    column-gap: 8px;
+}
+
+/* Legal Disclaimer Boxes */
+.ezContainer_below-button-legal-disclaimer {
+    display: grid;
+    justify-content: end;
+    align-content: left;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.ezContainer_legal-disclaimer-small-screens {
+    display: none;
+}
+
+/* Footer Boxes */
+.ezContainer-link-footer {
+    display: grid;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: 100%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 8px;
+}
+
+.ezContainer-legal-links {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 4px;
+    column-gap: 4px;
+    grid-row-gap: 4px;
+    row-gap: 4px;
+    justify-content: stretch;
+    align-content: center;
+    padding: 4px;
+    margin-top: 4px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezContentFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+    border-color: var(--ezBorderColorStone);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ezContainer-legal-link {
+    display: grid;
+    padding: 4px;
+    align-content: stretch;
+    text-align: center;
+}
+
+/* Margin Containers */
+.ezContainer_TopMargin_8 {
+    margin-top: 8px;
+}
+
+/* Border Containers */
+.ezContainer-border-box {
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezContainer-content-box {
+    padding: 10px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+
+}
+
+.ezContainer-scroll-box {
+    padding: 8px;
+    overflow: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezClockerGray);
+    box-shadow: inset 0 0 1px 1px rgb(109 110 112 / 50%);
+}
+
+.ezContainer-side-help-box {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-content: start;
+    margin-top: 0;
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    overflow: auto;
+}
+
+.ezContainer-side-help-box-img {
+    height: 32px;
+    vertical-align: middle;
+}
+
+.ezContainer-side-help-box-title {
+    color: var(--ezClockerNavy);
+    font-size: 14pt;
+    font-weight: bold;
+    border-bottom-color: var(--ezClockerGray);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezContainer-side-help-box-content {
+    padding: 4px;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+}
+
+.ezContainer-full-screen-overlay {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto;
+    align-content: start;
+    justify-content: stretch;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.ezContainer-integration-setup-header {
+    padding: 8px;
+    color: var(--ezFontColor);
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+.ezContainer-integration-logo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content;
+    justify-content: start;
+    align-content: center;
+    text-align: left;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.ezContainer-integration-logo-img {
+    vertical-align: middle;
+    text-align: left;
+    height: 28px;
+}
+
+.ezContainer-integration-logo-img-nosize {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ezContainer-integration-logo-text {
+    text-align: left;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.ezContainer-integration-input-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-content: start;
+    justify-content: stretch;
+    /*    border-color: var(--ezClockerNavy);
+    border-width: 2px;*/
+    border-style: none;
+    overflow: auto;
+}
+
+.ezContainer-mini-help-box-img {
+    height: 22px;
+    vertical-align: middle;
+}
+
+.ezContainer-mini-help-box {
+    padding: 4px;
+    color: var(--ezClockerGray);
+    font-size: 10pt;
+    text-align: left;
+}
+
+.ezContainer-editor-info-box {
+    margin-top: 4px;
+    color: var(--ezClockerNavy);
+    font-size: 10pt;
+    text-align: left;
+}
+
+.ezContainer-input-info-box-white-text {
+    margin-top: 4px;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    text-align: left;
+}
+
+
+.ezContiner-ezClockerNavy-pad8 {
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+.ezContiner-ezClockerNavy-pad8-top-margin-10 {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+.ezContainer-display-contents {
+    display: contents;
+}
+
+.ezContainer-glass-bubble-pad-8 {
+    padding: 8px;
+    background-color: var(--ezGlass-background);
+    box-shadow: var(--ezGlass-box-shadow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezGlass-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-glass-bubble-pad-10 {
+    padding: 10px;
+    background-color: var(--ezGlass-background);
+    box-shadow: var(--ezGlass-box-shadow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezGlass-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-glass-bubble-pad-20 {
+    padding: 20px;
+    background-color: var(--ezGlass-background);
+    box-shadow: var(--ezGlass-box-shadow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezGlass-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezContainer-glass-bubble-pad-40 {
+    padding: 40px;
+    background-color: var(--ezGlass-background);
+    box-shadow: var(--ezGlass-box-shadow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezGlass-border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+
+/* Input Containers */
+.ezContainer-radio-input-box {
+    display: contents;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-width: 0;
+    border-style: none;
+}
+
+.ezContainer-radio-check-input {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-content: middle;
+    justify-content: start;
+    grid-row-gap: 0;
+    grid-column-gap: 8px;
+}
+
+.ezContainer-info-box-yellow {
+    padding: 4px;
+    background-color: var(--ezClockerInfoYellow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.ezContainer-ezClockerYellow-pad8 {
+    padding: 8px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderYellow);
+    border-radius: 3px;
+}
+
+.ezContainer-contentBox-transparent {
+    display: inline;
+    background-color: transparent;
+}
+
+span.ezContainer-text {
+    display: contents;
+}
+
+span.ezContainer-showids {
+    display: contents;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 2px;
+    font-size: 8pt;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Category Container Styles
+| A transparent container with a 10px pad on the left
+|-----------------------------------------------------------------
+| Template
+|   ezContainer_<name>-<backoungd-color>-<left-padding>
+|
+| Available Styles
+|   ezContainer_tabbox-transparent-8px
+|   ezContainer_tabbox-transparent-10px
+|   ezContainer_tabbox-transparent-20px
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ezContainer_tabbox-transparent-8px {
+    padding-left: 10px;
+}
+
+.ezContainer_tabbox-transparent-10px {
+    padding-left: 10px;
+}
+
+.ezContainer_tabbox-transparent-20px {
+    padding-left: 20px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Category Container Styles
+| A container with only a bottom border as an underline
+|-----------------------------------------------------------------
+| Template
+|   ezContainer_<name>-<bottom-border-color>
+|
+| Available Styles
+|   ezContainer_categorybox-navy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.ezContainer_categorybox-navy {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-bottom: 4px;
+    background-color: transparent;
+    color: var(--ezClockerBlack);
+    font-size: var(--ezFontSize);
+    font-weight: bold;
+    border-color: var(--ezClockerNavy);
+    border-style: none;
+    border-width: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezContainer_CategoryContent {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    color: var(--ezClockerBlack);
+    font-size: var(--ezContentFontSize);
+}
+
+.ezContainer_EmployeeCard {
+    padding: 4px;
+    margin: 4px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #032746;
+}
+
+.ezContainer-toolbutton {
+    display: contents;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: transparent;
+}
+
+.ezContainer-archive-status {
+    display: grid;
+    padding: 2px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    color: var(--ezClockerNavy);
+    font-size: 10pt;
+    align-content: center;
+    justify-content: end;
+    border-style: none;
+}
+
+.ezContainer-unarchive-status {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    padding: 2px;
+    background-color: transparent;
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    align-content: center;
+    justify-content: end;
+    border-style: none;
+}
+
+.ezContainer-title-box-ezClockerYellow-pad4 {
+    padding: 4px;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderYellow);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.ezContainer-title-box-ezClockerNavy-pad-4 {
+    padding: 4px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-weight: bold;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+}
+
+.ezContainer-title-box-ezClockerNavy-pad-8 {
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-weight: bold;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 0;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+    .ezContainer-dialog-buttons-x2 {
+        display: grid;
+        margin-top: 20px;
+        justify-content: stretch;
+        align-content: center;
+        grid-template-rows: 100%;
+        grid-template-columns: auto auto;
+        grid-column-gap: 8px;
+        column-gap: 8px;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    /*
+    .ezContainers_InputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        justify-content: start;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContaner_CenterInputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        justify-content: stretch;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContainer-dialog-buttons-x2 {
+        display: grid;
+        margin-top: 20px;
+        justify-content: stretch;
+        align-content: center;
+        grid-template-rows: 100%;
+        grid-template-columns: auto auto;
+        grid-column-gap: 8px;
+        column-gap: 8px;
+    }
+
+    .ezContainer_below-button-legal-disclaimer {
+        display: none;
+    }
+
+    .ezContainer_legal-disclaimer-small-screens {
+        display: grid;
+        justify-content: left;
+        align-content: left;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .ezContainer-link-footer {
+        display: grid;
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 50%;
+        grid-column-gap: 4px;
+    }
+    */
+}
+
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .ezContainers_InputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        justify-content: start;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContaner_CenterInputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        justify-content: stretch;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContainer-dialog-buttons-x2 {
+        display: grid;
+        margin-top: 20px;
+        justify-content: stretch;
+        align-content: center;
+        grid-template-rows: 100%;
+        grid-template-columns: auto auto;
+        grid-column-gap: 8px;
+        column-gap: 8px;
+    }
+
+    .ezContainer_below-button-legal-disclaimer {
+        display: none;
+    }
+
+    .ezContainer_legal-disclaimer-small-screens {
+        display: grid;
+        justify-content: left;
+        align-content: left;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .ezContainer-legal-links {
+        display: grid;
+        grid-template-columns: auto;
+        grid-column-gap: 2px;
+        column-gap: 2px;
+        grid-row-gap: 0;
+        row-gap: 0;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+        margin-top: 2px;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezContentFontColor);
+        font-family: var(--ezFontFamily);
+        font-size: var(--ezContentFontSize);
+        font-weight: var(--ezContentFontWeight);
+        font-style: var(--ezContentFontStyle);
+        border-style: none;
+    }
+
+    .ezContainer-link-footer {
+        display: grid;
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 50%;
+        grid-column-gap: 4px;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+    .ezContainers_InputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        justify-content: start;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContaner_CenterInputBox {
+        display: grid;
+        padding: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        justify-content: stretch;
+        align-content: center;
+        background-color: transparent;
+        color: var(--ezFontColor);
+    }
+
+    .ezContainer-dialog-buttons-x2 {
+        display: grid;
+        margin-top: 8px;
+        justify-content: stretch;
+        align-content: center;
+        grid-template-rows: 100%;
+        grid-template-columns: auto auto;
+        grid-column-gap: 2px;
+        column-gap: 2px;
+    }
+
+    .ezContainer_below-button-legal-disclaimer {
+        display: none;
+    }
+
+    .ezContainer_legal-disclaimer-small-screens {
+        display: grid;
+        justify-content: left;
+        align-content: left;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .ezContainer-link-footer {
+        display: grid;
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 50%;
+        grid-column-gap: 4px;
+    }
+}

@@ -1,0 +1,82 @@
+<style>
+    .ezQBOGrid {
+        color: #000000;
+        width: 100%;
+        vertical-align: middle;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    .ezQBOTableBody {
+        overflow: auto;
+    }
+
+    .ezQBOBodyCell {
+        text-align: center;
+        width: 140px;
+    }
+
+    .ezQBOEnableIntegration {
+        text-align: right;
+    }
+
+    .ezQBOInitailView {
+        margin-bottom: 20px;
+    }
+
+    /* Set a fixed scrollable wrapper */
+    .tableWrap {
+        height: 300px;
+        border: 2px solid black;
+        overflow: auto;
+    }
+
+    .errorBlock {
+        color: red;
+    }
+</style>
+<div id="EzQBOIntegrationSetupDialog" title="QBO Integration Setup">
+    <div id="EzQBOIntegrationTab" class="ezTabContainer">
+        <div id="qboErrorBlock" style="display: none" class="errorBlock">
+            QBO is required
+        </div>
+        <div id="qboEIErrorBlock" style="display: none" class="errorBlock">
+            Please Enable Integration
+        </div>
+        <table id="EzQBOIntegrationDialog_Toptable" class="ezFullWidth ezQBOInitailView">
+            <tr>
+                <td class="ezTopAlign">
+                    <div class="ezQBOEnableIntegration">
+                        <label for="ezQBOEnableIntegration">
+                            <input id="isNewQBO" type="hidden" name="isNewQBO" />
+                            <input id="ezQBOEnableIntegration" type="checkbox" name="ezQBOEnableIntegration"
+                                value="ezQBOEnableIntegration" />
+                            Enable Integration
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="errorQBOBlockDiv" style="display: none;">
+            <p id="errorQBOBlockText" class="errorBlock"></p>
+        </div>
+        <div id="EzQBOEmployeeMappingView" class="ezActiveTabView">
+            <p><b>Employee Mapping</b></p>
+            <p>Map ezClocker Employees to QBO Employee</p>
+            <table id="qboEmployeeMappingListHeader" class="ezQBOGrid">
+                <thead>
+                    <tr class="header">
+                        <td class="ezGridHeaderCell ezQBOBodyCell">
+                            EzClocker Employees
+                        </td>
+                        <td class="ezGridHeaderCell ezQBOBodyCell">
+                            QBO Employee
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="qboEmployeeMappingListBody" class="ezQBOTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>div>
+</div>

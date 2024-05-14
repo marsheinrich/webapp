@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+div.platformContainer {
+    margin: 4px;
+    background-color: #ffffff;
+    padding: 0;
+} 
+
+div.platformHeaderContainer {
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9b5d00;	
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 24pt;
+    font-weight: bold;	
+    background-color: #ff9900;	
+}
+
+div.exampleHeader {
+    color: #000066;
+    font-weight: bold;
+    font-size: 24pt;
+    font-shadow: 1px 1px 4px;
+    text-shadow: 0 0 1px #ff9900;
+}
+
+div.exampleContainer {
+    border-style: solid;
+    border-color: #6d6e70;
+    border-width: 1px;
+    background-color: #e0e0e0;
+    padding: 0 10px 10px;
+    margin-top: 2px;
+} 
+
+.styleFileText {
+    font-family: monospace;
+}
+
+table.exampleTable {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;	
+    color: #000000;
+    background-color: #ffffff;
+    width: 100%; 
+    border-spacing: 0;
+}
+
+thead.tableHeader { 
+    background-color: #c0c0c0;
+    font-color: #000000;
+    font-family: Verdana;
+    font-weight: bold;	
+}
+
+tbody.tableBody {
+    background-color: #ffffff;
+    font-color: #000000;	
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;	
+}
+
+td.monoText {
+    font-family: monospace;	
+}
+
+td.leftAlign {
+    text-align: left;
+}

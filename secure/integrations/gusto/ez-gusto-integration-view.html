@@ -1,0 +1,82 @@
+<style>
+    .ezGustoGrid {
+        color: #000000;
+        width: 100%;
+        vertical-align: middle;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    .ezGustoTableBody {
+        overflow: auto;
+    }
+
+    .ezGustoBodyCell {
+        text-align: center;
+        width: 140px;
+    }
+
+    .ezGustoEnableIntegration {
+        text-align: right;
+    }
+
+    .ezGustoInitailView {
+        margin-bottom: 20px;
+    }
+
+    /* Set a fixed scrollable wrapper */
+    .tableWrap {
+        height: 300px;
+        border: 2px solid black;
+        overflow: auto;
+    }
+
+    .errorBlock {
+        color: red;
+    }
+</style>
+<div id="EzGustoIntegrationSetupDialog" title="Gusto Integration Setup">
+    <div id="EzGustoIntegrationTab" class="ezTabContainer">
+        <div id="gustoErrorBlock" style="display: none" class="errorBlock">
+            Gusto is required
+        </div>
+        <div id="gustoEIErrorBlock" style="display: none" class="errorBlock">
+            Please Enable Integration
+        </div>
+        <table id="EzGustoIntegrationDialog_Toptable" class="ezFullWidth ezGustoInitailView">
+            <tr>
+                <td class="ezTopAlign">
+                    <div class="ezGustoEnableIntegration">
+                        <label for="ezGustoEnableIntegration">
+                            <input id="isNewGusto" type="hidden" name="isNewGusto" />
+                            <input id="ezGustoEnableIntegration" type="checkbox" name="ezGustoEnableIntegration"
+                                value="ezGustoEnableIntegration" />
+                            Enable Integration
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="errorGustoBlockDiv" style="display: none;">
+            <p id="errorGustoBlockText" class="errorBlock"></p>
+        </div>
+        <div id="EzGustoEmployeeMappingView" class="ezActiveTabView">
+            <p><b>Employee Mapping</b></p>
+            <p>Map ezClocker Employees to Gusto Employee</p>
+            <table id="gustoEmployeeMappingListHeader" class="ezGustoGrid">
+                <thead>
+                    <tr class="header">
+                        <td class="ezGridHeaderCell ezGustoBodyCell">
+                            EzClocker Employees
+                        </td>
+                        <td class="ezGridHeaderCell ezGustoBodyCell">
+                            Gusto Employee
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="gustoEmployeeMappingListBody" class="ezGustoTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>div>
+</div>

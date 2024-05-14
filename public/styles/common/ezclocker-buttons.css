@@ -1,0 +1,643 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Migrate to CSS classes defined in /src/main/webapp/public/styles/common/ez-buttons.css
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */button {
+    cursor: pointer;
+    padding: 6px 24px;
+    margin: 2px;
+    font-size: 10pt;
+    font-family: Roboto, Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    color: #000000;
+    background-color: #FF9900;
+    border: 1px solid #6d6e70;
+    border-radius: 2px;
+    outline-width: 0;
+}
+
+/* DEPRECATED */button:hover {
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */button:active {
+    background-color: #FF9900;
+}
+
+/* DEPRECATED */button:focus {
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 30%);
+}
+
+/* DEPRECATED */button:disabled {
+    cursor: default;
+    font-weight: normal;
+    background-color: #FFC164;
+    color: #C67600;
+    border-color: #9b5d00;
+}
+
+/* DEPRECATED */button.disabledButton {
+    cursor: default;
+    font-weight: normal;
+    background-color: #FFC164;
+    color: #C67600;
+    border-color: #c67600;
+}
+
+label.buttonSubLabel {
+    font-weight: normal;
+}
+
+/** Mini Normal Button Styles **/
+/* DEPRECATED */button.miniMajorButton {
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+    border-radius: 4px;
+}
+
+/* DEPRECATED */button.miniMajorButton:hover {
+    background-color: #ffdb64;
+}
+
+/* DEPRECATED */button.miniMajorButton:active {
+    border-color: #ffcc66;
+}
+
+/* DEPRECATED */button.miniMajorButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/* DEPRECATED */button.disabledMiniMajorButton {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/** Mini Normal Button Styles **/
+
+/* DEPRECATED */button.miniNormalButton {
+    font-size: 8pt;
+    font-weight: normal;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+    border-radius: 4px;
+}
+
+/* DEPRECATED */button.miniNormalButton:hover {
+    background-color: #ffdb64;
+}
+
+/* DEPRECATED */button.miniNormalButton:active {
+    border-color: #ffcc66;
+}
+
+/* DEPRECATED */button.miniNormalButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/* DEPRECATED */button.disabledMiniNormalButton {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/** Generic Button Styles **/
+
+/* DEPRECATED */button.fullWidth {
+    width: 100%;
+}
+
+/* DEPRECATED */button.paddButton10 {
+    margin-left: 10px;
+}
+
+/** Header Button Styles **/
+
+/* DEPRECATED */button.headerButton {
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* DEPRECATED */button.headerButton:disabled {
+    font-weight: normal;
+}
+
+/* DEPRECATED */button.disabledHeaderButton {
+    font-weight: normal;
+}
+
+/** Red warning button **/
+
+/* DEPRECATED */button.warningHeaderButton {
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+    color: #ffffff;
+}
+
+/* DEPRECATED */button.warningHeaderButton:hover {
+    background-color: #FF0700;
+    color: #ffffff;
+}
+
+/* DEPRECATED */button.warningHeaderButton:active {
+    color: #ffffff;
+    background-color: #BF3330;
+}
+
+/* DEPRECATED */button.warningHeaderButton:disabled {
+    color: #c0c0c0;
+    background-color: #FFf0f0;
+    border-color: #c0c0c0;
+    font-weight: normal;
+}
+
+/** Major Button Styles **/
+
+/* DEPRECATED */button.majorButton {
+    font-weight: bold;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+}
+
+/* DEPRECATED */button.majorButton:hover {
+    background-color: #ffdb64;
+}
+
+/* DEPRECATED */button.majorButton:active {
+    border-color: #ffcc66;
+}
+
+/* DEPRECATED */button.majorButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/* DEPRECATED */button.disabledMajorButton {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+/** Delete Major Button **/
+
+/* DEPRECATED */button.deleteMajorButton {
+    margin: 0;
+    padding: 6px 24px;
+    color: #ffffff;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+}
+
+/* DEPRECATED */button.deleteMajorButton:hover {
+    background-color: #FF0700;
+    color: #ffffff;
+}
+
+/* DEPRECATED */button.deleteMajorButton:active {
+    background-color: #BF3330;
+}
+
+/* DEPRECATED */button.deleteMajorButton:disabled {
+    color: #c0c0c0;
+    background-color: #FFf0f0;
+    border-color: #c0c0c0;
+    cursor: default;
+}
+
+/** Edit Button Styles **/
+
+/* DEPRECATED: Use the one from ez-buttons.css instead */
+/* DEPRECATED */button.editButton {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    font-size: 8pt;
+    background-color: #0f4777;
+    border-color: #032746;
+    color: #ffffff;
+
+    /*
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    color: var(--ezNavyContainerTextColor);
+    */
+    padding: 2px 4px;
+    margin-right: 2px;
+}
+
+/* DEPRECATED: Use the one from ez-buttons.css instead */
+/* DEPRECATED */button.editButton:hover {
+    background-color: #1D5D93;
+
+    /*
+    background-color: var(--ezHoverNavy);
+    */
+}
+
+/* DEPRECATED: Use the one from ez-buttons.css instead */
+/* DEPRECATED */button.editButton:active {
+    background-color: #063861;
+
+    /*
+    background-color: var(--ezDarkNavy);
+    */
+}
+
+/* DEPRECATED: Use the one from ez-buttons.css instead */
+/* DEPRECATED */button.editButton:disabled {
+    cursor: default;
+    background-color: #3B6F9B;
+    border-color: #3B6F9B;
+    color: #e0e0e0;
+
+    /*
+    background-color: var(--ezLightNavy);
+    border-color: var(--ezLightNavy);
+    color: var(--ezClockerSilver);
+    */
+}
+
+/* DEPRECATED: Use the one from ez-buttons.css instead */
+/* DEPRECATED */button.disabledEditButton {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    font-size: 8pt;
+    padding: 2px;
+    margin-right: 2px;
+    cursor: default;
+    background-color: #063565;
+    border-color: #0d58a6;
+    color: #0d58a6;
+}
+
+/* DEPRECATED */button.silverEditButton {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0;
+    font-size: 8pt;
+    padding: 2px 4px;
+    margin-right: 2px;
+    background-color: #0f4777;
+    border-color: #032746;
+    color: #ffffff;
+
+    /*
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    color: var(--ezNavyContainerTextColor);
+    */
+}
+
+/* DEPRECATED */button.silverEditButton:hover {
+    background-color: #1D5D93;
+
+    /*
+    background-color: var(--ezHoverNavy);
+    */
+}
+
+/* DEPRECATED */button.silverEditButton:active {
+    background-color: #063861;
+
+    /*
+    background-color: var(--ezDarkNavy);
+    */
+}
+
+/* DEPRECATED */button.silverEditButton:disabled {
+    cursor: default;
+    background-color: #0f4777;
+    border-color: #032746;
+    color: #ffffff;
+
+    /*
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezBorderNavy);
+    color: var(--ezNavyContainerTextColor);
+    */
+}
+
+/** Small Button Styles **/
+
+/* DEPRECATED */button.smallButton {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 8pt;
+    margin: 0 2px 0 0;
+    padding: 2px;
+    border-color: #a60400;
+    background-color: #ff7673;
+}
+
+/* DEPRECATED */button.smallButton:hover {
+    background-color: #ff0700;
+    color: #ffffff;
+}
+
+/* DEPRECATED */button.smallButton:active {
+    background-color: #BF3330;
+}
+
+/* DEPRECATED */button.smallButton:disabled {
+    cursor: default;
+    color: #808080;
+    border-color: #c0c0c0;
+    padding: 2px;
+    background-color: #f0f0f0;
+}
+
+/** Mini Action Button Styles **/
+
+/* DEPRECATED */button.miniActionButton {
+    font-size: 8pt;
+    background-color: #ffc500;
+    border-color: #9b7800;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* DEPRECATED */button.miniActionButton:hover {
+    background-color: #ffdb64;
+}
+
+/* DEPRECATED */button.miniActionButton:active {
+    background-color: #c69800;
+}
+
+/* DEPRECATED */button.miniActionButton:disabled {
+    background-color: #c69800;
+    border-color: #808080;
+    color: #ffc500;
+}
+
+/* DEPRECATED */button.disabledMiniActionButton {
+    background-color: #c69800;
+    border-color: #808080;
+    color: #ffc500;
+}
+
+/** Action Button Styles **/
+
+/* DEPRECATED */button.actionButton {
+    margin: 0;
+    background-color: #8df13c;
+    border-color: #439400;
+    font-weight: bold;
+    padding: 6px 24px;
+}
+
+/* DEPRECATED */button.actionButton:hover {
+    background-color: #caff9e;
+}
+
+/* DEPRECATED */button.actionButton:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+
+/* DEPRECATED */button.actionButton:disabled {
+    cursor: default;
+    background-color: #caff9e;
+    border-color: #8df13c;
+    font-weight: normal;
+    color: #808080;
+}
+
+/* DEPRECATED */button.disabledActionButton {
+    cursor: default;
+    background-color: #caff9e;
+    border-color: #8df13c;
+    font-weight: normal;
+    color: #808080;
+}
+
+/** Super-Action Button Styles **/
+
+/* DEPRECATED */button.superActionButton {
+    margin: 0;
+    background-color: #0f4777;
+    border-color: #6d6e70;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18pt;
+    padding: 6px 24px;
+}
+
+/* DEPRECATED */button.superActionButton:hover {
+    background-color: #0d58a6;
+}
+
+/* DEPRECATED */button.superActionButton:active {
+    background-color: #0d58a6;
+}
+
+/* DEPRECATED */button.superActionButton:disabled {
+    cursor: default;
+    background-color: #5387bd;
+    border-color: #0f4777;
+    font-weight: normal;
+    color: #0f4777;
+}
+
+/* OLD BUTTONS */
+
+/* DO NOT USE THESE!! */
+
+/* DEPRECATED */a.navButton {
+    font-size: medium;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #439400;
+    background-color: #8ef13c;
+    color: #000000;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+/* DEPRECATED */a.navButton:HOVER {
+    border-top-color: #caff9e;
+    border-left-color: #caff9e;
+    border-bottom-color: #66cc99;
+    border-right-color: #66cc99;
+    background-color: #a9f16c;
+}
+
+/* DEPRECATED */a.navButton:ACTIVE {
+    border-top-color: #66cc99;
+    border-left-color: #66cc99;
+    border-bottom-color: #caff9e;
+    border-right-color: #caff9e;
+    color: #a9f16c;
+    background-color: #439400;
+}
+
+/* DEPRECATED */a.toolButton {
+    font-size: small;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #996600;
+    background-color: #ff9900;
+    color: #000000;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+/* DEPRECATED */a.toolButton:HOVER {
+    border-top-color: #ffee00;
+    border-left-color: #ffee00;
+    border-bottom-color: #ff9933;
+    border-right-color: #ff9933;
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */a.toolButton:ACTIVE {
+    border-top-color: #ff9933;
+    border-left-color: #ff9933;
+    border-bottom-color: #ffee00;
+    border-right-color: #ffee00;
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */a.disabledToolButton {
+    font-size: small;
+    font-weight: normal;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: #c0c0c0;
+    color: #808080;
+    cursor: default;
+    padding: 2px 4px;
+}
+
+/* Deprecated Styles */
+
+/* DEPRECATED */.buttonText {
+    font-size: 12pt;
+    font-family: verdana, sans-serif;
+    font-weight: normal;
+}
+
+/* DEPRECATED */.headerButtonText {
+    font-size: 12pt;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* TABS */
+
+/* DEPRECATED */.ezTabButton {
+    margin: 0 4px 0 0;
+    min-height: 32;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #c0c0c0;
+    outline-style: none;
+    color: #000000;
+    box-shadow: none;
+}
+
+/* DEPRECATED */.ezTabButton:HOVER {
+    background-color: #e0e0e0;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+
+/* DEPRECATED */.ezTabButton:ACTIVE {
+    background-color: #ffffff;
+    border-bottom-width: 2px;
+    border-bottom-color: #ffffff;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+
+/* DEPRECATED */.ezTabButton:FOCUS {
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+
+/* DEPRECATED */.ezTabButtonActive {
+    margin: 0 4px 0 0;
+    min-height: 32;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* DEPRECATED */.ezTabButtonActive:HOVER {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* DEPRECATED */.ezTabButtonActive:ACTIVE {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* DEPRECATED */.ezTabButtonActive:FOCUS {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}

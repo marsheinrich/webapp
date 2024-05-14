@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/ezlibrary/EzDependencyManager.js"></script>
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/node_modules/animate.css/animate.min.css', true)">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.min.css', true)">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.structure.min.css', true)">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.theme.min.css', true)">
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-body.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-text.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-shadows.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-shadows.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-borders.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-borders.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-layout-grid.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-containers.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-buttons.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-inputs.css?v=r72-3', true)">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ezclocker-page-layout.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-dialogs.css?v=r72-3', true)">
+    <link href="/public/styles/common/ez-logo.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/public/styles/common/ez-logo.css?v=r72-3', true)">
+    <link href="reset-password-dialog.css?v=r72-3" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('reset-password-dialog.css?v=r72-3', true)">
+    <script src="/ezlibrary/ez-modernizr.js?v=r72-3"
+        onerror="failedScriptReloader('/ezlibrary/ez-modernizr.js?v=r72-3', true)"></script>
+    <script src="/ezlibrary/ez-old-browser-check.js?v=r72-3"
+        onerror="failedScriptReloader('/ezlibrary/ez-old-browser-check.js?v=r72-3', true)"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if (window.oldBrowserCheckReady) {
+                ezOldBrowserCheck(
+                    '<h1>Accept Employer Invite</h1>' +
+                    '<h2>You are almost there!</h2>' +
+                    '<p>' +
+                    '   Unfortunately, ezClocker does not support older Microsoft mobile devices or ' +
+                    '   Microsoft\'s outdated Internet Explorer browser.' +
+                    '   To accept your employer\'s invite you will need to use a recent Apple or Andriod device or ' +
+                    '   your desktop or laptop computer with one of the available modern browsers (see the links below).' +
+                    '</p>' +
+                    '<p>' +
+                    '   After switching to a compatable device and/or browser you can return to your email and ' +
+                    '   re-click the reset password link to finish entering a new password.' +
+                    '</p>');
+            }
+        };
+    </script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery/dist/jquery.min.js', true)"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery-migrate/dist/jquery-migrate.min.js', true)"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"
+        onerror="failedScriptReloader('/node_modules/moment/min/moment-with-locales.min.js', true)"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"
+        onerror="failedScriptReloader('/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js', true)"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"
+        onerror="failedScriptReloader('/jquery-ui/jquery-ui.min.js', true)"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"
+        onerror="failedScriptReloader('/ezwp/js/ez-library.bundle.js?v=r72-3', true)"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"
+        onerror="failedScriptReloader('/ezwp/js/ez-core.bundle.js?v=r72-3', true)"></script>
+    <script src="/ezwp/js/ez-version-checker.bundle.js?v=r72-3"
+        onerror="failedScriptReloader('/ezwp/js/ez-version-checker.bundle.js?v=r72-3', true)"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"
+        onerror="failedScriptReloader('/ezwp/js/ez-ux-core.bundle.js?v=r72-3', true)"></script>
+    <script src="/ezwp/js/ez-reset-password.bundle.js?v=r72-3"
+        onerror="failedScriptReloader('/ezwp/js/ez-reset-password.bundle.js?v=r72-3', true)"></script>
+    <title>ezClocker: Reset Password</title>
+</head>
+
+<body id="EzResetPasswordBody">
+    <div id="EzResetPasswordContent" class="ezResetPasswordContent">
+        <div id="EzResetPasswordDialogContainer" class="ezResetPasswordDialogContainer">
+            <div id="EzResetPasswordLeftSpacer" class="ezResetPasswordLeftSpacer">
+            </div>
+            <div id="EzResetPasswordDialog" class="ezResetPasswordDialog">
+                <div id="EzResetPasswordHeaderContainer" class="ezResetPasswordHeaderContainer">
+                    <div id="EzLogoImageContainer" class="ezLogo-container-center">
+                        <div class="ezContaner-image-box">
+                            <img src="/public/images/logos/logo.svg" class="ezClockerLogo_FullWidth" alt="ezClocker" />
+                        </div>
+                    </div>
+                    <h2 id="EzEmployeeSignup_SubHeader" class="ezAlignCenter ezH2-subheader">
+                        Reset Password
+                    </h2>
+                </div>
+                <div id="EzResetPasswordDialogInputContainer" class="ezResetPasswordDialogInputContainer">
+                    <div id="EzResetPasswordError" class="ezErrorBox" style="display:none">
+                        Some or all of the information you have entered is not correct.
+                    </div>
+                    <div class="ezContainers-input-box">
+                        <input id="EzEmailAddress" class="ezInputs-large-full-width" type="text" name="new-username"
+                            placeholder="Email or Phone Number" autocomplete="new-username"
+                            title="Email or Phone Number" />
+                        <div id="EzEmailAddressError" class="ezErrorBox" style="display:none">
+                        </div>
+                        <div id="EzResetPassword_ErrorBox" class="ezErrorBox" style="display:none">
+                        </div>
+                    </div>
+                    <div class="ezContainers-input-box">
+                        <div class="ezAutoCol_AxMin ezGrid-align-full ezGrid-vertical-align-middle ezGrid-col-gap_8">
+                            <input id="EzNewPassword" class="ezInputs-large-full-width" type="password" name="new-password"
+                                autocomplete="new-password" placeholder="Enter a new password" title="New Password" />
+                            <div id="EzToggleShowHidePasswordContainer" class="ezGrid-align-middle-center">
+                                <button id="pwdBtn1" class="ezToolButton ezButtons-tool-navy-large" type="button" onclick="ezToggleShowHidePassword('EzNewPassword')" title="Show Password"
+                                        tabindex="-1">
+                                    <img src="/public/images/icons/view-white.svg" class="ezPasswordShowHideImg" style="width: 16px;" alt="View Password" />
+                                </button>
+                                <button id="pwdBtn2" class="ezToolButton ezButtons-tool-navy-large" type="button" style="display:none" onclick="ezToggleShowHidePassword('EzNewPassword')"
+                                        title="Hide Password" tabindex="-1">
+                                    <img class="ezPasswordShowHideImg" style="width: 16px;" src="/public/images/icons/hide-view-white.svg" alt="Hide Password" />
+                                </button>
+                            </div>
+                        </div>
+                        <div id="EzPasswordInfoContainer" class="ezContainer-editor-info-box">
+                            Minimum password length is 8 characters.
+                        </div>
+                        <div id="EzNewPasswordError" class="ezErrorBox" style="display:none">
+                        </div>
+                    </div>
+                    <div class="ezContainers-input-box">
+                        <div class="ezAutoCol_AxMin ezGrid-align-full ezGrid-vertical-align-middle ezGrid-col-gap_8">
+                            <input id="EzConfirmPassword" class="ezInputs-large-full-width" type="password"
+                                name="new-password" autocomplete="new-password" placeholder="Confirm your new password"
+                                title="Confirm your new password" />
+                            <div id="EzToggleShowHideConfirmPasswordContainer" class="ezGrid-align-middle-center">
+                                <button id="pwdConfirmBtn1" class="ezToolButton ezButtons-tool-navy-large" type="button" onclick="ezToggleShowHidePassword('EzConfirmPassword','pwdConfirmBtn1','pwdConfirmBtn2')" title="Show Password"
+                                        tabindex="-1">
+                                    <img src="/public/images/icons/view-white.svg" class="ezPasswordShowHideImg" style="width: 16px;" alt="View Password" />
+                                </button>
+                                <button id="pwdConfirmBtn2" class="ezToolButton ezButtons-tool-navy-large" type="button" style="display:none" onclick="ezToggleShowHidePassword('EzConfirmPassword','pwdConfirmBtn1','pwdConfirmBtn2')"
+                                        title="Hide Password" tabindex="-1">
+                                    <img class="ezPasswordShowHideImg" style="width: 16px" src="/public/images/icons/hide-view-white.svg" alt="Hide Password" />
+                                </button>
+                            </div>
+                        </div>
+                        <div id="EzConfirmPasswordInfoContainer" class="ezContainer-editor-info-box">
+                            Minimum password length is 8 characters.
+                        </div>
+                        <div id="EzConfirmPasswordError" class="ezErrorBox" style="display:none">
+                        </div>
+                    </div>
+                    <div class="ezContainer-dialog-buttons-x2">
+                        <button id="EzResetPasswordButton" class="ezDialogButton">
+                            Set new password
+                        </button>
+                        <button id="EzCancelPasswordReset" class="ezWhiteDialogButton">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="EzResetPasswordRightSpacer" class="ezResetPasswordRightSpacer">
+            </div>
+        </div>
+    </div>
+    <div id="EzHideDialogsDiv" style="display:none">
+    </div>
+
+    <script>
+        function ezToggleShowHidePassword(ez_password = 'ez_password', pwdBtn1 = 'pwdBtn1', pwdBtn2 = 'pwdBtn2') {
+            var x = document.getElementById(ez_password);
+            if (x.type === "password") {
+                x.type = "text";
+                $('#' + pwdBtn1).hide();
+                $('#' + pwdBtn2).show();
+            } else {
+                x.type = "password";
+                $('#' + pwdBtn1).show();
+                $('#' + pwdBtn2).hide();
+            }
+        }
+    </script>
+</body>
+
+</html>

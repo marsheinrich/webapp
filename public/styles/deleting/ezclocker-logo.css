@@ -1,0 +1,38 @@
+/* DEPRECATED */
+
+td.ezClockerlogo_TextCell {
+    vertical-align: middle;
+}
+
+td.ezClockerlogo_ImageCell {
+    vertical-align: middle;
+}
+
+td.ezClockerLogo_CatchPhraseCell {
+    text-align: right;
+    vertical-align: top;
+}
+
+img.ezClockerLogo_Image {
+    width: 48px;
+    height: 48px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-right: 4px;
+    padding: 0;
+}
+
+label.ezClockerLogo_Text {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 48pt;
+    color: #000000;
+}
+
+label.mobileEzClockerLogo_Text {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 24pt;
+    color: #000000;
+}

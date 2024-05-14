@@ -1,0 +1,552 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Migrate to CSS classes defined in src/main/webapp/public/styles/ez-inputs.clss
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */input {
+    margin: 0;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    font-family: Roboto, Verdana, sans-serif;
+    font-size: 10pt;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+}
+
+/* DEPRECATED */input:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/* DEPRECATED */input:invalid {
+    background-color: #ffeeee;
+    border-color: #FF0700;
+    border-width: 1px;
+    box-shadow: none;
+}
+
+/* DEPRECATED */select {
+    font-size: 10pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+/* DEPRECATED */select:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+
+    /* box-shadow: 0px 0px 2px 2px rgba(255, 153, 0, .2); */
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/* DEPRECATED */select.reportsOverride {
+    font-size: 10pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+/* DEPRECATED */select.reportsOverride:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+
+    /* box-shadow: 0px 0px 2px 2px rgba(255, 153, 0, .2); */
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/* DEPRECATED */option {
+    font-size: 10pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+/* DEPRECATED */option:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/* DEPRECATED */input[type="button"].ezButtonMajor {
+    background-color: var(--ezClockerOrange);
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonMajor:hover {
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonMajor:active {
+    background-color: #ff9933;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonAction {
+    background-color: #8df13c;
+    border-radius: 2px;
+    border: 1px solid #439400;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonAction:hover {
+    background-color: #caff9e;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonAction:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonEdit {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonEdit:hover {
+    background-color: #edf6ff;
+}
+
+/* DEPRECATED */input[type="button"].ezButtonEdit:active {
+    background-color: var(--ezClockerGray);
+}
+
+/* DEPRECATED */input[type="date"].ezDate {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="date"].ezDate:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="datetime"].ezDateTime {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="datetime"].ezDateTime:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="datetime-local"].ezDateTimeLocal {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="datetime-local"].ezDateTimeLocal:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="email"].ezEmail {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="email"].ezEmail:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="file"].ezFile {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="image"].ezImage {
+    border-style: solid;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="image"].ezImage:hover {
+    border-style: solid;
+    border-color: var(--ezClockerBlack);
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="month"].ezMonth {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="month"].ezMonth:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="number"].ezNumber {
+    font-size: 12pt;
+    font-family: var(--ezFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="number"].ezNumber:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="number"].ezNumber:disabled {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+    outline-color: #e0e0e0;
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="password"].ezPassword {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="password"].ezPassword:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="radio"].ezRadio {
+    padding-bottom: 4px;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetMajor {
+    background-color: var(--ezClockerOrange);
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetMajor:hover {
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetMajor:active {
+    background-color: #ff9933;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetActionButton {
+    background-color: #8df13c;
+    border-radius: 2px;
+    border: 1px solid #439400;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetActionButton:hover {
+    background-color: #caff9e;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetActionButton:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetEdit {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetEdit:hover {
+    background-color: #edf6ff;
+}
+
+/* DEPRECATED */input[type="reset"].ezResetEdit:active {
+    background-color: var(--ezClockerGray);
+}
+
+/* DEPRECATED */input[type="search"].ezSearch {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="submit"].ezMajorSubmit {
+    background-color: var(--ezClockerOrange);
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="submit"].ezMajorSubmit:hover {
+    background-color: #ffcc66;
+}
+
+/* DEPRECATED */input[type="submit"].ezMajorSubmit:active {
+    background-color: #ff9933;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitActionButton {
+    background-color: #8df13c;
+    border-radius: 2px;
+    border: 1px solid #439400;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitActionButton:hover {
+    background-color: #caff9e;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitActionButton:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitEdit {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    border: 1px solid var(--ezClockerBlack);
+    display: inline-block;
+    cursor: pointer;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px;
+    text-decoration: none;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitEdit:hover {
+    background-color: #edf6ff;
+}
+
+/* DEPRECATED */input[type="submit"].ezSubmitEdit:active {
+    background-color: var(--ezClockerGray);
+}
+
+/* DEPRECATED */input[type="tel"].ezTel {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="tel"].ezTel:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="text"].ezText {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="text"].ezText:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="time"].ezTime {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="time"].ezTime:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="url"].ezUrl {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="url"].ezUrl:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */input[type="week"].ezWeek {
+    font-size: 12pt;
+    font-family: monospace;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */input[type="week"].ezWeek:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+/* DEPRECATED */.editorLabel {
+    font-size: 14;
+    color: var(--ezClockerBlack);
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+/* DEPRECATED */.oversizedEditor {
+    font-size: 16pt;
+    font-style: bold;
+}
+
+/* DEPRECATED */.fullWidthEditor {
+    width: 100%;
+    box-sizing: border-box;
+}

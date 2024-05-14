@@ -1,0 +1,174 @@
+button.signInUp {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #EDF6FF;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.signInUp:hover {
+    background-color: #ffffff;
+}
+
+button.signInUp:active {
+    background-color: #c0c0c0;
+}
+
+button.bannerQuickSigninButton {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #EDF6FF;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.bannerQuickSigninButton:hover {
+    background-color: #ffffff;
+}
+
+button.bannerQuickSigninButton:active {
+    background-color: #c0c0c0;
+}
+
+br.clearBoth {
+    clear: both;
+}
+
+div.bannerText {
+    clear: left;
+    width: 100%;
+    font-family: monospace;
+    color: #FF9933;
+    font-size: 38pt;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    padding: 10px;
+}
+
+div.bannerText2 {
+    color: #000000;
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 10px;
+}
+
+a.siteMapLink {
+    font-size: 10pt;
+    color: #000000;
+    text-decoration: none;
+}
+
+a.siteMapLink:hover {
+    font-size: 10pt;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div.siteMapLinks {
+    text-align: center;
+    width: 100%;
+}
+
+div.siteMap {
+    width: 100%;
+}
+
+input.bannerInput {
+    background-color: #FFFFFF;
+    font-size: 10pt;
+    padding: 3px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #FF9900;
+}
+
+button.bannerQuickSignupButton {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #EDF6FF;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.bannerQuickSignupButton:hover {
+    background-color: #ffffff;
+}
+
+button.bannerQuickSignupButton:active {
+    background-color: #c0c0c0;
+}
+
+div.quickSignUpTitle {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+label.quickInputLabel {
+    font-size: 10pt;
+    font-family: sans-serif;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+label.quickInputRadioLabel {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+table.signUpTable {
+    border-collapse: collapse;
+}
+
+table.accountTypeTable {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+tr.quickSignUpFormRow {
+    padding: 0;
+}
+
+td.labelCell {
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+}
+
+td.leftAlignCell {
+    vertical-align: top;
+    text-align: left;
+}
+
+div.quickSignIn {
+    float: right;
+}
+
+label.quickSignInLabel {
+    font-size: x-small;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+table.headerLayout {
+    width: 100%;
+}

@@ -1,0 +1,77 @@
+.ezEmployeeScheduleMenu {
+    /*
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    grid-template-rows: auto;
+    justify-content: stretch;
+    align-content: center;
+    */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 4px;
+    background-color: #e0e0e0;
+    color: #000000;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #6d6e70;
+    border-width: 1px;
+    border-top-width: 0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.ezEmployeeScheduleToolbarContainer {
+    display: grid;
+    grid-template-columns: max-content auto auto;
+    justify-content: start;
+    align-content: center;
+}
+
+.ezEmployeeScheduleDateSelectContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-content: center;
+}
+
+.ezEmployeeScheduleDateInputsContainer {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    grid-template-rows: auto;
+    justify-content: start;
+    align-content: center;
+}
+
+.ezEmployeeScheduleTotalHoursCell {
+    width: 200px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.ezEmployeeTotalScheduleHoursContainer {
+    text-align: left;
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    max-width: 200px;
+    color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezEmployeeTotalScheduleHours {
+    margin-top: 2px;
+    max-width: 150px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    border-style: solid;
+    border-color: var(--ezBorderNavy);
+    border-width: 1px;
+}

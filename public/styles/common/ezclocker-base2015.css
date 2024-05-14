@@ -1,0 +1,916 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Legacy 2015 CSS Classes
+| When possible move classes to non-legacy CSS class files or
+| migrate to non-legacy CSS classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */
+.activeTimeZone {
+    position: fixed;
+    top: 0;
+    left: 8px;
+    z-index: 500;
+    color: var(--ezClockerStone);
+    font-size: 8pt;
+    text-align: right;
+
+}
+
+/* DEPRECATED */
+body {
+    min-width: 300px;
+    margin: 0;
+    background-size: 13px, 29px, 37px, 53px;
+    background-image: linear-gradient(90deg, rgb(255 255 255 / 7%) 50%, transparent 50%), linear-gradient(90deg, rgb(255 255 255 / 13%) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgb(255 255 255 / 17%) 50%), linear-gradient(90deg, transparent 50%, rgb(255 255 255 / 19%) 50%);
+    background-color: rgb(224 224 224 / 30%);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezFontFamily);
+    font-size: 12pt;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: none;
+}
+
+/* DEPRECATED */
+.dialog-shadow {
+    box-shadow: 0 0 8px 4px rgb(0 0 0 / 40%);
+}
+
+/* DEPRECATED */
+.pageLoader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 555;
+}
+
+/* DEPRECATED */
+.ezHiddenByDefault {
+    display: none;
+}
+
+/* DEPRECATED */
+.ezQuarterWidth {
+    min-width: 25%;
+    width: 25%;
+}
+
+/* DEPRECATED */
+.ezBannerContainer {
+    position: relative;
+    width: 100%;
+}
+
+/* DEPRECATED */
+.ezStaticBannerImg {
+    width: 100%;
+}
+
+/* DEPRECATED */
+.ezStaticBannerText {
+    color: var(--ezClockerOrange);
+    font-family: var(--ezFontFamily);
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+/* DEPRECATED */
+.ezDialogContainer {
+    display: none;
+}
+
+/* DEPRECATED */
+.noDialogTitle .ui-dialog-titlebar {
+    display: none;
+}
+
+/* DEPRECATED */
+.ezClockerBackground {
+    background-image: linear-gradient(90deg, rgb(255 255 255 / 7%) 50%, transparent 50%), linear-gradient(90deg, rgb(255 255 255 / 13%) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgb(255 255 255 / 17%) 50%), linear-gradient(90deg, transparent 50%, rgb(255 255 255 / 19%) 50%);
+    background-color: rgb(224 224 224 / 30%);
+    background-size: 13px, 29px, 37px, 53px;
+}
+
+/** Paragraph Header Styles with Labels **/
+
+/* DEPRECATED */
+.ezHeader1,
+/* DEPRECATED */
+h1 {
+    /* color: var(--ezClockerNavy); */
+    color: var(--ezClockerNavy);
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+.ezHeader1NoMargin,
+/* DEPRECATED */
+h1.ezNoMargin {
+    color: var(--ezClockerNavy);
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* DEPRECATED */
+label.h1,
+/* DEPRECATED */
+span.h1 {
+    color: var(--ezClockerNavy);
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+h2 {
+    color: var(--ezClockerBlack);
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+label.h2,
+/* DEPRECATED */
+span.h2 {
+    color: var(--ezClockerBlack);
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+h3 {
+    color: var(--ezClockerNavy);
+    font-size: 14pt;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+label.h3,
+/* DEPRECATED */
+span.h3 {
+    color: var(--ezClockerNavy);
+    font-size: 14pt;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+h4 {
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: normal;
+    margin-top: 2px;
+}
+
+/* DEPRECATED */
+label.h4,
+/* DEPRECATED */
+span.h4 {
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+h5 {
+    color: var(--ezClockerGray);
+    font-size: 10pt;
+    font-weight: normal;
+    margin-top: 2px;
+}
+
+/* DEPRECATED */
+label.h5,
+/* DEPRECATED */
+span.h5 {
+    color: var(--ezClockerGray);
+    font-size: 10pt;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Shadows */
+
+/* DEPRECATED */
+.bottomShadow {
+    box-shadow: 0 2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.insetBottomShadow {
+    box-shadow: inset 0 -4px 4px -2px rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.rightShadow {
+    box-shadow: 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.insetRightShadow {
+    box-shadow: inset -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.leftShadow {
+    box-shadow: -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.leftRightShadow {
+    box-shadow: -2px 0 2px 0 rgb(109 110 112 / 50%), 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.insetLeftShadow {
+    box-shadow: inset 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.topShadow {
+    box-shadow: 0 -2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.insetTopShadow {
+    box-shadow: inset 0 2px 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.leftRightTopShadow {
+    box-shadow: -2px 0 2px 0 rgb(109 110 112 / 50%), inset 0 2px 2px 0 rgb(109 110 112 / 50%), 2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.leftRightBottomShadow {
+    box-shadow: 0 2px 4px 1px rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.allSideShadow {
+    box-shadow: 0 0 4px 2px rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.ezAllSideShadow {
+    box-shadow: 0 0 4px 2px rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.allSideShadowDark {
+    box-shadow: 0 2px 8px 4px rgb(0 0 0 / 50%);
+}
+
+/* DEPRECATED */
+.insetAllSideShadow {
+    box-shadow: inset 0 0 8px 4px rgb(109 110 112 / 50%);
+}
+
+/* DEPRECATED */
+.ezFullWidth {
+    width: 100%;
+}
+
+/* DEPRECATED */
+.ezFullWidthTable {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* DEPRECATED */
+.ezThirdWidth {
+    min-width: 33%;
+    width: 33%;
+}
+
+/* DEPRECATED */
+.ezTwoThirdsWidth {
+    min-width: 66%;
+    width: 66%;
+}
+
+/* DEPRECATED */
+.ezFullWidthHeight {
+    width: 100%;
+    height: 100%;
+}
+
+/* DEPRECATED */
+.ezHalfWidth {
+    width: 50%;
+}
+
+/** Margin Styles **/
+
+/* DEPRECATED */
+.ezMarginTop4 {
+    margin-top: 4px;
+}
+
+/* DEPRECATED */
+.marginTop10 {
+    margin-top: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginTop10 {
+    margin-top: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginTop20 {
+    margin-top: 20px;
+}
+
+
+/* DEPRECATED */
+.ezMarginBottom20 {
+    margin-bottom: 20px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom25 {
+    margin-bottom: 25px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom10 {
+    margin-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginRight10 {
+    margin-right: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginRight20 {
+    margin-right: 20px;
+}
+
+/* DEPRECATED */
+.ezMarginRight4 {
+    margin-right: 20px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom8 {
+    margin-bottom: 8px;
+}
+
+/* DEPRECATED */
+.ezMargin10 {
+    margin: 10px;
+}
+
+/* DEPRECATED */
+.ezMargin20 {
+    margin: 10px;
+}
+
+/** Image Styles **/
+
+/* DEPRECATED */
+img.contentIcons {
+    margin-right: 8px;
+    width: 100px;
+    height: 100px;
+}
+
+/** Rounded Corners **/
+
+/* DEPRECATED */
+.ezRounded4pxBottomCorners {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* DEPRECATED */
+.ezRounded2pxAllCorners {
+    border-radius: 2px;
+}
+
+/* DEPRECATED */
+.ezRounded4pxAllCorners {
+    border-radius: 4px;
+}
+
+/** DIV Styles **/
+
+/* DEPRECATED */
+.ezSilverBox {
+    padding: 4px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/* DEPRECATED */
+.ezLightGrayBox {
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/* DEPRECATED */
+.ezLightGrayMinBox {
+    display: block;
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/** Basic Paddings */
+
+/* DEPRECATED */
+.noPadding {
+    padding: 0;
+}
+
+/* DEPRECATED */
+.pad2 {
+    padding: 2px;
+}
+
+
+/* DEPRECATED */
+.pad4 {
+    padding: 4px;
+}
+
+/* DEPRECATED */
+.pad8 {
+    padding: 8px;
+}
+
+/* DEPRECATED */
+.pad10 {
+    padding: 10px;
+}
+
+/* DEPRECATED */
+.ezPadding10-Bottom {
+    padding-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezNoPadding {
+    padding: 0;
+}
+
+/* DEPRECATED */
+.ezPad2 {
+    padding: 2px;
+}
+
+/* DEPRECATED */
+.ezPad4 {
+    padding: 4px;
+}
+
+/* DEPRECATED */
+.ezPad8 {
+    padding: 8px;
+}
+
+/* DEPRECATED */
+.ezPad10 {
+    padding: 10px;
+}
+
+/* DEPRECATED */
+.ezPad20 {
+    padding: 20px;
+}
+
+/* DEPRECATED */
+.ezPadRight4 {
+    padding-right: 4px;
+}
+
+/* DEPRECATED */
+.ezPadLeft4 {
+    padding-left: 4px;
+}
+
+/* DEPRECATED */
+.ezPadRight10 {
+    padding-right: 4px;
+}
+
+/* DEPRECATED */
+.ezPadLeft10 {
+    padding-right: 4px;
+}
+
+/* DEPRECATED */
+.ezFade25 {
+    opacity: .25;
+}
+
+/* DEPRECATED */
+.ezFade50 {
+    opacity: .5;
+}
+
+/* DEPRECATED */
+.ezFade75 {
+    opacity: .75;
+}
+
+/** Basic Borders **/
+
+/* DEPRECATED */
+.blackBorder {
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */
+.grayBorder {
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */
+.noBorder {
+    border-style: none;
+    border-width: 0;
+}
+
+/* DEPRECATED */
+.ezBlackBorder {
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */
+.ezGrayBorder {
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */
+.ezNoBorder {
+    border-style: none;
+    border-width: 0;
+}
+
+/* DEPRECATED */
+.ezBorderRight {
+    border-right-style: solid;
+    border-right-color: var(--ezClockerBlack);
+    border-right-width: 1px;
+}
+
+/** z-index Styles **/
+
+/* DEPRECATED */
+.ezZIndex1 {
+    z-index: 1;
+}
+
+/* DEPRECATED */
+.ezZIndex2 {
+    z-index: 2;
+}
+
+/* DEPRECATED */
+.ezAbsolute {
+    position: absolute;
+}
+
+/** Text Alignment Styles **/
+
+/* DEPRECATED */
+.rightAlign {
+    /* DEPRECATED */
+    text-align: right;
+}
+
+/* DEPRECATED */
+.ezRightAlign {
+    text-align: right;
+}
+
+/* DEPRECATED */
+.leftAlign {
+    text-align: left;
+}
+
+/* DEPRECATED */
+.ezLeftAlign {
+    text-align: left;
+}
+
+/* DEPRECATED */
+.centerAlign {
+    text-align: center;
+}
+
+/* DEPRECATED */
+.ezCenterAlign {
+    text-align: center;
+}
+
+/* DEPRECATED */
+.ezMiddleAlign {
+    vertical-align: middle;
+}
+
+/* DEPRECATED */
+.ezTopAlign {
+    vertical-align: top;
+}
+
+/* DEPRECATED */
+.ezBottomAlign {
+    vertical-align: bottom;
+}
+
+/* DEPRECATED */
+.ezTopLeftAlign {
+    vertical-align: top;
+    text-align: left;
+}
+
+/* Special Link Styles */
+
+/* DEPRECATED */
+a.ezHelp {
+    color: var(--ezClockerNavy);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+/* DEPRECATED */
+a.ezHelp:hover {
+    text-decoration: underline;
+}
+
+/* DEPRECATED */
+a.ezHelp:visited {
+    color: var(--ezClockerBlack);
+}
+
+/* Error Styles */
+
+/* DEPRECATED */
+.errorBox {
+    padding: 4px;
+    margin-bottom: 4px;
+    background-color: var(--ezLightAlertRed);
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderAlertRed);
+}
+
+/* DEPRECATED */
+.ezErrorBox {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: var(--ezClockerErrorRed);
+    background-image: url("/public/images/icons/error-red.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    background-position-y: center;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezBorderAlertRed);
+    border-radius: 3px;
+}
+
+/* DEPRECATED */
+.ezVisibleErrorBox {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 8px;
+    min-height: 24px;
+    background-color: var(--ezClockerYellow);
+    background-size: 24px 24px;
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    color: var(--ezClockerBlack);
+    font-size: 14pt;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 3px;
+    border-color: var(--ezBorderAlertRed)
+}
+
+/* Common Table Styles */
+
+/* DEPRECATED */
+table.noBorderPaddingSpacing {
+    border-style: none;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 0;
+}
+
+/* DEPRECATED */
+td.topLeftCell {
+    vertical-align: top;
+    text-align: left;
+}
+
+/* DEPRECATED */
+td.centerTopCell {
+    text-align: center;
+    vertical-align: top;
+}
+
+/* DEPRECATED */
+td.centerMiddleCell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* DEPRECATED */
+td.rightMiddleCell {
+    text-align: right;
+    vertical-align: middle;
+}
+
+/* DEPRECATED */
+td.rightTopCell {
+    text-align: right;
+    vertical-align: top;
+}
+
+/* DEPRECATED */
+td.leftMiddleCell {
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* DEPRECATED */
+.ezCursorPointer {
+    cursor: pointer;
+}
+
+/* DEPRECATED */
+.ezCursorDefault {
+    cursor: default;
+}
+
+/* DEPRECATED */
+.ezBox {
+    display: inline-block;
+}
+
+/* DEPRECATED */
+.ezCenterBox {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* DEPRECATED */
+.ezRow {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* TABS */
+
+/* DEPRECATED */
+.ezTabContainer {
+    border-style: none;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+}
+
+/* DEPRECATED */
+.ezHiddenTabView {
+    display: none;
+}
+
+/* DEPRECATED */
+.ezActiveTabView {
+    padding: 8px;
+    margin: 0;
+    border-width: 1px;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+/* DEPRECATED */
+.ezTabButtonContainer {
+    height: 31px;
+}
+
+/* DEPRECATED */
+.ezSmallNoteBox {
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #ffdb64;
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    font-weight: normal;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c69800;
+    border-radius: 3px;
+}
+
+/* DEPRECATED */
+.ezSmallNoteBoxTitle {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* DEPRECATED */
+.ezRightGroupLine {
+    padding: 4px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: var(--ezClockerGray);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* DEPRECATED */
+.ezLeftGroupLine {
+    padding: 4px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: var(--ezClockerGray);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* DEPRECATED */
+.ezSmallHelp {
+    margin-top: 8px;
+    padding: 2px;
+    background-color: var(--ezLightBabyBlue);
+    color: var(--ezClockerBlack);
+    font-size: 8pt;
+    font-style: italic;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* DEPRECATED */
+.ezReportOptionBox {
+    padding: 8px;
+    margin-top: 15px;
+    background-color: var(--ezClockerWhite);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezClockerGray);
+}

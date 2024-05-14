@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../styles/tcs-common-black.css" />
+
+    <script type="text/javascript" src="../javascript/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../javascript/jquery/jquery.timers-1.2.js"></script>
+    <script type="text/javascript" src="../javascript/google-analytics.js"></script>
+    <script type="text/javascript" src="../javascript/tcs-common.js"></script>
+
+    <script type="text/javascript">
+        $('document').ready(function () {
+            loadAnalytics("../../");
+            mixpanel.track("403 Page");
+            $(this).oneTime(3000, loadDashboard);
+        });
+
+        function loadDashboard() {
+            window.location = "../../index.html";
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '38206072-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <title>ezClocker</title>
+</head>
+
+<body class="loader">
+    <div class="loadingDiv" id="loadingDiv">
+        <label id="loadingLabel">You do not have permission to access the page you requested. Returning you to the
+            ezclocker.com main page...</label>
+        <br />
+        <br />
+        <br />
+        <!--
+            <img src="../images/spinners/orange-spinner.gif" id="spinnerImage" class="spinnerImage" alt="[Loading]" />
+        -->
+    </div>
+</body>
+
+</html>

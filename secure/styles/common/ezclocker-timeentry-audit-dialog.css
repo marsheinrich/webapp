@@ -1,0 +1,25 @@
+table.timeEntryAuditTable {
+    color: #000000;
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td.timeEntryAuditHeader {
+    background-color: #6d6e70;
+    color: #ffffff;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+td.timeEntryAuditDataCell {
+    font-size: 10pt;
+    background-color: #ffffff;
+    color: #000000;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}

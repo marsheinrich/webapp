@@ -1,0 +1,136 @@
+<style>
+    .developerSignUpContainer {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, .7);
+    }
+
+    .developerSignUpHeader {
+        font-size: 16pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .logoContainer {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 14pt;
+        margin-bottom: 10px;
+    }
+
+    .logoImage {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    $("#_SignUpDeveloperButton").click(devSignUp);
+    $("#_SignUpDevCancelButton").click(ezNavigation.navigateToMain);
+    $("#_DeveloperName").focus();
+    $("input").on("focus", validateFields);
+    $("input").on("blur", validateFields);
+    $("input").on("change", validateFields);
+    $("input").on("keyup", validateFields);
+    validateFields();
+
+    function validateFields() {
+        var name = $("#_DeveloperName").val();
+        var user = $("#_EmailAdress").val();
+        var pass = $("#_Password").val();
+        if (isEmptyString(name) || isEmptyString(user) || isEmptyString(pass)) {
+            $("#_SignUpDeveloperButton").attr("disabled", true);
+            return;
+        }
+        $("#_SignUpDeveloperButton").attr("disabled", false);
+    }
+
+    function validateSubmitDevSignUpFields() {
+        var name = $("#_DeveloperName").val();
+        if (isEmptyString(name)) {
+            showDevSignUpError("Your developer name or company name is required.");
+            return;
+        }
+
+        var user = $("#_EmailAdress").val();
+        validateEmailAddress(user);
+        if (passValid != _PASSWORD_VALID) {
+            $("#_EmailAdress").focus();
+            showDevSignUpError("Please enter a valid email address.");
+            return;
+        }
+
+        var pass = $("#_Password").val();
+        var passValid = validateEzClockerPasswordRequirements(pass);
+        if (passValid != _PASSWORD_VALID) {
+            $("#_Password").focus();
+            showDevSignUpError(passValid);
+            return;
+        }
+        $("#_SignUpDeveloperButton").attr("disabled", false);
+    }
+
+    function devSignUp() {
+        $("#_DevSignUpError").hide("fadeOut");
+        if (!validateSubmitDevSignUpFields())
+            return;
+        accountServices.signUp(
+            "developer",
+            $("#_DeveloperName").val(),
+            null,
+            null,
+            null,
+            $("#_EmailAddress").val(),
+            $("#_Password").val(),
+            function (response) { // success
+                if (httpHelper.isErrorResponse(response)) {
+                    showDevSignUpError(response.message);
+                    $("#_DeveloperName").focus();
+                    return;
+                }
+                window.location = ezNavigation.navigateTo("developer.html");
+            },
+            function (errorResponse) { // failure
+                if (isEmptyString(errorResponse.message))
+                    errorResponse =
+                        "An unexpected error occurred while creating your developer account. Please make sure you have entered all the necessary account information correctly.";
+                showDevSignUpError(errorResponse);
+                $("#_DeveloperName").focus();
+            }
+        );
+    }
+
+    function showDevSignUpError(message) {
+        $("#_DevSignUpError").html(message);
+        $("#_DevSignUpError").show("fadeIn");
+        $("#_SignUpDeveloperButton").attr("disabled", true);
+    }
+
+</script>
+
+<div id="_DeveloperSignUpContainer"
+    class="developerSignUpContainer ezGrayBorder ezRounded2pxAllCorners ezAllSideShadow">
+    <div class="developerSignUpHeader">
+        <div class="logoContainer">
+            <img src="../../images/logos/ezclockerLogo2015.svg" class="logoImage" /> ezClocker
+        </div>
+        Developer Sign Up
+    </div>
+    <div id="_DevSignUpError" class="ezErrorBox" style="display:none">Some or all of the information you have entered is
+        not correct.</div>
+    <div class="editorLabel">Developer or Company Name</div>
+    <input style="width: 100%" id="_DeveloperName" type="text" name="developerName" />
+    <div class="editorLabel">Email</div>
+    <input style="width: 100%" id="_EmailAdress" type="text" name="emailAddress" />
+    <div class="editorLabel">Password</div>
+    <input style="width: 100%" id="_Password" type="password" name="password" value="" />
+    <div class="ezRightAlign ezMarginTop20">
+        <button id="_SignUpDeveloperButton" class="actionButton">Sign Up</button>
+        <button id="_SignUpDevCancelButton">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,297 @@
+/** CONTAINER STYLES **/
+
+div.ezGridContainer {
+    padding: 8px;
+    margin-top: 10px;
+
+    /* background-color: var(--ezAlphaBackgroundWhite2); */
+    background-color: rgb(255 255 255 / 40%);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+
+    /* border-color: var(--ezClockerSilver); */
+    border-color: #e0e0e0;
+    overflow: auto;
+}
+
+/* div.ezGridTableContainer { */
+
+/*     overflow: auto; */
+
+/* } */
+
+/** BASIC TABLE STYLES **/
+
+table.ezGrid {
+    color: #000000;
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    border-collapse: collapse;
+    border-style: 1px;
+    border-radius: 3px;
+    border-color: var(--ezClockerGray);
+}
+
+tbody.ezGridData {
+    overflow: auto;
+}
+
+/** ROW STYLES **/
+
+tr.ezGridHeaderRow {
+    border-width: 0;
+    margin: 0;
+}
+
+tr.ezGridDataRow {
+    border-width: 0;
+    margin: 0;
+}
+
+/** CELL STYLES **/
+
+td.ezGridHiddenCell {
+    background-color: transparent;
+}
+
+td.ezGridHeaderCell {
+    padding: 4px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    font-family: var(--ezTextFontFamily);
+    border-color: var(-ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+td.ezGridJobHeaderCell {
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+}
+
+td.ezGridNotesHeaderCell {
+    text-align: left;
+    vertical-align: middle;
+}
+
+td.ezGridButtonHeaderCell {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-bottom-color: #6d6e70;
+    width: 100px;
+    padding: 4px;
+    margin: 0;
+}
+
+
+td.ezGridDataCell {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 12pt;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-style: solid;
+    padding: 4px;
+    margin: 0;
+}
+
+td.ezTimeEntryGridButtonCell {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    width: 138px;
+    min-width: 138px;
+    max-width: 138px;
+
+    /* background-color: var(--ezClockerSilver); */
+    background-color: #e0e0e0;
+    text-align: left;
+    vertical-align: middle;
+
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td.ezGridDateCell {
+    text-align: center;
+    width: 140px;
+}
+
+td.ezGridTimeCell {
+    text-align: center;
+    width: 140px;
+}
+
+td.ezGridTotalTimeCell {
+    text-align: center;
+    width: 110px;
+}
+
+
+td.ezGridJobCell {
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+}
+
+
+td.ezGridNotesCell {
+    text-align: left;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+td.ezGridMapCell {
+    text-align: center;
+    width: 40px;
+}
+
+.rightAlignValue {
+    text-align: right;
+}
+
+td.ezGridActiveClockInCell {
+    background-color: var(--ezTimeEntryActiveClockInBackgroundColor);
+    color: var(--ezTimeEntryActive-font-color);
+    border-color: var(--ezTimeEntryActiveClockInBorderColor);
+}
+
+td.ezGridErrorCell {
+    background-color: var(--ezTimeEntryErrorBackgroundColor);
+    color: var(--ezTimeEntryError-font-color);
+    border-color: var(--ezTimeEntryErrorClockInBorderColor);
+}
+
+td.ezGridWarningCell {
+    background-color: var(--ezTimeEntryWarningBackgroundColor);
+    color: var(--ezTimeEntryWarning-font-color);
+    border-color: var(--ezTimeEntryWarningClockInBorderColor);
+}
+
+td.ezGridPartialCell {
+    background-color: var(--ezTimeEntryPartialBackgroundColor);
+    color: var(--ezTimeEntryPartial-font-color);
+    border-color: var(--ezTimeEntryPartialClockInBorderColor);
+}
+
+td.ezGridBreakCell {
+    background-color: var(--ezTimeEntryBreakBackgroundColor);
+    color: var(--ezTimeEntryBreak-font-color);
+    border-color: var(--ezTimeEntryBreakClockInBorderColor);
+}
+
+td.ezGridActiveBreakCell {
+    background-color: var(--ezTimeEntryActiveBreakBackgroundColor);
+    color: var(--ezTimeEntryActiveBreak-font-color);
+    font-weight: bold;
+    border-color: var(--ezTimeEntryActiveBreakClockInBorderColor);
+    box-shadow:
+        inset 0 4px 4px -4px var(--ezTimeEntryActiveBreakBorderColor),
+        inset 0 -4px 4px -4px var(--ezTimeEntryActiveBreakBorderColor);
+}
+
+td.ezGridClockInCell {
+    background-color: var(--ezTimeEntryActiveClockInBackgroundColor);
+    background-color: var(--ezTimeEntryActiveClockInBackgroundColor);
+    color: var(--ezTimeEntryActive-font-color);
+    /* font-weight: bold; */
+    border-color: var(--ezTimeEntryActiveClockInBorderColor);
+    /*
+    box-shadow:
+        inset 0px 11px 10px -10px var(--ezTimeEntryActiveClockInBorderColor),
+        inset 0px -11px 10px -10px var(--ezTimeEntryActiveClockInBorderColor);
+    */
+}
+
+td.ezGridPaidTimeOffCell {
+    background-color: var(--ezPaidTimeOff-background-color);
+    color: var(--ezPaidTimeOff-font-color);
+    border-color: var(--ezPaidTimeOff-border-color);
+}
+
+td.ezGridUnpaidTimeOffCell {
+    background-color: var(--ezUnpaidTimeOff-background-color);
+    color: var(--ezUnpaidTimeOff-font-color);
+    border-color: var(--ezUnpaidTimeOff-border-color);
+}
+
+td.centerCell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.ezHintImageContainer {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/** IMAGE STYLES **/
+
+img.hintImage {
+    width: 16px;
+    height: 16px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.breakHintContainer-black {
+    display: inline;
+    padding: 4px;
+    margin: 0;
+    background-color: var(--ezClockerBlack);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.breakHintContainer-white {
+    display: inline;
+    padding: 4px;
+    margin: 0;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.timeEntryHintContainer {
+    display: inline;
+    padding: 4px;
+    margin: 0;
+    background-color: white;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+img.ezGridLocationHeaderImage {
+    height: 20px;
+    padding: 2px;
+}
+
+img.ezGridEditButtonImage {
+    height: 16px;
+    width: 16px;
+    padding-top: 2px;
+    text-align: center;
+    vertical-align: center;
+}

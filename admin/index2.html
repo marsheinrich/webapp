@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <script src="/node_modules/core-js-bundle/minified.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/node_modules/store/dist/store.legacy.min.js" data-dep-for="jquery-idletimeout.min.js"></script>
+    <script src="/jquery/jquery.timers-1.2.min.js" data-dep-for="jquery-idletimeout.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/jquery-ui/jquery-idletimeout.min.js"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js"></script>
+    <script src="/node_modules/icheck/icheck.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/ez-admin.bundle.js?v=r72-3"></script>
+    <title>ezClocker Admin Services</title>
+</head>
+<body>
+    <div class="ezClockerHeader2015NonFixed bottomShadow">
+        <a href="#" onclick="ezNavigation.navigateToMain();">
+            <img src="/public/images/logos/ezclocker_logo_2015.svg" class="ezClockerHeader2015" alt="ezClocker" />
+        </a>
+    </div>
+    <div id="EzAdminPageContent" class="ezPageContent">
+        <div id="EzAdminPageContentBlock" class="ezPageContentBlock">
+            <h1>ezClocker Admin Services</h1>
+            <!-- LOOKUP USER ************************************************* -->
+            <div class="TestBox">
+                <script>
+                    function lookupUserByEmail() {
+                        var url = "/api/v1/admin/query/user?email=" + $("#_LookupEmail")
+                            .val();
+                        httpHelper.httpGETJSON(url, function (result) {
+                            $("#_LookUpUserResults")
+                                .html('<div><pre><code class="json">' + ezApi.ezToJson(result, 3, true) +
+                                    '</code></pre></div>');
+                        }, function (errorResult) {
+                            $("#_LookUpUserResults")
+                                .html('<div><pre><code class="json">' + ezApi.ezToJson(errorResult, 3, true) +
+                                    '</code></pre></div>');
+                        });
+                    };
+                </script>
+                <h1>Look up user by email address</h1>
+                Email Address:
+                <br />
+                <input type="text" id="_LookupEmail" />
+                <div>
+                    <button onclick="lookupUserByEmail()">Look up user...</button>
+                    <div class="ResultsBox" id="_LookUpUserResults"></div>
+                </div>
+            </div>
+            <script>
+                function hijackEmployer() {
+                    $("#_HijackResults").html('');
+                    $("#_HijackResults2").html('');
+                    $('#_HijackEmployeeResults').html('');
+                    var employerId = $("#_HijackEmployerId").val();
+                    if (!employerId || employerId.length == 0) {
+                        alert("Employer id is required to hijack!");
+                        $("#_HijackEmployerId").focus();
+                        viewHijacks();
+                        return;
+                    }
+                    var url = "/api/v1/admin/hijack/employer/" + $("#_HijackEmployerId").val();
+                    ezApi.ezclocker.http.ezGet(url).then(
+                        function (response) {
+                            if (response.errorCode !== 0) {
+                                $("#_HijackResults").html('Error: ' + response.message + '<div><pre><code class="json">' +
+                                    ezApi.ezToJson(response, 3, true) + "</code></pre></div>");
+                                viewHijacks();
+                                return;
+                            }
+                            $("#_HijackResults").html('Employer ' + response.employer.employerName +
+                                ' account with id=' + response.employer.id +
+                                ' now hijacked by user with id=' +
+                                response.employer.userId +
+                                '<div><pre><code class="json">' +
+                                ezApi.ezToJson(response, 3, true) + "</code></pre></div>");
+                            viewHijacks();
+                        },
+                        function (errorResult) {
+                            var htmlView = '<div><pre><code class="json">' +
+                                ezApi.ezToJson(errorResult, 3, true) + "</code></pre></div>";
+                            $("#_HijackResults").html(htmlView);
+                            viewHijacks();
+                        });
+                };
+
+                function viewHijacks() {
+                    var url = "/api/v1/admin/hijack";
+                    $('#viewJumpEmployee').hide();
+                    $('#viewJumpEmployer').hide();
+                    $('#jumpEmployee').hide();
+                    $('#jumpEmployer').hide();
+                    ezApi.p.http.get(url).then(
+                        function (response) {
+                            if (response.errorCode !== 0) {
+                                $("#_WhoIsHijacked").html('Error (' + response.errorCode + '): ' + response.message);
+                                return;
+                            }
+                            if (null === response.responses || response.responses.length === 0) {
+                                $("#_WhoIsHijacked").html('No accounts currently hijacked.');
+                                return;
+                            }
+                            var hijackedAccounts = '';
+                            response.responses.forEach(function (entity) {
+                                let employerId = ezApi.ezIsNumber(entity.hijackedEmployerId)
+                                    ? entity.hijackedEmployerId
+                                    : "-";
+                                let employeeId = ezApi.ezIsNumber(entity.hijackedEmployeeId)
+                                    ? entity.hijackedEmployeeId
+                                    : "-";
+
+                                hijackedAccounts += '<div><h2>Currently Hijacked Accounts</h2>';
+                                hjEmployers = '<div class="ezLightGrayBox"><h3>Employer Accounts</h3><hr/>';
+                                hjEmployees = '<div class="ezLightGrayBox"><h3>Employee Accounts</h3><hr/>';
+
+                                if (!entity.isEmployeeAccount) {
+                                    hjEmployers += '<p>Employer: ' + employerId +
+                                        '<ul style="font-family:\'Roboto Mono\',monospace;">' +
+                                        '<li> Hijacked By,,,,,..: ' + entity.hijackerUserId + '</li>' +
+                                        '<li> Hijacked On.......: ' + entity.hijackedDate + '</li>' +
+                                        '<li> Hijacked User Id..: ' + entity.hijackedUserId + '</li></ul></p>';
+                                } else {
+                                    hjEmployees += '<p>Employee: ' + employeeId +
+                                        '<ul style="font-family:\'Roboto Mono\',monospace;">' +
+                                        '<li> Hijacked By.......: ' + entity.hijackerUserId + '</li>' +
+                                        '<li> Hijacked On.......: ' + entity.hijackedDate + '</li>' +
+                                        '<li> Hijacked User Id..: ' + entity.hijackedUserId + '</li></ul></p>';
+                                }
+
+                                if (entity.isEmployeeAccount) {
+                                    $('#viewJumpEmployee').show();
+                                    $('#jumpEmployee').show();
+                                } else {
+                                    $('#viewJumpEmployer').show();
+                                    $('#jumpEmployer').show();
+                                }
+                            });
+
+                            hijackedAccounts += hjEmployers + '</div>' + hjEmployees + '</div></div>';
+                            $("#_WhoIsHijacked").html(hijackedAccounts);
+                        },
+                        function (eResponse) {
+                            $("#_WhoIsHijacked").html('Error (' + eResponse.errorCode + '): ' + eResponse.message);
+                        });
+                };
+
+                function hijackEmployee() {
+                    $('#_HijackEmployeeResults').html('');
+                    $("#_HijackResults").html('');
+                    $("#_HijackResults2").html('');
+                    var employerId = $("#_HijackEmployeeId").val();
+                    if (!employerId || employerId.length == 0) {
+                        alert("Employee id is required to hijack!");
+                        $("#_HijackEmployeeId").focus();
+                        return;
+                    }
+                    var url = "../api/v1/admin/hijack/employee/" + $("#_HijackEmployeeId").val();
+                    ezApi.p.http.get(url).then(
+                        function (response) {
+                            if (response.errorCode !== 0) {
+                                $("#_HijackEmployeeResults").html(response.response);
+                            } else if (null == response.employee) {
+                                $("#_HijackEmployeeResults").html(response.message,
+                                    '<div><pre><code class="json">' + ezApi.ezToJson(response, 3, true) +
+                                    '</code></pre></div>');
+                            } else {
+                                $("#_HijackEmployeeResults").html(
+                                    'Employee ' + response.employee.employeeName +
+                                    ' account with id=' + response.employee.id +
+                                    ' now hijacked by user with id=' + response.employee.userId +
+                                    '<div><pre><code class="json">' +
+                                    ezApi.ezToJson(response, 3) +
+                                    '</code></pre></div>');
+                            }
+                            viewHijacks();
+                        },
+                        function (eResult) {
+                            $("#_HijackResults").html(
+                                'Error: ' +
+                                '<div><pre><code class="json">' + ezApi.ezToJson(eResult, 3, true) +
+                                '</code></pre></div>');
+                            viewHijacks();
+                        });
+                };
+
+                function releaseHijack() {
+                    $('#_HijackEmployeeResults').html('');
+                    $('#_HijackResults').html('');
+                    $('#_HijackResults2').html('');
+                    var url = "../api/v1/admin/hijack/restore";
+                    ezApi.ezclocker.http.ezGet(url).then(
+                        function (response) {
+                            var viewHtml = '';
+                            if (response.message) {
+                                viewHtml += response.message;
+                            }
+
+                            var restoredEmployee = ezApi.ezIsNotEmptyArray(response.restoredEmployees)
+                                ? response.restoredEmployees[0]
+                                : null;
+
+                            var restoredEmployer = ezApi.ezIsNotEmptyArray(response.restoredEmployers)
+                                ? response.restoredEmployers[0]
+                                : null;
+
+                            if (ezApi.ezIsValid(restoredEmployer)) {
+                                viewHtml += '<h2>Employer Hijack Released</h2><hr/><ul>' +
+                                    '<li>Employer Name..: ' + restoredEmployer.employerName + '</li>' +
+                                    '<li>Employer Id....: ' + restoredEmployer.id + '</li>' +
+                                    '</ul><div><pre><code class="json">' +
+                                    ezApi.ezToJson(response, 3, true) +
+                                    '</code></pre></div>';
+                            }
+
+                            if (ezApi.ezIsValid(restoredEmployee)) {
+                                viewHtml += '<h2>Employee HiJack Released</h2><hr/><ul>' +
+                                    '<li>Employee Id...:' + restoredEmployee.id + '</li>' +
+                                    '<ul><div><pre><code class="json">' +
+                                    ezApi.ezToJson(response, 3, true) +
+                                    '</code></pre></div>';
+                            }
+                            $('#_HijackResults2').html(viewHtml);
+                            viewHijacks();
+                        },
+                        function (eResponse) {
+                            $('#_HijackResults2').html('Error: <div><pre><code class="json">' + ezApi.ezToJson(eResponse, 3, true) +
+                                '</code></pre></div>');
+                            viewHijacks();
+                        });
+                };
+                $(document).ready(function () {
+                    viewHijacks();
+                });
+            </script>
+
+            <!-- WHO IS HIJACKED ************************************************* -->
+            <div style="background-color:#E8F7FF" class="TestBox">
+                <h1 class="warningText">Who is Hijacked?</h1>
+                <button onclick="viewHijacks()">View Hijacked Accounts...</button>
+                <div style="background-color: #ffc500" class="ResultsBox" id="_WhoIsHijacked">results appear here</div>
+                <div id="viewJumpEmployer" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                    <a href="/secure/employerDashboard.html" target="_EmployerDashboardHijack">
+                        Jump to Employer Dashboard
+                    </a>
+                </div>
+                <div id="viewJumpEmployee" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                    <a href="/secure/employeeDashboard.html" target="_EmployeeDashboardHijack">
+                        Jump to Employee Dashboard
+                    </a>
+                </div>
+            </div>
+
+            <!-- HIJACK EMPLOYER ************************************************* -->
+            <div class="TestBox">
+                <h1>Hijack Employer Account</h1>
+                url: (domain)/v1/admin/hijack/{employerId}
+                <br />
+                <br /> Employer Id:
+                <br />
+                <input type="text" id="_HijackEmployerId" />
+                <br />
+                <button onclick="hijackEmployer()">Hijack Employer...</button>
+                <div class="ResultsBox" id="_HijackResults"></div>
+                <div id="jumpEmployer" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                    <a href="/secure/employerDashboard.html" target="_EmployerDashboardHijack">
+                        Jump to Employer Dashboard
+                    </a>
+                </div>
+            </div>
+
+            <!-- HIJACK EMPLOYEE ************************************************* -->
+            <div class="TestBox">
+                <h1>Hijack Employee Account</h1>
+                <div style="padding: 4px;">url: (domain)api/v1/admin/hijack/employee/{employeeId}</div>
+                <div style="padding: 4px;">Employee Id:</div>
+                <div style="padding: 4px;">
+                    <input type="text" id="_HijackEmployeeId" />
+                </div>
+                <div style="padding: 4px;">
+                    <button onclick="hijackEmployee()">Hijack Employee...</button>
+                </div>
+                <div class="ResultsBox" id="_HijackEmployeeResults"></div>
+                <div id="jumpEmployee" style="margin-top:4px;padding:4px;border-style:solid;border-width:1px">
+                    <a href="/secure/employeeDashboard.html" target="_EmployeeDashboardHijack">
+                        Jump to Employee Dashboard
+                    </a>
+                </div>
+            </div>
+
+            <!-- RESTORE HIJACK ************************************************* -->
+            <div class="TestBox">
+                <div style="background-color: #C0F991" class="TestBox">
+                    <p>Releasing a hijacked account release ALL hijacked accounts (employee and employer).</p>
+                    <p>Log out of the hijacked account and close the browser window. Then click the release button below
+                        to
+                        release the account.</p>
+                    <button style="font-size: 18pt;" onclick="releaseHijack()">Release Hijack</button>
+                    <div class="ResultsBox" id="_HijackResults2"></div>
+                </div>
+            </div>
+
+            <!-- RESTORE RESCYCLED EMPLOYEE ************************************************* -->
+            <div class="TestBox">
+                <script>
+                    function restoreRecycledEmployee() {
+                        var url = '/_api/v1/admin/recycle-center/restore/employee';
+                        var recycledEmployeeId = $('#_RecycledEmployeeId').val();
+                        var restoreToEmployeeId = ezApi.ezId('_RecycledRestoreEmployeeId').val();
+                        ezApi.ezId('_RestoreRecycledEmployeeResults').html('Restoring employee...');
+                        if (ezApi.isEmptyString(restoreToEmployeeId)) {
+                            restoreToEmployeeId = recycledEmployeeId;
+                        }
+                        ezApi.ezclocker.http.ezPost(url, ezApi.ezToJson({
+                            'originalEmployeeId': recycledEmployeeId,
+                            'restoreToEmployeeId': restoreToEmployeeId,
+                            'restoreTimeEntries': ezApi.ezId('_RestoreRecycledTimeEntries').is(':checked')
+                        })).then(
+                            function (response) {
+                                if (ezApi.isValid(response) && response.errorCode !== 0) {
+                                    ezApi.ezId('_RestoreRecycledEmployeeResults')
+                                        .html('Error: ' +
+                                            '<div><pre><code class="json">' + ezApi.ezToJson(response, 3, true) +
+                                            '</code></pre></div>');
+                                    return;
+                                }
+                                ezApi.ezId('_RestoreRecycledEmployeeResults')
+                                    .html('Employee Restored' +
+                                        '<div>Restore Log:</br>' +
+                                        '<textarea style="width:100%;height:250px">' + response.message + '</textarea></div>' +
+                                        '</div>Response:' +
+                                        '<div><pre><code class="json">' + ezApi.ezToJson(response, 3, true) +
+                                        '</code></pre></div></div>');
+                            },
+                            function (eResponse) {
+                                if (ezApi.isValid(eResponse)) {
+                                    ezApi.ezId('_RestoreRecycledEmployeeResults')
+                                        .html('Error: ' + eResponse.message +
+                                            '<div><pre><code class="json">' + ezApi.ezToJson(eResponse, 3, true) +
+                                            '</code></pre></div>');
+                                    return;
+                                }
+                            });
+                    }
+                </script>
+                <h1>Restore Deleted Employee</h1>
+                <div class="testBoxLine">
+                    <div>Original Employee Id</div>
+                    <input type="text" id="_RecycledEmployeeId" />
+                </div>
+                <div class="testBoxLine">
+                    <input type="checkbox" id="_RestoreRecycledTimeEntries" checked />Restore Time Entries?
+                </div>
+                <div class="testBoxLine">
+                    <button onclick="restoreRecycledEmployee()">Restore Recycled Employee...</button>
+                </div>
+                <div class="ResultsBox" id="_RestoreRecycledEmployeeResults"></div>
+            </div>
+
+
+            <h1>Administration Tools</h1>
+
+            <!-- Delete Account -->
+            <div class="TestBox">
+                <h1>Delete User Account</h1>
+                <h3 class="warningText">This operation cannot be reversed!</h3>
+                <h4>Service: http://{domain}/_api/v1/account</h4>
+                <div class="ezInputBox">
+                    <label for="ezAdminDeleteAccountUserName">Account User Name:</label>
+                    <input class="ezFullWidth" type="text" id="ezAdminDeleteAccountUserName" />
+                </div>
+                <div class="ezButtonBox">
+                    <button onclick="deleteAccount()">Delete Account</button>
+                </div>
+                <div class="ResultsBox" id="ezAdminDeleteUserAccountResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- List Developer Employers -->
+            <div class="TestBox">
+                <h1>Promotion Code Test</h1>
+                <h4>Service: http://{domain}/promo?code={code}&amp;data={data}</h4>
+                code: (promo code in use, required)
+                <br />
+                <input type="text" name="code" id="_PromoCode" value="test" />
+                <br /> data: (any extra data - optional)
+                <br />
+                <input type="text" name="data" id="_PromoData" value="you need a Lotus" />
+                <br /> target: (full url to re-direct to - optional)
+                <br />
+                <input type="text" id="_PromoTarget" value="http://www.northtexaslotusclub.com/club-member/ridge" />
+                <br />
+                <button onclick="getPromoCodeUrl()">Generate</button>
+                <br />
+                <div class="ResultsBox" id="_PromoUrlResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <div class="TestBox">
+                <h1>Create an invite</h1>
+                <div class="ezInputBox">
+                    <label for="ezAdminCreateInviteFullUserName">Account User Name:</label>
+                    <input class="ezFullWidth" type="text" id="ezAdminCreateInviteFullUserName" />
+                </div>
+                <div class="ezInputBox">
+                    <label for="ezAdminCreateInviteEmailId">Account Email id:</label>
+                    <input class="ezFullWidth" type="text" id="ezAdminCreateInviteEmailId" />
+                </div>
+                <div class="ezButtonBox">
+                    <button onclick="createEmployeeInvite()">Create an Invite</button>
+                </div>
+                <div class="ResultsBox" id="ezAdminCreateEnInviteResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <div class="TestBox">
+                <h1>Move employees to new employer</h1>
+                <div class="ezInputBox">
+                    <label for="ezAdminBulkMoveEmployeesFromEmployer">Employee login user name (name or email id, as applicable)):</label>
+                    <input class="ezFullWidth" type="text" id="ezAdminBulkMoveEmployeesFromEmployer" />
+                </div>
+                <div class="ezInputBox">
+                    <label for="ezAdminBulkMoveEmployeesToEmployer">Target Employer login user name (name or email id, as applicable):</label>
+                    <input class="ezFullWidth" type="text" id="ezAdminBulkMoveEmployeesToEmployer" />
+                </div>
+                <div id="moveEmployeeToEmployerSubmitButton" class="ezButtonBox">
+                    <button onclick="moveEmployeeToEmployer()">Move Employee</button>
+                </div>
+                <div class="ResultsBox" id="ezAdminBulkMoveEmployeesResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <h1>Developer Tools</h1>
+
+            <!-- List Developer Employers -->
+            <div class="TestBox">
+                <h1>List Developer Employers</h1>
+                <h4>Service: http://{domain}/_employer/developer</h4>
+                <h4>List all employers associated with your developer token</h4>
+                <form id="listDeveloperEmployersForm" action="../_employer/developer" enctype="application/json
+                   " method="post">
+                    developerToken:
+                    <br />
+                    <input type="text" id="developerToken" name="developerToken" />
+                    <br />
+                    <input type="submit" value="List all employers...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="listDeveloperEmployersResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <h1>Employer Tools</h1>
+
+            <!-- remove Employer -->
+            <div class="TestBox">
+                <h1>Remove Employer</h1>
+                <h4>Service: http://{domain}/_employer/remove/{employerId}</h4>
+                <h4>Removes the employer, all employees, all time entries, and other associated tables for the employer
+                </h4>
+                <form id="removeEmployerForm" action="../_employer/remove" enctype="application/json" method="post">
+                    employerId:
+                    <br />
+                    <input type="text" id="employerId" />
+                    <br />
+                    <input type="submit" value="Remove employer...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="removeEmployerResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <h1>Employee Tools</h1>
+
+            <!-- Remove Employee -->
+            <div class="TestBox">
+                <h1>Remove Employee</h1>
+                <h4>Service: http://{domain}/_employee/remove/{employerId}/{employeeId}
+                </h4>
+                <h4>Removes the employee and their associated tables</h4>
+                <form id="removeEmployeeForm" action="../_employee/remove" enctype="application/json" method="post">
+                    employerId:
+                    <br />
+                    <input type="text" id="employerId" />
+                    <br /> employeeId:
+                    <br />
+                    <input type="text" id="employeeId" />
+                    <br />
+                    <input type="submit" value="Remove employee...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="removeEmployeeResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <h1>Email Tools</h1>
+            <form id="_ForceEmailQueue" action="../_email/forceEmailQueue" enctype="application/json" method="post">
+                <input type="submit" value="Force Email Queue" />
+            </form>
+            <br />
+
+            <!-- Test Email Template -->
+            <div class="TestBox">
+                <h1>Test Email Template</h1>
+                <h4>Service: http://{domain}/email/template/test</h4>
+                <h4>Sends an email using a template and data passed to the recipient (for testing)</h4>
+                name: (template ID/name)
+                <br />
+                <input type="text" name="name" id="_EmailTestName" value="NEW_EMPLOYER_HTML" />
+                <br /> dataFields: This is a json array, key value: [{"key":"value",{"key":"value"}]
+                <br />
+                <textarea name="dataFields" id="_EmailTestDataFields" rows="25" cols="100">
+                    {"EMPLOYER_NAME":"Employer Name"}
+                </textarea>
+                <br /> recpient:
+                <br />
+                <input type="text" name="recipient" id="_EmailTestRecipient" value="jason.ridge@gmail.com" />
+                <br />
+                <button onclick="sendTestEmail()">Send email test..."</button>
+                <br />
+                <div class="ResultsBox" id="_TestEmailResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- Add Email Template -->
+            <div class="TestBox">
+                <h1>Add Email Template</h1>
+                <h4>Service: http://{domain}/email/template/add</h4>
+                <h4>Adds a new email template to the DB</h4>
+                <form id="addEmailTemplateForm" action="../_email/template/add" enctype="application/json"
+                    method="post">
+                    name (template name, must be unique):
+                    <br />
+                    <input type="text" name="name" />
+                    <br /> subject (email subject):
+                    <br />
+                    <input type="text" name="subject" style="width: 500px;" />
+                    <br /> body (email body):
+                    <br /> NOTE: For replacement tags, use the following format: {-table_name.field_name-}
+                    <br />
+                    <textarea name="body" rows="25" cols="100"></textarea>
+                    <br />
+                    <input type="submit" value="Add email template...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="addEmailTemplateResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- Update Email Template -->
+            <div class="TestBox">
+                <h1>Update Email Template (by name)</h1>
+                <h4>Service: http://{domain}/email/template/update</h4>
+                <h4>Updates an existing email template</h4>
+                <form id="updateEmailTemplateForm" action="../_email/template/update" enctype="application/json"
+                    method="post">
+                    name (required):
+                    <br />
+                    <input type="text" name="name" />
+                    <br /> subject (email subject, optional in the update):
+                    <br />
+                    <input type="text" name="subject" style="width: 500px;" />
+                    <br /> body (email body, optional in the update):
+                    <br /> NOTE: For replacement tags, use the following format: {-table_name.field_name-}
+                    <br />
+                    <textarea name="body" rows="25" cols="100"></textarea>
+                    <br />
+                    <input type="submit" value="Update email template...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="updateEmailTemplateResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- Remove Email Template -->
+            <div class="TestBox">
+                <h1>Remove Email Template (by name)</h1>
+                <h4>Service: http://{domain}/email/template/remove</h4>
+                <h4>Removes an existing email template</h4>
+                <form id="removeEmailTemplateForm" action="../_email/template/remove" enctype="application/json"
+                    method="post">
+                    name (required):
+                    <br />
+                    <input type="text" name="name" />
+                    <br />
+                    <input type="submit" value="Remove email template...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="removeEmailTemplateResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- Get Email Template -->
+            <div class="TestBox">
+                <h1>Get Email Template (by name)</h1>
+                <h4>Service: http://{domain}/email/template/get</h4>
+                <h4>Gets an existing email template</h4>
+                <form id="getEmailTemplateForm" action="../_email/template/get" enctype="application/json"
+                    method="post">
+                    name (required):
+                    <br />
+                    <input type="text" name="name" />
+                    <br />
+                    <input type="submit" value="Get email template...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="getEmailTemplateResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+
+            <!-- Get Email Template -->
+            <div class="TestBox">
+                <h1>List All Available Email Templates</h1>
+                <h4>Service: http://{domain}/email/template/names</h4>
+                <form id="getEmailTemplateNamesForm" action="../_email/template/names" enctype="application/json"
+                    method="get">
+                    <input type="submit" value="Get email template names...">
+                    <br />
+                </form>
+                <div class="ResultsBox" id="getEmailTemplateNamesResults">
+                    <em>Results Appear Here</em>
+                </div>
+            </div>
+            <script>
+                function postBulkAddEmployerLocation() {
+                    var url = '../_api/v1/support/import/bulk-locations/' + $("#_BulkLocation_EmployerId")
+                        .val();
+                    $("#bulkAddEmployerLocation")
+                        .attr("action", url);
+                    $("#bulkAddEmployerLocation")
+                        .submit();
+                }
+            </script>
+            <div class="TestBox">
+                <form id="bulkAddEmployerLocation" method="post" enctype="multipart/form-data" target="_new_tab_bulk">
+                    <input type="file" name="csvFile" id="_csvFile" />
+                    <br /> Employer Id:
+                    <input type="text" name="employerId" id="_BulkLocation_EmployerId" />
+                    <br />
+                    <input type="checkbox" name="splitStreet" id="_SplitStreet" checked />Split Street Column?
+                </form>
+                <button onclick="postBulkAddEmployerLocation()">Go!</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

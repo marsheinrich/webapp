@@ -1,0 +1,418 @@
+body {
+    background-color: #FFFFFF;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/*
+	fixed problem with bootstrap rows
+	in fluid layouts
+*/
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* vertically center Bootstrap modal */
+
+.modal-vertical-centered {
+    transform: translate(0, 50%) !important;
+    transform: translate(0, 50%) !important;
+
+    /* IE 9 */
+    transform: translate(0, 50%) !important;
+
+    /* Safari and Chrome */
+}
+
+/* background */
+
+.backgroundImage {
+    background-color: #e0e0e0;
+
+    /*
+	background: rgb(0,102,178); /* Old browsers */
+
+    /* background: rgb(0,102,178); /* Old browsers */
+
+    /*
+	background: -moz-linear-gradient(-45deg,  rgba(0,102,178,1) 0%, rgba(0,138,237,1) 56%, rgba(0,127,219,1) 56%, rgba(0,145,255,1) 100%); /* FF3.6+ */
+
+    /* background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,102,178,1)), color-stop(56%,rgba(0,138,237,1)), color-stop(56%,rgba(0,127,219,1)), color-stop(100%,rgba(0,145,255,1))); /* Chrome,Safari4+ */
+
+    /* background: -webkit-linear-gradient(-45deg,  rgba(0,102,178,1) 0%,rgba(0,138,237,1) 56%,rgba(0,127,219,1) 56%,rgba(0,145,255,1) 100%); /* Chrome10+,Safari5.1+ */
+
+    /* background: -o-linear-gradient(-45deg,  rgba(0,102,178,1) 0%,rgba(0,138,237,1) 56%,rgba(0,127,219,1) 56%,rgba(0,145,255,1) 100%); /* Opera 11.10+ */
+
+    /* background: -ms-linear-gradient(-45deg,  rgba(0,102,178,1) 0%,rgba(0,138,237,1) 56%,rgba(0,127,219,1) 56%,rgba(0,145,255,1) 100%); /* IE10+ */
+
+    /* background: linear-gradient(135deg,  rgba(0,102,178,1) 0%,rgba(0,138,237,1) 56%,rgba(0,127,219,1) 56%,rgba(0,145,255,1) 100%); /* W3C */
+
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0066b2', endColorstr='#0091ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* logo */
+
+.ezClockerLogoText {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 48pt;
+    color: #000000;
+}
+
+.ezClockerLogoImage {
+    width: 48px;
+    height: 48px;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-right: 4px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.ezClockerCatchPhrase {
+    text-align: right;
+    vertical-align: top;
+    font-size: 16pt;
+    font-family: sans-serif;
+    color: #000000;
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 50px;
+}
+
+.ezClockerBanner {
+    background-color: #FAFAFA;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #EEEEEE;
+    box-shadow: inset 0 -3px 3px -3px #EEEEEE;
+}
+
+/* login */
+
+.quickLogin {
+    float: right;
+}
+
+.quickLoginLabel {
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 2px;
+    color: #000000;
+}
+
+.indexButtonCancel,
+.indexButtonCancel:link {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #AAAAAA;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.indexButtonCancel:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.indexButtonCancel:hover {
+    background-color: #CCCCCC;
+    text-decoration: none;
+    color: #000000;
+}
+
+.indexButtonCancel:active {
+    box-shadow: inset 0 2px 3px #AAAAAA;
+    color: #000000;
+    text-decoration: none;
+}
+
+.indexButtonLarge,
+.indexButtonLarge:link,
+.indexButtonMedium,
+.indexButtonMedium:link,
+.indexButtonSmall,
+.indexButtonSmall:link {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(255 153 0 / 100%);
+    color: #FFFFFF;
+    text-shadow: -1px 0 #B26B00, 1px 0 #B26B00, 0 1px #B26B00, 0 -1px #B26B00;
+    border: 1px solid #E19100;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.indexButtonLarge:visited,
+.indexButtonMedium:visited,
+.indexButtonSmall:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.indexButtonLarge:hover,
+.indexButtonMedium:hover,
+.indexButtonSmall:hover {
+    background-color: rgb(225 145 0 / 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.indexButtonLarge:active,
+.indexButtonMedium:active,
+.indexButtonSmall:active {
+    box-shadow: inset 0 2px 3px rgb(178 107 0 / 100%);
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.indexButtonLarge {
+    font-size: 16pt;
+    width: 150px;
+}
+
+.indexButtonMedium {
+    font-size: 12;
+    width: 100px;
+}
+
+.indexButtonSmall {
+    font-size: 8;
+    width: 75px;
+}
+
+a.quickLoginRecoverPassword {
+    cursor: pointer;
+    font-size: small;
+    font-family: sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+a.quickLoginRecoverPassword:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.recoverPasswordCell {
+    text-align: left;
+    vertical-align: top;
+    padding-left: 4px;
+}
+
+.indexInput {
+    padding: 3px 0 3px 3px;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AAAAAA;
+    autocomplete: off;
+    font-size: medium;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+    outline: none;
+}
+
+.indexInput:focus {
+    box-shadow: 0 0 3px rgb(0 145 255 / 100%);
+    padding: 3px 0 3px 3px;
+    margin-bottom: 3px;
+    border: 1px solid rgb(0 145 255 / 100%);
+}
+
+.signUpContainer {
+    background-color: rgb(250 250 250 / 100%);
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    float: left;
+    clear: both;
+    padding: 10px;
+    font-family: sans-serif;
+    box-shadow: inset 1px 1px 10px #EEEEEE;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.quickSignUpPitch {
+    text-shadow: -1px 0 #B26B00, 0 1px #B26B00, 1px 0 #B26B00, 0 -1px #B26B00;
+    color: #FF9900;
+}
+
+.mobileContainer {
+    text-align: center;
+    background-color: rgb(250 250 250 / 100%);
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    font-family: sans-serif;
+    box-shadow: inset 1px 1px 10px #EEEEEE;
+    padding: 20px;
+}
+
+.signUpLabel {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.glyphicon.downArrow {
+    font-size: 36pt;
+    width: 100%;
+    text-align: center;
+    animation-name: downArrowAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-name: downarrowanimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    color: rgb(255 153 0 / 100%);
+    text-shadow: -1px 0 #B26B00, 0 1px #B26B00, 1px 0 #B26B00, 0 -1px #B26B00;
+    margin-bottom: 50px;
+}
+
+@keyframes downArrowAnimation {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 5px;
+    }
+}
+
+@keyframes downArrowAnimation {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 5px;
+    }
+}
+
+div.infoPanel {
+    height: 100%;
+}
+
+div.infoPanelHeading {
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 10px;
+}
+
+div.infoPanelBody {
+    text-align: left;
+    background-color: rgb(250 250 250 / 100%);
+    box-shadow: inset 1px 1px 10px #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+}
+
+table.pricingTable {
+    padding: 50px 20px;
+    width: 100%;
+    border-spacing: 10px 0;
+    border-collapse: separate;
+}
+
+table.pricingTable th {
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+table.pricingTable td {
+    text-align: left;
+    vertical-align: top;
+    background-color: rgb(250 250 250 / 100%);
+    box-shadow: inset 1px 1px 10px #EEEEEE;
+    padding: 10px;
+    border: 1px solid #EEEEEE;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pricingHeader {
+    text-align: center;
+
+    /* blue gradient banner
+	background: rgb(158,214,255);
+	background: -moz-linear-gradient(-45deg,  rgba(158,214,255,1) 0%, rgba(0,102,178,1) 33%, rgba(0,102,178,1) 66%, rgba(158,214,255,1) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(158,214,255,1)), color-stop(33%,rgba(0,102,178,1)), color-stop(66%,rgba(0,102,178,1)), color-stop(100%,rgba(158,214,255,1)));
+	background: -webkit-linear-gradient(-45deg,  rgba(158,214,255,1) 0%,rgba(0,102,178,1) 33%,rgba(0,102,178,1) 66%,rgba(158,214,255,1) 100%);
+	background: -o-linear-gradient(-45deg,  rgba(158,214,255,1) 0%,rgba(0,102,178,1) 33%,rgba(0,102,178,1) 66%,rgba(158,214,255,1) 100%);
+	background: -ms-linear-gradient(-45deg,  rgba(158,214,255,1) 0%,rgba(0,102,178,1) 33%,rgba(0,102,178,1) 66%,rgba(158,214,255,1) 100%);
+	background: linear-gradient(135deg,  rgba(158,214,255,1) 0%,rgba(0,102,178,1) 33%,rgba(0,102,178,1) 66%,rgba(158,214,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ed6ff', endColorstr='#9ed6ff',GradientType=1 );
+	text-shadow: -1px 0 #0066B2, 1px 0 #0066B2, 0 1px #0066B2, 0 -1px #0066B2;
+	color: #FFFFFF;
+	*/
+
+    /* orange gradient banner */
+    background: rgb(255 216 158);
+    background: linear-gradient(-45deg, rgb(255 216 158 / 100%) 0%, rgb(255 153 0 / 100%) 33%, rgb(255 153 0 / 100%) 66%, rgb(255 216 158 / 100%) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgb(255 216 158 / 100%)), color-stop(33%, rgb(255 153 0 / 100%)), color-stop(66%, rgb(255 153 0 / 100%)), color-stop(100%, rgb(255 216 158 / 100%)));
+    background: linear-gradient(-45deg, rgb(255 216 158 / 100%) 0%, rgb(255 153 0 / 100%) 33%, rgb(255 153 0 / 100%) 66%, rgb(255 216 158 / 100%) 100%);
+    background: linear-gradient(-45deg, rgb(255 216 158 / 100%) 0%, rgb(255 153 0 / 100%) 33%, rgb(255 153 0 / 100%) 66%, rgb(255 216 158 / 100%) 100%);
+    background: linear-gradient(-45deg, rgb(255 216 158 / 100%) 0%, rgb(255 153 0 / 100%) 33%, rgb(255 153 0 / 100%) 66%, rgb(255 216 158 / 100%) 100%);
+    background: linear-gradient(135deg, rgb(255 216 158 / 100%) 0%, rgb(255 153 0 / 100%) 33%, rgb(255 153 0 / 100%) 66%, rgb(255 216 158 / 100%) 100%);
+    filter: progid:dximagetransform.microsoft.gradient( startColorstr='#ffd89e', endColorstr='#ffd89e', GradientType=1);
+    text-shadow: -1px 0 #B26B00, 1px 0 #B26B00, 0 1px #B26B00, 0 -1px #B26B00;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.pricingHeader h1 {
+    margin-top: 10px;
+}
+
+.siteMap {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.siteMap a {
+    font-size: 10pt;
+    text-decoration: none;
+    color: #000000;
+}
+
+.siteMap a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.siteInfo {
+    font-size: x-small;
+    text-align: center;
+    width: 100%;
+}
+
+#_Version {
+    float: right;
+}

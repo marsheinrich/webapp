@@ -1,0 +1,44 @@
+/*
+    Used in the following:
+    (updated: 2021.02.22)
+
+    m/p/accept-employee-invite/index.html
+
+    public/employeeSignup.html
+    public/signup.html
+*/
+
+.capterra_body {
+    background-color: #0f4776;
+    background-image: none;
+}
+
+.capterra_main_div {
+    text-align: center;
+    margin: 200px;
+    padding: 100px;
+    background-color: white;
+}
+
+.capterra_need_help_div {
+    font-size: 24px;
+    margin-bottom: 30px
+}
+
+.capterra_no_thanks_div {
+    font-size: 24px;
+    margin-top: 30px;
+    float: right;
+}
+
+@media screen and (max-width: 480px) {
+    .capterra_body {
+        background-color: white;
+    }
+
+    .capterra_main_div {
+        margin: 0;
+        padding: 100px 10px;
+    }
+
+}

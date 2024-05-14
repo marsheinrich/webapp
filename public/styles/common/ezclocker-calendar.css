@@ -1,0 +1,266 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Schedule UX Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Schedule Table CSS Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+table.calendarTable {
+    width: 100%;
+    background-color: var(--ezClockerWhite);
+    border: 1px solid var(--ezClockerBlack);
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-radius: 3px;
+}
+
+tr.calendarTableTitleRow {
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerWhite);
+}
+
+td.calendarTableTitleCell {
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid var(--ezClockerBlack);
+    border-radius: 3px;
+}
+
+td.calendarTableEmployeeNameCell {
+    padding: 10px;
+    width: 150px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    text-align: left;
+    vertical-align: text-top;
+    border: 1px solid var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+.copyScheduleButtonContainer {
+    padding-top: 10px;
+}
+
+td.calendarTableHoursCell {
+    width: 150px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+td.calendarTableScheduleCell {
+    height: 10px;
+    width: 120px;
+    background-color: var(--ezClockerWhite);
+    text-align: center;
+    border: 1px solid var(--ezBorderNavy);
+    border-radius: 3px;
+}
+
+.calendarTableScheduleCellToday {
+    height: 10px;
+    width: 120px;
+    /* Light baby-blue */
+    /* background-color: rgba(124, 208, 253, 0.08); */
+    text-align: center;
+    border: 1px solid var(--ezBorderNavy);
+    border-radius: 3px;
+    box-shadow: var(--ezBoxShadow-inset-ezClockerBabyBlue-50);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Schedule Block CSS Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezSchedule-not-published-container {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerNavy);
+    font-size: 8pt;
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+table.scheduleBlockTitle {
+    width: 100%;
+    min-height: 38px;
+    margin-bottom: 4px;
+    border-style: none;
+    border-spacing: 0;
+}
+
+td.scheduleBlockTitleCell {
+    padding: 4px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: small;
+    vertical-align: middle;
+    border-style: none;
+}
+
+td.approvedRequestTimeOffTableCell {
+    background-color: var(--ezClockerGreen);
+}
+
+td.pendingRequestTimeOffTableCell {
+    background-color: var(--ezClockerGray);
+}
+
+.ez-schedule-card-total-container {
+    display: grid;
+    margin-top: 4px;
+    justify-content: end;
+    align-content: center;
+    grid-template-rows: auto;
+}
+
+.ez-schedule-card-shift-total {
+    padding: 2px;
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerWhite);
+    font-size: 10pt;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.schedule-title-container {
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.employeeScheduleBlock {
+    margin: 4px;
+    padding: 4px;
+    background-color: var(--ezAlphaSilver);
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.scheduleBlock-read-only {
+    margin: 4px;
+    padding: 4px;
+    background-color: var(--ezAlphaSilver);
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+.pendingRequestTimeOff {
+    border-color: var(--ezClockerStone);
+}
+
+.scheduleBlock {
+    margin: 4px;
+    padding: 4px;
+    background-color: var(--ezClockerSilver);
+    text-align: center;
+    vertical-align: middle;
+    border-color: var(--ezClockerNavy);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.scheduleBlock:hover {
+    background-color: var(--ezLightSilver);
+    border-color: var(--ezClockerNavy);
+    box-shadow: 0 0 2px 2px rgb(109 110 112 / 50%);
+}
+
+.scheduleBlock:active {
+    background-color: var(--ezLightSilver);
+    border-color: var(--ezClockerNavy);
+    box-shadow: inset 0 0 2px 2px rgb(0 0 0 / 50%);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Day Off CSS Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.employeeDayOffCell {
+    margin: 4px;
+    /* background-color: var(--ezClockerWhite); */
+    color: var(--ezClockerStone);
+    text-align: center;
+    vertical-align: middle;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dayOffCell {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerStone);
+    text-align: center;
+    vertical-align: middle;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.dayOffCell:hover {
+    background-color: var(--ezClockerYellow);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Add Shift Container CSS Classes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.addShiftContainer {
+    margin: 4px;
+}
+
+.totalScheduleHoursContainer {
+    padding: 8px;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-weight: normal;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.totalScheduleHours {
+    margin-top: 2px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.requestTimeOffTableRow {
+    height: 35px;
+}
+
+.allDayRequestTimeOff {
+    margin: 19px auto;
+}

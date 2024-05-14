@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="ezHtml">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/ezlibrary/EzDependencyManager.js"></script>
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" onerror="failedLinkReloader('/jquery-ui/jquery-ui.min.css', true)">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.structure.min.css', true)">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" onerror="failedLinkReloader('/jquery-ui/jquery-ui.theme.min.css', true)">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery.ui.timepicker-0.3.3.min.css', true)">
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css"
+        onerror="failedLinkReloader('/node_modules/animate.css/animate.min.cs', true)">
+    <script src="/node_modules/jquery/dist/jquery.min.js" onerror="failedScriptReloader('/node_modules/jquery/dist/jquery.min.js', true)"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery-migrate/dist/jquery-migrate.min.js', true)"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"
+        onerror="failedScriptReloader('/node_modules/moment/min/moment-with-locales.min.js', true)"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"
+        onerror="failedScriptReloader('/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js', true)"></script>
+    <script src="/jquery-ui/jquery-ui.min.js" onerror="failedScriptReloader('/jquery-ui/jquery-ui.min.js', true)"></script>
+    <script src="/jquery-ui/jquery.ui.timepicker-0.3.3.min.js" onerror="failedScriptReloader('/jquery-ui/jquery.ui.timepicker-0.3.3.min.js', true)"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-custom-jquery-widgets.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-toggles.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-context.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-google-service.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-integrations-export.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-invite-employee-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-time-add-edit-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-export-report-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-job-code-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-update-email-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-time-entry-audit-dialog.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-employee-select-combo-box.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-employer-dashboard.bundle.js?v=r72-3"></script>
+    <!-- <script src="/ezlibrary/EzTeamChat/ez-team-chat-ui.bundle.js?v=r72-3"></script> -->
+    <title>ezClocker: Employer Dashboard</title>
+</head>
+
+<body class="ezPageBody">
+    <div id="EzPageViewHeader"></div>
+    <div id="EzPageViewSelectedEmployeeContent">
+        <div id="EzPageViewSelectedEmployeeHeader" class="ezPad10"></div>
+        <div id="EzEmployerDashboardPage" class="ezPageView"></div>
+        <div id="EzNoEmployeeSelected" class="ezPad10 ezPageView" style="display: none">
+            <h1 id="EzNoEmployeeSelectedH1">
+                Please select an employee to view.
+            </h1>
+        </div>
+    </div>
+    <div id="_EzActiveTimeZone" data-feature-id="ezfActiveTimeZoneDisplay" class="ez-debug-timezone-container ezFeatureContainer" style="display: none">
+        <!-- Active Time Zone Display -->
+    </div>
+    <div id="_HideDialogsDiv" class="ezHiddenDefault">
+        <!-- Quick Books Dialog -->
+        <div id="_EZW_QuickBooksDialog" title="Quick Books">
+            <input type="hidden" id="_EZW_QuickBooksDialog_Timezone" /> <input type="hidden" id="_EZW_QuickBooksDialog_EmployerId" />
+            <div id="_EZW_EmployerQuickbooks_Integration" class="ezSilverBox">
+                <h3>Quick Books Integration</h3>
+            </div>
+            <div class="ezSilverBox marginTop10"></div>
+        </div>
+        <!-- Select Employer Dialog -->
+        <div id="selectEmployerDialog" title="Select Company">
+            <form id="selectCompany">
+                <label> You are managing multiple companies. Select the company you wish to view. </label> <select id="employerCombo">
+                    <option value="-1">Select Company</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

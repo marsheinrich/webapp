@@ -1,0 +1,1659 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Grid Layout UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    /* ezClocker Font Famlies */
+    --ezLayoutGrid-row-label-font-size: 12pt;
+}
+
+
+/* -------------------------------------------------------------------
+| Page Grid Layout Styles
+------------------------------------------------------------------- */
+.ezHtml {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.ezPageHeader {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+}
+
+.ezFixedPageHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.ezPageBody {
+    display: grid;
+    align-content: start;
+    margin: var(--ezBodyMarginSize);
+    padding: var(--ezBodyPaddingSize);
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezPageBody-no-scroll {
+    display: grid;
+    align-content: start;
+    margin: var(--ezBodyMarginSize);
+    padding: var(--ezBodyPaddingSize);
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+    overflow: hidden;
+}
+
+.ezPageView {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: start;
+    background-color: transparent;
+}
+
+.ezPageView-no-scroll {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    align-content: start;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.ezPageViewHeader {
+    display: grid;
+    align-content: start;
+    grid-template-columns: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.ezPageSection {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    align-content: start;
+    grid-template-columns: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.ezContentView {
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    background-color: transparent;
+    overflow: auto;
+}
+
+.ezContentSection {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ezContentSection-vertical-scroll {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.ezContent-grid-col-section-50x50 {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-row-gap: 0;
+    grid-column-gap: 4px;
+    grid-template-columns: 50% 50%;
+    background-color: transparent;
+}
+
+.ezContentSection-inset-border-2-radius-bottom-pad4-vscroll {
+    margin: 0;
+    padding: 4px;
+    background-color: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+.ezSubContentView {
+    display: grid;
+    padding: 8px;
+    align-content: stretch;
+    justify-content: stretch;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezSubContentView-no-scroll {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.ezSubContentView_vertical {
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.ezSubContentView-no-border {
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-style: none;
+}
+
+.ezSubContentView-no-border-no-scroll {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-style: none;
+    overflow: hidden;
+}
+
+.ezSubContentView-transparent-no-border-no-scroll {
+    background-color: transparent;
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-style: none;
+    overflow: hidden;
+}
+
+/*
+    @deprecated
+    Migrate to ezHtml, ezPageBody, ezPageView functionality
+*/
+.ezPage {
+    display: grid;
+    align-content: stretch;
+    justify-content: stretch;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*
+    @deprecated
+    Migrate to ezHtml, ezPageBody, ezPageView, ezPageContent functionality
+*/
+.ezContent {
+    display: grid;
+    align-content: stretch;
+    justify-content: stretch;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    overflow: scroll;
+}
+
+/* -------------------------------------------------------------------
+| Specific Grid Styles
+------------------------------------------------------------------- */
+.ezTimeEntryGridContainer {
+    display: grid;
+    align-content: stretch;
+    justify-content: stretch;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: var(--ezAlphaBackgroundWhite2);
+}
+
+
+/* -------------------------------------------------------------------
+| Generic Top Level Grid Styles
+------------------------------------------------------------------- */
+.ezFullScreen {
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+.ezGridX {
+    display: grid;
+    color: var(--ezFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+}
+
+.ezGridHeader {
+    display: grid;
+    padding: 6px;
+    color: var(--ezTopicFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezTopicFontSize);
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+}
+
+.ezGridHeader-navy {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    background-color: var(--ezClockerNavy);
+    color: var(--ezTopicFontColorWhite);
+    font-size: var(--ezTopicFontSize);
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    border-color: var(--ezBorderNavy);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezGridContent {
+    display: grid;
+    padding: 4px;
+    color: var(--ezContentFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezGridFullPage {
+    display: grid;
+    height: 100%;
+}
+
+.ezRowItem-container_2Col {
+    display: grid;
+    grid-template-columns: max-content auto;
+    justify-content: stretch;
+    align-content: center;
+    grid-column-gap: 4px;
+    grid-row-gap: 0;
+    padding: 8px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.ezRowItem-container-disabled_2Col {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerStone);
+    border-color: var(--ezClockerStone);
+}
+
+.ezRowItem-container-archived_2Col {
+    display: grid;
+    grid-template-rows: none;
+    justify-content: stretch;
+    align-content: center;
+    grid-column-gap: 4px;
+    grid-row-gap: 0;
+    padding: 8px;
+    background-color: var(--ezClockerGray);
+    color: var(--ezClockerWhite);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    border-color: var(--ezBorderGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezRowItem-text_col-1of2 {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-content: start;
+    align-content: center;
+}
+
+.ezRowItem-button-container_col-2of2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 2/2;
+    grid-row: 1;
+    justify-content: end;
+    align-content: center;
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Row and Column Gap Styles
+------------------------------------------------------------------- */
+.ezGridNoGap {
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+}
+
+.ezGridGap {
+    display: grid;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+}
+
+.ezGridGap_2 {
+    display: grid;
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+}
+
+.ezGridGap_4 {
+    display: grid;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+}
+
+.ezGridGap_8 {
+    display: grid;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+}
+
+.ezGridGap_20 {
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.ezGrid-col-gap-4 {
+    display: grid;
+    grid-column-gap: 4px;
+}
+
+.ezGrid-col-gap_6 {
+    display: grid;
+    grid-column-gap: 6px;
+}
+
+.ezGrid-col-gap_8 {
+    display: grid;
+    grid-column-gap: 8px;
+}
+
+.ezGrid-row-gap_8 {
+    display: grid;
+    grid-row-gap: 8px;
+}
+
+.ezGrid-row-gap_10 {
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.ezGrid-row-gap-0 {
+    display: grid;
+    grid-row-gap: 0;
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Text Styles
+------------------------------------------------------------------- */
+.ezGridContentText {
+    color: var(--ezContentFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezGridRowLabelText {
+    color: var(--ezFontColor);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    font-size: var(--ezLayoutGrid-row-label-font-size);
+}
+
+.ezGridNormalText {
+    color: var(--ezFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+}
+
+.ezGridTopicText {
+    color: var(--ezClockerWhite);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezTopicFontSize);
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Background Styles
+------------------------------------------------------------------- */
+.ezGridWhite {
+    background-color: var(--ezClockerWhite);
+    color: var(--ezContentFontColor);
+    border-radius: 3px;
+}
+
+.ezGridBlack {
+    background-color: var(--ezClockerBlack);
+    color: var(--ezClockerWhite);
+    border-radius: 3px;
+}
+
+.ezGridNavy {
+    background-color: var(--ezNavy);
+    color: var(--ezNavyContainerTextColor);
+    border-radius: 3px;
+}
+
+.ezGridGray {
+    background-color: var(--ezGray);
+    color: var(--ezGrayContainerText);
+    border-radius: 3px;
+}
+
+.ezGridStone {
+    background-color: var(--ezClockerStone);
+    color: var(--ezContentFontColor);
+    border-radius: 3px;
+}
+
+.ezGridYellow {
+    background-color: var(--ezYellow);
+    color: var(--ezYelloContainerText);
+    border-radius: 3px;
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Horizontal Alignment Styles (X-Axis)
+------------------------------------------------------------------- */
+.ezGrid-align-left {
+    display: grid;
+    /* X-Axis */
+    justify-content: start;
+}
+
+.ezGrid-align-center {
+    display: grid;
+    /* X-Axis */
+    justify-content: center;
+}
+
+.ezGrid-align-right {
+    display: grid;
+    /* X-Axis */
+    justify-content: end;
+}
+
+.ezGrid-align-full {
+    display: grid;
+    /* X-Axis */
+    justify-content: stretch;
+}
+
+.ezGrid-align-space-between {
+    display: grid;
+    /* X-Axis */
+    justify-content: space-between;
+}
+
+.ezGrid-align-space-around {
+    display: grid;
+    /* X-Axis */
+    justify-content: space-around;
+}
+
+.ezGrid-align-space-evenly {
+    display: grid;
+    /* X-Axis */
+    justify-content: space-evenly;
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Vertical Alignment Styles (Y-Axis)
+------------------------------------------------------------------- */
+.ezGrid-vertical-align-top {
+    display: grid;
+    /* Y-Axis */
+    align-content: start;
+}
+
+.ezGrid-vertical-align-middle {
+    display: grid;
+    /* Y-Axis */
+    align-content: center;
+}
+
+.ezGrid-vertical-align-bottom {
+    display: grid;
+    /* Y-Axis */
+    align-content: end;
+}
+
+.ezGrid-vertical-align-full {
+    display: grid;
+    /* Y-Axis */
+    align-content: stretch;
+}
+
+.ezGrid-vertical-space-evenly {
+    display: grid;
+    /* Y-Axis */
+    align-content: space-evenly;
+}
+
+.ezGrid-vertical-space-between {
+    display: grid;
+    /* Y-Axis */
+    align-content: space-between;
+}
+
+
+/* -------------------------------------------------------------------
+| Grid Vertical and Horizontal Alignment Styles
+------------------------------------------------------------------- */
+.ezGrid-fullsize {
+    display: grid;
+    /* X-Axis */
+    align-content: stretch;
+    /* Y-Axis */
+    justify-content: stretch;
+}
+
+.ezGrid-align-top-left {
+    display: grid;
+    /* X-Axis */
+    align-content: start;
+    /* Y-Axis */
+    justify-content: start;
+}
+
+.ezGrid-align-fullsize {
+    display: grid;
+    /* X-Axis */
+    align-content: stretch;
+    /* Y-Axis */
+    justify-content: stretch;
+}
+
+.ezGrid-align-middle-left {
+    display: grid;
+    /* X-Axis */
+    align-content: center;
+    /* Y-Axis */
+    justify-content: start;
+}
+
+.ezGrid-align-middle-right {
+    display: grid;
+    /* X-Axis */
+    align-content: center;
+    /* Y-Axis */
+    justify-content: end;
+}
+
+.ezGrid-align-middle-center {
+    display: grid;
+    /* X-Axis */
+    align-content: center;
+    /* Y-Axis */
+    justify-content: center;
+}
+
+.ezGrid-align-top-space-evenly {
+    display: grid;
+    /* X-Axis */
+    align-content: start;
+    /* Y-Axis */
+    justify-content: space-between;
+}
+
+/* -------------------------------------------------------------------
+| Columns Classes for 2 Column Grids
+------------------------------------------------------------------- */
+.ezCol-1of2 {
+    display: grid;
+    grid-column: 1/2;
+}
+
+.ezCol-2of2 {
+    display: grid;
+    grid-column: 2/2;
+}
+
+/* -------------------------------------------------------------------
+| Columns Classes for 3 Column Grids
+------------------------------------------------------------------- */
+.ezCol-1of3 {
+    display: grid;
+    grid-column: 1/2;
+}
+
+.ezCol-2of3 {
+    display: grid;
+    grid-column: 2/2;
+}
+
+.ezCol-3of3 {
+    display: grid;
+    grid-column: 3/3;
+}
+
+/* -------------------------------------------------------------------
+| Columns Classes for 4 Column Grids
+------------------------------------------------------------------- */
+.ezCol-1of4 {
+    display: grid;
+    grid-column: 1/4;
+}
+
+.ezCol-2of4 {
+    display: grid;
+    grid-column: 2/4;
+}
+
+.ezCol-3of4 {
+    display: grid;
+    grid-column: 3/4;
+}
+
+.ezCol-4of4 {
+    display: grid;
+    grid-column: 3/4;
+}
+
+/* -------------------------------------------------------------------
+| Generic Row Grid Styles
+------------------------------------------------------------------- */
+.ezAutoRow {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.ezAutoRow_Min {
+    display: grid;
+    grid-template-rows: min-content;
+}
+
+.ezAutoRow_100 {
+    display: grid;
+    grid-template-rows: 100%;
+}
+
+/* -------------------------------------------------------------------
+| Two Row Grid Styles
+------------------------------------------------------------------- */
+.ezAutoRow_Min_2 {
+    display: grid;
+    grid-template-rows: min-content min-content;
+}
+
+.ezAutoRow_Min_Auto {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+.ezAutoRow_MinxMax,
+.ezAutoRow_Min_Max {
+    display: grid;
+    grid-template-rows: min-content max-content;
+}
+
+.ezAutoRow_600px_600px {
+    display: grid;
+    grid-template-columns: 600px 600px;
+}
+
+.ezAutoRow_Min_Min {
+    display: grid;
+    grid-template-rows: min-content min-content;
+}
+
+.ezAutoRow_A_Max {
+    display: grid;
+    grid-template-rows: auto max-content;
+}
+
+.ezAutoRow_A_min {
+    display: grid;
+    grid-template-rows: auto min-content;
+}
+
+.ezAutoRow_AxA,
+.ezAutoRow_A_A {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.ezAutoRow_50_A {
+    display: grid;
+    grid-template-rows: 50% auto;
+}
+
+.ezAutoRow_A_50 {
+    display: grid;
+    grid-template-rows: auto 50%;
+}
+
+.ezAutoRow_50x50,
+.ezAutoRow_50_50 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+/* -------------------------------------------------------------------
+| Three Row Grid Styles
+------------------------------------------------------------------- */
+.ezAutoRow_Min_3 {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+}
+
+.ezAutoRow_A_A_A {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.ezAutoRow_33_A_33 {
+    display: grid;
+    grid-template-rows: 33% auto 33%;
+}
+
+.ezAutoRow_33_33_33 {
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.ezAutoRow_33_33_A {
+    display: grid;
+    grid-template-rows: 33% 33% auto;
+}
+
+.ezAutoRow_A_33_33 {
+    display: grid;
+    grid-template-rows: auto 33% 33%;
+}
+
+.ezAutoRow_25_A_25 {
+    display: grid;
+    grid-template-rows: 25% auto 25%;
+}
+
+.ezAutoRow_25_50_25 {
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+}
+
+.ezAutoRow_25_25_A {
+    display: grid;
+    grid-template-rows: 25% 25% auto;
+}
+
+.ezAutoRow_A_25_25 {
+    display: grid;
+    grid-template-rows: auto 25% 25%;
+}
+
+.ezAutoRow_1fr_2fr_1fr {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.ezAutoRow_Min_Max_A {
+    display: grid;
+    grid-template-rows: min-content, max-content, auto;
+}
+
+/* -------------------------------------------------------------------
+| Four Row Grid Styles
+------------------------------------------------------------------- */
+.ezAutoRow_AxAxAxA {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+/* -------------------------------------------------------------------
+| One Column Grid Styles
+------------------------------------------------------------------- */
+.ezAutoCol_A {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.ezAutoCol_100 {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+
+/* -------------------------------------------------------------------
+| Two (TWO! HA HA HA!) Column Grid Styles
+------------------------------------------------------------------- */
+.ezAutoCol_83xA {
+    grid-template-columns: 83.33333333% auto;
+}
+
+.ezAutoCol_MinxA {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+.ezAutoCol_AxMin {
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.ezAutoCol_AxMax {
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+
+.ezAutoCol_MinxMax {
+    display: grid;
+    grid-template-columns: min-content max-content;
+}
+
+.ezAutoCol_Max_Min {
+    display: grid;
+    grid-template-columns: max-content min-content;
+}
+
+.ezAutoCol_Max_A {
+    display: grid;
+    grid-template-columns: max-content min-content;
+}
+
+.ezAutoCol_Max_Max {
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+.ezAutoCol_AxA {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ezAutoCol_50xA {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.ezAutoCol_Ax50 {
+    display: grid;
+    grid-template-columns: auto 50%;
+}
+
+.ezAutoCol_50x50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.ezAutoCol_200PXxA {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.ezAutoCol_33xA {
+    display: grid;
+    grid-template-columns: 33% auto;
+}
+
+.ezAutoCol_Ax33 {
+    display: grid;
+    grid-template-columns: auto 33%;
+}
+
+.ezAutoCol_25xA {
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
+.ezAutoCol_Ax25 {
+    display: grid;
+    grid-template-columns: auto 25%;
+}
+
+.ezAutoCol_75xA {
+    display: grid;
+    grid-template-columns: 75% auto;
+}
+
+
+/* -------------------------------------------------------------------
+| Three (THREE! HA HA HA!) Column Grid Styles
+------------------------------------------------------------------- */
+.ezAutoCol_28px_28px_28px {
+    display: grid;
+    grid-template-columns: 28px 28px 28px;
+}
+
+.ezAutoCol_MinxMinxMin {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+}
+
+.ezAutoCol_AxAxMin {
+    display: grid;
+    grid-template-columns: auto auto min-content;
+}
+
+.ezAutoCol_AxAxA {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.ezAutoCol_25x25xA {
+    display: grid;
+    grid-template-columns: 25% 25% auto;
+}
+
+.ezAutoCol_25xAx25 {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+}
+
+.ezAutoCol_Ax25x25 {
+    display: grid;
+    grid-template-columns: auto 25% 25%;
+}
+
+.ezAutoCol_33x33xA {
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+}
+
+.ezAutoCol_33xAx33 {
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+}
+
+.ezAutoCol_Ax33x33 {
+    display: grid;
+    grid-template-columns: auto 33% 33%;
+}
+
+.ezAutoCol_33x33x33 {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.ezAutoCol_50x25xA {
+    display: grid;
+    grid-template-columns: 25% 25% auto;
+}
+
+.ezAutoCol_Ax50x25 {
+    display: grid;
+    grid-template-columns: auto 50% 25%;
+}
+
+.ezAutoCol_50xAx25 {
+    display: grid;
+    grid-template-columns: 50% auto 25%;
+}
+
+.ezAutoCol_50xAxA {
+    display: grid;
+    grid-template-columns: 50% auto auto;
+}
+
+.ezAutoCol_Ax50xA {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+}
+
+.ezAutoCol_AxAx50 {
+    display: grid;
+    grid-template-columns: auto auto 50%;
+}
+
+.ezAutoCol_AxAx30px {
+    display: grid;
+    grid-template-columns: auto auto 33px;
+}
+
+/* -------------------------------------------------------------------
+| Four (FOUR! HA HA HA!) Column Grid Styles
+------------------------------------------------------------------- */
+.ezAutoCol_AxAxAxA {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.ezAutoCol_25x25xAxA {
+    display: grid;
+    grid-template-columns: 25% 25% auto auto;
+}
+
+.ezAutoCol_25x25x25xA {
+    display: grid;
+    grid-template-columns: 25% 25% 25% auto;
+}
+
+.ezAutoCol_25xAxAx25 {
+    display: grid;
+    grid-template-columns: 25% auto auto 25%;
+}
+
+.ezAutoCol_AxAxAx25 {
+    display: grid;
+    grid-template-columns: auto auto auto 25%;
+}
+
+.ezAutoCol_AxAxAxMax {
+    display: grid;
+    grid-template-columns: auto auto auto max-content;
+}
+
+/* -------------------------------------------------------------------
+| Five (FIVE! MUHAHAHAHA!) Column Grid Styles
+------------------------------------------------------------------- */
+.ezAutoCol_AxAxAxAxA {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+/* Column Spans */
+.ezColSpan_1a2 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.ezColSpan_1a2a3 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.ezColSpan_2a3 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/* -------------------------------------------------------------------
+| Sub-Grid Styles
+------------------------------------------------------------------- */
+.ezSubGridColRow {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+.ezSubgridRow {
+    display: grid;
+    grid-template-rows: subgrid;
+}
+
+.ezSubGridCol {
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+/* Grid Column Gaps */
+.ezNoGridColumnGap {
+    display: grid;
+    grid-column-gap: 0;
+    column-gap: 0;
+}
+
+/* -------------------------------------------------------------------
+| Grid Column Gap Styles
+------------------------------------------------------------------- */
+.ezGridColumnGap {
+    display: grid;
+    grid-column-gap: 1px;
+    column-gap: 1px;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1024px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| DEPRECATED STYLES
+------------------------------------------------------------------- */
+
+/* DEPRECATED */
+.ezPadTop2 {
+    padding-top: 2px;
+}
+
+/* DEPRECATED */
+.ezPadBottom2 {
+    padding-bottom: 2px;
+}
+
+/* DEPRECATED */
+.ezPadTopBottom2 {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* DEPRECATED */
+.ezPadLeft2 {
+    padding-left: 2px;
+}
+
+/* DEPRECATED */
+.ezPadRight2 {
+    padding-right: 2px;
+}
+
+/* DEPRECATED */
+.ezPadLeftRight2 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* DEPRECATED */
+.ezPaddedBox4 {
+    padding: 4px;
+}
+
+/* DEPRECATED */
+.ezPadTop4 {
+    padding-top: 4px;
+}
+
+/* DEPRECATED */
+.ezPadBottom4 {
+    padding-bottom: 4px;
+}
+
+/* DEPRECATED */
+.ezPadTopBottom4 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* DEPRECATED */
+.ezPadLeft4 {
+    padding-left: 4px;
+}
+
+/* DEPRECATED */
+.ezPadRight4 {
+    padding-right: 4px;
+}
+
+/* DEPRECATED */
+.ezPadLeftRight4 {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* DEPRECATED */
+.ezPadTop6 {
+    padding-top: 6px;
+}
+
+/* DEPRECATED */
+.ezPadBottom6 {
+    padding-bottom: 6px;
+}
+
+/* DEPRECATED */
+.ezPadTopBottom6 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* DEPRECATED */
+.ezPadLeft6 {
+    padding-left: 6px;
+}
+
+/* DEPRECATED */
+.ezPadRight6 {
+    padding-right: 6px;
+}
+
+/* DEPRECATED */
+.ezPadLeftRight6 {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* DEPRECATED */
+.ezPadTop8 {
+    padding-top: 8px;
+}
+
+/* DEPRECATED */
+.ezPadBottom8 {
+    padding-bottom: 8px;
+}
+
+/* DEPRECATED */
+.ezPadTopBottom8 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* DEPRECATED */
+.ezPadLeft8 {
+    padding-left: 8px;
+}
+
+/* DEPRECATED */
+.ezPadRight8 {
+    padding-right: 8px;
+}
+
+/* DEPRECATED */
+.ezPadLeftRight8 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* DEPRECATED */
+.ezPadTop10 {
+    padding-top: 10px;
+}
+
+/* DEPRECATED */
+.ezPadBottom10 {
+    padding-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezPadTopBottom10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezPadLeft10 {
+    padding-left: 10px;
+}
+
+/* DEPRECATED */
+.ezPadRight10 {
+    padding-right: 10px;
+}
+
+/* DEPRECATED */
+.ezPadLeftRight10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* DEPRECATED */
+.ezMargin2 {
+    margin: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginTop2 {
+    margin-top: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom2 {
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginTopBottom2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginLeft2 {
+    margin-left: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginRight2 {
+    margin-right: 2px;
+}
+
+/* DEPRECATED */
+.ezMarginLeftRight2 {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* DEPRECATED */
+.ezMargin4 {
+    margin: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginTop4 {
+    margin-top: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom4 {
+    margin-bottom: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginTopBottom4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginLeft4 {
+    margin-left: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginRight4 {
+    margin-right: 4px;
+}
+
+/* DEPRECATED */
+.ezMarginLeftRight4 {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* DEPRECATED */
+.ezMargin8 {
+    margin: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginTop8 {
+    margin-top: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom8 {
+    margin-bottom: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginTopBottom8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginLeft8 {
+    margin-left: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginRight8 {
+    margin-right: 8px;
+}
+
+/* DEPRECATED */
+.ezMarginLeftRight8 {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* DEPRECATED */
+.ezMargin10 {
+    margin: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginTop10 {
+    margin-top: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginBottom10 {
+    margin-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginTopBottom10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginLeft10 {
+    margin-left: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginRight10 {
+    margin-right: 10px;
+}
+
+/* DEPRECATED */
+.ezMarginLeftRight10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* -------------------------------------------------------------------
+| Legacy Auto-Column (experimental) Styles
+------------------------------------------------------------------- */
+/* DEPRECATED */
+.ezAutoCol1 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 8.33333333%;
+}
+
+/* DEPRECATED */
+.ezAutoCol2 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 16.66666667%;
+}
+
+/* DEPRECATED */
+.ezAutoCol3 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 25%;
+}
+
+/* DEPRECATED */
+.ezAutoCol4 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 33.33333333%;
+}
+
+/* DEPRECATED */
+.ezAutoCol5 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 41.66666667%;
+}
+
+/* DEPRECATED */
+.ezAutoCol6 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 50%;
+}
+
+/* DEPRECATED */
+.ezAutoCol7 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 58.33333333%;
+}
+
+/* DEPRECATED */
+.ezAutoCol8 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 66.66666667%;
+}
+
+/* DEPRECATED */
+.ezAutoCol9 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 75%;
+}
+
+/* DEPRECATED */
+.ezAutoCol10 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 83.33333333%;
+}
+
+/* DEPRECATED */
+.ezAutoCol11 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 91.66666667%;
+}
+
+/* DEPRECATED */
+.ezColumn12 {
+    display: grid;
+    min-height: 1px;
+    grid-template-columns: 100%;
+}
+
+/* DEPRECATED */
+.ezCenterBox {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* DEPRECATED */
+.ezBox {
+    display: inline-block;
+}
+
+/* DEPRECATED */
+.ezFooter {
+    padding: 4px;
+    height: 24px;
+    bottom: 0;
+    background-color: var(--ezClockerSilver);
+}
+
+/* DEPRECATED */
+.ezRightAlign {
+    text-align: right;
+}
+
+/* DEPRECATED */
+td.ezclockerHeader2015Right {
+    vertical-align: middle;
+    text-align: right;
+}
+
+/* DEPRECATED */
+.ezInfoBox {
+    padding: 4px;
+    background-color: var(--ezClockerInfoYellow);
+    color: var(--ezClockerBlack);
+    border-style: solid;
+    border-color: var(--ezDarkYellow);
+    border-width: 1px;
+}
+
+/* DEPRECATED */
+.ezCell {
+    padding: 4px;
+    background-color: transparent;
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-style: solid;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+}

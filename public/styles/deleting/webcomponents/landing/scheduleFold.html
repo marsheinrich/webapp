@@ -1,0 +1,46 @@
+<style>
+.onlineScheduleContainer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #6d6e70;
+    background-image: url("pi/landing/ezc_web_image_4_OnlineScheduling.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 350px;
+    min-height: 350px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.onlineScheduleFlexConatiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px;
+}
+
+.onlineScheduleFlexConatiner>img {
+    padding: 20px;
+}
+
+@media only screen and (max-width: 550px) {
+    .onlineScheduleContainer {
+        background-image: none;
+    }
+    .onlineScheduleFlexConatiner {
+        justify-content: center;
+    }
+    .onlineScheduleFlexConatiner>img {
+        width: 90%;
+    }
+}
+</style>
+
+<div class="onlineScheduleFlexConatiner">
+    <img class="onlineScheduleImg" src="pi/landing/onlineSchedule.svg"
+        name="ezClocker.com: View and edit employee schedules anywhere." /> <img class="onlineScheduleQuoteImg"
+        src="pi/landing/onlineScheduleQuote.svg"
+        name="ezClocker Customer: '...I needed a simple and straightforward way..and I found it in ezClocker.'"
+        alt="ezClocker Customer: '...I needed a simple and straightforward way..and I found it in ezClocker.'" />
+</div>

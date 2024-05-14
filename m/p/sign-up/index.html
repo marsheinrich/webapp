@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" >
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" >
+    <link href="/favicon-16x16.png"rel="icon" type="image/png" sizes="16x16" >
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/m/jqm/1.4.5/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="/m/jqm/1.4.5/jquery.mobile.custom/jquery.mobile.custom.structure.css" rel="stylesheet" />
+    <link href="/m/jqm/1.4.5/themes/ezclocker.css" rel="stylesheet" />
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/m/p/css/ezm-common.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/m/p/password-reset/ezm-password-reset.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js?v=r72-3"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/m/jqm/1.4.5/jquery.mobile.custom/jquery.mobile.custom.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/public/javascript/services/ez-utmtagmap-service.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ezclocker-dateUtils.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ez-format.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ez-services.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ezclocker-google-analytics.js?v=r72-3"></script>
+    <script src="/public/webcomponents/marketing/google-remarketing.js?v=r72-3"></script>
+    <script src="/public/javascript/services/ezclocker-services-helper.js?v=r72-3"></script>
+    <script src="/public/javascript/services/ezclocker-account-services.js?v=r72-3"></script>
+    <script src="/public/javascript/services/ezclocker-options.js?v=r72-3"></script>
+    <script src="/public/javascript/services/ezclocker-employee.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/m/p/js/ezm-navigation.js?v=r72-3"></script>
+    <script src="/m/p/js/ezm-mobile.js?v=r72-3"></script>
+    <script src="/m/p/js/ezm-signin-controller.js?v=r72-3"></script>
+    <script src="ezm-employer-signup-controller.js?v=r72-3"></script>
+    <title>ezClocker: Sign Up</title>
+</head>
+
+<body>
+    <div id="EzmSignUpPage" data-theme="a" data-role="page">
+        <div data-role="main" id="_SignUpEmployer" class="ui-content">
+            <div id="EzmCustomLargeMobileHeaderContainer" class="ezAutoCol_A">
+                <div>
+                    <img id="EzmCustomLargeMobileHeaderLogo" class="ezm-custom-header-logo"
+                        src="/images/ezclocker-logo-left-align.svg" alt="ezClocker" />
+                </div>
+                <div id="EzmCustomLargeMobileSubHeader" class="ezm-custom-header-sub-header">
+                    Sign Up
+                </div>
+            </div>
+            <hr />
+
+            <div class="ui-content" id="EzSignUpPage">
+                <div class="ezLightGrayBox">
+                    <div class="ezPageContent ezGridNoGap ezAutoCol_A">
+                        <div id="_ErrorMessage" class="ezErrorBox" style="display:none"></div>
+
+                        <div class="ezInputBox">
+                            <input type="hidden" name="accountType" value="employer" id="_AccountType" />
+                            <input type="hidden" name="source" value="mobile.website" id="_Source" />
+                        </div>
+
+                        <div class="ezInputBox">
+                            <label for="_EmployerName">
+                                Enter your company name
+                            </label>
+                            <input class="ezInput" id="_EmployerName" type="text" name="employerName" />
+                        </div>
+
+                        <div class="ezInputBox">
+                            <label for="_EmailAddress">
+                                Enter your email address
+                            </label>
+                            <input class="ezInput" id="_EmailAddress" type="text" name="emailAddress" value=""
+                                autocomplete="new-password" />
+                        </div>
+
+                        <div class="ezInputBox">
+                            <label for="_Password">
+                                Enter a password
+                            </label>
+                            <input class="ezInput" id="_Password" type="password" name="password" value=""
+                                autocomplete="new-password" />
+                        </div>
+
+                        <a data-role="button" style="background-color:#8df13c;border-color:#439400;margin-top:15px;"
+                            href="#" id="_SignUp">
+                            Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a id="_SignUpEmployerTermsOfServiceButton" href="/m/p/tos" target="EzClockerTOS_Page">Terms
+                                of Service</a>
+                        </li>
+                        <li>
+                            <a id="_SignUpEmployerPrivacyPolicyButton" href="/public/privacy.html"
+                                target="EzClockerPrivacy_Page">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-theme="a" data-role="page" id="_DownloadAndriod">
+        <div data-theme="a" data-role="content" class="noborder">
+            <div style="text-align:center">
+                <img id="_DownloadAndriodLogImg"
+                    style="max-height:32px;padding-top:2px;padding-left:2px;padding-right:2px;margin:0;"
+                    alt="download for andriod" />
+                <h2>ezClocker</h2>
+            </div>
+            <div style="text-align: center">
+                <label style="font-weight:bold;color:#0f4777">Success!</label>
+            </div>
+            <div
+                style="color:#ffffff;margin-top:10px;background-color:#6d6e70;padding:8px;font-weight: bold;font-size:large;">
+                Welcome to ezClocker!
+            </div>
+            <div class="ui-body" style="border-style: solid;border-width:1px;border-color:#e0e0e0">
+                <p>Tap the store icon below to download and Install the ezClocker Business App.</p>
+                <div style="text-align: center">
+                    <a id="EzDownloadAndriodButton" rel="external">
+                        <img alt="Get it on Google Play"
+                            src="https://play.google.com/intl/en_us/badges/images/badge_new.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-theme="a" data-role="page" id="_DownloadiPhone">
+        <div data-theme="a" data-role="content" class="noborder">
+            <div style="text-align:center">
+                <img id="_DownloadiPhoneLogoImg"
+                    style="max-height:32px;padding-top:2px;padding-left:2px;padding-right:2px;margin:0;"
+                    alt="download for iOS" />
+                <h2>ezClocker</h2>
+            </div>
+            <div style=" text-align: center">
+                <label style="font-weight:bold;color:#0f4777">Success!</label>
+            </div>
+            <div
+                style="color:#ffffff;margin-top:10px;background-color:#6d6e70;padding:8px;font-weight: bold;font-size:large;">
+                Welcome to ezClocker!</div>
+            <div class="ui-body" style="border-style: solid;border-width:1px;border-color:#e0e0e0">
+                <p>Tap the store icon below to download and Install the ezClocker Business App.</p>
+                <div style="text-align: center">
+                    <a id="EzDownloadiPhoneButton" rel="external">
+                        <img alt="Download from Apple App Store" style="width:75%" id="appleAppStoreBadge"
+                            src="/public/images/marketing/apple-appstore.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ezHiddenDefault" id="EzHiddenDialogsContainer"></div>
+</body>
+
+</html>

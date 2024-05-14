@@ -1,0 +1,71 @@
+.ezRequestTimeOffDialogMainDiv {
+    background-color: white;
+    border-style: initial;
+}
+
+.ezRequestTimeOffDialogMainTable {
+    display: flex;
+}
+
+.ezRequestTimeOffDialog_EmployeeIds_div {
+    margin-bottom: 10px;
+}
+
+.ezRequestTimeOffDialog_EmployeeIds {
+    display: flex;
+    width: 350px;
+}
+
+.ezRequestTimeOffDialog_RequestType {
+    width: 250px;
+    margin-right: 50px;
+}
+
+.ezRequestTimeOffDialog_HoursPerDay {
+    height: 35px;
+    width: 100px;
+}
+
+.ezRequestTimeOffDialog_StartDate,
+.ezRequestTimeOffDialog_StartTime,
+.ezRequestTimeOffDialog_EndDate,
+.ezRequestTimeOffDialog_EndTime {
+    width: auto;
+}
+
+.ezRequestTimeOffDialog_Notes {
+    width: 500px;
+    height: 60px;
+}
+
+.ezRequestTimeOffDialog_TotalTimeOffLabel {
+    height: 20px;
+    width: 250px;
+    background-color: #0f4777;
+    text-align: center;
+    padding: 18px 0;
+    display: block;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ezRequestTimeOffDialog_TotalTimeOff {
+    height: 40px;
+    border: black 1px solid;
+    text-align: center;
+    padding-top: 18px;
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.ezRequestTimeOffDialog_ValidationError_Main_Div {
+    background-color: pink;
+    margin: 0 8px;
+    padding: 10px;
+}
+
+.ezRequestTimeOffDialog_ValidationError {
+    display: flex;
+}

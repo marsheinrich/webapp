@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css" rel="stylesheet" type="text/css">
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-shadows.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-spinner.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/customer_satisfaction/customer.css?v=r72-3" rel="stylesheet" type="text/css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/ezlibrary/ez-modernizr.js"></script>
+    <script src="/ezlibrary/ez-old-browser-check.js"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-metrics.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-customer-satisfaction.bundle.js?v=r72-3"></script>
+    <title>ezClocker: Customer Satisfaction</title>
+</head>
+
+<body class="rateUsCustomerSatisfactionBody">
+    <div class="rateUsCustomerSatisfactionMainDiv">
+        <div class="rateUsCustomerSatisfactionSubDiv">
+            <div id="_RateUsCustomerSatisfactionBox" class="rateUsCustomerSatisfactionBox">
+                <div id="_rateUsCustomerSatisfactionContainer">
+                    <div class="rateUsCustomerSatisfactionSubBanner">Customer Satisfaction is our number one priority.
+                        Please let us know how we can improve your experience.</div>
+                    <div class="ezErrorBox" id="customerSatisfactionRateUsError" style="display:none"></div>
+                    <table class="ezFullWidth" id="rateUsCustomerSatisfactionTable">
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionLabel">Name</td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionInputCell">
+                                <input placeholder="required" class="rateUsCustomerSatisfactionInput" id="ez_userName"
+                                    type="text" name="name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionLabel">Phone</td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionInputCell">
+                                <input class="rateUsCustomerSatisfactionInput" id="ez_userPhone" type="text"
+                                    name="userPhone" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionLabel">Email</td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionInputCell">
+                                <input class="rateUsCustomerSatisfactionInput" id="ez_email" type="text" name="email"
+                                    value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionLabel">Message</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100%" class="rateUsCustomerSatisfactionInputCell">
+                                <textarea style="width: inherit; height: 100px" class="rateUsCustomerSatisfactionInput"
+                                    id="ez_message" type="text" name="userMessage"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;" class="rateUsCustomerSatisfactionInputCell">
+                                <input id="ez_contact_us" type="checkbox" name="contactUsCheckBox" />
+                                <label style="margin-left: 10px;" for="ez_contact_us">
+                                    Yes, you may contact me regarding this feedback.
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rateUsCustomerSatisfactionButtonCell">
+                                <div>
+                                    <button id="EzLeaveFeedbackButton" class="ezActionButton">SEND MESSAGE</button>
+                                    <button id="EzCancelFeedbackProcessButton"
+                                        class="ezMajorButton ezCancelFeedbackButton">SKIP MESSAGE</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

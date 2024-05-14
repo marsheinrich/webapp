@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<style>
+    .signInPopUp_HIDDEN_Dialogs {
+        display: none;
+    }
+
+    .signIn_PopUpContainer {
+        display: none;
+        position: fixed;
+        background-color: rgba(255, 255, 255, .9);
+        padding: 2px;
+        max-width: 450px;
+    }
+
+    .signIn_Header {
+        color: #ffffff;
+        background-color: #063565;
+        padding: 8px;
+    }
+
+    .signIn_inputLabelCell {
+        text-align: left;
+        vertical-align: top;
+        padding-top: 8px;
+    }
+
+    .signIn_inputCell {
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .signIn_Header {
+        font-weight: bold;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    a.signIn_helpLink {
+        color: #0d58a6;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 8pt;
+    }
+
+    a.signIn_helpLink:hover {
+        color: #316dac;
+        text-decoration: underline;
+    }
+
+    a.signIn_helpLink:active {
+        color: #094481;
+        text-decoration: underline;
+    }
+
+    .signIn_InputContainer {
+        padding: 15px;
+    }
+
+    .signIn_ButtonRow {
+        padding-top: 8px;
+    }
+</style>
+
+<button class="headerButton" id="_SoloSignInButton">sign in</button>
+
+<div class="signIn_PopUpContainer grayBorder ezRounded2pxAllCorners allSideShadowDark" id="_SignInPopUpContainer">
+    <div class="signIn_Header">Sign In</div>
+    <div class="ezErrorBox" id="_SignInError" style="display:none">
+        <span id="_EzSignInErrorMessage"></span>
+    </div>
+    <div class="signIn_InputContainer">
+        <table class="ezFullWidth">
+            <tr>
+                <td class="signIn_inputLabelCell">Email Address</td>
+            </tr>
+            <tr>
+                <td class="signIn_inputCell">
+                    <div>
+                        <input class="fullWidthEditor" autocomplete="off" id="j_username" type="text"
+                            name="j_username" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="signIn_inputLabelCell">Password</td>
+            </tr>
+            <tr>
+                <td class="signIn_inputCell">
+                    <div>
+                        <input class="fullWidthEditor" autocomplete="off" id="j_password" type="password"
+                            name="j_password" />
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="signIn_ButtonRow rightMiddleCell"><a href="#" class="signIn_helpLink"
+                        id="_ForgotPasswordLink">Forgot your password?</a></td>
+            </tr>
+            <tr>
+                <td class="signIn_ButtonRow rightMiddleCell">
+                    <button class="miniActionButton" id="_SignInButton">Sign In</button>
+                    <button class="miniNormalButton" id="_CancelSignInButton">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="_SignInPopUpDialogDialogContainer"></div>

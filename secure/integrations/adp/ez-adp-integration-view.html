@@ -1,0 +1,149 @@
+<!-- Template for the integrations employee linker wizard page -->
+
+<head>
+    <link href="/secure/styles/adpIntegrationTable.css?v=r72-3" rel="stylesheet" type="text/css">
+    <style>
+        .ezEnableIntegration {
+            margin-top: 60px;
+            margin-left: 129px;
+        }
+
+        .ezADPInitailView {
+            margin-bottom: 20px;
+        }
+
+        /* Set a fixed scrollable wrapper */
+        .tableWrap {
+            height: 300px;
+            border: 2px solid black;
+            overflow: auto;
+        }
+
+        .errorBlock {
+            color: red;
+        }
+    </style>
+    <script src="/secure/integrations/adp/ez-adp-integration-controller.js?v=r72-3"></script> 
+    <script src="/secure/integrations/adp/ez-adp-integration-enums.js?v=r72-3"></script>
+    <title>ezClocker ADP Integration</title>
+</head>
+
+<body>
+    <div id="_EzADPIntegrationView" title="ADP Integration Setup">
+        <div class="ezTabContainer" id="EzADPIntegrationTab">
+
+            <div id="adpErrorBlock" style="display: none" class="errorBlock">
+                ADP Client Id is required
+            </div>
+            <div id="adpBatchNumberErrorBlock" style="display: none" class="errorBlock">
+                Batch Number is required
+            </div>
+            <div id="adpEIErrorBlock" style="display: none" class="errorBlock">Please Enable Integration</div>
+            <table id="EzADPIntegrationDialog_Toptable" class="ezFullWidth ezADPInitailView">
+                <caption />
+                <tr>
+                    <td class="ezTopAlign">
+                        <p>ADP Workforce Now Company Code</p>
+                        <div>
+                            <label for="EzReportWithDecimalTotals">
+                                <input id="ezADPClientId" type="text" placeholder="ADP Client Id" />
+                            </label>
+                        </div>
+
+                    </td>
+                    <td class="ezTopAlign">
+                        <p>Batch Number</p>
+                        <div>
+                            <label for="EzReportWithDecimalTotals">
+                                <input id="ezADPBatchNumber" type="text" placeholder="Batch Number" />
+                            </label>
+                        </div>
+
+                    </td>
+                    <td class="ezTopAlign">
+                        <div class="ezEnableIntegration">
+                            <label for="ezADPEnableIntegration">
+                                <input id="isNewADP" type="hidden" name="isNewADP" />
+                                <input id="ezADPEnableIntegration" type="checkbox" name="ezADPEnableIntegration"
+                                    value=ezADPEnableIntegration /> Enable Integration
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="errorBlockDiv" style="display: none;">
+                <p class="errorBlock" id="errorBlockText"></p>
+            </div>
+
+            <div class="ezTabButtonContainer">
+                <button type="button" class="ezTabButton ezFloatLeft ezTabButtonActive"
+                    id="EzADPIntegrationDialog_EmployeeMapping" data-active="false" data-tabgroup="adpIntegrationTabs"
+                    data-tabviewid="EzADPEmployeeMappingView">Employee
+                    Mapping</button>
+
+                <!-- <button type="button" class="ezTabButton ezFloatLeft"
+                    id="EzADPIntegrationDialog_PayTypes" data-active="true"
+                                    data-tabgroup="adpIntegrationTabs"
+                                    data-tabviewid="EzADPPayTypesView">Pay Types</button> -->
+
+                <button type="button" class="ezTabButton ezFloatLeft" id="EzADPIntegrationDialog_JobsMapping"
+                    data-active="false" data-tabgroup="adpIntegrationTabs" data-tabviewid="EzADPJobsMappingView">Jobs
+                    Mapping</button>
+            </div>
+
+            <div id="EzADPEmployeeMappingView" data-tabgroup="adpIntegrationTabs" class="ezActiveTabView">
+
+                <div class="ezGridContainer tableWrap" id="adpEmployeeMappingListDiv">
+                    <p>Map ezClocker Employees to Paychex Worker Ids</p>
+                    <table class="ezGrid" id="adpEmployeeMappingListHeader">
+                        <thead>
+                            <tr class="header">
+                                <td class="ezGridHeaderCell ezGridDateCell">EzClocker
+                                    Employees</td>
+                                <td class="ezGridHeaderCell ezGridTimeCell">ADP Workforce Now File Number</td>
+                            </tr>
+                        </thead>
+                        <tbody class="ezGridData" id="adpEmployeeMappingListBody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- <div id="EzADPPayTypesView"
+                data-tabgroup="adpIntegrationTabs" class="ezHiddenTabView">
+                    <div class="ezGridContainer tableWrap" id="adpPayTypesListDiv">
+                        <p>Map Pay Types to APD Workforce Now Components</p>
+                        <table class="ezGrid" id="adpPayTypesListHeader">
+                            <thead>
+                                <tr class="header">
+                                    <td class="ezGridHeaderCell ezGridDateCell">EzClocker Pay Types</td>
+                                    <td class="ezGridHeaderCell ezGridTimeCell">ADP Workforce Now Pay Components</td>
+                                </tr>
+                            </thead>
+                            <tbody class="ezGridData" id="adpPayTypesListBody"></tbody>
+                        </table>
+                    </div>
+
+            </div> -->
+
+            <div id="EzADPJobsMappingView" data-tabgroup="adpIntegrationTabs" class="ezHiddenTabView">
+
+                <div class="ezGridContainer tableWrap" id="adpJobMappingListDiv">
+                    <p>Optional: Map ezClocker Jobs to APD Workforce Now Department Code</p>
+                    <table class="ezGrid" id="adpJobMappingListHeader">
+                        <thead>
+                            <tr class="header">
+                                <td class="ezGridHeaderCell ezGridDateCell">EzClocker Jobs</td>
+                                <td class="ezGridHeaderCell ezGridTimeCell">ADP Workforce Now Department Code</td>
+                            </tr>
+                        </thead>
+                        <tbody class="ezGridData" id="adpJobMappingListBody"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,279 @@
+/*
+
+   Use: <span class="ez-spinner-left-right-loader-orange-navy"></span>
+*/
+.ez-spinner-left-right-loader-orange-navy {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #0f4777;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.ez-spinner-left-right-loader-orange-navy::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #ff9900;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+/*
+   Use: <span class="ez-spinner-slish-slash-orange-navy"></span>
+*/
+.ez-spinner-slish-slash-orange-navy {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #0f4777;
+}
+
+.ez-spinner-slish-slash-orange-navy::before,
+.ez-spinner-slish-slash-orange-navy::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.ez-spinner-slish-slash-orange-navy::after {
+    color: #ff9900;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+/*
+   Use: <span class="ez-spinner-double-sided-spinner"></span>
+*/
+.ez-spinner-double-sided-spinner-orange-navy {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #0f4777;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.ez-spinner-double-sided-spinner-orange-navy::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #ff9900;
+    border-left: 4px solid transparent;
+}
+
+/*
+   Use: <span class="ez-spinner-three-balls-orange-navy"></span>
+*/
+.ez-spinner-three-balls-orange-navy, .ez-spinner-three-balls-orange-navy::before, .ez-spinner-three-balls-orange-navy::after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation-fill-mode: both;
+    animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.ez-spinner-three-balls-orange-navy {
+    color: #FFFFFF;
+    font-size: 7px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.ez-spinner-three-balls-orange-navy::before,
+.ez-spinner-three-balls-orange-navy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.ez-spinner-three-balls-orange-navy::before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+
+.ez-spinner-three-balls-orange-navy::after {
+    left: 3.5em;
+}
+
+/*
+   Use: <span class="ez-spinner-three-balls-orange-navy"></span>
+*/
+.ez-spinner-forever-loader {
+    width: 96px;
+    height: 16px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-image:
+        linear-gradient(45deg, rgb(0 0 0 / 25%) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgb(0 0 0 / 25%) 50%,
+            rgb(0 0 0 / 25%) 75%,
+            transparent 75%,
+            transparent);
+    font-size: 30px;
+    background-size: 1em 1em;
+    box-sizing: border-box;
+    animation: barStripe 1s linear infinite;
+}
+
+
+/*
+   Use: <span class="ez-spinner-gears-orange-whitebg"></span>
+*/
+.ez-spinner-gears {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+
+    --base-color: #ffffff; /* use your base color */
+}
+
+.ez-spinner-gears::before {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ff9900;
+    background-image: radial-gradient(circle 8px at 18px 18px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 18px 0, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 0 18px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 36px 18px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 18px 36px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 30px 30px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 5px 30px, var(--base-color) 100%, transparent 0), radial-gradient(circle 4px at 5px 5px, var(--base-color) 100%, transparent 0);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    animation: rotationBack 3s linear infinite;
+}
+
+.ez-spinner-gears::after {
+    content: '';
+    left: 35px;
+    top: 15px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(circle 5px at 12px 12px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 12px 0, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 0 12px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 24px 12px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 12px 24px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 20px 20px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 3px 20px, var(--base-color) 100%, transparent 0), radial-gradient(circle 2.5px at 3px 3px, var(--base-color) 100%, transparent 0);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    animation: rotationBack 4s linear infinite reverse;
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes barStripe {
+    0% {
+        background-position: 1em 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes bblFadInOut {
+    0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+    40% { box-shadow: 0 2.5em 0 0 }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: .2em 0 0 0 currentcolor;
+    }
+
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+
+    25% {
+        box-shadow: 0 .2em 0 0 currentcolor;
+    }
+
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+
+    75% {
+        box-shadow: 0 -.2em 0 0 currentcolor;
+    }
+
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,754 @@
+@import 'ez-core';
+@import 'ez-responsive';
+
+// large buttons
+$ezLargeButtonMaxHeight: 32px;
+$ezLargeButtonMaxWidth: 175px;
+$ezLargeButtonMinWidth: 32px;
+$ezLargeButtonTextTransform: capitalize;
+$ezLargeButtonFontWeight: bold;
+
+// navigation
+$ezNavButtonColor: $ezOrange;
+$ezNavButtonColorHover: #ff9900;
+$ezNavButtonTextColor: $ezBlack;
+$ezNavButtonFontSize: $ezResponsiveNormalFontSize;
+$ezNavButtonFontWeight: $ezLargeButtonFontWeight;
+$ezNavButtonMaxHeight: $ezLargeButtonMaxHeight;
+$ezNavButtonTextTransform: $ezLargeButtonTextTransform;
+$ezNavButtonMaxWidth: $ezLargeButtonMaxWidth;
+$ezNavButtonMinWidth: $ezLargeButtonMinWidth;
+$ezNavButtonRippleEffect: $ezWhite;
+
+// sign out
+$ezSignOutButtonColor: $ezClockerAqua;
+$ezSignOutButtonTextColor: $ezWhite;
+$ezSignOutButtonFontSize: $ezResponsiveNormalFontSize;
+$ezSignOutButtonHoverColor: $ezDarkAqua;
+$ezSignOutButtonFontWeight: $ezLargeButtonFontWeight;
+$ezSignOutButtonTextTransform: $ezLargeButtonTextTransform;
+$ezSignOutButtonMaxHeight: $ezLargeButtonMaxHeight;
+$ezSignOutButtonMaxWidth: $ezLargeButtonMaxWidth;
+$ezSignOutButtonMinWidth: $ezLargeButtonMinWidth;
+
+// select plan
+$ezSelectPlanBtnColor: $ezActionGreen;
+$ezSelectPlanBtnTextColor: $ezBlack;
+$ezSelectPlanBtnFontSize: $ezResponsiveNormalFontSize;
+$ezSelectPlanBtnHoverColor: $ezHoverActionGreen;
+$ezSelectPlanBtnFontWeight: $ezLargeButtonFontWeight;
+$ezSelectPlanTextTransform: $ezLargeButtonTextTransform;
+$ezSelectPlanBtnMaxHeight: $ezLargeButtonMaxHeight;
+$ezSelectPlanButtonMaxWidth: $ezLargeButtonMaxWidth;
+$ezSelectPlanButtonMinWidth: $ezLargeButtonMinWidth;
+
+// Global Button Styles
+button {
+    cursor: pointer;
+    padding: 6px 24px;
+    margin: 2px;
+    font-size: $ezResponsiveNormalFontSize;
+    font-family: Roboto, Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    color: #000000;
+    background-color: #FF9900;
+    border: 1px solid #6d6e70;
+    border-radius: 2px;
+    outline-width: 0;
+}
+button:hover {
+    background-color: #ffcc66;
+}
+button:active {
+    background-color: #FF9900;
+}
+button:focus {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+}
+button:disabled {
+    cursor: default;
+    font-weight: normal;
+    background-color: #FFC164;
+    color: #C67600;
+    border-color: #9b5d00;
+}
+
+
+// Other Button Related Styles
+label.buttonSubLabel {
+    font-weight: normal;
+}
+button.fullWidth {
+    width: 100%;
+}
+button.floatRightButton {
+    float: right;
+}
+button.paddButton10 {
+    margin-left: 10px;
+}
+
+
+// Header Button Styles
+button.headerButton {
+    vertical-align: middle;
+    font-size: 12pt;
+    font-weight: bold;
+}
+button.headerButton:disabled {
+    font-weight: normal;
+}
+
+
+// Major Button Styles
+button.majorButton {
+    font-weight: bold;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+}
+button.majorButton:hover {
+    background-color: #ffdb64;
+}
+button.majorButton:active {
+    border-color: #ffcc66;
+}
+button.majorButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+// ez-marketing-button
+button.ez-marketing-button {
+    background-color: $ezClockerNavy;
+    border-radius: 2px;
+    border: 1px solid $ezBorderNavy;
+    display: inline-block;
+    cursor: pointer;
+    color: $ezClockerWhite;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:hover {
+        background-color: $ezHoverNavy;
+    }
+    &:active {
+        background-color: $ezDarkNavy;
+    }
+    &:focus {
+        background-color: $ezDarkNavy;
+    }
+}
+
+button.ez-marketing-go-button {
+    background-color: $ezClockerOrange;
+    border-radius: 2px;
+    border: 1px solid $ezBorderNavy;
+    display: inline-block;
+    cursor: pointer;
+    color: $ezClockerWhite;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:hover {
+        background-color: $ezHoverOrange;
+    }
+    &:active {
+        background-color: $ezDarkOrange;
+    }
+    &:focus {
+        background-color: $ezDarkOrange;
+    }
+}
+
+
+button.ez-marketing-button-wide {
+    background-color: $ezClockerNavy;
+    border-radius: 2px;
+    border: 1px solid $ezBorderNavy;
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+    color: $ezClockerWhite;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    &:hover {
+        background-color: $ezHoverNavy;
+    }
+    &:active {
+        background-color: $ezDarkNavy;
+    }
+    &:focus {
+        background-color: $ezDarkNavy;
+    }
+}
+
+
+a.ez-learn-more-button {
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-weight: normal;
+    font-size: $ezResponsiveNormalFontSize;
+    font-style: normal;
+    text-decoration: none;
+    color: $ezClockerBlack;
+    background-color: $ezClockerWhite;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $ezClockerYellow;
+    padding: 13px;
+    border-radius: 25px;
+    &:focus {
+        background-color: $ezHoverYellow;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $ezHoverYellow;
+        text-decoration: none;
+    }
+    &:active {
+        background-color: $ezDarkYellow;
+        text-decoration: none;
+    }
+}
+
+a.ez-marketing-learn-more-button {
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-weight: normal;
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-style: normal;
+    text-decoration: none;
+    color: $ezClockerBlack;
+    background-color: $ezClockerWhite;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $ezClockerYellow;
+    padding: 13px;
+    border-radius: 25px;
+    &:focus {
+        background-color: $ezHoverYellow;
+        text-decoration: none;
+    }
+    &:hover {
+        background-color: $ezHoverYellow;
+        text-decoration: none;
+    }
+    &:active {
+        background-color: $ezDarkYellow;
+        font-style: normal;
+        text-decoration: none;
+    }
+}
+
+
+// Delete Major Button
+button.deleteMajorButton {
+    margin: 0;
+    padding: 6px 24px;
+    color: #ffffff;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+}
+button.deleteMajorButton:hover {
+    background-color: #FF0700;
+    color: #ffffff;
+}
+button.deleteMajorButton:active {
+    background-color: #BF3330;
+}
+button.deleteMajorButton:disabled {
+    color: #c0c0c0;
+    background-color: #FFf0f0;
+    border-color: #c0c0c0;
+    cursor: default;
+}
+
+// Mini Major
+Button Styles button.miniMajorButton {
+    font-size: $ezResponsivePicoFontSize;
+    font-weight: bold;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+    border-radius: 4px;
+}
+button.miniMajorButton:hover {
+    background-color: #ffdb64;
+}
+button.miniMajorButton:active {
+    border-color: #ffcc66;
+}
+button.miniMajorButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+// Mini Normal Button Styles
+button.miniNormalButton {
+    font-size: $ezResponsivePicoFontSize;
+    font-weight: normal;
+    background-color: #ffc500;
+    border-color: #6d6e70;
+    color: #000000;
+    border-radius: 4px;
+}
+button.miniNormalButton:hover {
+    background-color: #ffdb64;
+}
+button.miniNormalButton:active {
+    border-color: #ffcc66;
+}
+button.miniNormalButton:disabled {
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+// Red warning button
+button.warningHeaderButton {
+    vertical-align: middle;
+    font-size: $ezResponsiveSmallFontSize;
+    font-weight: bold;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+    color: #ffffff;
+}
+button.warningHeaderButton:hover {
+    background-color: #FF0700;
+    color: #ffffff;
+}
+button.warningHeaderButton:active {
+    color: #ffffff;
+    background-color: #BF3330;
+}
+button.warningHeaderButton:disabled {
+    color: #c0c0c0;
+    background-color: #FFf0f0;
+    border-color: #c0c0c0;
+    font-weight: normal;
+}
+
+// Edit Button Styles
+button.editButton {
+    vertical-align: middle;
+    text-align: center;
+    margin: 2;
+    font-size: $ezResponsivePicoFontSize;
+    background-color: $ezClockerNavy;
+    border-color: $ezBorderNavy;
+    color: $ezClockerWhite;
+    padding: 2px 4px;
+}
+button.editButton:hover {
+    background-color: $ezHoverNavy;
+}
+button.editButton:active {
+    background-color: $ezDarkNavy;
+}
+button.editButton:disabled {
+    cursor: default;
+    background-color: $ezLightNavy;
+    color: $ezNavyContainerDisabledTextColor;
+}
+
+// Small Button
+button.smallButton {
+    vertical-align: middle;
+    text-align: center;
+    font-size: $ezResponsivePicoFontSize;
+    margin: 0 2px 0 0;
+    padding: 2px;
+    border-color: #a60400;
+    background-color: #ff7673;
+}
+button.smallButton:hover {
+    background-color: #ff0700;
+    color: #ffffff;
+}
+button.smallButton:active {
+    background-color: #BF3330;
+}
+button.smallButton:disabled {
+    cursor: default;
+    color: #808080;
+    border-color: #c0c0c0;
+    padding: 2px;
+    background-color: #f0f0f0;
+}
+
+// Mini Action Button Styles
+img.miniButtonIcon {
+    width: 24px;
+    border-style: none;
+    vertical-align: middle;
+    padding-right: 4px;
+}
+button.miniActionButton {
+    font-size: $ezResponsivePicoFontSize;
+    padding: 2px;
+    margin: 0;
+    font-weight: bold;
+    border-radius: 2px;
+    color: #000000;
+    background-color: #ffc500;
+    border-color: #9b7800;
+    cursor: pointer;
+}
+button.miniActionButton:hover {
+    background-color: #ffdb64;
+}
+button.miniActionButton:active {
+    background-color: #c69800;
+}
+button.miniActionButton:disabled {
+    background-color: #c69800;
+    border-color: #808080;
+    color: #ffc500;
+    cursor: default;
+}
+
+
+// Mini delete action button
+button.miniDeleteActionButton {
+    font-size: $ezResponsivePicoFontSize;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 0;
+    color: #ffffff;
+    background-color: #CE0F0C;
+    border-color: #A60400;
+    cursor: pointer;
+}
+button.miniDeleteActionButton:hover {
+    background-color: #FF0700;
+    color: #ffffff;
+}
+button.miniDeleteActionButton:active {
+    background-color: #BF3330;
+}
+button.miniDeleteActionButtonn:disabled {
+    color: #c0c0c0;
+    background-color: #FFf0f0;
+    border-color: #c0c0c0;
+    cursor: default;
+}
+
+
+// Action Button
+button.actionButton {
+    margin: 0;
+    background-color: #8df13c;
+    border-color: #439400;
+    font-weight: bold;
+    padding: 6px 24px;
+}
+button.actionButton:hover {
+    background-color: #caff9e;
+}
+button.actionButton:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+button.actionButton:disabled {
+    cursor: default;
+    background-color: #caff9e;
+    border-color: #8df13c;
+    font-weight: normal;
+    color: #808080;
+}
+
+
+// Super-Action Button Styles
+button.superActionButton {
+    margin: 0;
+    background-color: #0f4777;
+    border-color: #6d6e70;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: $ezResponsiveMediumFontSize;
+    padding: 6px 24px;
+}
+button.superActionButton:hover {
+    background-color: #0d58a6;
+}
+button.superActionButton:active {
+    background-color: #0d58a6;
+}
+button.superActionButton:disabled {
+    cursor: default;
+    background-color: #5387bd;
+    border-color: #0f4777;
+    font-weight: normal;
+    color: #0f4777;
+}
+
+
+/* Tab Buttons */
+
+// Tab Button
+.ezTabButton {
+    margin: 0 4px 0 0;
+    min-height: 32;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #c0c0c0;
+    outline-style: none;
+    color: #000000;
+    box-shadow: none;
+}
+.ezTabButton:HOVER {
+    background-color: #e0e0e0;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+.ezTabButton:ACTIVE {
+    background-color: #ffffff;
+    border-bottom-width: 2px;
+    border-bottom-color: #ffffff;
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+.ezTabButton:FOCUS {
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+}
+
+
+// Active Tab Button
+.ezTabButtonActive {
+    margin: 0 4px 0 0;
+    min-height: 32;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+.ezTabButtonActive:HOVER {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+.ezTabButtonActive:ACTIVE {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+.ezTabButtonActive:FOCUS {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-bottom-color: #ffffff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline-style: none;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* Paper Buttons */
+
+// Navigation Button
+paper-button.ez-navigation-button {
+    max-height: $ezNavButtonMaxHeight;
+    max-width: $ezNavButtonMaxWidth;
+    min-width: $ezNavButtonMinWidth;
+    font-size: $ezNavButtonFontSize;
+    font-weight: $ezNavButtonFontWeight;
+    background-color: $ezNavButtonColor;
+    color: $ezNavButtonTextColor;
+    text-transform: $ezNavButtonTextTransform;
+}
+paper-button.ez-navigation-button>paper-ripple {
+    color: $ezWhite;
+}
+paper-button.ez-navigation-button:hover {
+    background-color: $ezNavButtonColorHover;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+// Sign out Button
+paper-button.ez-signout-button {
+    text-transform: $ezSignOutButtonTextTransform;
+    max-height: $ezSignOutButtonMaxHeight;
+    max-width: $ezSignOutButtonMaxWidth;
+    min-width: $ezSignOutButtonMinWidth;
+    font-size: $ezSignOutButtonFontSize;
+    font-weight: $ezSignOutButtonFontWeight;
+    background-color: $ezSignOutButtonColor;
+    color: $ezSignOutButtonTextColor;
+}
+paper-button.ez-signout-button>paper-ripple {
+    color: $ezWhite;
+}
+paper-button.ez-signout-button:hover {
+    background-color: $ezSignOutButtonHoverColor;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+// Select plan button
+paper-button.ez-select-plan-button {
+    max-width: $ezSelectPlanButtonMaxWidth;
+    min-width: $ezSelectPlanButtonMinWidth;
+    max-height: $ezSelectPlanBtnMaxHeight;
+    font-size: $ezSelectPlanBtnFontSize;
+    font-weight: $ezSelectPlanBtnFontWeight;
+    background-color: $ezSelectPlanBtnColor;
+    color: $ezSelectPlanBtnTextColor;
+    text-transform: $ezSelectPlanTextTransform;
+}
+paper-button.ez-select-plan-button>paper-ripple {
+    color: $ezBorderGreen;
+}
+paper-button.ez-select-plan-button:hover {
+    background-color: $ezSelectPlanBtnHoverColor;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* INPUT BUTTONS */
+
+// ez-major button
+input[type="button"].ez-major-button {
+    background-color: #ff9900;
+    border-radius: 2px;
+    border: 1px solid #000000;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+input[type="button"].ez-major-button:hover {
+    background-color: #ffcc66;
+}
+input[type="button"].ez-major-button:active {
+    background-color: #ff9933;
+}
+input[type="button"].ez-action-button {
+    background-color: #8df13c;
+    border-radius: 2px;
+    border: 1px solid #439400;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+// ez-marketing-button
+input[type="button"].ez-marketing-input-button {
+    background-color: $ezClockerNavy;
+    border-radius: 2px;
+    border: 1px solid $ezBorderNavy;
+    display: inline-block;
+    cursor: pointer;
+    color: $ezClockerWhite;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    &:hover {
+        background-color: $ezHoverNavy;
+    }
+    &:active {
+        background-color: $ezDarkNavy;
+    }
+    &:focus {
+        background-color: $ezDarkNavy;
+    }
+}
+
+// ez-action-button
+input[type="button"].ez-action-button {
+    background-color: #8df13c;
+    border-radius: 2px;
+    border: 1px solid #439400;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+input[type="button"].ez-action-button:hover {
+    background-color: #caff9e;
+}
+input[type="button"].ez-action-button:active {
+    color: #caff9e;
+    background-color: #439400;
+}
+
+// ez-edit-button
+input[type="button"].ez-edit-button {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    border: 1px solid #000000;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px;
+    text-decoration: none;
+}
+input[type="button"].ez-edit-button:hover {
+    background-color: #edf6ff;
+}
+input[type="button"].ez-edit-button:active {
+    background-color: #c0c0c0;
+}

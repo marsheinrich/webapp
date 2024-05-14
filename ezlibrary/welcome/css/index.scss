@@ -1,0 +1,938 @@
+@import 'ez-core';
+@import 'ez-responsive.scss';
+
+//colors
+// $color_givry_approx: #f3e2c9;
+// $color_zanah_approx: #d9e4d3;
+// $color_shady_lady_approx: #a4a8a7;
+// $color_zeus_approx: #241f20;
+// $color_pampas_approx: #f7f4ec;
+// $gray: #808080;
+// $color_shark_approx: #282324;
+// $color_supernova_approx: #fec503;
+// $color_sunglow_approx: #fed136;
+// $ezClockerWhite;: #fff;
+// $color_bright_sun_50_approx: rgba(254, 209, 55, 0.5);
+// $color_romance_approx: #fdfdfd;
+// $color_french_gray_approx: #bbc0c5;
+// $color_submarine_approx: #bfc5c8;
+// $color_oslo_gray_approx: #8c9192;
+// $color_carrot_orange_approx: #f68c2b;
+// $color_pumice_approx: #c7c9ca;
+// $color_abbey_approx: #495057;
+// $ezClockerBlack: #000;
+// $color_california_approx: #f90;
+// $color_pale_sky_approx: #6a737d;
+// $color_mine_shaft_approx: #333;
+// $color_celeste_approx: #ccc;
+// $color_quill_gray_approx: #d2d1d1;
+// $color_alabaster_approx: #f9f9f9;
+// $color_science_blue_approx: #0077e2;
+// $color_scarlet_approx: #ef1a1a;
+// $color_cerulean_approx: #00aced;
+// $color_cabaret_approx: #d84b6b;
+//fonts
+$font_0: Droid Serif;
+$font_1: Helvetica Neue;
+$font_2: Helvetica;
+$font_3: Arial;
+$font_4: sans-serif;
+$font_5: Roboto;
+$font_6: Kaushan Script;
+$font_7: cursive;
+$font_8: Roboto; //Acme;
+$font_9: serif;
+
+//urls
+$url_0: url(/welcome/images/ezc_web_image_0_Home_2.jpg);
+$url_1: url(/welcome/images/clock_in_out_anywhere_banner.jpg);
+$url_2: url(/welcome/images/gps_verification_banner.jpg);
+$url_3: url(/welcome/images/online_scheduling_banner.jpg);
+
+.ezErrorBox {
+    display: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 28px;
+    min-height: 20px;
+    min-width: 20px;
+    background-color: #ffcccc;
+    background-image: url("/public/images/icons/error-red.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-x: 4px;
+    background-position-y: 4px;
+    background-clip: padding-box;
+    color: #000000;
+    font-size: 12pt;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9b0400;
+}
+
+#appleAppStoreBadge {
+    height: 46px;
+}
+
+div.sign-in {
+    margin: 0;
+    padding: 0;
+}
+
+// Sections
+section {
+    background-color: $ezAlphaBackgroundColor;
+    h2.section-heading {
+        font-size: $ezResponsiveMarketingHeaderFontSize;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: $ezHeaderTextColor;
+    }
+    h3.section-subheading {
+        color: $ezSubHeaderTextColor;
+        font-size: $ezResponsiveMarketingSubHeaderFontSize;
+        margin-bottom: 75px;
+        text-transform: none;
+    }
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+.scrolled {
+    background-color: $ezAlphaDarkBackgroundColor;
+    box-shadow: 0 0 2px 2px rgb(0 0 0 / 40%);
+}
+
+#mainNav {
+    .navbar-toggler {
+        font-size: 12px;
+        right: 0;
+        padding: 13px;
+        text-transform: uppercase;
+        color: $ezClockerWhite;
+        border: 0;
+        background-color: $ezClockerOrange;
+        font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        margin-right: 10px;
+    }
+    .navbar-brand {
+        font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        &:active {
+            color: $ezClockerOrange;
+        }
+        &:focus {
+            color: $ezClockerOrange;
+        }
+        &:hover {
+            color: $ezClockerOrange;
+        }
+    }
+    .navbar-collapse {
+        background-color: $ezDarkSmokeyTooth;
+        color: $ezClockerBlack;
+        border-style: none;
+    }
+    .navbar-nav .nav-item {
+        text-align: right;
+        padding-right: 10px;
+        .nav-link {
+            font-size: $ezResponsiveNormalFontSize;
+            padding: 0.75em 0;
+            letter-spacing: 1px;
+            color: $ezClockerBlack;
+            font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            &:active {
+                font-weight: bold;
+                color: $ezDarkOrange;
+            }
+            &:focus {
+                font-weight: bold;
+                color: $ezHoverOrange;
+            }
+            &:hover {
+                font-weight: bold;
+                color: $ezHoverOrange;
+            }
+        }
+        .nav-link-scrolled {
+            font-size: $ezResponsiveNormalFontSize;
+            padding: 0.75em 0;
+            letter-spacing: 1px;
+            color: $ezClockerBlack;
+            font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            &:active {
+                color: $ezDarkOrange;
+            }
+            &:focus {
+                font-weight: bold;
+                color: $ezHoverOrange;
+            }
+            &:hover {
+                color: $ezHoverOrange;
+            }
+        }
+    }
+}
+
+#ezcLogo {
+    max-height: 44px;
+    max-width: 150px;
+}
+
+section.masthead {
+    text-align: center;
+    color: $ezClockerBlack;
+    background-image: $url_0;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position-x: 75%;
+    background-size: cover;
+    .container {
+        margin-left: 2px;
+    }
+    .intro-text {
+        padding-top: 250px;
+        padding-bottom: 50px;
+        .intro-lead-in {
+            font-style: italic;
+            margin-bottom: 25px;
+            font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        }
+        .intro-heading h4 {
+            font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        }
+    }
+}
+
+#signup {
+    float: none;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 25px;
+    .form-group {
+        width: 80%;
+        padding-left: 10px;
+    }
+    .card .card-block .row.col-lg-12 {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+#footersignin {
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.horz-image-section {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: contain;
+}
+
+#horz-image-1 {
+    height: 180px;
+    background-image: $url_1;
+    background-position-x: 15%;
+    background-color: $ezClockerBackground;
+    .horz-image-header {
+        padding-top: 100px;
+        padding-left: 5%;
+    }
+    .horz-image-text {
+        padding-top: 2px;
+        padding-left: 5%;
+    }
+}
+
+#horz-image-2 {
+    height: 230px;
+    margin-top: 0;
+    background-image: $url_2;
+    background-position-x: 70%;
+    background-color: $ezClockerBackground;
+    .horz-image-header {
+        padding-top: 118px;
+        padding-left: 5%;
+    }
+    .horz-image-text {
+        padding-top: 0;
+        padding-left: 5%;
+    }
+}
+
+#horz-image-3 {
+    height: 220px;
+    margin-top: 0;
+    background-image: $url_3;
+    background-position-x: 15%;
+    background-color: $ezClockerBackground;
+    .horz-image-header {
+        padding-top: 100px;
+        padding-left: 5%;
+    }
+    .horz-image-text {
+        padding-top: 0;
+        padding-left: 5%;
+    }
+}
+
+#ezMarketingVideo {
+    background-color: $ezClockerBackground; //margin-top: 30px;
+    .container {
+        padding-top: 20px;
+    }
+}
+
+#video-col {
+    background-color: $ezClockerBackground;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+}
+
+#ezClockerFeatures {
+    background-color: $ezClockerWhite;
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+    .options-col {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+    .option-text-container {
+        text-align: justify;
+        margin-left: 1px;
+        padding-bottom: 30px;
+    }
+    .text-muted {
+        font-size: 0.8rem;
+    }
+    .learn-more {
+        margin-top: 10px;
+        border-style: solid;
+        border-width: 0.8px;
+        border-color: #fec503;
+        padding: 13px;
+        border-radius: 25px;
+    }
+    .learn-more:hover {
+        background-color: $ezClockerYellow;
+        color: $ezClockerBlack;
+    }
+}
+
+.filler-helper {
+    height: 100%;
+    vertical-align: middle;
+}
+.filler-image-middle {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#filler {
+    padding: 30px;
+    vertical-align: center;
+    background-color: $ezClockerGray;
+    .col-md-3 {
+        vertical-align: middle;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    img {
+        max-width: 140px;
+        max-height: 40px;
+    }
+}
+
+#ezClockerFeedback {
+    background-color: $ezAlphaBackgroundColor;
+    .carousel-item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        h6 {
+            font-size: 1rem;
+            font-weight: 100;
+            font-style: italic;
+            font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        }
+    }
+}
+
+.carousel-indicators {
+    .active {
+        background-color: $ezClockerOrange;
+    }
+    li {
+        background-color: $ezClockerOrange;
+    }
+}
+
+#ezcFeedbackCarousel {
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: $ezClockerSmokeyTooth;
+}
+
+#feedbackItem {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.2;
+    height: 250px;
+}
+
+#reviewername {
+    padding-top: 10px;
+    span {
+        padding-left: 10px;
+        font-size: 0.6rem;
+    }
+}
+
+.carousel-prev {
+    color: $ezClockerOrange;
+}
+
+.carousel-next {
+    color: $ezClockerOrange;
+}
+
+.collapse-span {
+    padding-left: 5px;
+}
+
+.service-heading {
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: 10px;
+    padding: 25px 0;
+    text-align: center;
+    span.copyright {
+        font-size: 90%;
+        line-height: 40px;
+        text-transform: none;
+        font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    }
+    ul.quicklinks {
+        font-size: 90%;
+        line-height: 40px;
+        margin-bottom: 0;
+        text-transform: none;
+        font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    }
+}
+
+#contact-us,
+#signupCard {
+    background-color: $ezSilverAlpha;
+}
+
+#signupCardHeader {
+    background-color: $ezClockerGray;
+}
+
+#signupText {
+    padding-top: 5px;
+}
+
+
+#signupbuttonrow {
+    padding-top: 10px;
+}
+
+.horz-filler {
+    padding: 10px;
+}
+
+#address {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: $ezClockerAquaGray;
+    color: $ezClockerWhite;
+    font-size: 12pt;
+}
+
+#ezcFooter {
+    background-color: $ezClockerAquaGray;
+    color: $ezClockerWhite;
+    padding-top: 30px;
+    .footer-copyright {
+        background-color: $ezDarkGray;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        text-align: center;
+        p {
+            margin: 10px;
+            color: $ezLightAquaGray;
+            font-size: 10pt;
+        }
+    }
+    .row {
+        margin-bottom: 60px;
+    }
+    .navbar-brand {
+        margin-top: 45px;
+        height: 65px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        line-height: 1.7;
+    }
+    h5 {
+        font-size: 18px;
+        color: $ezClockerWhite;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    a {
+        color: $ezClockerSilver;
+        text-decoration: none;
+        &:hover {
+            color: $ezClockerWhite;
+        }
+        &:focus {
+            color: $ezClockerWhite;
+        }
+    }
+    .social-networks {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 16px;
+        a {
+            font-size: 32px;
+            color: $ezAquaGrayContainerText;
+            padding: 10px;
+            transition: 0.2s;
+            text-decoration: none;
+            &:hover {
+                color: $ezClockerWhite;
+            }
+            &:focus {
+                color: $ezClockerWhite;
+            }
+        }
+
+    }
+}
+
+#about-collapse[aria-expanded=false] .fa-chevron-up {
+    display: none;
+}
+
+#about-collapse[aria-expanded=true] .fa-chevron-down {
+    display: none;
+}
+
+#indus-collapse[aria-expanded=false] .fa-chevron-up {
+    display: none;
+}
+
+#indus-collapse[aria-expanded=true] .fa-chevron-down {
+    display: none;
+}
+
+#product-collapse[aria-expanded=false] .fa-chevron-up {
+    display: none;
+}
+
+#product-collapse[aria-expanded=true] .fa-chevron-down {
+    display: none;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+    li a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        transition: all 0.3s;
+        color: $ezClockerWhite;
+        border-radius: 100%;
+        outline: 0;
+        background-color: $ezClockerSilver;
+        &:active {
+            background-color: $ezClockerWhite;
+        }
+        &:focus {
+            background-color: $ezClockerWhite;
+        }
+        &:hover {
+            background-color: $ezClockerWhite;
+        }
+    }
+    .btn {
+        color: $ezClockerWhite;
+        background-color: $ezClockerOrange;
+        border-radius: 20px;
+        border: none;
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    h2 a {
+        font-size: 50px;
+        text-align: center;
+        color: $ezClockerWhite;
+    }
+    .facebook:hover {
+        color: $ezClockerWhite;
+    }
+    .google:hover {
+        color: $ezClockerWhite;
+    }
+    .twitter:hover {
+        color: $ezClockerWhite;
+    }
+}
+
+@media(min-width: 320px) {
+    section.masthead {
+        text-align: center;
+        color: $ezClockerWhite;
+        background-image: $url_0;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position-x: 75%;
+        background-size: cover;
+        .container {
+            margin-left: 2px;
+        }
+        .intro-text {
+            padding-top: 250px;
+            padding-bottom: 50px;
+            .intro-lead-in {
+                font-style: italic;
+                margin-bottom: 25px;
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+            .intro-heading h4 {
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+        }
+    }
+}
+
+@media(min-width:576px) {
+    section.masthead {
+        text-align: center;
+        color: $ezClockerWhite;
+        background-image: $url_0;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position-x: 75%;
+        background-size: cover;
+        .container {
+            margin-left: 2px;
+        }
+        .intro-text {
+            padding-top: 250px;
+            padding-bottom: 50px;
+            .intro-lead-in {
+                font-style: italic;
+                margin-bottom: 25px;
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+            .intro-heading h4 {
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+        }
+    }
+    .navbar-collapse {
+        background-color: $ezDarkSmokeyTooth;
+        color: $ezClockerBlack;
+        border-style: solid;
+        border-color: $ezClockerGray;
+        border-width: 1px;
+        border-radius: 4px;
+    }
+    #ezcFooter {
+        .collapse-link {
+            display: none;
+        }
+        .collapse {
+            display: block;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    section.masthead {
+        text-align: center;
+        color: $ezClockerWhite;
+        background-image: $url_0;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position-x: 75%;
+        background-size: cover;
+        .container {
+            margin-left: 2px;
+        }
+        .intro-text {
+            padding-top: 250px;
+            padding-bottom: 50px;
+            .intro-lead-in {
+                font-style: italic;
+                margin-bottom: 25px;
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+            .intro-heading h4 {
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+        }
+    }
+    #ezcLogo {
+        max-height: 44px;
+        max-width: 200px;
+    }
+    section {
+        padding: 5% 0;
+        h2.section-heading {
+            font-size: 2rem;
+            margin-top: 0;
+            padding-bottom: 50px;
+        }
+    }
+    #signup {
+        margin-left: 25px;
+        padding-left: 5px;
+        padding-right: 5px;
+        h4 {
+            font-size: 1.3rem;
+        }
+    }
+    #horz-image-1 {
+        height: 230px;
+        background-image: $url_1;
+        background-position-x: 15%;
+        background-color: $ezClockerBackground;
+        background-size: cover;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        .horz-image-header {
+            padding-top: 0;
+            padding-left: 50%;
+        }
+        .horz-image-text {
+            padding-top: 5px;
+            padding-left: 50%;
+        }
+    }
+    #horz-image-2 {
+        height: 230px;
+        background-image: $url_2;
+        background-position: 70%;
+        background-color: $ezClockerBackground;
+        background-size: cover;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        .horz-image-header {
+            padding-top: 0;
+            padding-left: 2%;
+            padding-right: 60%;
+        }
+        .horz-image-text {
+            padding-top: 5px;
+            padding-left: 2%;
+            padding-right: 50%;
+        }
+    }
+    #horz-image-3 {
+        height: 230px;
+        background-image: $url_3;
+        background-position-x: 15%;
+        background-color: $ezClockerBackground;
+        background-size: cover;
+        padding-top: 150px;
+        padding-bottom: 150px;
+        .horz-image-header {
+            padding-top: 0;
+            padding-left: 50%;
+        }
+        .horz-image-text {
+            padding-top: 5px;
+            padding-left: 50%;
+        }
+    }
+    #video-col {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    #feedbackItem {
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        line-height: 1.2;
+        height: 250px;
+    }
+    #reviewername {
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    #filler .col-md-3 {
+        margin-bottom: 0;
+    }
+    #video .container {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #ezClockerFeatures {
+        .container {
+            padding-top: 0;
+        }
+        .text-muted {
+            font-size: 1.0rem;
+        }
+    }
+    #ezClockerFeedback .carousel-item h6 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse {
+        background-color: $ezDarkSmokeyTooth;
+        color: $ezClockerBlack;
+        border-style: solid;
+        border-color: $ezClockerGray;
+        border-width: 1px;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #ezcFooter {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    #ezcFeedbackCarousel {
+        margin-left: 150px;
+        margin-right: 150px;
+        background-color: $ezClockerSmokeyTooth;
+    }
+    #mainNav .container {
+        margin-left: 15px;
+        max-width: 100%;
+    }
+    #mainNav .navbar-nav .nav-item {
+        color: $ezClockerWhite;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link-scrolled {
+        font-size: $ezResponsiveNormalFontSize;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        color: $ezClockerBlack;
+        font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+        &.active {
+            color: $ezDarkOrange;
+        }
+        &:hover {
+            color: $ezHoverOrange;
+        }
+    }
+    #mainNav .navbar-collapse {
+        background-color: transparent;
+    }
+    section.masthead {
+        background-position: right top;
+        padding-bottom: 10px;
+        .intro-text {
+            padding-top: 40px;
+            padding-bottom: 25px;
+            text-align: left;
+            .intro-heading {
+                //font-size: 75px;
+                //font-weight: 700;
+                //line-height: 75px;
+                margin-bottom: 40px;
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+                color: $ezClockerBlack;
+                .title-margin {
+                    margin-left: 15px; //margin-bottom: 25px;
+                }
+            }
+            .intro-lead-in {
+                font-size: 40px;
+                font-style: italic;
+                line-height: 40px;
+                margin-bottom: 25px;
+                font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/*------------------------------------------------------
+| @Media Small Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (max-width: $ezSmallMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Regular Mobile Devices
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezMobileMinWidth) and
+    (max-width: $ezMobileMaxWidth)  {
+}
+
+/*------------------------------------------------------
+| @Media for Tablets
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezTabletMinWidth) and
+    (max-width: $ezTabletMaxWidth) {
+}
+
+/*------------------------------------------------------
+| @Media for Laptops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezLaptopMinWidth) and
+    (max-width: $ezLaptopMaxWidth) {
+}
+
+/*------------------------------------------------------
+| @Media for Desktops
+--------------------------------------------------------*/
+@media only screen and
+    (min-width: $ezDesktopMinWidth) {
+        .navbar-collapse {
+        background-color: transparent;
+        color: $ezClockerBlack;
+        border-style: none;
+    }
+}

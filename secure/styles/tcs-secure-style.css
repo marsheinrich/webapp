@@ -1,0 +1,94 @@
+table.accountHeaderTable {
+    width: 100%;
+}
+
+td.buttonColumn {
+    vertical-align: middle;
+    text-align: right;
+}
+
+button.employeeMenuButton {
+    height: 30px;
+    font-size: small;
+}
+
+div.progressDiv {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: .4;
+}
+
+div.progressImageDiv {
+    width: 128px;
+    height: 128px;
+}
+
+div.employeClockInMenu {
+    padding: 4px;
+    float: left;
+}
+
+div.employeeMenu {
+    padding: 4px;
+    float: right;
+}
+
+div.logoutDiv {
+    height: 25px;
+    float: right;
+    display: inline-block;
+}
+
+div.imageDiv {
+    float: left;
+    margin-right: 8px;
+}
+
+img.employerImage {
+    max-width: 110px;
+    max-height: 39px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+img.userImage {
+    width: 100px;
+    height: 100px;
+}
+
+label.employerLabel {
+    font-size: large;
+}
+
+label.employerAddress {
+    font-size: small;
+}
+
+div.menu {
+    background-color: #F5F5F5;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top-width: 0;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 100%;
+    box-shadow: 0 0 4px 1px #C0C0C0;
+}
+
+.error_edit_input {
+    background-color: #fff0f0;
+    border-color: #a60400;
+}

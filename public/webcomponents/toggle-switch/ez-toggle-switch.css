@@ -1,0 +1,93 @@
+.ezToggleSwitchCenterContainer {
+    text-align: center;
+    padding: 4px;
+}
+
+.ezToggleSwitchWrapper {
+    width: 100%;
+}
+
+.ezToggleSwitchLayoutCell {
+    text-align: center;
+    vertical-align: middle;
+    height: 60px;
+}
+
+.ezToggleSwitchLeftLabel {
+    display: inline-block;
+    padding: 4px;
+}
+
+.ezToggleSwitchRightLabel {
+    display: inline-block;
+    padding: 4px;
+}
+
+/* The switch - the box around the slider */
+.ezToggleSwitch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.ezToggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.ezSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0f4777;
+    transition: .4s;
+    transition: .4s;
+    transition: .4s;
+    transition: .4s;
+}
+
+.ezSlider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    transition: .4s;
+    transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.ezSlider {
+    background-color: #8EF13C;
+}
+
+input:focus+.ezSlider {
+    box-shadow: 0 0 1px #8EF13C;
+}
+
+input:checked+.ezSlider::before {
+    transform: translateX(26px);
+    transform: translateX(26px);
+    transform: translateX(26px);
+    transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.ezSlider.ezRoundSlider {
+    border-radius: 34px;
+}
+
+.ezSlider.ezRoundSlider::before {
+    border-radius: 50%;
+}

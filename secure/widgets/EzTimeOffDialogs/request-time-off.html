@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<div id="EzTimeOff" class="ezHiddentByDefault" title="Request Time Off">
+    <div id="time-off-main-fragment" class="ezHiddentByDefault">
+        <div id="EzRequestTimeOffDialog" title="Request Time Off Dialog">
+            <div id="EzRequestTimeOffDialogMainDiv" class="ezSilverBox marginTop10 ezRequestTimeOffDialogMainDiv">
+                <table id="EzRequestTimeOffDialogMainTable" class="ezFullWidth ezRequestTimeOffDialogMainTable">
+                    <tr id="EzRequestTimeOffDialog_EmployeeIds_div"
+                        class="ezHiddenByDefault ezRequestTimeOffDialog_EmployeeIds_div">
+                        <td class="leftAlignCell">
+                            <label>Select Employee</label>
+                            <br />
+                            <select id="EzRequestTimeOffDialog_EmployeeIds" class="ezRequestTimeOffDialog_EmployeeIds">
+                            </select>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell">
+                            <label>Request Type</label>
+                            <br />
+                            <select id="EzRequestTimeOffDialog_RequestType" class="ezRequestTimeOffDialog_RequestType">
+                                <option selected value="PTO">PTO</option>
+                                <option value="SICK">SICK</option>
+                                <option value="UNPAID">UNPAID</option>
+                            </select>
+                        </td>
+                        <td class="leftAlignCell" style="width: 100px; display: flex; margin-top: 15px;">
+                            <label for="EzRequestTimeOffDialog_AlLDay">
+                                All day
+                            </label>
+                            <input type="checkbox" id="EzRequestTimeOffDialog_AlLDay" />
+                        </td>
+                        <td class="leftAlignCell" style="width: 200px;">
+                            <label for="EzRequestTimeOffDialog_HoursPerDay">Hours per Day</label>
+                            <br />
+                            <input type="number" name="EzRequestTimeOffDialog_HoursPerDay"
+                                id="EzRequestTimeOffDialog_HoursPerDay" min="0" max="24"
+                                class="ezRequestTimeOffDialog_HoursPerDay" />
+                        </td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell">
+                            <label>Start</label>
+                            <br />
+                            <div style="display: flex">
+                                <input type="text" readonly="true" id="EzRequestTimeOffDialog_StartDate"
+                                    class="ezRequestTimeOffDialog_StartDate" />
+                                <input type="text" class="ezHiddentByDefault" readonly="true" id="EzRequestTimeOffDialog_StartTime"
+                                    class="ezRequestTimeOffDialog_StartTime" />
+                            </div>
+                        </td>
+                        <td class="leftAlignCell"><label>End</label> <br />
+                            <div style="display: flex">
+                                <input type="text" readonly="true" id="EzRequestTimeOffDialog_EndDate"
+                                    class="ezRequestTimeOffDialog_EndDate" />
+                                <input type="text" class="ezHiddentByDefault" readonly="true" id="EzRequestTimeOffDialog_EndTime"
+                                    class="ezRequestTimeOffDialog_EndTime" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 10px">
+                        <td class="leftAlignCell">
+                            <label for="EzRequestTimeOffDialog_Notes">Notes:</label>
+                            <br />
+                            <textarea type="text" id="EzRequestTimeOffDialog_Notes" maxlength="500"
+                                class="ezRequestTimeOffDialog_Notes"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="display: flex; margin-bottom: 5px; width: 100%; margin-top: 30px;">
+                        <td class="leftAlignCell" style="display: inline-block;">
+                            <label id="EzRequestTimeOffDialog_TotalTimeOffLabel"
+                                class="ezRequestTimeOffDialog_TotalTimeOffLabel">
+                                Total Time Off Hours
+                            </label>
+                            <label id="EzRequestTimeOffDialog_TotalTimeOff" class="ezRequestTimeOffDialog_TotalTimeOff">
+                            </label>
+                        </td>
+                        <td class="leftAlignCell" style="width: 50%">
+                            <div>
+                                <div class="ezErrorBox ezHiddenDefault" id="EzRequestTimeOffDialog_ValidationError"
+                                    class="ezRequestTimeOffDialog_ValidationError">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

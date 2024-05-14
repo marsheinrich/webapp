@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ezclocker/ezclocker-landing-v2/static/css/main.e9e23194.css",
+    "main.js": "/ezclocker/ezclocker-landing-v2/static/js/main.354a73e1.js",
+    "static/js/787.741c0601.chunk.js": "/ezclocker/ezclocker-landing-v2/static/js/787.741c0601.chunk.js",
+    "index.html": "/ezclocker/ezclocker-landing-v2/index.html",
+    "main.e9e23194.css.map": "/ezclocker/ezclocker-landing-v2/static/css/main.e9e23194.css.map",
+    "main.354a73e1.js.map": "/ezclocker/ezclocker-landing-v2/static/js/main.354a73e1.js.map",
+    "787.741c0601.chunk.js.map": "/ezclocker/ezclocker-landing-v2/static/js/787.741c0601.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9e23194.css",
+    "static/js/main.354a73e1.js"
+  ]
+}

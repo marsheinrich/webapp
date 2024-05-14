@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<div id="EzExportTimeSheet" class="ezHiddentByDefault" title="Export Time Sheet">
+    <input type="hidden" id="EzExportTimeSheetDialog_TimeZone" /> <input type="hidden"
+        id="EzExportTimeSheetDialog_EmployerId" /> <input type="hidden" id="EzExportTimeSheetDialog_EmployeeId" />
+
+    <!-- Employee Export Mode -->
+    <div style="display: none" id="EzEMPLOYEE_EXPORT_MODE">
+
+        <div id="EzEmployeeExportTimeSheetDialog" title="Export Time Sheet">
+            <div class="ezSilverBox marginTop10" style="padding-bottom: 52px;">
+                <h3>Select the Date Range</h3>
+                <table class="ezFullWidth">
+                    <tr>
+                        <td class="leftAlignCell"><label>Start Date</label> <br /> <input type="text"
+                                id="EzEmployeeExportTimeSheetDialog_StartDate" /></td>
+                        <td class="leftAlignCell"><label>End Date</label> <br /> <input type="text"
+                                id="EzEmployeeExportTimeSheetDialog_EndDate" /></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Employer Export Mode -->
+    <div id="EzEMPLOYER_EXPORT_MODE" class="ezHiddentByDefault">
+
+        <div id="EzEmployerExportTimeSheetDialog" title="Export Time Sheets">
+            <div class="ezTabContainer" id="EzExportTypeTabs">
+
+                <div class="ezTabButtonContainer">
+                    <button id="EzEmployerExportTimeSheetDialog_SelectedEmployee" type="button"
+                        class="ezTabButton ezFloatLeft ezTabButtonActive" data-active="true"
+                        data-tabgroup="exportReportTabs" data-tabviewid="EzExportSelectedEmployeeView">
+                        Selected Employee
+                    </button>
+                    <button id="EzEmployerExportTimeSheetDialog_AllEmployees" type="button"
+                        class="ezTabButton ezFloatLeft" data-active="false" data-tabgroup="exportReportTabs"
+                        data-tabviewid="EzExportAllEmployeesView">
+                        All Employees
+                    </button>
+                    <button id="EzEmployerExportTimeSheetDialog_Jobs" type="button" class="ezTabButton ezFloatLeft"
+                        data-active="false" data-tabgroup="exportReportTabs" data-tabviewid="EzExportJobsView">
+                        Jobs
+                    </button>
+                    <div data-feature-id="ezfIntegrations" id="Ez{feature_name}FeatureContainer"
+                        class="ezFeatureContainer" style="display:none">
+                        <button id="EzEmployerIntegrations" type="button" class="ezTabButton ezFloatLeft"
+                            data-active="false" data-tabgroup="exportReportTabs"
+                            data-tabviewid="EzEmployerIntegrationsView">
+                            Integrations
+                        </button>
+                    </div>
+                </div>
+
+                <div id="EzExportSelectedEmployeeView" data-tabgroup="exportReportTabs" class="ezActiveTabView">
+                    <h3>Select the Employee</h3>
+                    <p>
+                        <select id="EzEmployerExportTimeSheetDialog_EmployeeSelection" class="ezFullWidth"></select>
+                    </p>
+                </div>
+
+                <div id="EzExportAllEmployeesView" data-tabgroup="exportReportTabs" class="ezHiddenTabView">
+                    <div style="height: 92px">
+                        <h3>Report Options:</h3>
+                        <p>
+                        <table class="ezFullWidth" id="EzExportAllEmployees_OptionsTable">
+                            <caption />
+                            <th id="EzExportAllEmployees_OptionsTableHeader" />
+                            <tr>
+                                <td><label for="EzRadioAllEmployeesByEmployee"> <input
+                                            id="EzRadioAllEmployeesByEmployee" name="Group_by_Employee" type="radio"
+                                            checked />
+                                        Group Time Entries by Employee
+                                    </label></td>
+                                <td><label for="EzRadioAllEmployeesByDate"> <input id="EzRadioAllEmployeesByDate"
+                                            name="Group_by_Employee" type="radio" /> Group
+                                        Time Entries by Day
+                                    </label></td>
+                            </tr>
+                        </table>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="EzExportJobsView" data-tabgroup="exportReportTabs" class="ezHiddenTabView">
+                    <div style="height: 92px">
+                        <h3>Report Options:</h3>
+                        <p>
+                        <div class="ezFloatLeft">
+                            <input id="EzRadioGroupByJob" name="EZ_GROUP_BY_JOB" type="radio" checked /> <label
+                                for="EzRadioGroupByJob">Group by Job </label>
+                        </div>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div id="EzEmployerIntegrationsView" data-tabgroup="exportReportTabs" class="ezHiddenTabView">
+                    <div data-feature-id="ezfIntegrations" id="Ez{feature_name}FeatureContainer"
+                        class="ezFeatureContainer" style="display:none">
+                        <div style="height: 142px">
+                            <div id="EzIntegrationAbsent" class="ezHiddenDefault">
+                                <h3>Integrations with QuickBooks!</h3>
+                                <p>To get setup click the Account button to go to your Account page. Scroll down until
+                                    you see the Integrations section. You can the</p>
+                                <p>
+                                    <button id="accountSetupIntegrationButton" title="Click to setup integration"
+                                        class="actionButton">Click Here to go to your Account page to get
+                                        setup!</button>
+                                </p>
+                            </div>
+                            <div id="EzIntegrationPresent" class="ezHiddenDefault">
+                                <h3>Select Integration to export time entries to:</h3>
+                                <select id="options_integrations" class="ezFullWidth">
+                                    <option value="0">QuickBooks Online</option>
+                                    <option value="1">Paychex Integration</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ezSilverBox marginTop10">
+                <h3>Select the Date Range</h3>
+                <table class="ezFullWidth">
+                    <tr>
+                        <td class="leftAlignCell"><label>Start Date</label> <br />
+                            <input type="text" id="EzEmployerExportTimeSheetDialog_StartDate" />
+                        </td>
+                        <td class="leftAlignCell"><label>End Date</label> <br />
+                            <input type="text" id="EzEmployerExportTimeSheetDialog_EndDate" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <table id="EzEmployerExportTimeSheetDialog_TimeFormatTable" class="ezFullWidth">
+                <tr>
+                    <td class="ezHalfWidth ezTopAlign">
+                        <div class="ezReportOptionBox">
+                            <img src="/public/images/info.svg" class="ezMiddleAlign" style="width: 18px; height: 18px"
+                                title="32 hours 45 minutes will display as 32.75" alt="i" /> <label
+                                for="EzReportWithDecimalTotals"> <input id="EzReportWithDecimalTotals"
+                                    type="checkbox" /> Totals in decimal format.
+                            </label>
+                        </div>
+                    </td>
+                    <td class="ezHalfWidth ezTopAlign">
+                        <div class="ezReportOptionBox">
+                            <img src="/public/images/info.svg" class="ezMiddleAlign" style="width: 18px; height: 18px"
+                                title="1:30 will display as 13:30" /> <label for="EzReportWith24hrTime"> <input
+                                    id="EzReportWith24hrTime" type="checkbox" /> Time in 24 hour format.
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div id="ezDateRangeError" class="ezErrorBox" style="display:none"></div>
+</div>

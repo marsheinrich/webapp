@@ -1,0 +1,14 @@
+.questionSlide {
+    display: none;
+}
+
+.faqcontainer {
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    padding: 4px;
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, .4);
+}

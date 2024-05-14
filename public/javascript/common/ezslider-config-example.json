@@ -1,0 +1,47 @@
+{
+    "container": {
+        "id": "landing-slider-id",
+        "classname": "ezslider-container"
+    },
+    "images": {
+        "classname": "ezslider-image",
+        "imageinfo": [
+            {
+                "id": "1",
+                "src": "https://ezclocker.com/public/images/slider-placeholder.png",
+                "title": "Image 1",
+                "link": "http://ezclocker.com/links/image1link.html"
+            },
+            {
+                "id": "2",
+                "src": "https://ezclocker.com/public/images/slider-placeholder.png",
+                "title": {
+                    "classname": "titleClassName",
+                    "value": "Image 1"
+                },
+                "link": "http://ezclocker.com/links/image1link.html"
+            }
+        ]
+    },
+    "navigation": {
+        "navdots": {
+            "classname": "ezslider-nav-dots",
+            "image": "http://ezclocker.com/images/navdot.png"
+        },
+        "leftbutton": {
+            "classname": "ezslider-nav-button",
+            "image": "http://ezclocker.com/images/lefticon.png",
+            "text": "<"
+        },
+        "rightbutton": {
+            "class": "ezslider-nav-button",
+            "image": "http://ezclocker.com/images/righticon.png",
+            "text": "<"
+        }
+    },
+    "autoslide": {
+        "delayms": "4000",
+        "jqtransition": "jquery-transition-name",
+        "startingimageid": "1"
+    }
+}

@@ -1,0 +1,55 @@
+/* Styling for the quick filter menu on dashboards */
+div.filterMenu {
+    margin-top: 10px;
+    padding: 4px;
+
+    /* background-color: var(--ezAlphaBackgroundWhite2); */
+    background-color: rgb(255 255 255 / 40%);
+    border-width: 1px;
+    border-style: solid;
+
+    /* border-color: var(--ezClockerSilver); */
+    border-color: #e0e0e0;
+}
+
+label.payPeriodTitle {
+    font-weight: bold;
+    padding: 8px;
+}
+
+button.filterNavPrevious {
+    height: 30px;
+    font-size: small;
+    width: 100px;
+}
+
+button.filterNavNext {
+    height: 30px;
+    font-size: small;
+    width: 100px;
+}
+
+button.quickFilterSubmit {
+    height: 30px;
+    font-size: small;
+    width: 100px;
+}
+
+input.quickFilterStartDate {
+    height: 18px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2px;
+    border-radius: 4px;
+    width: 100px;
+}
+
+input.quickFilterEndDate {
+    margin-right: 10px;
+    height: 18px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2px;
+    border-radius: 4px;
+    width: 100px;
+}

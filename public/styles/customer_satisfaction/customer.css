@@ -1,0 +1,151 @@
+/*
+    Used in the following:
+    (updated: 2021.02.22)
+
+    m/p/accept-employee-invite/index.html
+
+    public/employeeSignup.html
+    public/signup.html
+*/
+
+.rateUsCustomerSatisfactionBody {
+    background-color: #0f4776;
+    background-image: none;
+}
+
+.rateUsCustomerSatisfactionMainDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.rateUsCustomerSatisfactionSubDiv {
+    margin: 100px;
+}
+
+.rateUsCustomerSatisfactionBox {
+    background-color: white;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: #e1e1e1;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 35px;
+}
+
+td.rateUsCustomerSatisfactionCell {
+    padding-top: 20px;
+    text-align: center;
+}
+
+td.rateUsCustomerSatisfactionInputCell {
+    padding-bottom: 8px;
+}
+
+td.rateUsCustomerSatisfactionLabel {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+td.lightRateUsCustomerSatisfactionLabel {
+    font-size: 16pt;
+}
+
+td.liteRateUsCustomerSatisfactionLabel {
+    font-weight: normal;
+    font-size: 12pt;
+    color: #808080;
+}
+
+td.rateUsCustomerSatisfactionButtonCell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+}
+
+div.rateUsCustomerSatisfactionBanner {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+div.rateUsCustomerSatisfactionSubBanner {
+    text-align: center;
+    font-size: 18pt;
+    font-weight: normal;
+    color: #808080;
+    margin-bottom: 28px;
+}
+
+div.rateUsCustomerSatisfactionErrorBox {
+    text-align: center;
+    color: red;
+    font-size: 14pt;
+    display: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+div.rateUsCustomerSatisfactionStaticData {
+    font-weight: bold;
+    font-size: 16pt;
+    color: #0f4777;
+    padding-bottom: 8px;
+}
+
+input.rateUsCustomerSatisfactionInput {
+    width: 100%;
+    font-size: 18pt;
+}
+
+textarea.rateUsCustomerSatisfactionInput {
+    width: 100%;
+    font-size: 18pt;
+}
+
+.rateUsCustomerSatisfactionStaticDataLabel {
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.ezCancelFeedbackButton {
+    margin-left: 10px;
+}
+
+::placeholder {
+    opacity: 0.4;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .rateUsCustomerSatisfactionBody {
+        background-color: white;
+    }
+
+    .rateUsCustomerSatisfactionSubDiv {
+        margin: 0;
+    }
+
+    .rateUsCustomerSatisfactionBox {
+        width: unset;
+    }
+
+    .ezCancelFeedbackButton {
+        margin-top: 10px;
+        margin-left: 0;
+
+    }
+
+    td.rateUsCustomerSatisfactionButtonCell {
+        float: none;
+        text-align: center;
+    }
+
+}

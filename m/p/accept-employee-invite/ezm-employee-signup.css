@@ -1,0 +1,118 @@
+.ezEmployeeAcceptInviteHeader {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-areas: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.ezEmployeeAcceptInviteSubHeader {
+    color: #0f4777;
+    text-align: center;
+}
+
+.ezEmployeeAcceptInviteInputContainer {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.ezmEmployeeAcceptInviteDataDisplay {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+.ezmEmployeeAcceptInviteDataRow {
+    display: grid;    
+    grid-template-rows: auto;
+    align-content: center;
+}
+
+.ezmEmployeeAcceptInviteButtonRow {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: right;
+    align-content: center;
+}
+
+.ezmEmployeeAcceptInviteDownloadAndriodContainer {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.ezmEmployeeInviteSuccessLabel {
+    font-weight: bold;
+    color: #0f4777;
+}
+
+.ezmEmployeeInviteWelcomeLabel {
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #6d6e70;
+    padding: 8px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.ezmEmployeeInviteCenterGridContainer {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.ezmEmployeeInviteDownloadContainer {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0
+}
+
+.ezmEmployeeInviteAppleAppStoreImg {
+    width: 75%;
+}
+
+.ezmLegalStatement {
+    color: #000000;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.ui-loading .ui-loader
+{
+    display:none;
+}
+
+.ezMiniHelpText {
+    color: #0f4777;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: normal;    
+    font-family: Roboto, Verdana, sans-serif;
+}
+
+.ezFakeInput { 
+    padding: 8px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 1em; 
+    font-weight: bold;   
+}
+
+.ezm-accept-invite-display-label {
+    font-size: 0.8em;
+}
+
+.ezm-accept-invite-input-label {
+    font-size: 1.2em;
+    color: #0f4777;
+    font-weight: bold;
+}
+
+.ezm-create-password-container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

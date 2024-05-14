@@ -1,0 +1,106 @@
+.centerGrayBox {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.grayBox {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* for orange background */
+
+.centerHighlightWhiteTitleText {
+    text-shadow: 0 0 10px #000000;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+.centerHighlightBlackTitleText {
+    text-shadow: 0 0 10px #ffffff;
+    color: #000000;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+table.mobileCenterTable {
+    width: 100%;
+}
+
+td.mobileCenterCell {
+    padding-top: 15px;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 15px;
+}
+
+td.mobileLeftMiddleCell {
+    text-align: left;
+    vertical-align: middle;
+}
+
+img.mobileLogo {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 4px;
+    background-color: #ffffff;
+}
+
+.signInGradient {
+    /* IE10 Consumer Preview */
+    background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #FF9900 100%);
+
+    /* Mozilla Firefox */
+    background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #FF9900 100%);
+
+    /* Opera */
+    background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #FF9900 100%);
+
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, #FFFFFF), color-stop(1, #FF9900));
+
+    /* Webkit (Chrome 11+) */
+    background-image: radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #FF9900 100%);
+
+    /* W3C Markup, IE10 Release Preview */
+    background-image: radial-gradient(circle farthest-corner at center, #FFFFFF 0%, #FF9900 100%);
+}
+
+div.signIn {
+    background-color: #FF9900;
+}
+
+label.basicLabel {
+    font-size: large;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: none;
+}
+
+.noborder {
+    border-style: none;
+}
+
+label.boldtext {
+    font-weight: bold;
+}
+
+a.mobileLogo {
+    border-style: none;
+    height: 32px;
+    padding: 0;
+}

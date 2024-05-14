@@ -1,0 +1,94 @@
+<link href="../../public/javascript/jquery/jquery-ui-1.10.3/css/jquery-ui-1.10.3.min.css" rel="stylesheet"
+    type="text/css" />
+<script src="../../public/javascript/jquery/jquery-1.11.0.min.js"></script>
+<script src="../../public/javascript/jquery/jquery-ui-1.10.3/js/jquery-ui-1.10.3.min.js"></script>
+
+<style>
+table.employerExportDialog {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td.employerExportDialog {
+    text-align: left;
+    vertical-align: top;
+}
+
+td.employerExportDialog.buttonCell {
+    text-align: right;
+}
+
+label.employerExportDialog {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14pt;
+}
+</style>
+
+<body>
+    <div id="_EZW_EmployerExportTimeSheetDialog" title="Export Time Sheet">
+        <input type="hidden" id="_EZW_TimeZone" />
+        <table class="employerExportDialog">
+            <tr>
+                <td class="employerExportDialog"><label class="employerExportDialog">Export time sheet for:</label>
+                    <br /> <input type="radio" id="_EZW_AllEmployeesRadio" checked value="All employees" /> <input
+                    type="radio" id="_EZW_SelectedEmployee" value="Selected Employee" /> <select
+                    id="_EZW_EmployeeSelection">
+                </select></td>
+            </tr>
+            <tr>
+                <td class="employerExportDialog"><label>Start Date</label> <br /> <input type="date"
+                    id="_EZW_StartDate" /></td>
+                <td class="employerExportDialog"><label>End Date</label> <input type="date" id="_EZW_EndDate" /></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+    var ezwEmployerExportTimeSheetDialog = {
+        me: function() {
+            var _me_ = $("#_EZW_EmployerExportTimeSheetDialog");
+            return _me_;
+        },
+        init: function() {
+            //$("body").append(ezwEmployerExportTimeSheetDialog.me());
+            ezwEmployerExportTimeSheetDialog.me().dialog({
+                autoOpen: false,
+                closeOnEscape: true,
+                height: 400,
+                width: 400,
+                modal: true,
+                show: "blind",
+                showOpt: {
+                    direction: "down"
+                },
+                position: "center",
+                buttons: {
+                    "Export": ezwEmployerExportTimeSheetDialog.exportTimeSheet,
+                    Cancel: ezwEmployerExportTimeSheetDialog.closeDialog
+                },
+                close: ezwEmployerExportTimeSheetDialog.closeDialog
+            });
+        },
+        showDialog: function(startDate, endDate, timeZone, employees) {
+            $("#_EZW_StartDate").val(new Date(startDate));
+            $("#_EZW_EndDate").val(new Date(endDate));
+            $("#_EZW_TimeZone").val(timeZone);
+            for (var index in employees) {
+                var employee = employees[index];
+                $("#_EZW_EmployeeSelection").append('<option value="' + employee.id + '">' + employee.employeeName +
+                    '</option>');
+            }
+            //if (ezwEmployerExportTimeSheetDialog.me().dialog("isOpen"))
+            //	return; // dialog already open
+            ezwEmployerExportTimeSheetDialog.me().dialog("show");
+        },
+        closeDialog: function() {
+            $("#" + ezwEmployerExportTimeSheetDialog.id).dialog("close");
+        },
+        exportTimeSheet: function() {
+
+        }
+    };
+
+    </script>
+</body>

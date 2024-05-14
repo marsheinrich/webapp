@@ -1,0 +1,47 @@
+<style>
+    table.ezIntegrationExportTimeEntriesContainer {
+        width: 100%;
+    }
+</style>
+
+<!-- qbo-wizard-flow: EXPORTTIMEENTRIES step-->
+<div id="EzWizardPageBody" class="ezWizardPageBody">
+    <div class="ezWizardHeader">Intuit QuickBooks Online Integration</div>
+    <div id="EzWizardContentBox" class="ezWizardContentBox">
+        <div id="EzWizardExportTimeEntriesDateSelectionContainer">
+            <div id="EzWizardInstructionText" class="ezWizardInstructionText">Select the pay period you wish to
+                export to QuickBooks.</div>
+            <table id="EzIntegrationExportTimeEntriesContainer" class="ezIntegrationExportTimeEntriesContainer">
+                <tr>
+                    <td id="EzIntegrationExportTimeEntriesStartDateCell">
+                        <div class="ezInputTitle">Time Period Start Date</div> <input type="text"
+                            id="EzIntegrationExportTimeEntriesStartDate" />
+                    </td>
+                    <td id="EzIntegrationExportTimeEntriesEndDateCell">
+                        <div class="ezInputTitle">Time Period End Date</div> <input type="text"
+                            id="EzIntegrationExportTimeEntriesEndDate" />
+                    </td>
+                </tr>
+            </table>
+            <div id="EzIntegrationExportTimeEntriesErrorContainer" class="ezErrorBox" style="display:none"></div>
+        </div>
+
+        <div class="ezHiddenDefault" id="EzWizardExportTimeEntriesProgressContainer">
+            <div class="ezAlignCenter">
+                <h1>Exporting time entries to your integration...</h1>
+                <img src="/public/webcomponents/spinner/assets/infinity.gif" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        ezApi.ezclocker.ezIntegrationExportController.ezInitWizardPage(
+            'EzIntegrationExportTimeEntriesStartDate',
+            'EzIntegrationExportTimeEntriesEndDate',
+            ezApi.ezclocker.ezDateTime.ezNowWithStartOfDay(),
+            ezApi.ezclocker.ezDateTime.ezNowWithEndOfDay().add(14, 'days'));
+    });
+</script>

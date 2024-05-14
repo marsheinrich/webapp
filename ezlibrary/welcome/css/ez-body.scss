@@ -1,0 +1,197 @@
+@import 'ez-core';
+@import 'ez-responsive.scss';
+
+// Default HTML styling
+html {
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    font-size: $ezResponsiveNormalFontSize;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+// Default Body Styling
+body {
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+    color: $ezTextColor;
+    font-size: $ezResponsiveNormalFontSize;
+    background-image: linear-gradient(90deg, var($ezBackgroundImageGradientAlphaWhite1) 50%, transparent 50%),
+    linear-gradient(90deg, var($ezBackgroundImageGradientAlphaWhite2) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, var($ezBackgroundImageGradientAlphaWhite3)50%),
+    linear-gradient(90deg, transparent 50%, var($ezBackgroundImageGradientAlphaWhite4) 50%);
+    background-size: 13px, 29px, 37px, 53px;
+    background-color: $ezAlphaBackgroundColor;
+    margin: $ezDefaultMarginSize;
+    padding: $ezDefaultPaddingSize;
+}
+
+// Normal Header Styles
+h1 {
+    font-weight: bold;
+    font-size: $ezResponsiveHeaderFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+h2 {
+    font-weight: bold;
+    font-size: $ezResponsiveTitleFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+h3 {
+    font-weight: bold;
+    font-size: $ezResponsiveSubHeaderFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+h4 {
+    font-weight: bold;
+    font-size: $ezResponsiveNormalFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+h5 {
+    font-weight: normal;
+    font-size: $ezResponsiveNormalFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+h6 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: $ezResponsiveNormalFontSize;
+    font-family: $ezFontFamilyRoboto, $ezFontFamilyVerdana, $ezFontFamilySansSerif;
+}
+
+// Marketing Header Styles
+h1.ez-marketing {
+    font-size: $ezResponsiveMarketingHeaderFontSize;
+    font-weight: bold
+}
+h2.ez-marketing {
+    font-size: $ezResponsiveMarketingTitleFontSize;
+    font-weight: bold
+}
+h3.ez-marketing {
+    font-size: $ezResponsiveMarketingSubHeaderFontSize;
+    font-weight: bold
+}
+h4.ez-marketing {
+    font-size: $ezMarketingNormalFontSize;
+    font-weight: bold
+}
+h5.ez-marketing {
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: normal;
+}
+h6.ez-marketing {
+    font-size: $ezResponsiveMarketingNormalFontSize;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+// Default link styling
+a {
+    font-size: $ezResponsiveNormalFontSize;
+    font-style: normal;
+    color: $ezClockerNavy;
+    font-weight: normal;
+    &:hover {
+        color: $ezHoverNavy;
+    }
+    &:focus {
+        color: $ezLightNavy;
+    }
+    &:active {
+        color: $ezDarkNavy;
+    }
+}
+
+label {
+    font-size: $ezResponsiveLabelFontSize;
+    color: $ezClockerBlack;
+    background-color: transparent;
+}
+
+// Default Paragraph Styling
+p {
+    background-color: transparent;
+    color: $ezClockerBlack;
+    font-size: $ezResponsiveNormalFontSize;
+}
+
+
+// Default Div Styling
+div {
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+// Default table styling
+table {
+    font-size: $ezResponsiveNormalFontSize;
+    color: $ezClockerBlack;
+    background-color: $ezClockerWhite;
+    border-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: $ezClockerGray;
+}
+caption {
+    text-align: left;
+    caption-side: bottom;
+    font-size: $ezResponsiveSmallFontSize;
+    font-style: italic;
+}
+thead {
+    background-color: $ezClockerNavy;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: $ezBorderGray;
+}
+th {
+    vertical-align: top;
+    text-align: left;
+    font-size: $ezResponsiveNormalFontSize;
+    font-weight: bold;
+    color: $ezClockerWhite;
+}
+tbody {
+    background-color: $ezClockerWhite;
+    border-style: none;
+}
+tr {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: $ezClockerGray;
+}
+td {
+    vertical-align: top;
+    text-align: left;
+    font-size: $ezResponsiveNormalFontSize;
+    font-weight: normal;
+    color: $ezClockerBlack;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: $ezClockerGray;
+}
+tfoot {
+    font-size: $ezResponsiveSmallFontSize;
+    font-weight: bold;
+    color: $ezClockerWhite;
+    background-color: $ezClockerSilver;
+    border-style: none;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: $ezBorderGray;
+}
+
+div.ez-clocker-header-logo-container {
+    margin-left: 5%;
+    max-width: 100%;
+}
+
+.ez-large-box-shadow {
+    box-shadow: 0px 0px 16px 4px rgba(109, 110, 112, 0.75);
+}

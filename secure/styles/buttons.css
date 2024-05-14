@@ -1,0 +1,96 @@
+button.headerButton {
+    width: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #edf6ff;
+    color: #000000;
+    border-color: #000000;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.headerButton:disabled {
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.headerButton:active {
+    background-color: #c0c0c0;
+}
+
+button.headerButton:hover {
+    background-color: #ffffff;
+}
+
+button.actionButton {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.actionButton:hover {
+    background-color: #FFCC66;
+}
+
+button.actionButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}
+
+button.disabledActionButton {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #808080;
+    border-color: #808080;
+    border-style: solid;
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.rightEditButton {
+    width: 50px;
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #FF9900;
+    color: #000000;
+    border-color: #808080;
+    border-style: solid;
+    padding: 2px;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+button.headerButton:disabled {
+    background-color: #c0c0c0;
+    cursor: default;
+}
+
+button.rightEditButton:hover {
+    background-color: #FFCC66;
+}
+
+button.rightEditButton:active {
+    border-top-color: #996600;
+    border-left-color: #996600;
+    border-right-color: #FFCC66;
+    border-bottom-color: #FFCC66;
+    background-color: #FF9933;
+}

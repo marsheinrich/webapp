@@ -1,0 +1,254 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Tab UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezTabContainer {
+    color: var(--ezFontColor);
+    background-color: var(--ezClockerWhite);
+    border-style: none;
+    padding: 4px;
+}
+
+.ezTabsContainer {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 0;
+    background-color: var(--ezClockerBackground);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.ezTabs-content {
+    background-color: transparent;
+    border-color: var(--ezClockerBlack);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.ezTabs-content-scroll-box {
+    padding: 8px;
+    overflow: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ezClockerGray);
+    box-shadow: inset 0 0 1px 1px rgb(109 110 112 / 50%);
+}
+
+.ezTabs-section-grid-cols_360x360 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 360px 360px;
+    justify-content: stretch;
+    align-content: center;
+    grid-column-gap: 16px;
+}
+
+.ezTabs-section-grid-cols_75x25{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 75% auto;
+    grid-template-rows: auto;
+    justify-content: start;
+    align-content: center;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.ezTabs-section-grid-cols_100 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    justify-content: start;
+    align-content: start;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.ezTab,
+.ezTab:enabled,
+.ezTab:visited {
+    min-height: 32px;
+    margin-bottom: 0;
+    color: var(--ezClockerBlack) ;
+    background-color: var(--ezClockerOffWhite) ;
+    border-color: var(--ezLightNavy) ;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    outline-width: 0;
+}
+
+.ezTab:enabled:hover,
+.ezTab:enabled:active,
+.ezTab:enabled:focus {
+    margin-bottom: 0;
+    color: var(--ezNavyContainerTextColor) ;
+    background-color: var(--ezHoverNavy) ;
+    border-color: var(--ezClockerBlack) ;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    outline-width: 0;
+    box-shadow: inset 0 -4px 4px -2px var(--ezDarkNavy);
+}
+
+.ezErrorTab,
+.ezErrorTab:enabled,
+.ezErrorTab:visited {
+    min-height: 32;
+    margin-bottom: 0;
+    color: var(--ezClockerBlack);
+    background-color: var(--ezClockerOffWhite);
+    border-color: var(--ezBorderAlertRed);
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    outline-width: 0;
+}
+
+.ezErrorTab:enabled:hover,
+.ezErrorTab:enabled:active,
+.ezErrorTab:enabled:focus {
+    margin-bottom: 0;
+    color: var(--ezNavyContainerTextColor) ;
+    background-color: var(--ezHoverNavy) ;
+    border-color: var(--ezBorderAlertRed);
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    outline-width: 0;
+    box-shadow: inset 0 -4px 4px -2px var(--ezDarkNavy);
+}
+
+.ezActiveTab,
+.ezActiveTab:hover,
+.ezActiveTab:visited,
+.ezActiveTab:focus,
+.ezActiveTab:active,
+.ezActiveTab:enabled,
+.ezActiveTab:enabled:hover,
+.ezActiveTab:enabled:visited,
+.ezActiveTab:enabled:active,
+.ezActiveTab:enabled:active:hover,
+.ezActiveTab:enabled:focus,
+.ezActiveTab:enabled:focus:hover,
+.ezActiveTab:enabled:focus:active,
+.ezActiveTab:enabled:focus:active:hover {
+    margin-bottom: 0;
+    min-height: 32;
+    background-color: var(--ezClockerNavy) ;
+    color: var(--ezNavyContainerTextColor) ;
+    font-weight: bold;
+    border-color: var(--ezClockerBlack) ;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    box-shadow:
+        0 -2px 2px 0 rgb(109 110 112 / 50%),
+        2px 0 2px 0 rgb(109 110 112 / 50%),
+        -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ezErrorActiveTab,
+.ezErrorActiveTab:hover,
+.ezErrorActiveTab:visited,
+.ezErrorActiveTab:focus,
+.ezErrorActiveTab:enabled,
+.ezErrorActiveTab:enabled:hover,
+.ezErrorActiveTab:enabled:visited,
+.ezErrorActiveTab:enabled:active,
+.ezErrorActiveTab:enabled:active:hover,
+.ezErrorActiveTab:enabled:focus,
+.ezErrorActiveTab:enabled:focus:hover,
+.ezErrorActiveTab:enabled:focus:active,
+.ezErrorActiveTab:enabled:focus:active:hover {
+    margin-bottom: 0;
+    min-height: 32;
+    background-color: var(--ezClockerNavy) ;
+    color: var(--ezNavyContainerTextColor) ;
+    font-weight: bold;
+    border-color: var(--ezBorderAlertRed);
+    border-style: solid;
+    border-width: 2px;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline-style: none;
+    box-shadow:
+        0 -2px 2px 0 rgb(109 110 112 / 50%),
+        2px 0 2px 0 rgb(109 110 112 / 50%),
+        -2px 0 2px 0 rgb(109 110 112 / 50%);
+}
+
+.ez-tab-view-container {
+    border-style: solid;
+    border-color: var(--ezClockerBlack);
+    border-width: 2px;
+}
+
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/

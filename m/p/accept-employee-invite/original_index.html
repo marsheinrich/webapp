@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/images/ezm-favicon.png?v=r72-3" rel="shortcut icon" type="image/png" />
+    <link href="/images/ezm-favicon-48x48.png?v=r72-3" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png?v=r72-3" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png?v=r72-3" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png?v=r72-3" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="../../jqm/1.4.5/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../jqm/1.4.5/jquery.mobile.theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../jqm/1.4.5/jquery.mobile.custom/jquery.mobile.custom.theme.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../jqm/1.4.5/jquery.mobile.custom/jquery.mobile.custom.structure.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../jqm/1.4.5/themes/ezclocker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../jqm/1.4.5/themes/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="../css/ezm-common.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="ezm-employee-signup.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../jqm/1.4.5/jquery.mobile.min.js"></script>
+    <script src="../../jqm/1.4.5/jquery.mobile.custom/jquery.mobile.custom.min.js"></script>
+    <script src="../dist/ezm-accept-employee-invite.bundle.js?v=r72-3"></script>
+    <title>ezClocker</title>
+</head>
+
+<body>
+    <div id="EzmEmployeeInvitePage" data-theme="a" data-role="page">
+        <div data-role="main" class="ui-content">
+            <div id="EzmCustomLargeMobileHeaderContainer" class="ezm-left-middle-row-container">
+                <div id="EzmCustomLargeMobileHeaderLogoContainer" class="ezm-left-middle-row-container">
+                    <img id="EzmCustomLargeMobileHeaderLogo" class="ezm-custom-header-logo"
+                        src="/images/ezclocker-logo-left-align.svg" />
+                </div>
+                <div id="EzmCustomLargeMobileSubHeader" class="ezm-custom-header-sub-header">
+                    Accept Employee Invite and Sign Up
+                </div>
+            </div>
+            <div id="EzMissingInviteTokenInUrlError" class="ezErrorBox" style="display:none">
+                <p>
+                    Your invite link does not contain your unique invite token.
+                </p>
+                <p>
+                    Make sure you do not alter the link provided in the invite email when opening in your browser.
+                </p>
+                <p>
+                    If you continue to have problems delete your existing invite email and ask your employer to re-send
+                    the invite.
+                </p>
+            </div>
+            <div id="EzAcceptEmployeeInviteReadyContainer">
+                <p class="ezm-instruction-text">
+                    Your employer has entered your name and email address for you.
+                </p>
+                <p class="ezm-instruction-text">
+                    If you need to change your name or email address let your employer know and they will update your
+                    information and re-send the invite.
+                </p>
+                <p class="ezm-instruction-text">
+                    Accept the invite by creating a password for your employee account and tapping the Sign Up button.
+                </p>
+                <div class="ezm-graybox">
+                    <div class="ezEmployeeAcceptInviteInputContainer">
+                        <div class="ezmEmployeeAcceptInviteDataRow">
+                            <div id="EzEmployeeNameContainer">
+                                <div class="ezm-accept-invite-display-label">Invite for</div>
+                                <div id="EzmEmployeeAcceptInviteNameDisplay" class="ezFakeInput"></div>
+                                <input id="EzmEmployeeAcceptInviteName" name="EzmEmployeeAcceptInviteName"
+                                    type="hidden" />
+                            </div>
+                            <div id="EzEmployeeEmailContainer">
+                                <div class="ezm-accept-invite-display-label">Sign in Email</div>
+                                <div id="EzmEmployeeAcceptInviteEmailDisplay" class="ezFakeInput"></div>
+                                <input id="EzmEmployeeAcceptInviteEmail" name="EzmEmployeeAcceptInviteEmail"
+                                    type="hidden" />
+                            </div>
+                        </div>
+                        <div class="ezmEmployeeAcceptInviteDataRow">
+                            <div id="EzCreatePasswordContainer" class="ezm-create-password-container">
+                                <label id="EzmCreatePasswordLabel" for="EzmEmployeeAcceptInvitePassword">
+                                    <div class="ezm-accept-invite-input-label">Create Your Password</div>
+                                </label>
+                                <input id="EzmEmployeeAcceptInvitePassword" name="EzmEmployeeAcceptInvitePassword"
+                                    type="password" required="required" data-clear-btn="true"
+                                    placeholder="enter a password for your account" />
+                                <div id="EzPasswordRequirementsHelp" class="ezMiniHelpText">
+                                    Password minimum length is 4
+                                </div>
+                            </div>
+                        </div>
+                        <button id="EzmEmployeeAcceptInviteSignupButton" disabled="disabled" data-theme="a"
+                            class="ui-btn">
+                            Sign Up
+                        </button>
+                    </div>
+                    <div class="ezm-center-middle-row-container ezmLegalStatement">
+                        You agree to the Terms of Service when sign up.
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a id="EzmEmployeeAcceptInviteTOSButton" href="/m/p/tos" name="EzClockerTOSWindow">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a id="EzmEmployeeAcceptInvitePrivacyButton" href="/mobile/public/m.privacyPolicy.html"
+                                name="EzClockerPrivacyPolicyWindow">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-theme="a" data-role="page" id="EzmEmployeeAcceptInviteDownloadAndriod">
+        <div data-role="main" class="ui-content">
+            <div id="EzmCustomLargeMobileHeaderContainer" class="ezm-left-middle-row-container">
+                <div id="EzmCustomLargeMobileHeaderLogoContainer" class="ezm-left-middle-row-container">
+                    <img id="EzmCustomLargeMobileHeaderLogo" class="ezm-custom-header-logo"
+                        src="/images/ezclocker-logo-left-align.svg" />
+                </div>
+                <div id="EzmCustomLargeMobileSubHeader" class="ezm-custom-header-sub-header">
+                    Success!
+                </div>
+            </div>
+            <div class="ezm-center-middle-row-container ezmEmployeeInviteWelcomeLabel">
+                Welcome to ezClocker!
+            </div>
+            <p class="ezmEmployeeInviteAppleAppInfo">
+                Tap the store icon below to download and install the
+                <b>ezClocker: Employee Time Tracking and Scheduling</b>
+                for your Andriod device for free.
+            </p>
+            <div class="ezmEmployeeInviteCenterGridContainer">
+                <a id="EzmEmployeeAcceptInviteDownloadAndriodButton" rel="external">
+                    <img alt="Get it on Google Play"
+                        src="https://play.google.com/intl/en_us/badges/images/badge_new.png" />
+                </a>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a id="EzmEmployeeAcceptInviteTOSButton" href="/m/p/tos" name="EzClockerTOSWindow">
+                            Terms of Service
+                        </a>
+                    </li>
+                    <li>
+                        <a id="EzmEmployeeAcceptInvitePrivacyButton" href="/mobile/public/m.privacyPolicy.html"
+                            name="EzClockerPrivacyPolicyWindow">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-theme="a" data-role="page" id="EzmEmployeeAcceptInviteDownloadiPhone">
+        <div data-role="main" class="ui-content">
+            <div id="EzmCustomLargeMobileHeaderContainer" class="ezm-left-middle-row-container">
+                <div id="EzmCustomLargeMobileHeaderLogoContainer" class="ezm-left-middle-row-container">
+                    <img id="EzmCustomLargeMobileHeaderLogo" class="ezm-custom-header-logo"
+                        src="/images/ezclocker-logo-left-align.svg" />
+                </div>
+                <div id="EzmCustomLargeMobileSubHeader" class="ezm-custom-header-sub-header">
+                    Success!
+                </div>
+            </div>
+            <div class="ezm-center-middle-row-container ezmEmployeeInviteWelcomeLabel">
+                Welcome to ezClocker!
+            </div>
+            <p class="ezmEmployeeInviteAppleAppInfo">
+                Tap the store icon below to download and install the
+                <b>ezClocker: Employee Time Tracking and Scheduling</b>
+                for your iOS device for free.
+            </p>
+            <div class="ezmEmployeeInviteCenterGridContainer">
+                <a id="EzmEmployeeAcceptInviteDownloadiPhoneButton" rel="external">
+                    <img id="EzmEmployeeInviteAppleAppStoreBadge" alt="Download from the Apple App Store"
+                        src="/public/images/marketing/apple-appstore.svg" />
+                </a>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a id="EzmEmployeeAcceptInviteTOSButton" href="/m/p/tos" target="EzClockerTOSWindow">
+                            Terms of Service
+                        </a>
+                    </li>
+                    <li>
+                        <a id="EzmEmployeeAcceptInvitePrivacyButton" href="/mobile/public/m.privacyPolicy.html"
+                            target="EzClockerPrivacyPolicyWindow">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

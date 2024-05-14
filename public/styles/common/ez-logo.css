@@ -1,0 +1,106 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Logo UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezClockerLogo_32x32 {
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+.ezClockerLogoImgContaner_Center {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--ezClockerWhite);
+    text-align: center;
+}
+
+.ezClockerLogoTextContaner_Center {
+    padding: 10px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezBannerHeaderColor);
+    text-align: center;
+    font-size: var(--ezBannerHeaderFontSize);
+    font-weight: var(--ezBannerHeaderFontWeight);
+    font-style: var(--ezBannerHeaderFontStyle);
+}
+
+.ezClockerLogo_FullWidth {
+    border: none;
+    width: 85%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ezLogo-container-center {
+    display: grid;
+    padding: 4px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezBannerHeaderColor);
+    font-size: var(--ezBannerHeaderFontSize);
+    font-weight: var(--ezBannerHeaderFontWeight);
+    font-style: var(--ezBannerHeaderFontStyle);
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    .ezClockerLogo_FullWidth {
+        border: none;
+        width: 75%;
+        height: auto;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .ezClockerLogo_FullWidth {
+        border: none;
+        width: 75%;
+        height: auto;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+    .ezClockerLogo_FullWidth {
+        border: none;
+        width: 200px;
+    }
+
+    .ezLogo-container-center {
+        padding: 0;
+        background-color: var(--ezClockerWhite);
+        color: var(--ezBannerHeaderColor);
+        text-align: center;
+        font-size: var(--ezBannerHeaderFontSize);
+        font-weight: var(--ezBannerHeaderFontWeight);
+        font-style: var(--ezBannerHeaderFontStyle);
+    }
+}
+

@@ -1,0 +1,55 @@
+div.fold1 {
+    background: rgb(0 102 178);
+
+    /* Old browsers */
+    background: rgb(0 102 178);
+
+    /* Old browsers */
+    background: linear-gradient(-45deg, rgb(0 102 178 / 100%) 0%, rgb(0 138 237 / 100%) 56%, rgb(0 127 219 / 100%) 56%, rgb(0 145 255 / 100%) 100%);
+
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgb(0 102 178 / 100%)), color-stop(56%, rgb(0 138 237 / 100%)), color-stop(56%, rgb(0 127 219 / 100%)), color-stop(100%, rgb(0 145 255 / 100%)));
+
+    /* Chrome,Safari4+ */
+    background: linear-gradient(-45deg, rgb(0 102 178 / 100%) 0%, rgb(0 138 237 / 100%) 56%, rgb(0 127 219 / 100%) 56%, rgb(0 145 255 / 100%) 100%);
+
+    /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(-45deg, rgb(0 102 178 / 100%) 0%, rgb(0 138 237 / 100%) 56%, rgb(0 127 219 / 100%) 56%, rgb(0 145 255 / 100%) 100%);
+
+    /* Opera 11.10+ */
+    background: linear-gradient(-45deg, rgb(0 102 178 / 100%) 0%, rgb(0 138 237 / 100%) 56%, rgb(0 127 219 / 100%) 56%, rgb(0 145 255 / 100%) 100%);
+
+    /* IE10+ */
+    background: linear-gradient(135deg, rgb(0 102 178 / 100%) 0%, rgb(0 138 237 / 100%) 56%, rgb(0 127 219 / 100%) 56%, rgb(0 145 255 / 100%) 100%);
+
+    /* W3C */
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#0066b2', endColorstr='#0091ff', GradientType=1);
+
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+body.index {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #000000;
+    min-width: 300px;
+    background-image: url("../../images/background/gray-background.png");
+
+    /* background-color: #EDF6FF; */
+
+    /*
+	background:
+		radial-gradient(#E0E0E0 15%, transparent 16%) 0 0,
+		radial-gradient(#E0E0E0 15%, transparent 16%) 8px 8px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+		radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#EDF6FF;
+	background-size:16px 16px;
+	*/
+
+    /*
+	background: #edf6ff;
+	background-image: url("../images/background/bg1.png");
+	*/
+}

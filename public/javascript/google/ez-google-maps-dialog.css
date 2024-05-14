@@ -1,0 +1,55 @@
+.EZ_MapContainer {
+    height: 410px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px rgb(0 0 0 / 50%);
+}
+
+.EZ_GpsStatusContainerDisabled {
+    border-color: #c0c0c0;
+}
+
+.EZ_GpsStatusTitle {
+    font-weight: bold;
+    font-size: 12pt;
+    margin-bottom: 4px;
+}
+
+.EZ_GpsStatusTitleDisabled {
+    color: #c0c0c0;
+}
+
+.EZ_GpsStatusValueOut {
+    padding: 4px;
+    background-color: #0f4777;
+    color: #ffffff;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.EZ_GpsStatusValueOutDisabled {
+    background-color: #e0e0e0;
+    color: #e0e0e0;
+}
+
+.EZ_GpsStatusValueIn {
+    padding: 4px;
+    background-color: #8df13c;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.EZ_ExamplePinImage {
+    height: 24px;
+}
+
+.EZ_PinKeyContainer {
+    padding: 4px;
+    border-style: solid;
+    border-color: #a7a9ab;
+    border-width: 1px;
+    background-color: #e0e0e0;
+    color: #000000;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/png">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="javascript/jquery/jquery-ui-1.10.3/css/jquery-ui-1.10.3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/public/styles/common/ezclocker-common.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ezclocker-header.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ezclocker-maincontent.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/tcs-common-black.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/public/javascript/jquery/jquery-ui-1.10.3/js/jquery-ui-1.10.3.min.js"></script>
+    <!-- TODO: Fix google analytics -->
+    <script id="EzGoogleAnalyticsScript" type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '38206072-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    -->
+    <script src="/public/javascript/common/ezclocker-size-divs.js?v=r72-3"></script>
+    <script src="/public/javascript/common/ezclocker-block-user-actions.js?v=r72-3"></script>
+    <script src="/public/javascript/google-analytics.js?v=r72-3"></script>
+    <script src="/public/javascript/tcs-common.js?v=r72-3"></script>
+    <script src="/public/javascript/ezclocker-constants.js?v=r72-3"></script>
+    <script src="/public/javascript/devSignup/devSignUpDialog.js?v=r72-3"></script>
+    <script src="/public/javascript/jquery/jquery-tcs-common.js?v=r72-3></script>
+    <script src="/public/webcomponents/marketing/google-remarketing.js?v=r72-3"></script>
+    <script>
+        $('document').ready(
+            () => {
+                $('.bodyDiv').fadeIn("slow");
+
+                sizeDivs($("div#_EzClockerHeader"), $("div#_EzClockerMainContent"));
+
+                configureDialogs();
+
+                getEmailAddressParam();
+
+                showDevSignUpDialog();
+
+                getContactUsLink();
+
+                loadAnalytics("../");
+        });
+
+        $(window).resize(
+            () => {
+                sizeDivs($("div#_EzClockerHeader"), $("div#_EzClockerMainContent"));
+
+                $('div#filler').height($(document).height());
+
+                $("div#devSignUpDialog").dialog("option", "position", {
+                    my: "center",
+                    at: "center",
+                    of: window
+                });
+        });
+    </script>
+    <title>ezClocker: Developer</title>
+</head>
+
+<body>
+    <div class="ezClockerHeader2015NonFixed bottomShadow">
+        <a href="#" onclick="ezNavigation.navigateToMain();">
+            <img src="images/logos/ezclocker_logo_2015.svg" class="ezClockerHeader2015" />
+        </a>
+    </div>
+    <div class="ezClockerMainContent" id="_EzClockerMainContent">
+    </div>
+    <div id="devSignUpDialog" title="Developer Sign Up">
+        <form name="devSignUpForm" id="devSignUpForm" action="../account/createDeveloperAccount" method="post">
+            <div id="devSignUpError" class="signUpError">
+                <label>Some or all of the information you have entered is not correct.</label>
+            </div>
+            <label for="ez_name">Your Name</label>
+            <input style="width: 100%" id="developerName" type="text" name="developerName" />
+            <br />
+            <br />
+            <label for="ez_userName">Your Email Address</label>
+            <input style="width: 100%" id="emailAddress" type="text" name="emailAddress" />
+            <br />
+            <br />
+            <label for="ez_password">Your Password</label>
+            <input style="width: 100%" id="password" type="password" name="password" value="" />
+        </form>
+    </div>
+</body>
+
+</html>

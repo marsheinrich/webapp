@@ -1,0 +1,9 @@
+{
+   "ezclocker.website.version": "72-3-9",
+   "ezclocker.services.version": "r72.3.9",
+   "ezclocker.build.rc": "r72.3.9",
+   "ezclocker.build.version": "2024.05.07-72.3.9",
+   "ezclocker.build.branch": "releases/r72.3.x",
+    "ezclocker.build.datetime": "2024-05-07T21:17:16-05:00",
+   "ezclocker.build-environment": "loc"
+}

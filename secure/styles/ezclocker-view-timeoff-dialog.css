@@ -1,0 +1,21 @@
+#EzTimeOffSelectedTimeOffRequestsView>table>thead>tr>td {
+    padding: 6px;
+}
+
+#EzTimeOffSelectedTimeOffRequestsView>h3 {
+    margin: 5px 6px;
+}
+
+#EzRequestTimeOffSummary>div>h3 {
+    padding: 6px 3px;
+}
+
+.ezRequestTimeOffViewOverflowStyle {
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.ezRequestTimeOffViewYearSelectBox {
+    width: 200px;
+    background-color: #ffffff;
+}

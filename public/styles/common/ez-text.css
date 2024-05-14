@@ -1,0 +1,622 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Text CSS Classes
+| Note:
+|   Requires including the ez-body.css before this file due to
+|   dependencies upon css variables.
+=================================================================== */
+
+:root {
+    /* Font Family Variables */
+    --ezFontFamily: 'Roboto', verdana, sans-serif;
+    --ezTextFontFamily: 'Noto Sans JP', 'Roboto', verdana, sans-serif;
+
+    /* Banner Text Variables */
+    --ezBannerHeaderFontSize: 32pt;
+    /* Color: #000000, --ezClockerBlack defined in ez-body.css */
+    --ezBannerHeaderColor: var(--ezClockerBlack);
+    --ezBannerHeaderFontWeight: bold;
+    --ezBannerHeaderFontStyle: normal;
+
+    /* Header Text Variables */
+    --ezHeaderFontSize: 22pt;
+    /* Color: #000000, --ezClockerBlack defined in ez-body.css */
+    --ezHeaderFontColor: var(--ezClockerBlack);
+    --ezHeaderFontWeight: bold;
+    --ezHeaderFontStyle: normal;
+
+    /* Title Text Variables */
+    --ezTitleFontSize: 18pt;
+    --ezTitleFontColor: var(--ezClockerNavy);
+    --ezTitleFontWeight: bold;
+    --ezTitleFontStyle: normal;
+
+    /* Topic Text Variables */
+    --ezTopicFontSize: 14pt;
+    /* Color: #000000, --ezClockerBlack defined in ez-body.css */
+    --ezTopicFontColor: var(--ezClockerBlack);
+    /* Color: #ffffff, --ezClockerWhite defined in ez-body.css */
+    --ezTopicFontColorWhite: var(--ezClockerWhite);
+    --ezTopicFontWeight: bold;
+    --ezTopicFontStyle: normal;
+
+    /* Action Text Variables */
+    --ezActionFontSize: 14pt;
+    /* Color: #2419b2, --ezClockerBlue defined in ez-body.css */
+    --ezActionFontColor: var(--ezClockerBlue);
+    --ezActionFontWeight: bold;
+    --ezActionFontStyle: normal;
+
+    /* Normal Text Variables */
+    --ezFontSize: 14pt;
+    /* Color: #000000, --ezClockerBlack defined in ez-body.css */
+    --ezFontColor: var(--ezClockerBlack);
+    /* Color: #6d6e70, --ezClockerGray defined in ez-body.css */
+    --ezLightFontColor: var(--ezClockerGray);
+    --ezFontWeight: normal;
+    --ezFontStyle: normal;
+
+    /* Content Text Variables */
+    --ezContentFontSize: 12pt;
+    /* Color: #000000, --ezClockerBlack defined in ez-body.css */
+    --ezContentFontColor: var(--ezClockerBlack);
+    /* Color: #6d6e70, --ezClockerGray defined in ez-body.css */
+    --ezContentLightFontColor: var(--ezClockerGray);
+    --ezContentFontWeight: normal;
+    --ezContentFontStyle: normal;
+
+    /* Small Text Variables */
+    --ezSmallFontSize: 10pt;
+    --ezMicroFontSize: 8pt;
+    --ezMicroFontWeight: normal;
+    --ezMicroFontStyle: normal;
+
+    /* Data Related Text Variables */
+    /* Color: --ezClockerNavy: #0f4777;, --ezClockerNavyRGB: rgb(15, 71, 119) */
+    --ezDataColorNavy: var(--ezClockerNavy);
+
+    /* State or Status Related Text Variables
+    /* Color: #00B945, --ezClockerGreen defined in ez-body.css */
+    --ezActiveStateColor: var(--ezClockerGreen);
+    /* Color: #ffc500, --ezClockerYellow defined in ez-body.css */
+    --ezWarnningStateYellow: var(--ezClockerWarnning);
+    /* Color: #9b0400, --ezClockerWarnning defined in ez-body.css */
+    --ezWarnningStateRed: var(--ezClockerWarnning);
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+/* Header Text Styles */
+h1,
+.ezText-h1-32pt-ezClockerBlack {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* ezBannerHeaderColor defined above */
+    color: var(--ezBannerHeaderColor);
+    /* ezBannerHeaderColor defined above */
+    font-size: var(--ezBannerHeaderFontSize);
+    /* ezBannerHeaderColor defined above */
+    font-weight: var(--ezBannerHeaderFontWeight);
+    /* ezBannerHeaderColor defined above */
+    font-style: var(--ezBannerHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-h1-32pt-ezClockerNavy {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* --ezClockerNavy defined in ez-body.css */
+    color: var(--ezClockerNavy);
+    /* ezBannerHeaderColor defined above */
+    font-size: var(--ezBannerHeaderFontSize);
+    /* ezBannerHeaderColor defined above */
+    font-weight: var(--ezBannerHeaderFontWeight);
+    /* ezBannerHeaderColor defined above */
+    font-style: var(--ezBannerHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-h1-32pt-ezClockerWhite {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* --ezClockerWhite defined in ez-body.css */
+    color: var(--ezClockerWhite);
+    /* ezBannerHeaderColor defined above */
+    font-size: var(--ezBannerHeaderFontSize);
+    /* ezBannerHeaderColor defined above */
+    font-weight: var(--ezBannerHeaderFontWeight);
+    /* ezBannerHeaderColor defined above */
+    font-style: var(--ezBannerHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+h2,
+.ezText-h2-22pt-ezClockerBlack {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezHeaderFontColor);
+    font-size: var(--ezHeaderFontSize);
+    font-weight: var(--ezHeaderFontWeight);
+    font-style: var(--ezHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+h3,
+.ezText-h3-18pt-ezClockerNavy {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTitleFontColor);
+    font-size: var(--ezTitleFontSize);
+    font-weight: var(--ezTitleFontWeight);
+    font-style: var(--ezTitleFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-h3-ezClockerBlack {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* --ezClockerBlack defined in ez-body.css */
+    color: var(--ezClockerBlack);
+    font-size: var(--ezTitleFontSize);
+    font-weight: var(--ezTitleFontWeight);
+    font-style: var(--ezTitleFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+h4,
+.ezText-h4-14pt-ezClockerBlack {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTopicFontColor);
+    font-size: var(--ezTopicFontSize);
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-h4-12pt-ezClockerBlack {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTopicFontColor);
+    font-size: 12pt;
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-main-dialog-message {
+    color: var(--ezClockerNavy);
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: normal;
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+/* Header Styles */
+.ezH1 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezBannerHeaderColor);
+    font-size: var(--ezBannerHeaderFontSize);
+    font-weight: var(--ezBannerHeaderFontWeight);
+    font-style: var(--ezBannerHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH1-ezClockerWhite {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezClockerWhite);
+    font-size: var(--ezBannerHeaderFontSize);
+    font-weight: var(--ezBannerHeaderFontWeight);
+    font-style: var(--ezBannerHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezHeaderFontColor);
+    font-size: var(--ezHeaderFontSize);
+    font-weight: var(--ezHeaderFontWeight);
+    font-style: var(--ezHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH2-subheader {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTitleFontColor);
+    font-size: var(--ezHeaderFontSize);
+    font-weight: var(--ezHeaderFontWeight);
+    font-style: var(--ezHeaderFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH3 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTitleFontColor);
+    font-size: var(--ezTitleFontSize);
+    font-weight: var(--ezTitleFontWeight);
+    font-style: var(--ezTitleFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH3-ezClockerWhite {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezClockerWhite);
+    font-size: var(--ezTitleFontSize);
+    font-weight: var(--ezTitleFontWeight);
+    font-style: var(--ezTitleFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH3_warning {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezClockerWarnning);
+    font-size: var(--ezTitleFontSize);
+    font-weight: var(--ezTitleFontWeight);
+    font-style: var(--ezTitleFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezTopicFontColor);
+    font-size: var(--ezTopicFontSize);
+    font-weight: var(--ezTopicFontWeight);
+    font-style: var(--ezTopicFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezH4ActionBlue {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: var(--ezActionFontColor);
+    font-size: var(--ezActionFontSize);
+    font-weight: var(--ezActionFontWeight);
+    font-style: var(--ezActionFontStyle);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+/* Text Alignment Styles */
+.ezAlignRight {
+    text-align: right;
+}
+
+.ezAlignLeft {
+    text-align: left;
+}
+
+.ezAlignCenter {
+    text-align: center;
+}
+
+.ezVerticalAlignTop {
+    vertical-align: top;
+}
+
+.ezVerticalAlignMiddle {
+    vertical-align: middle;
+}
+
+.ezVerticalAlignBottom {
+    vertical-align: bottom;
+}
+
+/* Text Label Styles */
+.ezLabel {
+    color: var(--ezContentFontColor);
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+    font-style: var(--ezContentFontStyle);
+    font-weight: var(--ezContentFontWeight);
+}
+
+.ezDisabledLabel {
+    /* --ezClockerStone: #c0c0c0; (defined in ez-body.css) */
+    color: var(--ezClockerStone);
+}
+
+/* Text Weight Styles */
+.ezBold {
+    font-weight: bold;
+}
+
+.ezText-strike-out {
+    text-decoration: line-through;
+}
+
+.ezText-overline {
+    text-decoration: overline;
+}
+
+.ezText-underline {
+    text-decoration: underline;
+}
+
+/* Special Text Styles */
+.ez-faded-error-details {
+    color: var(--ezLightFontColor);
+    font-size: var(--ezSmallFontSize);
+    font-style: italic;
+}
+
+.ezText-legal-disclaimer {
+    /* --ezClockerGray: #6d6e70; (defined in ez-body.css) */
+    color: var(--ezClockerGray);
+    font-size: var(--ezMicroFontSize);
+    font-style: italic;
+}
+
+.ezText-username-info {
+    /* --ezClockerWhite: #ffffff; (defined in ez-body.css) */
+    color: var(--ezClockerWhite);
+    font-size: var(--ezSmallFontSize);
+}
+
+/* Text Classes */
+
+.ezText-bold {
+    font-family: var(--ezFontFamily);
+    font-weight: bold;
+}
+
+.ezText-data-navy {
+    color: var(--ezDataColorNavy);
+    font-family: var(--ezFontFamily);
+    font-weight: normal;
+}
+
+.ezText-navy {
+    color: var(--ezDataColorNavy);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+
+}
+
+.ezText-black {
+    color: var(--ezClockerBlack);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-bold-ezClockerBlack {
+    color: var(--ezClockerBlack);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-banner-size-32pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezBannerHeaderFontSize);
+}
+
+.ezText-header-size-22pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezHeaderFontSize);
+}
+
+.ezText-title-size-18pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezTitleFontSize);
+}
+
+.ezText-topic-size-14pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezTopicFontSize);
+}
+
+.ezText-content-size-12pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezContentFontSize);
+}
+
+.ezText-small-size-10pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif; (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezSmallFontSize);
+}
+
+.ezText-micro-size-8pt {
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif; (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+    font-size: var(--ezMicroFontSize);
+}
+
+/* Small Text Classes */
+
+/* Small Black */
+.ezText-small-black {
+    /* --ezClockerBlack: #000000; (defined in ez-body.css) */
+    color: var(--ezClockerBlack);
+    font-size: var(--ezSmallFontSize);
+}
+
+/* Small White */
+.ezText-small-white {
+    /* --ezClockerWhite: #ffffff; (defined in ez-body.css) */
+    color: var(--ezClockerWhite);
+    font-size: var(--ezSmallFontSize);
+}
+
+/* Small Gray */
+.ezText-small-gray {
+    /* --ezClockerGray: #6d6e70; (defined in ez-body.css) */
+    color: var(--ezClockerGray);
+    font-size: var(--ezSmallFontSize);
+}
+
+/* Small Navy */
+.ezText-small-navy {
+    /* --ezClockerNavy: #0f4777; (defined in ez-body.css) */
+    color: var(--ezClockerNavy);
+    font-size: var(--ezSmallFontSize);
+}
+
+/* Micro Text Classes */
+
+/* Micro Black */
+.ezText-micro-black {
+    /* --ezClockerBlack: #000000; (defined in ez-body.css) */
+    color: var(--ezClockerBlack);
+    font-size: var(--ezMicroFontSize);
+}
+
+/* Micro Gray */
+.ezText-micro-gray {
+    /* --ezClockerGray: #6d6e70; (defined in ez-body.css) */
+    color: var(--ezClockerGray);
+    font-size: var(--ezMicroFontSize);
+}
+
+/* Micro Navy */
+.ezText-micro-navy {
+    /* --ezClockerNavy: #0f4777; (defined in ez-body.css) */
+    color: var(--ezDataColorNavy);
+    font-size: var(--ezMicroFontSize);
+}
+
+/* Micro Navy */
+.ezText-micro-white {
+    /* --ezClockerWhite: #ffffff; (defined in ez-body.css) */
+    color: var(--ezClockerWhite);
+    font-size: var(--ezMicroFontSize);
+}
+
+.ezText-error-ezDarkAlertRed {
+    /* --ezDarkAlertRed: #c60500; (defined in ez-body.css) */
+    color: var(--ezDarkAlertRed);
+}
+
+.ezText-success-ezClockerGreen {
+    /* --ezClockerGreen: #00B945; (defined in ez-body.css) */
+    color: var(--ezClockerGreen);
+}
+
+.ezText-radio-checkbox-label {
+    cursor: pointer;
+}
+
+.ezText-ezActiveStatusColor {
+    /* --ezDarkAlertRed: #c60500; (defined in ez-body.css) */
+    color: var(--ezActiveStateColor);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-ezWarningStatusColor {
+    /* --ezDarkAlertRed: #c60500; (defined in ez-body.css) */
+    color: var(--ezWarnningStateYellow);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-ezErrorStatusColor,
+/* deprecated */.ezText-ezClockerWarnning,
+/* deprecated */.ezText-warning-dark-alert-red {
+    /* --ezDarkAlertRed: #c60500; (defined in ez-body.css) */
+    color: var(--ezWarnningStateRed);
+    /* --ezFontFamily: 'Roboto', verdana, sans-serif (defined in ez-body.css) */
+    font-family: var(--ezFontFamily);
+}
+
+.ezText-debug-id {
+    opacity: 80%;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Horizontal Rule Separator Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+hr.ezText-separator-line-navy {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 2px;
+    /* Ignoring hint: Do not use width or height when using padding or border */
+    height: 2px;
+    background-color: var(--ezClockerNavy);
+    border-color: var(--ezClockerNavy);
+    /* Ignoring hint: Do not use width or height when using padding or border */
+    border-style: solid;
+    /* Ignoring hint: Do not use width or height when using padding or border */
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)
+------------------------------------------------------------------ */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* ------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)
+------------------------------------------------------------------ */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* ------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+
+/* ------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+    .ezH2 {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        color: var(--ezHeaderFontColor);
+        font-size: 14pt;
+        font-weight: var(--ezHeaderFontWeight);
+        font-style: var(--ezHeaderFontStyle);
+        font-family: var(--ezFontFamily);
+    }
+
+    .ezH2-subheader {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        color: var(--ezTitleFontColor);
+        font-size: 14pt;
+        font-weight: var(--ezHeaderFontWeight);
+        font-style: var(--ezHeaderFontStyle);
+        font-family: var(--ezFontFamily);
+    }
+}

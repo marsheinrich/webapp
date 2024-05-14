@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "display": "Node 20",
+    "compilerOptions": {
+        "outFile": "../webapp-release",
+        "module": "ES6",
+        "target": "ES6",
+        "sourceMap": true,
+        "allowJs": true,
+        "checkJs": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "alwaysStrict": true,
+        "exactOptionalPropertyTypes": true,
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitAny": false,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "useUnknownInCatchVariables": true,
+        "types": [
+            "ezApi",
+            "globalThis",
+            "$"
+        ],
+        "plugins": [
+            {
+                "name": "typescript-eslint-language-service"
+            }
+        ]
+
+    },
+    "include": [
+        "src/main/webapp/**/*.js",
+        "src/main/webapp/**/*.ts",
+        "src/main/webapp/**/*.tsx"
+    ],
+    "exclude": [
+        "*.min.*",
+        "*.css",
+        "*.md",
+        ".*",
+        "*webpack*.js",
+        "src/main/webapp/node_modules/**",
+    ]
+}

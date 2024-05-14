@@ -1,0 +1,31 @@
+.ezAdmin-processing-spinner {
+    width: 100px;
+}
+
+.testBoxLine {
+    padding: 4px;
+}
+
+.warningText {
+    font-weight: bold;
+    color: #ff00c0;
+}
+
+.TestBox {
+    background-color: #FFFFFF;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.ResultsBox {
+    background-color: #E0E0E0;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+    margin-top: 10px;
+}
+

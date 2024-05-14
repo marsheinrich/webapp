@@ -1,0 +1,153 @@
+{
+    "views": {
+        "ezEmployerTimeOffView": {
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            }
+        },
+        "ezEmployeerTimeOffView": {
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            }
+        },
+        "ezTeamChatDialog": {
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": true
+            }
+        },
+        "account": {
+            "ezfYearlySubscriptions2023": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEZOPTION_REQUIRE_LOCATION_FOR_CLOCKINOUT": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfIntegrations": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezScheduleDrivenClockIn": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEZOPTION_ALLOW_RECORDING_OF_UNPAID_BREAKS": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEZOPTION_ALLOW_AUTOMATIC_BREAKS": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEZOPTION_NOTIFY_EMPLOYER_EMPLOYEE_MISSED_CLOCK_IN_CLOCK_OUT": {
+                "enabled": true,
+                "featureOn": false
+            },
+            "ezfEZOPTION_NOTIFY_EMPLOYEE_MISSED_CLOCK_IN_CLOCK_OUT": {
+                "enabled": true,
+                "featureOn": false
+            },
+            "ezfEZOPTION_ALLOW_EMPLOYEES_TO_SEE_COWORKER_SCHEDULES": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEZOPTION_ALLOW_TIME_OFF_REQUESTS": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezRoundClockInClockOut" :{
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfRemindEmployeesBeforeShiftStarts": {
+                "enabled": true,
+                "featureOn": false
+            }
+        },
+        "employerDashboard": {
+            "ezfActiveTimeZoneDisplay": {
+                "enabled": true,
+                "featureOn": false
+            },
+            "ezfIntegrations": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "JOBS": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfEmployePdfReport": {
+                "enabled": true,
+                "featureOn": true,
+                "style": "display:grid;"
+            },
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": true
+            }
+        },
+        "employerSchedule": {
+            "ezfActiveTimeZoneDisplay": {
+                "enabled": true,
+                "featureOn": false
+            },
+            "ezfPublishSchedule": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfExportSchedule": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": true
+            }
+        },
+        "employeeDashboard": {
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": false
+            }
+        },
+        "employeeSchedule": {
+            "ezfExportSchedule": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTimeOff": {
+                "enabled": true,
+                "featureOn": true
+            },
+            "ezfTeamChat": {
+                "enabled": true,
+                "featureOn": true
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+table.headerTable {
+    width: 100%;
+}
+
+.headerContent {
+    margin-top: 10px;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    background-color: rgb(255 255 255 / 40%);
+}
+
+.archiveLists {
+    margin-top: 8px;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    background-color: rgb(255 255 255 / 40%);
+}
+
+/* DEPRECATED: headerButtonContainer */
+div.headerButtonContainer {
+    float: right;
+}
+
+div.pageContent {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px #C0C0C0;
+}
+
+table.archiveContentTable {
+    width: 100%;
+}
+
+td.listColumn {
+    height: 100%;
+    width: 48%;
+    text-align: left;
+    vertical-align: top;
+}
+
+td.listContainer {
+    vertical-align: top;
+}
+
+div.availableSlots {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.activeEmployeeList {
+    display: grid;
+    min-height: 120px;
+    padding: 4px;
+    align-content: start;
+    justify-content: stretch;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+    background-color: rgba(0, 185, 69, 0.2);
+    border-color: var(--ezClockerBorderGreen);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+div.archivedEmployeeList {
+    display: grid;
+    min-height: 120px;
+    padding: 4px;
+    align-content: start;
+    justify-content: stretch;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
+    background-color: var(--ezClockerSilver);
+    color: var(--ezFontColor);
+    font-size: var(--ezFontSize);
+    font-weight: var(--ezFontWeight);
+    font-style: var(--ezFontStyle);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+div.activeItem {
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 10px;
+    font-weight: bold;
+    border-color: var(--ezClockerBlack);
+    background-color: var(--ezClockerWhite);
+    color: var(--ezFontColor);
+}
+
+div.disabledActiveItem {
+    margin: 10px;
+    padding-left: 10px;
+
+    /* background-color: var(--ezClockerWhite); */
+    background-color: #ffffff;
+
+    /* color: var(--ezBorderWhite); */
+    color: #A2A0A0;
+    font-weight: bold;
+
+    /* border-color: var(--ezBorderNavy); */
+    border-color: #A2A0A0;
+    border-style: solid;
+    border-width: 2px;
+}
+
+div.archiveItem {
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 8px;
+    font-weight: normal;
+
+    /* color: var(--ezGrayContainerText);
+    border-color: var(--ezBorderGray);
+    background-color: var(--ezClockerGray); */
+    color: #ffffff;
+    border-color: #323437;
+    background-color: #6d6e70;
+}
+
+table.itemTable {
+    width: 100%;
+}
+
+td.labelColumn {
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.buttonColumn {
+    padding: 0;
+    vertical-align: middle;
+    text-align: right;
+}

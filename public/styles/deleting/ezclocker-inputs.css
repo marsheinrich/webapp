@@ -1,0 +1,23 @@
+/* DEPRECATED */
+
+select.ezSelectInput {
+    border-style: none;
+    font-size: 14pt;
+    outline: none;
+    background-color: #edf6ff;
+    width: 100%;
+    /* within the wrapper */
+}
+
+.ezInputWrapper {
+    padding: 4px;
+    border-style: solid;
+    border-color: #ff9900;
+    border-width: 2px;
+    background-color: #edf6ff;
+    border-radius: 4px;
+}
+
+.ezInputWrapperFocus {
+    box-shadow: 0 0 15px 1px #ffcc66;
+}

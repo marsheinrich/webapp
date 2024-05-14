@@ -1,0 +1,221 @@
+/** CONTAINER STYLES **/
+
+div.ezGridContainer {
+    padding: 8px;
+    margin-top: 10px;
+
+    /* background-color: var(--ezAlphaBackgroundWhite2); */
+    background-color: rgb(255 255 255 / 40%);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+
+    /* border-color: var(--ezClockerSilver); */
+    border-color: #e0e0e0;
+    overflow: auto;
+}
+
+/* div.ezGridTableContainer { */
+
+/*     overflow: auto; */
+
+/* } */
+
+/** BASIC TABLE STYLES **/
+
+table.ezGrid {
+    color: #000000;
+    width: 100%;
+    vertical-align: middle;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tbody.ezGridData {
+    overflow: auto;
+}
+
+/** ROW STYLES **/
+
+tr.ezGridHeaderRow {
+    border-width: 0;
+    margin: 0;
+}
+
+tr.ezGridDataRow {
+    border-width: 0;
+    margin: 0;
+}
+
+/** CELL STYLES **/
+
+td.ezGridHiddenCell {
+    background-color: transparent;
+}
+
+td.ezGridHeaderCell {
+    padding: 4px;
+
+    /* background-color: var(--ezClockerGray); */
+
+    /* background-color: #6d6e70; */
+
+    /* background-color: var(--ezClockerNavy); */
+    background-color: #0f4777;
+    border-width: 1px;
+    border-style: solid;
+
+    /* border-color: var(-ezClockerBlack); */
+    border-color: #000000;
+
+    /* color: var(--ezClockerWhite); */
+    color: #ffffff;
+
+    /* font-weight: bold; */
+    font-size: 10pt;
+
+    /* font-family: var(--ezTextFontFamily); */
+    font-family: 'Noto Sans JP', Roboto, Verdana, sans-serif;
+}
+
+td.ezGridJobHeaderCell {
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+}
+
+td.ezGridNotesHeaderCell {
+    text-align: left;
+    vertical-align: middle;
+}
+
+td.ezGridButtonHeaderCell {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    border-bottom-color: #6d6e70;
+    width: 100px;
+    padding: 4px;
+    margin: 0;
+}
+
+
+td.ezGridDataCell {
+    color: #000000;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #6d6e70;
+    border-style: solid;
+    padding: 4px;
+    margin: 0;
+}
+
+td.ezGridButtonCell {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    width: 120px;
+
+    /* background-color: var(--ezClockerSilver); */
+    background-color: #e0e0e0;
+    vertical-align: middle;
+    text-align: left;
+
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td.ezGridDateCell {
+    text-align: center;
+    width: 140px;
+}
+
+td.ezGridTimeCell {
+    text-align: center;
+    width: 140px;
+}
+
+td.ezGridTotalTimeCell {
+    text-align: center;
+    width: 110px;
+}
+
+
+td.ezGridJobCell {
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+}
+
+
+td.ezGridNotesCell {
+    text-align: left;
+    vertical-align: middle;
+}
+
+td.ezGridMapCell {
+    text-align: center;
+    width: 40px;
+}
+
+.rightAlignValue {
+    text-align: right;
+}
+
+td.ezGridActiveClockInCell {
+    background-color: rgb(124 208 253 / 20%);
+
+    /* border-bottom-color: rgba(124, 208, 253, 1); */
+}
+
+td.ezGridErrorCell {
+    background-color: rgb(255 192 192 / 30%);
+
+    /* border-bottom-color: rgba(206, 15, 12, 1); */
+}
+
+td.ezGridWarningCell {
+    background-color: rgb(255 230 151 / 20%);
+
+    /* border-bottom-color: rgba(255, 197, 0, 1); */
+}
+
+td.ezGridPartialCell {
+    background-color: rgb(92 230 221 / 20%);
+
+    /* border-bottom-color: rgba(92, 230, 221, 1); */
+}
+
+td.ezGridClockInCell {
+    background-color: rgb(202 255 158 / 80%);
+
+    /* border-bottom-color: rgba(141, 241, 60, 1); */
+
+    border-top-width: 2px;
+    border-top-style: ridge;
+    border-top-color: rgb(141 241 60 / 100%);
+    border-bottom-width: 2px;
+    border-bottom-style: ridge;
+    border-bottom-color: rgb(141 241 60 / 100%);
+}
+
+td.centerCell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.ezHintImageContainer {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.ezGridData.scrollit {
+    overflow:scroll;
+    height:100px;
+}

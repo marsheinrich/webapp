@@ -1,0 +1,399 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Border UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    --ezBorderColorBlack: var(--ezClockerBlack);
+    --ezBorderColorGray: var(--ezClockerGray);
+    --ezBorderColorStone: var(--ezClockerStone);
+    --ezBorderColorSilver: var(--ezClockerSilver);
+    --ezBorderColorOffWhite: var(--ezClockerOffWhite);
+    --ezBorderColorNavy: var(--ezClockerNavy);
+    --ezBorderStyle: solid;
+    --ezBorderWidth: 1px;
+    --ezBorderRadius: 3px;
+    --ezBorderMedium: 3px;
+    --ezBorderMediumRadius: 3px;
+    --ezBorderThick: 4px;
+    --ezBorderThickRadius: 3px;
+}
+
+.ezBorders-radius {
+    border-radius: var(--ezBorderRadius);
+}
+
+.ezBorders-top-radius {
+    border-top-left-radius: var(--ezBorderRadius);
+    border-top-right-radius: var(--ezBorderRadius);
+}
+
+.ezBorders-bottom-radius {
+    border-bottom-left-radius: var(--ezBorderRadius);
+    border-bottom-right-radius: var(--ezBorderRadius);
+}
+
+
+/* 1px borders */
+.ezBorder {
+    border-color: var(--ezBorderColorGray);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ez-border-rounded {
+    border-color: var(--ezBorderColorGray);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+    border-radius: var(--ezBorderRadius);
+}
+
+.ez-border-navy {
+    border-color: var(--ezBorderColorNavy);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ez-border-medium-navy {
+    border-color: var(--ezBorderColorNavy);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderMedium);
+}
+
+.ez-border-medium-rounded-navy {
+    border-color: var(--ezBorderColorNavy);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderMedium);
+    border-radius: var(--ezBorderRadius);
+}
+
+.ez-border-medium-rounded-right-navy {
+    border-color: var(--ezBorderColorNavy);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderMedium);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(--ezBorderRadius);
+    border-bottom-right-radius: var(--ezBorderRadius);
+}
+
+.ez-border-thick-navy {
+    border-color: var(--ezBorderColorNavy);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderThick);
+    border-radius: var(----ezBorderRadius);
+}
+
+.ezBorders_Stone {
+    border-color: var(--ezBorderColorStone);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ezBorders_Silver {
+    border-color: var(--ezBorderColorStone);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ezBorders_OffWhite {
+    border-color: var(--ezBorderColorStone);
+    border-style: var(--ezBorderStyle);
+    border-width: var(--ezBorderWidth);
+}
+
+.ezBorderLeft {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+
+    /* border-left-style: var(--ezBorderStyle); */
+    border-left-style: solid;
+
+    /* border-left-width: var(--ezBorderWidth) */
+    border-left-width: 1px;
+}
+
+.ezBorderLeftBottom {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+
+    /* border-left-style: var(--ezBorderStyle); */
+    border-left-style: solid;
+
+    /* border-left-width: var(--ezBorderWidth) */
+    border-left-width: 1px;
+
+    /* border-bottom-style: var(--ezBorderStyle); */
+    border-bottom-style: solid;
+
+    /* border-bottom-width: var(--ezBorderWidth) */
+    border-bottom-width: 1px;
+}
+
+.ezBorderRight {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.ezBorderBottom {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezBorderLeftRightBottom {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezSolidBorder1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezSolidBorderTop1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.ezSolidBorderBottom1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezSolidBorderTopBottom1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezSolidBorderLeft1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.ezSolidBorderRight1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.ezSolidBorderLeftRigt1 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+/* 2px borders */
+.ezSolidBorder2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ezSolidBorderTop2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+.ezSolidBorderBottom2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.ezSolidBorderTopBottom2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.ezSolidBorderLeft2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 2px;
+}
+
+.ezSolidBorderRight2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+.ezSolidBorderLeftRigt2 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+/* 4px borders */
+.ezSolidBorder4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.ezSolidBorderTop4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 4px;
+}
+
+.ezSolidBorderBottom4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+
+.ezSolidBorderTopBottom4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+
+.ezSolidBorderLeft4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 4px;
+}
+
+.ezSolidBorderRight4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-right-style: solid;
+    border-right-width: 4px;
+}
+
+.ezSolidBorderLeftRigt4 {
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-right-style: solid;
+    border-right-width: 4px;
+}
+
+.ezRadius2 {
+    border-radius: 2px;
+}
+
+.ezRadiusTopLeft2 {
+    border-top-left-radius: 2px;
+}
+
+.ezRadisuTopRight2 {
+    border-top-right-radius: 2px;
+}
+
+.ezRadiusTop2 {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.ezRadiusBottomLeft2 {
+    border-bottom-left-radius: 2px;
+}
+
+.ezRadisuBottomRight2 {
+    border-bottom-right-radius: 2px;
+}
+
+.ezRadisuBottom2 {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.ezRadiusLeft2 {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.ezRadiusRight2 {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.ezRadius4 {
+    border-radius: 4px;
+}
+
+.ezRadiusTopLeft4 {
+    border-top-left-radius: 4px;
+}
+
+.ezRadiusTopRight4 {
+    border-top-right-radius: 4px;
+}
+
+.ezRadiusTop4 {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.ezRadiusBottomLeft4 {
+    border-bottom-left-radius: 4px;
+}
+
+.ezRadisuBottomRight4 {
+    border-bottom-right-radius: 4px;
+}
+
+.ezRadisuBottom4 {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.ezRadiusLeft4 {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.ezRadiusRight4 {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}

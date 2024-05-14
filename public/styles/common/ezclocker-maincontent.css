@@ -1,0 +1,113 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Remove or migrate to alternate solutions for all CSS classes in this file
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */div.ezClockerMainContent {
+    margin-top: 10px;
+    background-color: var(--ezAlphaBackgroundWhite2);
+    font-family: sans-serif;
+    border-color: var(--ezClockerStone);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 1px var(--ezClockerStone);
+    overflow: auto;
+}
+
+/* DEPRECATED */div.ezClockerMainContent2 {
+    background-color: var(-ezClockerWhite);
+    overflow: auto;
+}
+
+/* DEPRECATED */div.ezClockerMainContentDark {
+    overflow: auto;
+    margin-top: 10px;
+    background-color: var(--ezClockerStone);
+    font-family: sans-serif;
+    border-color: var(--ezClockerStone);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 1px var(--ezClockerStone);
+}
+
+/* DEPRECATED */div.ezClockerBasicHighlightedContentContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    border-color: var(--ezBorderOrange);
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* DEPRECATED */.ezGrayBox {
+    padding: 10px;
+    background-color: var(--ezClockerOffWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */.ezBabyBlueBox {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--ezHoverOffWhite);
+    border-color: var(--ezBorderOffWhite);
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* DEPRECATED */div.ezClockerBasicContentContainer {
+    background-color: rgb(255 255 255 / 50%);
+    margin: 0;
+    padding: 20px;
+    border-style: none;
+    border-width: 0;
+    border-top-color: var(--ezClockerBlack);
+    border-top-width: 1px;
+    border-top-style: solid;
+    box-shadow: 0 -2px 4px 0 rgb(109 110 112 / 50%);
+}
+
+/* Site Map Styles */
+
+/* DEPRECATED */a.ezSiteMapLink {
+    font-size: 10pt;
+    color: var(--ezClockerBlack);
+    text-decoration: none;
+}
+
+/* DEPRECATED */a.ezSiteMapLink:hover {
+    font-size: 10pt;
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* DEPRECATED */div.ezCopyrightContainer {
+    font-size: 10pt;
+    padding-top: 8px;
+    text-align: center;
+}
+
+/* DEPRECATED */div.ezSiteMapContainer {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* DEPRECATED */td.catchPhrase {
+    font-size: small;
+    font-family: sans-serif;
+}
+
+/* DEPRECATED */a.ezClockerBasicHighlightedLink {
+    font-weight: bold;
+    color: var(--ezClockerBlack);
+}

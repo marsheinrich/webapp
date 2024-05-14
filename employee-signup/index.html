@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
+    <link href="/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="/node_modules/animate.css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-shadows.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-borders.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-logo.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/employee-signup/employee-signup.css?v=r72-3" rel="stylesheet" type="text/css" />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <script src="/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/ezlibrary/ez-modernizr.js?v=r72-3"></script>
+    <script src="/ezlibrary/ez-old-browser-check.js?v=r72-3"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if (window.oldBrowserCheckReady) {
+                ezOldBrowserCheck(
+                    '<h1>Accept Employer Invite</h1>' +
+                    '<h2>You are almost there!</h2>' +
+                    '<p>' +
+                    '   Unfortunately, ezClocker does not support older Microsoft mobile devices or ' +
+                    '   Microsoft\'s outdated Internet Explorer browser.' +
+                    '   To accept your employer\'s invite you will need to use a recent Apple or Andriod device or ' +
+                    '   your desktop or laptop computer with one of the available modern browsers (see the links below).' +
+                    '</p>' +
+                    '<p>' +
+                    '   After switching to a compatable device and/or browser you can return to your email and ' +
+                    '   re-click the invite link to complete creating your ezClocker employee account.' +
+                    '</p>');
+            }
+        };
+    </script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-employee-signup.bundle.js?v=r72-3"></script>
+    <title>ezClocker: Employee Sign Up</title>
+</head>
+
+<body id="EzEmployeeSignupBody">
+    <div id="EzEmployeeSignupContent" class="ezEmployeeSignupContent">
+        <div id="EzEmployeeSignupDialogContainer" class="ezEmployeeSignupDialogContainer">
+            <div id="EzEmployeeSignupLeftSpacer" class="ezEmployeeSignupLeftSpacer">
+            </div>
+            <div id="EzEmployeeSignupDialog" class="ezEmployeeSignupDialog" style="display:none">
+                <div id="EzEmployeeSignupHeaderContainer" class="ezEmployeeSignupHeaderContainer">
+                    <div id="EzLogoImageContainer" class="ezLogo-container-center">
+                        <div class="ezContaner-image-box">
+                            <img src="../public/images/logos/logo.svg" class="ezClockerLogo_FullWidth"
+                                alt="ezClocker" />
+                        </div>
+                    </div>
+                    <h2 id="EzEmployeeSignup_SubHeader" class="ezAlignCenter ezH2-subheader">
+                        Employee Signup
+                    </h2>
+                </div>
+                <div id="EzEmployeeSignupDialogInputContainer" class="ezEmployeeSignupDialogInputContainer">
+                    <div id="EzEmployeeSignupError" class="ezContainer-validation-error-box" style="display:none">
+                        Some or all of the information you have entered is not correct.
+                    </div>
+                    <input id="EzEmployeeSignUp_InviteToken" type="hidden" />
+                    <input id="EzEmployeeSignUp_UserName" type="hidden" />
+                    <input id="EzEmployeeSignUp_EmailAddress" type="hidden" />
+                    <input id="EzEmployeeSignUp_Name" type="hidden" />
+                    <div id="EzEmployeeSignUp_NameFakeEditor" class="ezContainers-input-box">
+                        <h4>
+                            Name
+                        </h4>
+                        <div id="EzEmployeeSignUp_NameLabel" class="ezInputs-large-fake-editor-no-border">
+                        </div>
+                    </div>
+
+                    <div id="EzEmployeeSignUp_UserNameRow" class="ezContainers-input-box" style="display:none">
+                        <h4>
+                            Your user name is:
+                        </h4>
+                        <div id="EzEmployeeSignUp_UserNameLabel" class="ezInputs-large-fake-editor-no-border">
+                            Your User Name
+                        </div>
+                    </div>
+
+                    <div id="EzEmployeeSignUp_EmailAddressRow" class="ezContainers-input-box" style="display:none">
+                        <h4>
+                            Your user name is:
+                        </h4>
+                        <div id="EzEmployeeSignUp_EmailAddressLabel" class="ezInputs-large-fake-editor-no-border">
+                            Your Email
+                        </div>
+                    </div>
+
+                    <div class="ezContaner_CenterInputBox">
+                        <div class="ezAutoCol_AxMin ezGrid-align-full ezGrid-vertical-align-middle ezGrid-col-gap_8">
+                            <input id="EzEmployeeSignUp_Password" class="ezInputs-large-full-width" type="password"
+                                   name="new-password" autocomplete="new-password" placeholder="Create your password" />
+                            <div id="EzToggleShowHidePasswordContainer" class="ezGrid-align-middle-center">
+                                <button id="pwdBtn1" class="ezToolButton ezButtons-tool-navy-large" type="button" onclick="ezToggleShowHidePassword()" title="Show Password"
+                                        tabindex="-1">
+                                    <img src="/public/images/icons/view-white.svg" class="ezPasswordShowHideImg" style="width: 16px;padding-top: 2px;" alt="View Password" />
+                                </button>
+                                <button id="pwdBtn2" class="ezToolButton ezButtons-tool-navy-large" type="button" style="display:none" onclick="ezToggleShowHidePassword()"
+                                        title="Hide Password" tabindex="-1">
+                                    <img class="ezPasswordShowHideImg" style="width: 16px;" src="/public/images/icons/hide-view-white.svg" alt="Hide Password" />
+                                </button>
+                            </div>
+                        </div>
+                        <div id="EzEmployeeSignUp_PasswordInfo" class="ezText-small-navy">
+                            Minimum password length is 8 characters.
+                        </div>
+                        <div id="EzEmployeeSignUp_PasswordError" class="ezContainer-validation-error-box" style="display:none">
+                        </div>
+                    </div>
+
+                    <div class="ezContainer-dialog-buttons-x2">
+                        <button id="EzEmployeeSignUp_SubmitBtn" class="ezDialogButton" disabled>
+                            Sign Up
+                        </button>
+                        <button id="EzEmployeeSignUp_CancelBtn" class="ezWhiteDialogButton">
+                            Cancel
+                        </button>
+                    </div>
+
+                    <div id="EzEmployeeSighUp_ErrorBox" class="ezContainer-validation-error-box" style="display:none">
+                    </div>
+
+                    <div id="EzEmployeeSignupLegalDisclaimer_SmallScreen"
+                        class="ezContainer_legal-disclaimer-small-screens">
+                        <label class="ezText-legal-disclaimer">
+                            By selecting Sign Up, you agree to our
+                            Terms and have read and acknowledge our
+                            Privacy and Security Statements.
+                        </label>
+                    </div>
+
+                    <div id="EzEmployeeSignupLegalDisclaimer_NormalScreen"
+                        class="ezContainer_below-button-legal-disclaimer">
+                        <label class="ezText-legal-disclaimer">
+                            By selecting Sign Up, you agree to our
+                        </label>
+                        <label class="ezText-legal-disclaimer">
+                            Terms and have read and acknowledge our
+                        </label>
+                        <label class="ezText-legal-disclaimer">
+                            Privacy and Security Statements.
+                        </label>
+                    </div>
+
+                    <div id="EzLegalLinksContainer" class="ezContainer-legal-links">
+                        <div class="ezContainer-legal-link">
+                            <a class="ezSmallNavyLink" href="/public/ezclocker_terms_of_service.html?v=r72-3"
+                                target="ezClocker_Terms_Of_Service">
+                                Terms of Service
+                            </a>
+                        </div>
+                        <div class="ezContainer-legal-link">
+                            <a class="ezSmallNavyLink" href="/public/privacy.html?v=r72-3"
+                                target="ezClocker_Privacy_Statement">
+                                Privacy Statement
+                            </a>
+                        </div>
+                        <div class="ezContainer-legal-link">
+                            <a class="ezSmallNavyLink" href="/public/security.html?v=r72-3"
+                                target="ezClocker_Security_Statement">
+                                Security Statement
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="EzEmployeeSignupRightSpacer" class="ezEmployeeSignupRightSpacer">
+            </div>
+        </div>
+    </div>
+    <div id="EzHideDialogsDiv" style="display:none">
+    </div>
+    <script>
+        function ezToggleShowHidePassword() {
+            var x = document.getElementById("EzEmployeeSignUp_Password");
+            if (x.type === "password") {
+                x.type = "text";
+                $('#pwdBtn1').hide();
+                $('#pwdBtn2').show();
+            } else {
+                x.type = "password";
+                $('#pwdBtn1').show();
+                $('#pwdBtn2').hide();
+            }
+        }
+    </script>
+</body>
+
+</html>

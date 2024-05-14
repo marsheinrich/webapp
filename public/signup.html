@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="msapplication-config" content="msapplication-config.xml" />
+    <meta name="msapplication-square70x70logo" content="/favicon.ico" />
+    <meta name="msapplication-square150x150logo" content="/favicon.ico" />
+    <meta name="msapplication-wide310x150logo" content="/favicon.ico" />
+    <meta name="msapplication-square310x310logo" content="/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="application-name" content="ezClocker" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-itunes-app" content="app-id=833047956" />
+    <link href="/favicon.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" sizes="any">
+    <link href="/images/ezm-favicon-48x48.png" rel="apple-touch-icon" sizes="48x48" type="image/png" />
+    <link href="/images/ezm-favicon-72x72.png" rel="apple-touch-icon" sizes="72x72" type="image/png" />
+    <link href="/images/ezm-favicon-114x114.png" rel="apple-touch-icon" sizes="114x114" type="image/png" />
+    <link href="/images/ezm-favicon-144x144.png" rel="apple-touch-icon" sizes="144x144" type="image/png" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png">
+    <link href="/safari-pinned-tab.svg" rel="mask-icon" color="#ffffff" type="image/svg+xml">
+    <link href="/site.webmanifest" rel="manifest">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/ezlibrary/EzDependencyManager.js"></script>
+    <link
+        href="/jquery-ui/jquery-ui.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.min.css', true)">
+    <link
+        href="/jquery-ui/jquery-ui.structure.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.structure.min.css', true)">
+    <link
+        href="/jquery-ui/jquery-ui.theme.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery-ui.theme.min.css', true)">
+    <link
+        href="/jquery-ui/jquery.ui.timepicker-0.3.3.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/jquery-ui/jquery.ui.timepicker-0.3.3.min.css', true)">
+    <link
+        href="/node_modules/animate.css/animate.min.css"
+        rel="stylesheet"
+        type="text/css"
+        onerror="failedLinkReloader('/node_modules/animate.css/animate.min.cs', true)">
+    <link href="/public/styles/common/ez-body.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-text.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-containers.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-buttons.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-inputs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-layout-grid.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-shadows.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-header.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ez-dialogs.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-base2015.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-spinner.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-dialog.css?v=r72-3" rel="stylesheet" type="text/css">
+    <link href="/public/styles/signup/signup.css?v=r72-3" rel="stylesheet" type="text/css">
+    <script
+        src="/node_modules/jquery/dist/jquery.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery/dist/jquery.min.js', true)">
+        </script>
+    <script
+        src="/node_modules/jquery-migrate/dist/jquery-migrate.min.js"
+        onerror="failedScriptReloader('/node_modules/jquery-migrate/dist/jquery-migrate.min.js', true)">
+        </script>
+    <script
+        src="/node_modules/moment/min/moment-with-locales.min.js"
+        onerror="failedScriptReloader('/node_modules/moment/min/moment-with-locales.min.js', true)">
+        </script>
+    <script
+        src="/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"
+        onerror="failedScriptReloader('/node_modules/moment-timezone/builds/moment-timezone-with-data.min.js', true)">
+        </script>
+    <script
+        src="/jquery-ui/jquery-ui.min.js"
+        onerror="failedScriptReloader('/jquery-ui/jquery-ui.min.js', true)">
+        </script>
+    <script src="/ezlibrary/ez-modernizr.js?v=r72-3"></script>
+    <script src="/ezlibrary/ez-old-browser-check.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-library.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-version-checker.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-ux-core.bundle.js?v=r72-3"></script>
+    <script src="/ezwp/js/ez-sign-up.bundle.js?v=r72-3"></script>
+    <title>ezClocker: Sign Up</title>
+    <style>
+        .pwdShowBtn {
+            width: 40px;
+            height: 24px;
+            vertical-align: middle;
+            padding-top: 1px;
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-left: 4px;
+            margin-bottom: 8px;
+            background: #ffc500
+        }
+    </style>
+</head>
+
+<body style="display:none">
+    <div id="EzHeaderPublic" class="ezHeader-public">
+        <div id="EzHeaderPublicEzclockerLogoImageContainer" class="ezHeader-public-ezclocker-logo-image-container">
+            <a id="EzHeaderPublicNavigateToMainLink" href="#" onclick="ezApi.ezclocker.ezNavigation.navigateToMain();">
+                <img id="EzHeaderPublicEzClockerLogoImage" src="/public/images/logos/ezclocker_logo_2015.svg"
+                    class="ezHeader-public-ezclocker-logo-image" alt="ezClocker" />
+            </a>
+        </div>
+    </div>
+    <div id="_SignUpBox" class="signUpBox">
+        <div id="_signUpContainer">
+            <div class="signUpSubBanner">Employer Account</div>
+            <div class="signUpBanner" id="_SignUpBanner">Sign Up</div>
+            <div class="ezErrorBox" id="signUpError" style="display:none"></div>
+            <input type="hidden" name="accountType" id="_AccountType" value="employer" />
+            <table class="ezFullWidth" id="EzSignupTable">
+                <tr>
+                    <td class="signUpLabel">Company Name</td>
+                </tr>
+                <tr>
+                    <td class="inputCell">
+                        <input class="signUpInput" id="ez_companyName" autocomplete="new-password" type="text"
+                            name="name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="signUpLabel">Email Address</td>
+                </tr>
+                <tr>
+                    <td class="inputCell">
+                        <input class="signUpInput" id="ez_userName" autocomplete="new-password" type="text"
+                            name="emailAddress" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="signUpLabel">Password</td>
+                </tr>
+                <tr>
+                    <td class="inputCell">
+                        <div class="ezAutoCol_AxMin ezGrid-align-full ezGrid-vertical-align-middle ezGrid-col-gap_8">
+                            <input id="ez_password" class="signUpInput" autocomplete="new-password" type="password" name="password" value="" />
+                            <div id="EzToggleShowHidePasswordContainer" class="ezGrid-align-middle-center">
+                                <button id="pwdBtn1" class="ezToolButton" type="button" onclick="ezToggleShowHidePassword()" title="Show Password"
+                                    tabindex="-1">
+                                    <img src="/public/images/icons/view-white.svg" style="width: 16px;padding-top: 2px;" alt="View Password" />
+                                </button>
+                                <button id="pwdBtn2" class="ezToolButton" type="button" style="display:none" onclick="ezToggleShowHidePassword()"
+                                    title="Hide Password" tabindex="-1">
+                                    <img style="width: 16px;padding-top:2px" src="/public/images/icons/hide-view-white.svg" alt="Hide Password" />
+                                </button>
+                            </div>
+                        </div>
+                        <div id="EzPasswordInfoContainer" class="ezContainer-editor-info-box">
+                            Minimum password length is 8 characters.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="signUpLabel">Industry</td>
+                </tr>
+                <tr>
+                    <td class="inputCell">
+                        <style>
+                            .select-industry {
+                                width: 100%;
+                                color: var(--ezClockerBlack);
+                                font-size: 18pt;
+                                font-style: normal;
+                            }
+
+                            .select-industry:invalid {
+                                color: var(--ezClockerGray);
+                                font-size: 18pt;
+                                font-style: italic;
+                            }
+
+                            .ezSelect-industry-option {
+                                font-size: 18pt;
+                                color: var(--ezClockerBlack);
+                                font-style: normal;
+                            }
+
+                            .ezSelect-industry-option:invalid {
+                                font-size: 18pt;
+                                color: var(--ezClockerGray);
+                                font-style: italic;
+                            }
+                        </style>
+                        <select id="ez_industry" class="select-industry" name="industry" required>
+                            <option id="EzIndustryOption_NONE" class="ezSelect-industry-option" value="" hidden disabled selected>
+                                Please select your industry ...
+                            </option>
+                            <option id="EzIndustryOption_AGRICULTURE" class="ezSelect-industry-option" value="Agriculture">
+                                Agriculture
+                            </option>
+                            <option id="EzIndustryOption_AUTOMOTIVE" class="ezSelect-industry-option" value="Automotive">
+                                Automotive
+                            </option>
+                            <option id="EzIndustryOption_EVENT" class="ezSelect-industry-option" value="Catering/Event Planning">
+                                Catering/Event Planning
+                            </option>
+                            <option id="EzIndustryOption_CONSTRUCTION" class="ezSelect-industry-option" value="Construction Company">
+                                Construction Company
+                            </option>
+                            <option id="EzIndustryOption_EDUCATION" class="ezSelect-industry-option" value="Education">
+                                Education
+                            </option>
+                            <option id="EzIndustryOption_HOSPITALITY" class="ezSelect-industry-option" value="Hospitality/Hotels/Motels">
+                                Hospitality/Resorts/Hotels/Motels
+                            </option>
+                            <option id="EzIndustryOption_CONTRACTOR" class="ezSelect-industry-option" value="Contracting Svcs/Handyman">
+                                Independent Contractor/Handyman
+                            </option>
+                            <option id="EzIndustryOption_INFORMATION" class="ezSelect-industry-option" value="Information Services">
+                                Information Services/Software/Technology
+                            </option>
+                            <option id="EzIndustryOption_FOOD" class="ezSelect-industry-option" value="Food/Restaurant">
+                                Food/Restaurant
+                            </option>
+                            <option id="EzIndustryOption_FREELANCER" class="ezSelect-industry-option" value="Freelancer">
+                                Freelancer/Gig Worker
+                            </option>
+                            <option id="EzIndustryOption_GOVERNMENT" class="ezSelect-industry-option" value="Government/Public Services">
+                                Government/Public Services
+                            </option>
+                            <option id="EzIndustryOption_HEALTH_CARE" class="ezSelect-industry-option" value="Health Care">
+                                Health Care/Social Services
+                            </option>
+                            <option id="EzIndustryOption_IN_HOME_CARE" class="ezSelect-industry-option" value="In-Home Care">
+                                In-Home Care
+                            </option>
+                            <option id="EzIndustryOption_INSURANCE" class="ezSelect-industry-option" value="Insurance">
+                                Insurance
+                            </option>
+                            <option id="EzIndustryOption_JANITORIAL" class="ezSelect-industry-option" value="Janitorial/Cleaning Services">
+                                Janitorial/Cleaning Services
+                            </option>
+                            <option id="EzIndustryOption_LANDSCAPING" class="ezSelect-industry-option" value="Landscape/Lawn Care">
+                                Landscape/Lawn Care
+                            </option>
+                            <option id="EzIndustryOption_MINING" class="ezSelect-industry-option" value="Mining/Quarrying/Oil and Gas">
+                                Mining/Quarrying/Oil and Gas
+                            </option>
+                            <option id="EzIndustryOption_MEDIA" class="ezSelect-industry-option" value="Media Creation/Performance/Broadcasting">
+                                Media Creation/Performance/Broadcasting
+                            </option>
+                            <option id="EzIndustryOption_PROPERTY" class="ezSelect-industry-option" value="Property Mgmt/Real Estate">
+                                Property Management/Real Estate
+                            </option>
+                            <option id="EzIndustryOption_RETAIL" class="ezSelect-industry-option" value="Retail/Storefront/eCommerce">
+                                Retail/Storefront/eCommerce
+                            </option>
+                            <option id="EzIndustryOption_SECURITY" class="ezSelect-industry-option" value="Security Services">
+                                Security/Self Defence
+                            </option>
+                            <option id="EzIndustryOption_DELIVER" class="ezSelect-industry-option" value="Trucking/Delivery/Freight">
+                                Trucking/Delivery/Freight
+                            </option>
+                            <option id="EzIndustryOption_OTHER" class="ezSelect-industry-option" value="Other">
+                                Other
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="buttonCell">
+                        <div style="float:right;">
+                            <button id="EzSignUpButton" class="ezButtons-action-ezActionGreen ezMiddleAlign">Sign Up</button>
+                            <button id="EzCancelSignUpButton" class="ezButtons-action-ezClockerYellow ezMiddleAlign">Cancel</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="EzLegalLinksContainer"
+                class="ezGridGap ezGridContent ezGridWhite ezBorder ezAutoCol_AxAxA ezGrid-align-full ezGrid-vertical-align-middle">
+                <div class="ezAutoCol ezGrid-align-center ezPad4">
+                    <a class="ezSmallNavyLink" href="ezclocker_terms_of_service.html?v=r72-3"
+                        target="ezclocker.terms_of_service">
+                        Terms of Service
+                    </a>
+                </div>
+                <div class="ezAutoCol ezGrid-align-center ezPad4">
+                    <a class="ezSmallNavyLink" href="privacy.html?v=r72-3" target="ezclocker.privacy_statement">
+                        Privacy Statement
+                    </a>
+                </div>
+                <div class="ezAutoCol ezGrid-align-center ezPad4">
+                    <a class="ezSmallNavyLink" href="security.html?v=r72-3" target="ezclocker.security_statement">
+                        Security Statement
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ezHiddenDefault" id="EzSignUpDialogsContainer">
+    </div>
+
+    <script>
+        function ezToggleShowHidePassword() {
+            var x = document.getElementById("ez_password");
+            if (x.type === "password") {
+                x.type = "text";
+                $('#pwdBtn1').hide();
+                $('#pwdBtn2').show();
+            } else {
+                x.type = "password";
+                $('#pwdBtn1').show();
+                $('#pwdBtn2').hide();
+            }
+        }
+    </script>
+</body>
+
+</html>

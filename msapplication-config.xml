@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <application-name>
+                ezClocker
+            </application-name>
+            <TileColor>#ffffff</TileColor>
+            <square70x70logo src="/favicon.ico" />
+            <square150x150logo src="/favicon.ico" />
+            <wide310x150logo src="/favicon.ico" />
+            <square310x310logo src="/favicon.ico" />
+        </tile>
+    </msapplication>
+</browserconfig>

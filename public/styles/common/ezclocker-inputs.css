@@ -1,0 +1,26 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| DEPRECATED
+| Remove or migrate to alternate solutions for all CSS classes in this file
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* DEPRECATED */select.ezSelectInput {
+    width: 100%;
+    background-color: var(--ezHoverOffWhite);
+    font-size: 14pt;
+    border-style: none;
+    outline: none;
+}
+
+/* DEPRECATED */.ezInputWrapper {
+    padding: 4px;
+    background-color: var(--ezHoverOffWhite);
+    border-color: var(--ezClockerOrange);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+/* DEPRECATED */.ezInputWrapperFocus {
+    box-shadow: 0 0 15px 1px var(--ezClockerYellow);
+}

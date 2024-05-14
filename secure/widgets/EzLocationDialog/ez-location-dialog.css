@@ -1,0 +1,216 @@
+div.ezLocationEditorLocationListingsContainer {
+    overflow: auto;
+}
+
+/* Employer Location Item Container */
+div.ezLocationEditorLocationItemContainer {
+    margin: 4px;
+    padding: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9B7800;
+    box-shadow: 0 0 2px 1px #c0c0c0;
+    cursor: pointer;
+}
+
+div.ezLocationEditorLocationItemContainer:hover {
+    background-color: var(--ezExtraLightYellow);
+}
+
+div.ezLocationEditorSelectedLocationItemContainer {
+    margin: 4px;
+    padding: 4px;
+    background-color: var(--ezClockerYellow);
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--ezBorderYellow);
+}
+
+/* Locations Editor Left/Right Pane Table */
+table.ezLocationEditorPaneTable {
+    width: 100%;
+}
+
+td.ezLocationEditorLeftPane {
+    background-color: #ffffff;
+    vertical-align: top;
+    text-align: left;
+    overflow: none;
+}
+
+td.ezLocationEditorRightPane {
+    background-color: #ffffff;
+    vertical-align: top;
+    text-align: left;
+    overflow: none;
+}
+
+/* Locations Editor Left Pane Table */
+table.ezLocationEditorLeftPaneTable {
+    width: 100%;
+    color: #000000;
+    background-color: #0f4777;
+}
+
+table.ezLocationEditorRightPaneTable {
+    width: 100%;
+    color: #000000;
+    background-color: #0f4777;
+}
+
+tr.ezLocationEditorHeaderRow {
+    padding: 0;
+    background-color: #0f4777;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #032746;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td.ezLocationEditorHeaderTextCell {
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.ezLocationEditorHeaderButtonCell {
+    padding: 4px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+tr.ezLocationEditorListingsRow {
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: normal;
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td.ezLocationEditorListingCell {
+    padding: 4px;
+    height: 500px;
+    max-height: 500px;
+    vertical-align: top;
+    text-align: left;
+}
+
+tr.ezLocationEditorInputRow {
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: normal;
+    border-color: #6d6e70;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td.ezLocationEditorInputCell {
+    padding: 4px;
+    vertical-align: top;
+    text-align: left;
+}
+
+div.ezLocationEditorInputBox {
+    display: grid;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+}
+
+div.ezLocationEditorFlexInputBlock {
+    display: flex;
+}
+
+div.ezLocationEditorFlexInputBox {
+    display: grid;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
+}
+
+label.ezLocationEditorInputLabel {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+/* Location Editor Location Item */
+table.ezLocationEditorLocationItemTable {
+    width: 100%;
+}
+
+td.ezLocationEditorLocationItemNameCell {
+    vertical-align: middle;
+    text-align: left;
+}
+
+td.ezLocationEditorLocationItemButtonCell {
+    vertical-align: middle;
+    text-align: right;
+}
+
+td.ezLocationEditorLocationItemButtonCell:hover {
+    vertical-align: middle;
+    text-align: right;
+}
+
+img.ezLocationEditorDeleteLocationImg {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: #edf6ff;
+}
+
+img.ezLocationEditorDeleteLocationImg:hover {
+    border-color: #000000;
+    background-color: #ffcc66;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Assign Employees Editor Styles */
+div.ezLocationEditorAssignEmployeesContainer {
+    padding: 0;
+}
+
+div.ezLocationEditorAssignEmployeesHeader {
+    padding: 4px;
+    background-color: #0f4777;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+div.ezAssignedEmployeesList {
+    padding: 4px;
+    overflow-y: scroll;
+    overflow-x: none;
+    min-height: 200px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #6d6e70;
+    border-width: 1px;
+}
+
+div.ezAssignedEmployeeContainer {
+    display: inline-block;
+    padding: 4px;
+}

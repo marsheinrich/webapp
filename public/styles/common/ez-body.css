@@ -1,0 +1,526 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Base CSS Classes
+| Note:
+|   The ez-body.css import must appear before (nearly) all
+|   other ezClocker css imports to take advantage of the variables.
+=================================================================== */
+:root {
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezClocker Primary Color Variables
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    --ezClockerOrange: #ff9900;
+    --ezClockerOrangeRGB: rgb(255, 156, 0);
+    --ezClockerBabyBlue: #7CD0FD;
+    --ezClockerBabyBlueRGB: rgb(124, 208, 253);
+    --ezClockerMobileBlue: #529DC2;
+    --ezClockerAqua: #316dac;
+    --ezClockerLightNavy: #18699b;
+    --ezClockerNavy: #0f4777;
+    --ezClockerNavyRGB: rgb(15, 71, 119);
+    --ezClockerBlue: #2419b2;
+    --ezClockerYellow: #ffc500;
+    --ezClockerWarningYellow: #ffff00;
+    --ezClockerWhite: #ffffff;
+    --ezClockerOffWhite: #f0f0f0;
+    --ezClockerOffWhiteRGB: rgb(240, 240, 240);
+    --ezClockerBackground: #E1E1E1;
+    --ezClockerBackgroundRGB: rgb(225, 225, 225);
+    --ezClockerSilver: #e0e0e0;
+    --ezClockerSilverRGB: rgb(224, 224, 224);
+    --ezClockerStone: #c0c0c0;
+    --ezClockerStoneRGB: rgb(192, 192, 193);
+    --ezClockerGray: #6d6e70;
+    --ezClockerGrayRGB: rgb(109, 110, 112);
+    --ezClockerBlack: #000000;
+    --ezClockerBlackRGB: rgb(0, 0, 0);
+    --ezClockerActionGreen: #8df13c;
+    --ezClockerAlertRed: #FF0700;
+    --ezClockerGreen: #00B945;
+    --ezClockerGreeRGB: rgb(0, 185, 69);
+    --ezClockerSeaMistGreen: #00AA72;
+    --ezClockerLimeGreen: #00ff00;
+    --ezClockerLimeGreenRGB: rgb(0, 255, 0);
+    /* Highlighting Colors */
+    --ezClockerInfoYellow: #ffeeaa;
+    --ezClockerErrorRed: #ffcccc;
+    --ezClockerInputErrorBackground: #ffeeee;
+    --ezClockerHotGreen: #C3F500;
+    --ezClockerHotGreenRGB: rgb(195, 245, 0);
+    --ezClockerHotPink: #FF007F;
+    --ezClockerHotPinkRGB: rgb(255, 0, 127);
+    --ezClockerTeal: #00B1EC;
+    --ezBreakInTeal: #81DDFB;
+    --ezClockerWarnning: #9b0400;
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezClocker Color Alternative Colors and Shades
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* Time Entry Table Cell Background Colors */
+    --ezTimeEntryNormalBackgroundColor: var(--ezClockerWhite);
+    --ezTimeEntryNormal-font-color: var(--ezClockerBlack);
+    --ezTimeEntryNormalBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryActiveClockInBackgroundColor: rgba(202, 255, 158, 0.5);
+    --ezTimeEntryActive-font-color: var(--ezClockerBlack);
+    --ezTimeEntryActiveClockInBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryErrorBackgroundColor: rgba(255, 192, 192, 0.3);
+    --ezTimeEntryError-font-color: var(--ezClockerBlack);
+    --ezTimeEntryErrorBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryWarningBackgroundColor: rgba(255, 230, 151, 0.2);
+    --ezTimeEntryWarningBreak-font-color: var(--ezClockerBlack);
+    --ezTimeEntryWarningBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryPartialBackgroundColor: rgba(92, 230, 221, 0.5);
+    --ezTimeEntryPartial-font-color: var(--ezClockerBlack);
+    --ezTimeEntryPartialBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryBreakBackgroundColor: rgba(224, 224, 224, 0.5);
+    --ezTimeEntryBreak-font-color: var(--ezClockerBlack);
+    --ezTimeEntryBreakBorderColor: var(--ezClockerBlack);
+    --ezTimeEntryActiveBreakBackgroundColor: rgba(224, 224, 224, 0.5);
+    --ezTimeEntryActiveBreakBorderColor: var(--ezClockerBlack);
+    --ezPaidTimeOff-background-color: var(--ezClockerWhite);
+    --ezPaidTimeOff-font-color: var(--ezClockerNavy);
+    --ezPaidTimeOff-border-color: var(--ezClockerBlack);
+    --ezUnpaidTimeOff-background-color: var(--ezClockerWhite);
+    --ezUnpaidTimeOff-font-color: var(--ezClockerGray);
+    --ezUnpaidTimeOff-border-color: var(--ezClockerBlack);
+    /* ezClockerBlack 000000 Shades */
+    --ezBoxShadow--ezClockerBlack-30: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    /* @deprecated: Use --ezBoxShadow--ezClockerBlack-30 */
+    --ezFocusBoxShadowBlack: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    /* ezClockerOffWhite f0f0f0 Shades */
+    --ezOffWhite: var(--ezClockerOffWhite);
+    --ezHoverOffWhite: #edf6ff;
+    --ezDarkOffWhite: var(--ezClockerStone);
+    --ezBorderOffWhite: var(--ezClockerBlack);
+    /* ezClockerSeaMistGreen */
+    --ezClockerSeaMistLightGreen: #4BBF99;
+    --ezClockerSeaMistHoverGreen: #27AF83;
+    --ezClockerSeaMistDarkGreen: #008458;
+    --ezClockerSeaMistBorderGreen: #006746;
+    /* ezClockerGreen 00B945 Shades: http://paletton.com/#uid=12X0u0kw0w0jvDaoOy4y4oODajv */
+    --ezClockerLightGreen: #4FCB7D;
+    --ezClockerHoverGreen: #2BBE61;
+    --ezClockerDarkGreen: #008F35;
+    --ezClockerBorderGreen: #00712A;
+    --ezClockerGreenContainerText: var(--ezClockerBlack);
+    /* ezClockerTeal #00AEEC Shades: Palette URL: http://paletton.com/#uid=13p0u0k++UDrWZSFj+V+Vxi+0pA */
+    --ezTeal: var(--ezClockerTeal);
+    --ezTealHover: #28C7FC;
+    --ezTealActive: #06C1FF;
+    --ezDarkteal: #007BA3;
+    --ezTealBorder: #00607F;
+    --ezTealContainerTextColor: var(--ezClockerBlack);
+    --ezTealContainerDisabledTextColor: var(--ezTealBorder);
+    /* ezClockerHotGreen #C3F500 Shades: Palette URL: http://paletton.com/#uid=12a0u0kw0w0jyC+oRxVy4oIDfjr */
+    --ezHotGreen: var(--ezClockerHotGreen);
+    --ezLightHotGreen: #CFF537;
+    --ezLightHotGreenRGB: rgb(207, 245, 55);
+    --ezHoverHotGreen: #D9F760;
+    --ezDarkHotGreen: #97BD00;
+    --ezBorderHotGreen: #769400;
+    --ezBorderHotGreenRGB: rgb(118, 148, 0);
+    --ezBoxShadow-inset-ezBorderHotGreen-50: inset 0 0 4px 2px rgba(118, 148, 0, 0.5);
+    --ezBoxShadow-inset-ezClockerHotGreen-50: inset 0 0 4px 2px rgba(195, 245, 0, 0.5);
+    --ezHotGreenContainerFontColor: var(--ezClockerBlack);
+    /*
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Orange Shades
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Base Color Variable: --ezClockerOrange
+        Base Color: #ff9900
+        Base RGB Color: rgb(255, 153, 0)
+        Palette URL: http://paletton.com/#uid=10M0u0kw0w0jvDaoOy4y4oODajv
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    */
+    --ezOrangeRGB: var(--ezClockerOrangeRGB);
+    --ezOrange: var(--ezClockerOrange);
+    --ezLightOrange: #FFC164;
+    --ezHoverOrange: #FFB039;
+    --ezDarkOrange: #C67600;
+    --ezBorderOrange: #9B5D00;
+    --ezBoxShadow-inset-ezClockerOrange-50: inset 0 0 4px 2px rgba(255, 153, 0, 0.5);
+    --ezOrange-alpha-50: rgba(255, 153, 0, 0.5);
+    /* DEPRECATED: --ezDimOrange (migrate to --ezOrange-alpha-50) */
+    --ezDimOrange: rgba(255, 153, 0, 0.5);
+    /*
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Navy Shades
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Base Variable...: --ezClockerNavy
+        Base Color......: #0f4777
+        Base RGB Color..: rgb(15, 71, 119)
+        Palette URL.....: http://paletton.com/#uid=13y0u0ku0n9lhu9rus-z8iTIPdA
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    */
+    --ezNavy: var(--ezClockerNavy);
+    --ezNavyRGB: var(--ezClockerNavyRGB);
+    --ezLightNavy: #3B6F9B;
+    --ezHoverNavy: #1D5D93;
+    --ezDarkNavy: #063861;
+    --ezDarkNavyAlpha: rgba(6, 56, 97, 0.5);
+    --ezBorderNavy: #032746;
+    --ezNavyContainerTextColor: var(--ezClockerWhite);
+    --ezNavyContainerDisabledTextColor: var(--ezBorderNavy);
+    --ezBoxShadow-inset-ezNavy-50: inset 0 0 4px 2px rgba(6, 56, 97, 0.5);
+    --ezNavy-alpha-50: rgba(15, 71, 119, 0.5);
+    /* @deprecated: Use --ezBoxShadow-inset-ezNavy-50 */
+    --ezNavyInsetBoxShadow: inset 0 0 4px 2px rgba(6, 56, 97, 0.5);
+    /* ezClockerAqua #316dac Shades: Palette URL: http://paletton.com/#uid=13A0u0koMyaeSLXkeDNvkvpvLn- */
+    --ezAqua: var(--ezClockerAqua);
+    --ezLightAqua: #7AA7D5;
+    --ezHoverAqua: #4F85BE;
+    --ezDarkAqua: #1058A3;
+    --ezBorderAqua: #0A417A;
+    /* ezClockerYellow #ffc500 Shades: Palette URL: http://paletton.com/#uid=11f0u0kw0w0jvDaoOy4y4oODajv */
+    --ezYellow: var(--ezClockerYellow);
+    --ezExtraLightYellow: #FFF564;
+    --ezLightYellow: #FFDB64;
+    --ezHoverYellow: #FFD239;
+    --ezDarkYellow: #C69800;
+    --ezBorderYellow: #9B7800;
+    --ezYelloContainerText: #000000;
+    --ezBoxShadow-inset-ezDarkYellow-50: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+    /* @deprecated: Use --ezBoxShadow-inset-ezDarkYellow-50 */
+    --ezBoxShadowDarkYellow: inset 0 0 4px 2px rgba(198, 152, 0, 0.5);
+    /* ezClockerGray #6d6e70 Shades: Palette URL: http://paletton.com/#uid=13J0u0k0Yl60jzL0Cqw1Dg039ap */
+    --ezGray: var(--ezClockerGray);
+    --ezLightGray: #B2B3B4;
+    --ezHoverGray: #8A8B8D;
+    --ezDarkGray: #515255;
+    --ezBorderGray: #323437;
+    --ezGrayContainerText: var(--ezClockerWhite);
+    --ezBoxShadow-inset-ezClockerGray-50: inset 0 0 4px 2px rgba(109, 110, 112, 0.5);
+    --ezBoxShadow-ezGray-30: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+    /* @deprecated: Use --ezBoxShadow-ezGray-30 */
+    --ezGrayBoxShaddow: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+    /* ezClockerBlue #2419b2 Shades: Palette URL: http://paletton.com/#uid=1430u0kvXwbjvDmoOyiyaoUDaj- */
+    --ezBlue: var(--ezClockerGray);
+    --ezLightBlue: #665EC6;
+    --ezHoverBlue: #463DB7;
+    --ezDarkBlue: #1B128A;
+    --ezBorderBlue: #120B6D;
+    /* ezClockerSilver #e0e0e0 Shades: Palette URL: http://paletton.com/#uid=1000u0k00s700++00Da01mx0lgX */
+    /* Altered slightly from palette */
+    --ezSilver: var(--ezClockerSilver);
+    --ezSilver-alpha-50: rgba(224, 224, 224, 0.5);
+    --ezLightSilver: var(--ezClockerOffWhite);
+    --ezHoverSilver: var(--ezClockerWhite);
+    --ezDarkSilver: #B3B3B3;
+    --ezDarkSilverRGB: rgb(179, 179, 179);
+    --ezBorderSilver: #878686;
+    --ezBorderSilverRGB: rgb(135, 134, 134);
+    /* @deprecated: Use --ezSilver-alpha-50 */
+    --ezAlphaSilver: rgba(224, 224, 224, 0.5);
+    /* ezClockerStone #c0c0c0 Shades: Palette: https://paletton.com/#uid=1000u0k00o601Ma00tU01iH0qcO */
+    --ezStone: var(--ezClockerStone);
+    --ezHoverStone: #eeeeee;
+    --ezDarkStone: #959595;
+    --ezBorderStone: #666565;
+    --ezStoneContainerText: var(--ezClockerBlack);
+    --ezStoneDisabledText: var(--ezBorderStone);
+    --ezBoxShadow-ezStone-30: rgba(109, 110, 112, 0.3);
+    /* @deprecated: Use --ezBoxShadow-ezStone-30 */
+    --ezBoxShadowStone: 0 0 1px 1px rgba(109, 110, 112, 0.3);
+    /*
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Action Green Shades
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Base Variable...: --ezClockerActionGreen
+        Base Color......: #8df13c
+        Base RGB Color..: rgb(141, 241, 60)
+        Palette URL.....: http://paletton.com/#uid=13y0u0ku0n9lhu9rus-z8iTIPdA
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    */
+    --ezActionGreen: var(--ezClockerActionGreen);
+    --ezActionGreenHoverColor: #caff9e;
+    --ezActionGreenBorderColor: #439400;
+    --ezLightActionGreen: #C0F991;
+    --ezHoverActionGreen: #A5F562;
+    --ezDarkActionGreen: #77ED16;
+    --ezBorderActionGreen: #65DF00;
+    --ezActionGreenContainerText: var(--ezClockerBlack);
+    --ezActionGreen-alpha-50: rgba(141, 241, 60, 0.5);
+    --ezBoxShadow-inset-ezDarkYellow-80: inset 0 0 4px 0 rgba(67, 148, 60, 0.8);
+    /* ezClockerErrorRed #ffcccc Shades: Palette URL: http://paletton.com/#uid=1000u0k6qw00RTG38I4ayrtfymW */
+    --ezErrorRed: var(--ezClockerErrorRed);
+    --ezLightErrorRed: #fff8f8;
+    --ezHoverErrorRed: #ffe6e6;
+    --ezDarkErrorRed: #db9393;
+    --ezBorderErrorRed: #b75e5e;
+    /* ezClockerAlertRed #FF0700 Shades: Palette URL: http://paletton.com/#uid=1010u0kw0w0jvDaoOy4y4oODajv */
+    --ezAlertRed: var(--ezClockerAlertRed);
+    --ezSoftAlertRed: var(--ezClockerErrorRed);
+    --ezLightAlertRed: #ff6864;
+    --ezHoverAlertRed: #ff3e39;
+    --ezDarkAlertRed: #c60500;
+    --ezBorderAlertRed: #9b0400;
+    --ezBorderAlertRedRGB: rgb(155, 4, 0);
+    --ezBorderAlertRed-alpha-50: rgba(155, 4, 0, 0.5);
+    --ezAlertText: var(--ezClockerWhite);
+    /* ezClockerWarningYellow #ffff00 Shades: https://paletton.com/#uid=11T0u0kw0w0jvDaoOy4y4oODajv */
+    --ezWarningYellow: var(--ezClockerWarningYellow);
+    --ezLightWarningYellow: #FFFFC0;
+    --ezHoverWarningYellow: #FFFF39;
+    --ezDarWarningYellow: #FFFF39;
+    --ezBorderWarningYellow: #9B9B00;
+    --ezBoxShadow-ezWarningYellow-50: rgba(255, 255, 0, 0.5);
+    /* @deprecated: Use --ezBoxShadow-ezWarningYellow-50 */
+    --ezClockerInputWarningBackground: rgba(255, 255, 0, 0.5);
+    /* ezClockerBabyBlue #7CD0FD Shades: Palette URL: http://paletton.com/#uid=13t0u0khe+j35+Xbf+EmsZnrCWa */
+    --ezGlass-background: rgba(124, 208, 253, 0.02);
+    --ezGlass-box-shadow: inset 4px 4px 10px 8px rgba(124, 208, 253, 0.1), 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+    --ezGlass-border: rgba(124, 208, 253, 0.5);
+    --ezBabyBlue: var(--ezClockerBabyBlue);
+    --ezLightBabyBlue: #e8f7ff;
+    --ezHoverBabyBlue: #a9e0fe;
+    --ezDarkBabyBlue: #54c0Fa;
+    --ezBorderBabyBlue: #2cacf1;
+    --ezBoxShadow-inset-ezClockerBabyBlue-50: inset 0 0 4px 2px rgba(124, 208, 253, 0.5);
+    /* ezClockerBlack #000000 Shades: Palette URL: http://paletton.com/#uid=1000u0k00000nfW028N8N02fW0n */
+    --ezBlack: #000000;
+    --ezLightBlack: #7F7E7E;
+    --ezHoverBlack: #464646;
+    --ezBorderBlack: #030101;
+    --ezBoxShadow-inset-ezclocker-black-50: inset 0 0 4px 2px rgba(0, 0, 0, 0.5);
+    /* ezClockerWhite #ffffff Shades: Palette URL: http://paletton.com/#uid=1000u0k00w000++00SJ00pV0hkj */
+    --ezWhite: var(--ezClockerWhite);
+    --ezDarkWhite: #CECECE;
+    --ezBorderWhite: #A2A0A0;
+    --ezWhiteContainerText: var(--ezClockerBlack);
+    /* === ezClocker Alpha Colors === */
+    /* Alpha Gray #1 from var(--ezClockerGray), #6d6e70 */
+    --ezBoxShadow-ezclocker-gray-30: rgba(109, 110, 112, 0.3);
+    /* @deprecated: Use --ezBoxShadow-ezclocker-gray-30 */
+    --ezAlphaEzClockerGray1: rgba(109, 110, 112, 0.3);
+    /* Alpha Navy #1 from var(--ezClockerNavy), #0f4777 */
+    --ezBoxShadow-ezclocker-navy-30: rgba(15, 71, 119, 0.3);
+    /* @deprecated: Use --ezBoxShadow-ezclocker-navy-30 */
+    --ezAlphaEzClockerNavy1: rgba(15, 71, 119, 0.3);
+    /* baby blue, darkened, near fully transparent */
+    --ezBoxShadow-ezclocker-baby-blue-10: rgba(0, 75, 255, 0.1);
+    /* @deprecated: Use --ezBoxShadow-ezclocker-baby-blue-10 */
+    --ezAlphaGlass: rgba(0, 75, 255, 0.1);
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezClocker Background Colors
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* === ezClocker Background Colors === */
+    --ezLightBackgroundWhite: var(--ezClockerWhite);
+    --ezAlphaBackgroundWhite: rgb(255 255 255/ 0.8);
+    --ezAlphaBackgroundWhite1: rgba(225, 225, 225, 0.3);
+    --ezAlphaBackgroundWhite2: rgba(255, 255, 255, 0.4);
+    --ezAlphaBackgroundWhite3: rgba(255, 255, 255, 0.9);
+    --ezAlphaBackgroundWhite4: rgba(255, 255, 255, 0.85);
+    --ezBackgroundWhite: var(--ezClockerBackground);
+    --ezDarkAlphaBackgroundWhite: rgba(180, 180, 180, 0.3);
+    --ezDarkBackgroundWhite: #B4B4B4;
+    --ezBorderAlphaBackgroundWhite: rgba(136, 135, 135, 0.3);
+    --ezBorderBackgroundWhite: #888787;
+    --ezBackgroundGradientAlphaWhite1: rgba(255, 255, 255, 0.07);
+    --ezBackgroundGradientAlphaWhite2: rgba(255, 255, 255, 0.13);
+    --ezBackgroundGradientAlphaWhite3: rgba(255, 255, 255, 0.17);
+    --ezBackgroundGradientAlphaWhite4: rgba(255, 255, 255, 0.19);
+    /* Background Images */
+    --ezBackgroundImage: linear-gradient(90deg, var(--ezBackgroundGradientAlphaWhite1) 50%, transparent 50%),
+        linear-gradient(90deg, var(--ezBackgroundGradientAlphaWhite2) 50%, transparent 50%),
+        linear-gradient(90deg, transparent 50%, var(--ezBackgroundGradientAlphaWhite3) 50%),
+        linear-gradient(90deg, transparent 50%, var(--ezBackgroundGradientAlphaWhite4) 50%);
+    --ezBackgroundImageSize: 13px, 29px, 37px, 53px;
+    --ezLargeFontSize: 24pt;
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    | ezClocker Font and Text Variables
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    /* ezClocker Font Famlies */
+    --ezFontFamily: 'Roboto', verdana, sans-serif;
+    --ezTextFontFamily: 'Noto Sans JP', 'Roboto', verdana, sans-serif;
+    /* Banner Text */
+    --ezBannerHeaderFontSize: 32pt;
+    --ezBannerHeaderColor: var(--ezClockerBlack);
+    --ezBannerHeaderFontWeight: bold;
+    --ezBannerHeaderFontStyle: normal;
+    /* Header Text */
+    --ezHeaderFontSize: 22pt;
+    --ezHeaderFontColor: var(--ezClockerBlack);
+    --ezHeaderFontWeight: bold;
+    --ezHeaderFontStyle: normal;
+    /* Title Text */
+    --ezTitleFontSize: 18pt;
+    --ezTitleFontColor: var(--ezClockerNavy);
+    --ezTitleFontWeight: bold;
+    --ezTitleFontStyle: normal;
+    /* Topic Text */
+    --ezTopicFontSize: 14pt;
+    --ezTopicFontColor: var(--ezClockerBlack);
+    --ezTopicFontWeight: bold;
+    --ezTopicFontStyle: normal;
+    /* Action Text */
+    --ezActionFontSize: 14pt;
+    --ezActionFontColor: var(--ezClockerBlue);
+    --ezActionFontWeight: bold;
+    --ezActionFontStyle: normal;
+    /* Normal Text */
+    --ezFontSize: 14pt;
+    --ezFontColor: var(--ezClockerBlack);
+    --ezLightFontColor: var(--ezClockerGray);
+    --ezFontWeight: normal;
+    --ezFontStyle: normal;
+    /* Content Text */
+    --ezContentFontSize: 12pt;
+    --ezContentFontColor: var(--ezClockerBlack);
+    --ezContentLightFontColor: var(--ezClockerGray);
+    --ezContentFontWeight: normal;
+    --ezContentFontStyle: normal;
+    /* Small Text */
+    --ezSmallFontSize: 10pt;
+    --ezMicroFontSize: 8pt;
+    --ezMicroFontWeight: normal;
+    --ezMicroFontStyle: normal;
+    /* Body Margins and Padding */
+    --ezBodyMarginSize: 0;
+    --ezBodyPaddingSize: 0;
+}
+
+/* ezClocker Body */
+body {
+    margin: var(--ezBodyMarginSize);
+    padding: var(--ezBodyPaddingSize);
+    background-color: var(--ezAlphaBackgroundWhite1);
+    background-size: var(--ezBackgroundImageSize);
+    background-image: var(--ezBackgroundImage);
+    color: var(--ezContentFontColor);
+    font-size: var(--ezContentFontSize);
+    font-family: var(--ezFontFamily);
+    font-weight: var(--ezContentFontWeight);
+    font-style: var(--ezContentFontStyle);
+}
+
+.ezScroll {
+    overflow: scroll;
+}
+
+.ezAllowScroll, .ezScroll-auto {
+    overflow: auto;
+}
+
+.ezNoScroll, .ezScroll-hidden {
+    overflow: hidden;
+}
+
+.ezScroll-vertical {
+    overflow-y: scroll;
+}
+
+.ezScroll-vertical-auto {
+    overflow-y: auto;
+}
+
+.ezScroll-verticle-hide {
+    overflow-y: hidden;
+}
+
+.ezScroll-horizontal {
+    overflow-x: scroll;
+}
+
+.ezScroll-horizontal-auto {
+    overflow-x: auto;
+}
+
+.ezScroll-horizontal-hide {
+    overflow-x: hidden;
+}
+
+/* ezClocker Border Styles */
+.ezBorder {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+.ezBorderLeft {
+    border-left-color: #000000;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.ezBorderRight {
+    border-right-color: #000000;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.ezBorderTop {
+    border-top-color: #000000;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.ezBorderBottom {
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+/* ezClocker Utility Styles */
+.ezHiddenDefault {
+    display: none;
+}
+
+.ezWhiteHoverBackground:hover {
+    background-color: #ffffff;
+}
+
+.ezErrorDetails {
+    color: var(--ezClockerStone);
+    font-size: 8pt;
+}
+
+.ezSmallSpinnerContainer {
+    display: block;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 45%;
+    background-color: var(--ezAlphaBackgroundWhite3);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 4px;
+}
+
+.ezSmallSpinnerContent {
+    padding: 4px;
+    font-weight: bold;
+}
+
+.ezNoOverflowContainer {
+    display: grid;
+    overflow: hidden;
+}
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1024px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 480px) {
+}
+*/
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 319px) {
+}
+*/

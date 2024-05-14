@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/public/styles/common/ezclocker-base2015.css" rel="stylesheet" type="text/css">
+    <link href="/public/styles/common/ezclocker-page-layout.css" rel="stylesheet" type="text/css">
+    <script id="external-jquery" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script id="public-ezLogger" src="/public/javascript/common/ezclocker-logger.js"></script>
+    <script id="public-serviceHelper" src="/public/javascript/services/ezclocker-services-helper.js"></script>
+    <script id="public-ezHttpHelper" src="/public/javascript/common/ezclocker-http-helper.js"></script>
+    <script id="public-ezUrlHelper" src="/public/javascript/common/ezclocker-url-helper2.js"></script>
+    <script id="public-ezNavigation" src="/public/javascript/common/ezclocker-navigation-helper.js"></script>
+    <script id="secure-ezEmployerService" src="/javascript/common/ezclocker-employer-services.js"></script>
+    <script id="public-EzApi" src="/public/javascript/common/ezapi.js"></script>
+    <script id="secure-ezIntegrationController" src="ez-integration-controller.js"></script>
+    <title>ezClocker: Integrations</title>
+</head>
+
+<body>
+    <div class="ezClockerMainContent2015">
+        <div id="ezIPPicker">
+            <h1>Select the integration you wish to setup.</h1>
+            <button id="ezQbIntegrationId" onclick="ezIntegrationController.switchToQbProvider()">Quick Books
+                Online</button>
+            <button id="ezXeroIntegrationId" onclick="ezIntegrationController.switchToXeroProvider()">Xero</button>
+        </div>
+        <div id="ezIPError" class="ezHiddenByDefault ezError"></div>
+        <div class="ezLightGrayBox ezHiddenByDefault" id="ezIPQbWizard">
+            <div id="ezIPQbWizard_Step1">
+                <h1>QuickBooks Integration</h1>
+                <p>ezClocker will now step you through mapping employees in QuickBooks to the employees in
+                    ezClocker. The steps to complete:
+                <ol>
+                    <li>Log into QuickBooks and give permission for ezClocker to exchange data.</li>
+                    <li>Match QuickBooks employees to your ezClocker employees.</li>
+                </ol>
+                Click next to log into QuickBooks and provide permission for ezClocker to exchange data.
+                </p>
+                <button id="qbIntegrationWizardNext_Step2" onclick="ezIntegrationController.nextStep()">Next</button>
+            </div>
+            <div class="ezHiddenByDefault" id="ezIPQbWizard_Step2">
+                <h1>Redirecting you to the QuickBooks login...</h1>
+            </div>
+            <div class="ezHiddenByDefault" id="ezIPQbWizard_Step3">
+                <h1>Map QuickBooks Employees to ezClocker Employees</h1>
+                <table id="ezIPQbEmployeeMapingTable">
+                    <tr>
+                        <td>Your ezClocker Employees</td>
+                        <td>QuickBooks Employees</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="ezIPQbEmployeeMapingEzClockerEmployees"></div>
+                        </td>
+                        <td>
+                            <div id="ezIPQbEmployeeMapingQBEmployees"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ezHiddenByDefault" id="ezIPQbWizard_Step4">
+                <h1>Congratulations!</h1>
+                <p>You have successfully integrated ezCLocker with your QuickBooks Online account. Now you can
+                    export employee time entries to QuickBooks by clicking the Send to QuickBooks button next to the pay
+                    period date selection on your employer dashboard. Click OK to return to your employer dashboard.</p>
+                <button id="ezIPQbWizard_Done">Go to Employer Dashboard</button>
+            </div>
+        </div>
+
+        <div class="ezLightGrayBox ezHiddenByDefault" id="xeroIntegrationWizard">
+            <div id="xeroIntegrationWizard_Step1">
+                <h1>Xero Integration</h1>
+                <p>ezClocker will now step you through mapping employees in Xero to the employees in ezClocker. The
+                    steps to complete:
+                <ol>
+                    <li>Log into Xero and give permission for ezClocker to exchange data.</li>
+                    <li>Match Xero employees to your ezClocker employees.</li>
+                </ol>
+                Click next to log into Xero and provide permission for ezClocker to exchange data.
+                </p>
+                <button id="xeroIntegrationWizardNext_Step2" onclick="ezIntegrationController.nextStep()">Next</button>
+            </div>
+            <div class="ezHiddenByDefault" id="xeroIntegrationWizard_Step2">
+                <h1>Redirecting you to the Xero login...</h1>
+            </div>
+            <div class="ezHiddenByDefault" id="xeroIntegrationWizard_Step3">
+                <h1>Map Xero Employees to ezClocker Employees</h1>
+                <table id="xeroIntegrationWizardEmployeeMappingTable">
+                    <tr>
+                        <td>Your ezClocker Employees</td>
+                        <td>Xero Employees</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="xeroIntegrationWizardEzClockerEmployees"></div>
+                        </td>
+                        <td>
+                            <div id="xeroIntegrationWizardQBEmployees"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ezHiddenByDefault" id="xeroIntegrationWizard_Step4">
+                <h1>Congratulations!</h1>
+                <p>You have successfully integrated ezCLocker with your Xero account. Now you can export employee
+                    time entries to QuickBooks by clicking the Send to Xero button next to the pay period date selection
+                    on your employer dashboard. Click OK to return to your employer dashboard.</p>
+                <button id="xeroIntegrationWizard_Done">Go to Employer Dashboard</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

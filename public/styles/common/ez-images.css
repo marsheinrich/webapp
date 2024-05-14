@@ -1,0 +1,57 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Image UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ezImages-small-help {
+    padding: 0;
+    border:0;
+    width: 18px;
+    background-image: url('/public/images/icons/info.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ezImages-actiongreen-check-left-container-24x24 {
+    display: inline-block;
+    padding: 0 0 0 30px;
+    min-width: 28px;
+    background-image: url('/public/images/icons/check-ezActionGreen.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
+.ezImages-black-check-left-container-24x24 {
+    display: inline-block;
+    padding: 0 0 0 30px;
+    min-width: 28px;
+    background-image: url('/public/images/icons/check-black.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
+.ezImages-black-check-left-container-18x18 {
+    display: inline-block;
+    padding: 0 0 0 30px;
+    min-width: 28px;
+    background-image: url('/public/images/icons/check-black.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+
+.ezImages-hamburger-menu-button {
+    display: inline-block;
+    margin: 2px;
+    padding: 0 0 0 30px;
+    min-width: 24px;
+    min-height: 24px;
+    background-color: var(--ezClockerNavy);
+    background-image: url('/public/images/icons/mobile-menu-white.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}

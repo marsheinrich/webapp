@@ -1,0 +1,24 @@
+<style>
+</style>
+
+<script>
+    try {
+        ezImport.createImportJsonDataObject(true)
+            .done(function (ezijd) {
+                ezijd.plinks = [
+                    "common/ezclocker-base2015.css",
+                    "common/ezclocker-page-layout.css",
+                ];
+                ezLogger.debug("--< injecting basic-header.html >--");
+                ezImport.jsonImport(ezijd);
+            });
+    } catch (ex) {
+        ezImport.warn("ezImport is not available for basic-header.js");
+    }
+
+</script>
+
+<div class="ezClockerHeader2015NonFixed bottomShadow" id="_ezClockerPageHeader">
+    <a href="#" onclick="navigateToMain()"> <img src="images/logos/ezclockerLogo2015.svg" class="ezClockerHeader2015" />
+    </a> ezClocker
+</div>

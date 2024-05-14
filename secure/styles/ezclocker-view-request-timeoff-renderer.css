@@ -1,0 +1,36 @@
+.timeOffRendererIconsCell {
+    padding: 5px;
+    width: auto;
+    background-color: lightgray;
+}
+
+.timeOffRendererEnableApprovedButton {
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #008F35;
+}
+
+.timeOffRendererActionButton {
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #0f4777;
+}
+
+.timeOffRendererDenyButton {
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #d1001c;
+}
+
+.timeOffRendererDataCell {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.timeOffRendererTotalsCell {
+    background-color: #ffc500;
+    color: black;
+    text-align: center;
+
+}
+

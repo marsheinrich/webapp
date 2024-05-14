@@ -1,0 +1,46 @@
+# Ignoring Build Output Folders
+
+# Ignoring All Files in Folders with Name
+**/images/**
+**/node_modules/**
+**/jquery-mobile/**
+**/jquery/**
+**/bootstrap/**
+**/jquery-ui/**
+
+# Ignoring All Files in Specific Folders
+/m/jqm/**
+/META-INF/**
+/WEB-INF/**
+/welcome/**
+/tutorials/**
+/ezwp/**
+/dist/**
+/secure/widgets/employer-account-settings/**
+/public/webcomponents/ez-dialog/**
+
+# Ignoring File Matching the Mask
+**/*.txt
+**/*.min.*
+**/*.map
+**/*.png
+**/*.jpg
+**/*.svg
+**/*.ico
+**/*.pdf
+
+# Ignoring All Files with Name
+**/.babelrc
+**/.gitignore
+**/.d.ts
+**/.stylelintrc.json
+**/.swcrc
+**/codemix.code-workspace
+**/package.json
+**/package-lock.json
+
+# Ignoring Specific Files
+/googledc2f47e97563793a.html
+/googled76d329d4999bddd.html
+/MQ8MQLJJJR6kDW0WgvyryVjymDQKDWp.Fx__Z8_DOQ--.html
+/2d9535b19b98f29365281d6a6e228025.txt

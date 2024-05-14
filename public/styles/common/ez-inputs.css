@@ -1,0 +1,889 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| EzClocker Input UX CSS Classes
+| CSS variables defined in: /src/main/webapp/public/styles/common/ez-body.css
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+:root {
+    --ezInputFontFamily: 'Roboto', verdana, sans-serif;
+    --ezInputMonospaceFontFamily: monospace;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Input Styles
+| Tags: <input/>
+|-------------------------------------------------------------------
+| Available Styles:
+|   input <default>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+input {
+    font-family: var(--ezInputFontFamily);
+    font-size: 10pt;
+    padding: 4px;
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 0;
+    border-radius: 3px;
+}
+
+input:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+input:invalid {
+    background-color: #ffeeee;
+    border-color: #FF0700;
+    border-width: 1px;
+    box-shadow: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Select Input Styles
+| Tags: <select/>
+|-------------------------------------------------------------------
+| Available Styles:
+|   ezSelectMenu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+select {
+    margin: 4px 4px 4px 0;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerBlack);
+    font-size: 10pt;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+select:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+select.reportsOverride,
+select.ez-reports-override {
+    font-size: 10pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+select.reportsOverride:focus,
+select.ez-reports-override:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+select.ezSelect {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+select.ezSelect:enabled:hover {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+}
+
+select.ezSelect:enabled:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+select.ezSelectHeader {
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+select.ezSelectHeader:hover {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+}
+
+select.ezSelectHeader:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| Select Option Styles
+| Tags: <option/>
+|-------------------------------------------------------------------
+| Available Styles:
+|   option <tag default>
+|   ezOption
+|   ezOptionHeader
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+option {
+    font-size: 10pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+option:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+option.ezOption {
+    font-size: 12pt;
+    padding: 4px;
+}
+
+option.ezOptionHeader {
+    font-size: 14pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    margin: 4px 4px 4px 0;
+}
+
+option.ezOptionHeader:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| JQuery Select Input Styles
+| Tags: <select/>
+|-------------------------------------------------------------------
+| Available Styles:
+|   ezSelectMenu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* for jQuery's SelectMenu component */
+.ezSelectMenu {
+    width: auto;
+    padding: 4px;
+    margin: 4px 4px 4px 0;
+    background-color: var(--ezClockerYellow);
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.ezSelectMenu:hover {
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    background-color: #ffdb64;
+}
+
+.ezSelectMenu:active {
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    border-color: #ffcc66;
+}
+
+.ezSelectMenu:disabled {
+    font-weight: normal;
+    background-color: #ffdb64;
+    color: #c69800;
+    border-color: #c69800;
+}
+
+.ezSelectMenu:focus {
+    color: var(--ezClockerBlack);
+    font-weight: bold;
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+
+    /* box-shadow: 0px 0px 2px 2px rgba(255, 153, 0, .2); */
+    box-shadow: 0 0 2px 1px rgb(255 153 0 / 30%);
+}
+
+input[type="date"].ezDate {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="date"].ezDate:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="datetime"].ezDateTime {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="datetime"].ezDateTime:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="datetime-local"].ezDateTimeLocal {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="datetime-local"].ezDateTimeLocal:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="email"].ezEmail {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="email"].ezEmail:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="file"].ezFile {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="image"].ezImage {
+    border-style: solid;
+    border-color: var(--ezClockerGray);
+    border-width: 1px;
+}
+
+input[type="image"].ezImage:hover {
+    border-style: solid;
+    border-color: var(--ezClockerBlack);
+    border-width: 1px;
+}
+
+input[type="month"].ezMonth {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="month"].ezMonth:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="number"].ezNumber {
+    font-size: 12pt;
+    font-family: var(--ezInputFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="number"].ezNumber:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="number"].ezNumber:disabled {
+    color: #e0e0e0;
+    border-color: #e0e0e0;
+    outline-color: #e0e0e0;
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="password"].ezPassword {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="password"].ezPassword:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="radio"].ezRadio {
+    background-color: transparent;
+}
+
+input[type="reset"].ezResetMajor {
+    display: inline-block;
+    padding: 6px 24px;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid var(--ezClockerBlack);
+    cursor: pointer;
+}
+
+input[type="reset"].ezResetMajor:hover {
+    background-color: #ffcc66;
+}
+
+input[type="reset"].ezResetMajor:active {
+    background-color: #ff9933;
+}
+
+input[type="reset"].ezResetActionButton {
+    display: inline-block;
+    padding: 6px 24px;
+    background-color: #8df13c;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid var(--ezActionGreenBorderColor);
+    cursor: pointer;
+}
+
+input[type="reset"].ezResetActionButton:hover {
+    background-color: var(--ezActionGreenHoverColor);
+}
+
+input[type="reset"].ezResetActionButton:active {
+    color: var(--ezActionGreenHoverColor);
+    background-color: var(--ezActionGreenBorderColor);
+}
+
+input[type="reset"].ezResetEdit {
+    display: inline-block;
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 3px;
+    border: 1px solid var(--ezClockerBlack);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="reset"].ezResetEdit:hover {
+    background-color: #edf6ff;
+}
+
+input[type="reset"].ezResetEdit:active {
+    background-color: var(--ezClockerGray);
+}
+
+input[type="search"].ezSearch {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerBlack);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="submit"].ezMajorSubmit {
+    display: inline-block;
+    padding: 6px 24px;
+    background-color: var(--ezClockerOrange);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid var(--ezClockerBlack);
+    cursor: pointer;
+}
+
+input[type="submit"].ezMajorSubmit:hover {
+    background-color: #ffcc66;
+}
+
+input[type="submit"].ezMajorSubmit:active {
+    background-color: #ff9933;
+}
+
+input[type="submit"].ezSubmitActionButton {
+    display: inline-block;
+    padding: 6px 24px;
+    background-color: #8df13c;
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid var(--ezActionGreenBorderColor);
+    cursor: pointer;
+}
+
+input[type="submit"].ezSubmitActionButton:hover {
+    background-color: var(--ezActionGreenHoverColor);
+}
+
+input[type="submit"].ezSubmitActionButton:active {
+    color: var(--ezActionGreenHoverColor);
+    background-color: var(--ezActionGreenBorderColor);
+}
+
+input[type="submit"].ezSubmitEdit {
+    display: inline-block;
+    padding: 4px;
+    background-color: var(--ezClockerOffWhite);
+    color: var(--ezClockerBlack);
+    font-family: var(--ezInputFontFamily);
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid var(--ezClockerBlack);
+    cursor: pointer;
+}
+
+input[type="submit"].ezSubmitEdit:hover {
+    background-color: #edf6ff;
+}
+
+input[type="submit"].ezSubmitEdit:active {
+    background-color: var(--ezClockerGray);
+}
+
+input[type="tel"].ezTel {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="tel"].ezTel:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="text"].ezText {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="text"].ezText:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="time"].ezTime {
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="time"].ezTime:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="url"].ezUrl {
+    font-size: 12pt;
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="url"].ezUrl:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+input[type="week"].ezWeek {
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type="week"].ezWeek:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+textarea {
+    padding: 4px;
+    background-color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-family: var(--ezInputMonospaceFontFamily);
+    border-color: var(--ezClockerGray);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+textarea:focus {
+    border-color: var(--ezClockerOrange);
+    outline-color: var(--ezClockerOrange);
+    outline-style: solid;
+    outline-width: 1px;
+    border-radius: 3px;
+}
+
+textarea.ez-error-message-details {
+    margin: 8px;
+    width: 100%;
+    color: var(--ezClockerGray);
+    font-size: 6pt;
+    border-radius: 3px;
+}
+
+.ezInputs-large-fake-editor {
+    margin: 0;
+    min-height: 24px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: var(--ezClockerWhite);
+    font-family: Roboto, Verdana, sans-serif;
+    font-size: 18pt;
+    border-color: var(--ezClockerSilver);
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ezInputs-large-fake-editor-no-border {
+    margin: 0;
+    min-height: 24px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: var(--ezClockerWhite);
+    color: var(--ezClockerNavy);
+    font-family: var(--ezInputFontFamily);
+    font-size: 14pt;
+    border-style: none;
+}
+
+.ezMajorInputLabel {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezFontColor);
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.ezInput-label-white-12pt-bold {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezClockerWhite);
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.ezInput-label-black-12pt-bold {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezClockerBlack);
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.ezInput-label-black-14pt,
+.ezInputLabel,
+.ezEditorLabel,
+.editorLabel {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezFontColor);
+    font-size: 14pt;
+}
+
+.ezInput-label-black-14pt-bold,
+.ezBoldInputLabel {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezFontColor);
+    font-size: 14pt;
+}
+
+.ezInputs-checkbox-radio-label {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: var(--ezFontColor);
+    font-size: 14pt;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.ezTogglesLabel {
+    color: var(--ezFontColor);
+    font-size: 14pt;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.ezInputFormatLabel {
+    color: var(--ezClockerGray);
+    font-size: 10pt;
+}
+
+.ezLargeInputEditor {
+    font-size: 18pt;
+}
+
+.ezInputs-large-full-width {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18pt;
+}
+
+.ezOversizedEditor,
+.oversizedEditor {
+    font-size: 16pt;
+    font-style: bold;
+}
+
+.ezDialogEditor {
+    font-size: 12pt;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ezFullWidthEditor,
+.fullWidthEditor {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ezInputLabelGroupContainer {
+    padding: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ezInputErrorHighlight {
+    background-color: var(--ezClockerInputErrorBackground);
+    border-color: var(--ezBorderAlertRed);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.ezInputWarningHighlight {
+    background-color: var(--ezClockerInputWarningBackground);
+    border-color: var(--ezBorderWarningYellow);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.ezDisabledICheck {
+    background-color: #e0e0e0;
+    border-color: #6d6e70;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.ezInputs-disabled-icheck {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.ezInputs-important-data {
+    font-size: 12pt;
+}
+
+.ezDisabledLabel {
+    color: #e0e0e0;
+}
+
+.ezText-input-label-disabled {
+    color: #e0e0e0;
+    cursor: default;
+}
+
+.ez-input-validation-error {
+    background-color: var(--ezClockerInputErrorBackground);
+    border-color: var(--ezBorderAlertRed);
+}
+
+
+/* -------------------------------------------------------------------
+| Large Tablet Screen Styles (https://yesviz.com/laptops.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 1023px) {
+}
+*/
+
+/* -------------------------------------------------------------------
+| Small Tablet Screen Styles (https://yesviz.com/tablets.php)       |
+------------------------------------------------------------------- */
+/*
+@media screen and (max-width: 768px) {
+}
+*/
+
+
+/* -------------------------------------------------------------------
+| Phone Screen Styles  (https://yesviz.com/mobiles.php)             |
+------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .ezInputs-large-fake-editor {
+        display: grid;
+        box-sizing: border-box;
+        min-height: 30px;
+        margin: 0;
+        padding: 4px;
+        justify-content: left;
+        align-content: center;
+        background-color: var(--ezClockerWhite);
+        font-family: Roboto, Verdana, sans-serif;
+        font-size: 12pt;
+        border-color: var(--ezClockerSilver);
+        border-style: solid;
+        border-width: 1px;
+        vertical-align: middle;
+    }
+
+    .ezInputs-large-full-width {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 12pt;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+| Warable Screen Style  (https://yesviz.com/watches.php)            |
+------------------------------------------------------------------- */
+@media screen and (max-width: 319px) {
+    .ezInputs-large-fake-editor {
+        display: grid;
+        box-sizing: border-box;
+        min-height: 30px;
+        margin: 0;
+        padding: 4px;
+        justify-content: left;
+        align-content: center;
+        background-color: var(--ezClockerWhite);
+        font-family: Roboto, Verdana, sans-serif;
+        font-size: 12pt;
+        border-color: var(--ezClockerSilver);
+        border-style: solid;
+        border-width: 1px;
+        vertical-align: middle;
+    }
+
+    .ezInputs-large-full-width {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 12pt;
+    }
+}

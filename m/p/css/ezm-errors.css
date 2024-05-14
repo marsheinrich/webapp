@@ -1,0 +1,9 @@
+div.errorMessage {
+    border-color: #a60400;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #ff7673;
+    color: #ffffff;
+    padding: 8px;
+    margin-bottom: 8px;
+}

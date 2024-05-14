@@ -1,0 +1,9 @@
+div.quickSignIn {
+    float: right;
+}
+
+label.quickSignInLabel {
+    font-size: x-small;
+    margin-left: 2px;
+    font-weight: bold;
+}

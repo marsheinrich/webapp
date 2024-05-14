@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Tomcat v8.x <web-app> tag -->
+<!-- Comment out all other <web-app> tags and comment in the one below to target Tomcat v8.x -->
+<!--
+    <web-app
+    version="3.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+-->
+
+<!-- Tomcat v9 <web-app> tag -->
+<!-- Comment out all other <web-app> tags and comment in the one below to target Tomcat v9 -->
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <!-- Tomcat v10 <web-app> tag -->
+    <!-- Comment out all other <web-app> tags and comment in the one below to target Tomcat v9 -->
+    <!--
+        <web-app
+        version="5.0"
+        xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
+    -->
+
+    <display-name>ezClocker</display-name>
+    <description>ezClocker Application</description>
+
+    <resource-ref>
+        <description>ezClocker Communications</description>
+        <res-ref-name>mail/Session</res-ref-name>
+        <res-type>javax.mail.Session</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Character Encoding Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <context-param>
+        <param-name>defaultHtmlEscape</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:META-INF/spring/applicationContext*.xml</param-value>
+    </context-param>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Character Encoding Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Internal API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter>
+        <filter-name>HttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Internal API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter>
+        <filter-name>CacheControlFilter</filter-name>
+        <filter-class>com.ezclocker.filters.CacheControlFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Internal API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Internal API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter>
+        <filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+        <filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Internal API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.supportedMethod</param-name>
+            <param-value>
+                POST,
+                PUT,
+                GET,
+                DELETE,
+                HEAD
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>
+                *
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>
+                true
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>
+                http://[::1],
+                https://[::1],
+                https://[::1]:8080,
+                https://[::1]:8081,
+                https://[::1]:8082,
+                https://[::1]:8083,
+                https://[::1]:8181,
+                https://[::1]:8282,
+                https://[::1]:8383,
+                https://[::1]:8443,
+                https://[::1]:8444,
+                https://[::1]:8445,
+                https://[::1]:8446,
+                http://127.0.0.1,
+                https://127.0.0.1,
+                http://127.0.0.1:8080,
+                http://127.0.0.1:8081,
+                http://127.0.0.1:8082,
+                http://127.0.0.1:8083,
+                http://127.0.0.1:8181,
+                http://127.0.0.1:8282,
+                http://127.0.0.1:8383,
+                http://127.0.0.1:8443,
+                http://127.0.0.1:8444,
+                http://127.0.0.1:8445,
+                http://127.0.0.1:8446,
+                http://localhost,
+                https://localhost,
+                http://localhost:8080,
+                http://localhost:8081,
+                http://localhost:8082,
+                http://localhost:8083,
+                http://localhost:8181,
+                http://localhost:8282,
+                http://localhost:8383,
+                https://localhost:8443,
+                https://localhost:8444,
+                https://localhost:8445,
+                https://localhost:8446,
+                http://ezclocker.com,
+                https://ezclocker.com,
+                http://eznovatech.com,
+                https://eznovatech.com,
+                http://zclocker.com,
+                https://zclocker.com
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowSubdomains</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    -->
+
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Website CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter>
+        <filter-name>WEBSITE-CORS-FILTER</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.supportedMethod</param-name>
+            <param-value>
+                HEAD,
+                GET
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>
+                *
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>
+                true
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>
+                http://[::1],
+                https://[::1],
+                https://[::1]:8080,
+                https://[::1]:8081,
+                https://[::1]:8082,
+                https://[::1]:8083,
+                https://[::1]:8181,
+                https://[::1]:8282,
+                https://[::1]:8383,
+                https://[::1]:8443,
+                https://[::1]:8444,
+                https://[::1]:8445,
+                https://[::1]:8446,
+                http://127.0.0.1,
+                https://127.0.0.1,
+                http://127.0.0.1:8080,
+                http://127.0.0.1:8081,
+                http://127.0.0.1:8082,
+                http://127.0.0.1:8083,
+                http://127.0.0.1:8181,
+                http://127.0.0.1:8282,
+                http://127.0.0.1:8383,
+                http://127.0.0.1:8443,
+                http://127.0.0.1:8444,
+                http://127.0.0.1:8445,
+                http://127.0.0.1:8446,
+                http://localhost,
+                https://localhost,
+                http://localhost:8080,
+                http://localhost:8081,
+                http://localhost:8082,
+                http://localhost:8083,
+                http://localhost:8181,
+                http://localhost:8282,
+                http://localhost:8383,
+                https://localhost:8443,
+                https://localhost:8444,
+                https://localhost:8445,
+                https://localhost:8446,
+                http://ezclocker.com,
+                https://ezclocker.com,
+                http://eznovatech.com,
+                https://eznovatech.com,
+                http://zclocker.com,
+                https://zclocker.com
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowSubdomains</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API CORS Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter>
+        <filter-name>PUBLIC-API-CORS-FILTER</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+        <init-param>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>
+                HEAD,
+                POST,
+                PUT,
+                GET,
+                DELETE
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>
+                *
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>
+                false
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>
+                *
+            </param-value>
+        </init-param>
+        <init-param>
+            <param-name>cors.allowSubdomains</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Legacy Internal API CORS Filter Mappings -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/has-latest-version</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/redirect-with-version</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/url-version-param</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/index.html</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/redirectToUrl</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/redirectToSignIn</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/goIndex</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/redirectToDashboard</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/redirectToAccessDeniedPage</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/sessionError</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/home</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/session-error</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/dashboard</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/uncaughtException</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/resourceNotFound</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/logout</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/loginerror</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/login</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/dataAccessFailure</url-pattern>
+        </filter-mapping>
+
+        <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/unauthorized</url-pattern>
+        </filter-mapping>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Website CORS Filter Mappings -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter-mapping>
+        <filter-name>WEBSITE-CORS-FILTER</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Website CORS Filter Mappings -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter-mapping>
+        <filter-name>PUBLIC-API-CORS-FILTER</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Website CORS Filter Mappings -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--  DISABLED: USING Spring's MVC Configuration Instead
+    <filter-mapping>
+        <filter-name>INTERNAL-API-CORS-FILTER</filter-name>
+        <url-pattern>/_api/*</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API, Internal API, and Website Character Encoding Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API, Internal API, and Website Http-Method-Filter Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter-mapping>
+        <filter-name>HttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API, Internal API, and Website Cache-Control-Filter Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter-mapping>
+        <filter-name>CacheControlFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API, Internal API, and Website SpringSecurityFilterChain Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Public API, Internal API, and Website OpenEntityManagerInViewFilter Filter -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <filter-mapping>
+        <filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Context Loader Listener -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Message Dispatcher Servlet Listener -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <listener>
+        <listener-class>org.springframework.ws.transport.http.MessageDispatcherServlet</listener-class>
+    </listener>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Request Context Listener -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- EzClocker Servlet -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <servlet>
+        <servlet-name>ezClocker</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>WEB-INF/spring/webmvc-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- EzClocker Servlet Mapping -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <servlet-mapping>
+        <servlet-name>ezClocker</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Application Session Configuration -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <session-config>
+        <session-timeout>1440</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+            <secure>true</secure>
+        </cookie-config>
+    </session-config>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- 404 Error Page Handler -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/</location>
+    </error-page>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- 500 Error Page Handler -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/errors/500.html</location>
+    </error-page>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- 502 Error Page Handler -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <error-page>
+        <error-code>502</error-code>
+        <location>/errors/502.html</location>
+    </error-page>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- 401 Error Page Handler -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <error-page>
+        <error-code>401</error-code>
+        <location>/errors/401.html</location>
+    </error-page>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- RequestRejectedException Error Page Handler -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <error-page>
+        <exception-type>org.springframework.security.web.firewall.RequestRejectedException</exception-type>
+        <location>/api/v1/handle-request-error/request-rejected</location>
+    </error-page>
+</web-app>

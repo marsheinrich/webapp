@@ -1,0 +1,36 @@
+Copyright © 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 ezNova Technologies, LLC. All rights reserved.
+
+All source code for ezNova Technologies, LLC. products and services is considered private intellectual property unless the
+asset is already covered by an existing license (such as an open source license, or purchased license). Use of the
+ezNova Technologies, LLC private intellectual property is restricted to ezNova Technologies, LLC employees and active
+contractors. Any other use of the private intellectual property requires an explicit license from ezNova Technologies that
+details who, where, and how the intellectual property may be used.
+
+ezNova Technologies reserves the right to modify and update any license, terms of service, terms of use, or other
+restriction at any time without notice. Updated information is available on the product and service pages.
+
+Customer licensing and terms of service information is defined with each product and service that is publicly available.
+Please refer to this additional information.
+
+ezClocker.com
+    * Terms of Service at https://ezclocker.com/public/ezclocker_terms_of_service.html
+    * Privacy Information at https://ezclocker.com/public/privacy.html
+    * Security Information at https://ezclocker.com/public/security.html
+
+In addition to ezNova Technology licenses, the items below apply apply to some of the intellectual property used to
+create products and technologies for ezNova Technologies, LLC (including the ezclocker.com website). We require all
+users, employees, and active contractors to comply with any other vendor license as necessary.
+
+spring.io, Apache Tomcat, Apache HTTP
+    * Apache Software Foundation License
+    * http://www.apache.org/licenses/LICENSE-2.0
+
+Node.js
+    * https://raw.githubusercontent.com/nodejs/node/master/LICENSE
+
+Npm.js
+    * https://github.com/npm/cli/blob/latest/LICENSE
+    * https://www.npmjs.com/policies/open-source-terms
+
+ Webpack
+    * https://webpack.js.org/license

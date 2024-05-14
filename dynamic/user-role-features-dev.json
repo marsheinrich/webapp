@@ -1,0 +1,299 @@
+{
+    "UNKNOWN": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "NONE": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_EZCLOCKER_SUPPORT": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_DEVELOPER": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_ADMIN": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_EMPLOYER": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": true
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "ROLE_MANAGER": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_EMPLOYEE": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    },
+    "ROLE_PERSONAL": {
+        "views": {
+            "admin": {},
+            "employerDashboard": {},
+            "employeeDashboard": {},
+            "employerSchedules": {},
+            "employeeSchedules": {},
+            "archive": {},
+            "account": {
+                "EZROLE_FEATURE_ACCOUNT_TOOLS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_SUBSCRIPTION_EDITING": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_PASSWORD": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_DELETE_ACCOUNT": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_ACCOUNT_CHANGE_EMPLOYER_EMAIL": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_INTEGRATIONS": {
+                    "enabled": false
+                },
+                "EZROLE_FEATURE_EDIT_COMPANY_LOGO": {
+                    "enabled": false
+                }
+            }
+        }
+    }
+}

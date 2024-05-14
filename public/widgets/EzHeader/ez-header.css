@@ -1,0 +1,52 @@
+/*
+    Used in the following:
+    (updated: 2021.02.22)
+    
+    secure/archive/index.html
+    secure/archive.html
+*/
+
+.ezHeaderBanner {
+    top: 0;
+    padding: 8px;
+
+    /* background-color: var(--ezAlphaBackgroundWhite2); */
+    background-color: rgb(255 255 255 / 40%);
+
+    /* color: var(--ezClockerBlack); */
+    color: #000000;
+
+    /* font-family: var(--ezFontFamily); */
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+
+    /* font-size: var(----ezBannerHeaderFontSize); */
+    font-size: 32pt;
+
+    /* color: var(--ezClockerBlack); */
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.ezBannerHeaderText {
+    /* font-size: var(----ezBannerHeaderFontSize); */
+    font-family: Roboto, Verdana, sans-serif;
+    font-weight: normal;
+
+    /* font-size: var(----ezBannerHeaderFontSize); */
+    font-size: 32pt;
+    text-align: left;
+    border-style: none;
+}
+
+img.ezBannerLogo {
+    margin: 0;
+    padding: 2px;
+    max-width: 110px;
+    max-height: 40px;
+    border-style: none;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    vertical-align: middle;
+}

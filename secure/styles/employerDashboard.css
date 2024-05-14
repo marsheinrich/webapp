@@ -1,0 +1,177 @@
+table.clockedInEmployees {
+    width: 100%;
+    border-style: none;
+}
+
+td.exportReportOptionsCell {
+    vertical-align: top;
+    text-align: left;
+}
+
+img.editButtonImage {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+/** Employee Information **/
+table.employeeInformationBox {
+    width: 100%;
+    background-color: #6d6e70;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    padding: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+table.employeeInformation {
+    color: #ffffff;
+}
+
+td.employeeImageCell {
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+}
+
+td.employeeNameCell {
+    vertical-align: middle;
+    text-align: left;
+    color: #ffffff;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+td.employeeEmailCell {
+    font-style: italic;
+}
+
+a.employeeEmailLink {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.employeeEmailLink:hover {
+    cursor: pointer;
+    color: #ffdb64;
+}
+
+div.employeeMenuContainer {
+    margin-left: 8px;
+    margin-right: 8px;
+
+    /* background-color: var(--ezClockerSilver); */
+    background-color: #e0e0e0;
+
+    /* border-color: var(--ezClockerGray); */
+    border-color: #6d6e70;
+    border-style: solid;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-top-width: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+img.employeeImage {
+    margin-right: 8px;
+    height: 60px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+/** Total Hours Display **/
+input.totalHours {
+    font-size: 18pt;
+    font-family: monospace;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    width: 100px;
+    text-align: right;
+    margin-left: 4px;
+    padding: 4px;
+}
+
+a.whatIsThisLink {
+    font-weight: normal;
+    font-size: small;
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.whatIsThisLabel {
+    font-weight: normal;
+    font-size: small;
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a.whatIsThisLink:hover {
+    text-decoration: underline;
+}
+
+/** Active Clock In Display **/
+.EzEmployerDashboard_ActiveClockInCell {
+    text-align: right;
+    vertical-align: middle;
+}
+
+.ezActiveClockInDurationDisplay {
+    position: relative;
+}
+
+.activeClockInContainer {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 4px;
+    background-color: #0f4777;
+    color: #000000;
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+table.activeClockInTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td.activeClockInCell {
+    vertical-align: middle;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    background-color: #ffffff;
+    padding: 4px;
+}
+
+th.activeClockInHeader {
+    vertical-align: middle;
+    text-align: center;
+    padding: 4px;
+    background-color: #ffcc66;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    font-weight: bold;
+}
+
+div.floatRightDiv {
+    float: right;
+}
+
+table.fullWidthTable {
+    width: 100%;
+}
+
+.timeEntryGpsStatusText {
+    font-size: 8pt;
+}

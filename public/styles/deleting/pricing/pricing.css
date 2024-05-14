@@ -1,0 +1,58 @@
+div.subscriptionPlanPitchContainer {
+    margin: 10px;
+    padding: 8px;
+}
+
+.subscriptionPlanIntroTitle {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.paymentPlansContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.planCardCell {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #9B5D00;
+    vertical-align: top;
+    text-align: left;
+    padding: 4px;
+}
+
+.planContainer {
+    background-color: #FFC164;;
+    padding: 4px;
+    width: 100%;
+}
+
+.planPriceLabelCell {
+    color: #000000;
+    font-size: 18pt;
+    padding: 8px;
+}
+
+.planHeaderCell {
+    padding: 8px;
+    background-color: #ff9900;;
+    color: #0f4777;
+    font-size: 24pt;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.planButtonCell {
+    padding: 8px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.planFeatureCell {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: normal;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description"
+        content="Easy to use small business employee time tracking website and mobile app. EzClocker provides employee time clock features, GPS tracking, and scheduling. Great for businesses like janitorial, landscaping, construction, catering, and many others.">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+    <link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="public/javascript/thirdparty/import/import.js"></script>
+    <script src="public/javascript/common/ez-loader.js"></script>
+    <script>
+        document.addEventListener(ezClockerLoader.ezClockerLoaderReadyEventName,
+            ezClockerLoader.ezInitEzClockerWeb);
+        document.addEventListener(ezClockerLoader.ezClockerWebReadyEventName, function () {
+            ezUi.ezStartPageWait();
+            ezClockerLoader.ezInject([
+                ezClockerLOader.ezBuildInjector(ezClockerLoader.ezInjectJs,
+                    ezClockerLoader.ezp('webcomponents/ezgrid/ez-grid.js'))
+            ]);
+        });
+
+    </script>
+    <title>ezClocker UI Tests</title>
+</head>
+
+<body>
+
+    <div class="ezBox">ezClocker ezBox UI element</div>
+
+    <div class="ezBox">
+        <input class="ezTextInput" type="text" value="ezTextInput" />
+    </div>
+
+    <div style="text-align: center">
+        <div
+            style="width: 50%; text-align: center; display: inline-block; padding: 16px; padding-bottom: 14px; background-color: #6d6e70">
+            <label style="font-size: 24px; font-weight: bold; color: #ffffff">Join us online!</label>
+            <div style="margin-top: 10px; text-align: center;">
+                <a href="https://www.facebook.com/ezClocker"> <img style="padding: 4px; margin: 0px; height: 32px;"
+                        src="https://s3.amazonaws.com/com.ezclocker.static/images/social/facebook-orange.svg" />
+                </a> <a href="https://twitter.com/ezClocker"> <img style="padding: 4px; margin: 0px; height: 32px;"
+                        src="https://s3.amazonaws.com/com.ezclocker.static/images/social/twitter-orange.svg" />
+                </a> <a href="https://www.linkedin.com/company-beta/10572579"> <img
+                        style="padding: 4px; margin: 0px; height: 32px;"
+                        src="https://s3.amazonaws.com/com.ezclocker.static/images/social/linkedin-orange.svg" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

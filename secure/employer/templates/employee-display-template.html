@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<table id="_EmployeeInformationContainer" class="employeeInformationBox bottomShadow">
+    <tr>
+        <td>
+            <table id="_EmployeeInformation" class="employeeInformation">
+                <tr>
+                    <td id="_EmployeeImageCell" class="employeeImageCell">
+                        <img id="_EmployeeImage" class="employeeImage" alt="Employee Profile Picture" />
+                    </td>
+                    <td>
+                        <div id="EzEmployeeInfoEmployeeName" class="employeeNameCell ezBold"></div>
+                        <div id="EzEmployeeInfoEmployeeEmail" class="employeeNameCell"></div>
+                        <div id="EzEmployeeInfoEmployeUsernameCell" class="ezText-username-info"></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td class="EzEmployerDashboard_ActiveClockInCell">
+            <div id="_ActiveClockInContainer" class="activeClockInContainer">
+                <table class="activeClockInTable">
+                    <tr>
+                        <th id="EzClockInStatusColumn" class="activeClockInHeader">Status</th>
+                    </tr>
+                    <tr>
+                        <td class="activeClockInCell">Clocked Out</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div class="employeeMenuContainer insetTopShadow" id="_EmployeeMenuContainerDiv">
+    <table class="fullWidthTable">
+        <tr>
+            <td>
+                <button class="majorButton" id="_EmployeeClockInButton" disabled>
+                    <div>Clock In</div>
+                    <div id="clockInButtonEmployeeName" class="majorButtonSubLabel"></div>
+                </button>
+                <button class="majorButton" id="_EmployeeClockOutButton" disabled>
+                    <div>Clock Out</div>
+                    <div id="clockOutButtonEmployeeName" class="majorButtonSubLabel"></div>
+                </button>
+            </td>
+            <td>
+                <div class="floatRightDiv">
+                    <table>
+                        <tr>
+                            <td>
+                                <button class="majorButton" id="_AddTimeEntryButton" disabled>Add Time Entry</button>
+                            </td>
+                            <td>
+                                <button class="majorButton" id="_ReInviteEmployeeButton" disabled>Resend Invite</button>
+                            </td>
+                            <td>
+                                <button class="deleteMajorButton" id="_DeleteEmployeeButton" disabled>Delete
+                                    Employee</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="_filterMenuContainer" class="filterMenu">
+    <table class="noBorderPaddingSpacing fullWidthTable">
+        <tr>
+            <td>
+                <table class="noBorderPaddingSpacing">
+                    <tr>
+                        <td>
+                            <input id="_quickFilterStartDate" name="quickFilterStartDate" type="text" />
+                        </td>
+                        <td>to</td>
+                        <td>
+                            <input id="_quickFilterEndDate" name="quickFilterEndDate" type="text" />
+                        </td>
+                        <td>
+                            <button title="Load selected period..." class="majorButton" id="_quickFilterSubmit">
+                                View Pay Period
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td></td>
+            <td class="rightMiddleCell">
+                <div id="EzTotalHoursContainer">
+                    Total Time:
+                    <input type="text" class="totalHours" readonly id="_TotalHours" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
